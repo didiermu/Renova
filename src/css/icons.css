@@ -1,0 +1,80 @@
+@font-face {
+  font-family: 'icomoon';
+  src:  url('../fonts/icons/icomoon.eot?wv4ebv');
+  src:  url('../fonts/icons/icomoon.eot?wv4ebv#iefix') format('embedded-opentype'),
+    url('../fonts/icons/icomoon.ttf?wv4ebv') format('truetype'),
+    url('../fonts/icons/icomoon.woff?wv4ebv') format('woff'),
+    url('../fonts/icons/icomoon.svg?wv4ebv#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-Calidad:before {
+  content: "\e900";
+  color: #465766;
+}
+.icon-Certificaciones:before {
+  content: "\e901";
+}
+.icon-Chevron:before {
+  content: "\e902";
+}
+.icon-Compromiso:before {
+  content: "\e903";
+  color: #465766;
+}
+.icon-Honestidad:before {
+  content: "\e904";
+}
+.icon-Lealtad:before {
+  content: "\e905";
+  color: #465766;
+}
+.icon-PagosPuntuales:before {
+  content: "\e906";
+}
+.icon-Promociones:before {
+  content: "\e907";
+}
+.icon-Recoleccion:before {
+  content: "\e908";
+  color: var(--secundario);
+}
+.icon-Servicio:before {
+  content: "\e909";
+  color: #465766;
+}
+.icon-ServicioEnPlantas:before {
+  content: "\e90a";
+  color: var(--secundario);
+}
+.icon-ServicioExcelencia:before {
+  content: "\e90b";
+}
+.icon-Telefono:before {
+  content: "\e90c";
+}
+.icon-TrabajoEnEquipo:before {
+  content: "\e90d";
+  color: #465766;
+}
+.icon-Transformacion:before {
+  content: "\e90e";
+  color: var(--secundario);
+}

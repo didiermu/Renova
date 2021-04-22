@@ -1,0 +1,27 @@
+header.header
+    .container-fluid
+        .row    
+            .col-12.header--navegacion
+                .header--navegacion--logo
+                    a(href="/") 
+                        picture 
+                            img.img-fluid(srcset="img/RenovaLogo.svg")
+
+                nav.navbar-expand-lg
+                    .btnHam(data-toggle='collapse' data-target='#navbarNav' aria-controls='navbarNav' aria-expanded='false' aria-label='Toggle navigation')
+                        
+                    div.collapse.navbar-collapse#navbarNav
+                        ul
+                        
+                            li#li-s1(class=nosotros)
+                                a(href="servicios.html")  Servicios
+                        
+                            li#li-s2(class=publicaciones)
+                                a(href="materiales.html") Materiales
+                        
+                            li#li-s3(class=medios)
+                                a(href="nos-destacamos-por.html") Nos destacamos por
+                        
+                        
+                        a#linkContacto(href="contacto.html") 
+                            button.btn.primario Contacto

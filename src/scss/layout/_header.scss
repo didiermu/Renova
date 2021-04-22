@@ -1,0 +1,196 @@
+.header{
+    z-index: 9;
+    position: fixed;
+    left: 0;
+    top: 0;
+    
+    &--navegacion{
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        padding-left: 0;
+        
+        &--logo{
+            background: #fff;
+            border-radius: 0 0 30px 0;
+            width: 100%;
+            min-width: 340px;
+            padding: 50px;
+            text-align: center;
+            
+            img{
+                max-width: 220px;
+            }
+        }
+
+        .btnHam{
+            display: none;
+        }
+
+        nav{
+            
+            #navbarNav{
+                position: relative;
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                padding-left: 50px;
+    
+                > ul{
+                    margin: 90px 0 0;
+                    align-items: flex-start;
+                    background:transparent;
+                    flex-direction: column;
+                    display: flex;
+                    padding: 0;
+                    transition: .3s ease-in-out all;
+                    
+                    li{
+                        text-align: center;
+                        list-style: none;
+                        cursor: pointer;
+                        color: var(--blanco);
+                        font-family: var(--primariaRegular);
+                        font-size: var(--h3);
+                        margin: 0 0 30px;
+                        padding-bottom: 5px;
+                        text-shadow: 0 2px 4px #8897A5;
+                        transition: .3s ease-in-out all;
+                        
+                        &::after{
+                            content: "";
+                            display: block;
+                            width: 20px;
+                            height: 5px;
+                            border-radius: 10px;
+                            background: var(--primario);
+                            transition: .3s ease-in-out all;
+                        }
+                        
+                        a{
+                            color: inherit;
+                            text-decoration: none;
+                        }
+    
+                        &:hover{
+                            ul{
+                                display: flex;
+                            }
+                        }
+    
+                        &:hover:not(#li-img){
+                            &::after{
+                                width: 100%;
+                            }
+                        }
+                    }
+                }  
+            
+            }
+        }
+        
+       
+        
+    }
+
+    
+    &.activo{
+        
+        .header--navegacion #navbarNav{
+            li{
+                font-size: var(--h6);
+            }
+
+            img{
+                width: 100px !important;
+            }
+           
+        }
+    }
+    
+    &.black{
+        .header--navegacion nav #navbarNav>ul li{
+            color: var(--texto);
+            text-shadow: none;
+        }
+    }
+}
+
+@media (min-width:1920px) {
+    .header{
+        min-width: 600px;
+        
+        &--navegacion--logo img{
+            max-width: 300px;
+        }
+    }
+}
+
+@media (max-width:992px) {
+    .header{
+        height: 70px;
+        margin-bottom: 0;
+        
+        .btn{
+            display: block;
+            width: 40px;
+            height: 40px;
+            background: url("../img/iconHam.svg") no-repeat center / 30px;
+            transition: .2s ease-in-out all;
+
+            &.nav-on{
+                background: url("../img/Close.svg") no-repeat center / 25px;
+            }
+        }
+        
+        &--navegacion{
+            justify-content: end;
+            
+            a{
+                order: 2;
+                flex: 0 0 33%;
+            }
+            
+            nav{
+                order: 1;
+                flex: 0 0 33%;
+                
+                #navbarNav{
+                    display: none;
+                    position: absolute;
+                    top: 50px;
+                    flex-direction: column;
+                    left: 0;
+                    background: var(--blanco);
+                    padding: 50px 0;
+                    border-radius: 0 0 40px 40px;
+                    
+                    ul{
+                        flex-direction: column;
+                        border-bottom: 0;
+                        
+                        li{
+                            margin: auto auto 30px;
+                            font-size: var(--h3);
+                            
+                            &:last-child{
+                                margin: auto auto 30px;
+                            }
+                        }
+                    }
+                    
+                    #linkContacto{
+                        margin: auto;
+                        button{
+                            max-width: 160px;    
+                            margin: auto;
+                            display: block;
+                        }
+                        
+                    }
+                }
+            }
+        }
+    }
+
+}// 996

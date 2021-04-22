@@ -1,0 +1,323 @@
+.home{
+	
+	.ayuda{
+		background: var(--fondoClaro);
+		position: relative;
+		
+		&::before{
+			content: "";
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			top: 0;
+			left: 0;
+			//background: url(../../img/fondo1.svg) no-repeat left top / 75% 100%;
+			background: url(../../img/fondo1.svg) no-repeat left top / contain;
+		}
+		
+		.path1{
+			position: absolute;
+			left: 0px;
+			bottom: 0px;
+			z-index: 0;
+			opacity: 0;
+		}
+		
+		&.sectionOn{
+			.path1{
+				opacity: 1;
+				
+				path{
+					stroke-dasharray: 2000;
+					stroke-dashoffset:2000;
+					animation: draw 2s linear forwards;
+					animation-iteration-count: 1;
+					animation-delay: 0s;
+				}
+				@keyframes draw {
+					to {
+						stroke-dashoffset: 0;
+					}
+				}
+			}
+		}
+		
+		
+		.col-lg-5{
+			padding-left: 0;	
+			align-self: flex-end;
+		}
+		
+		.col-lg-7{
+			max-width: 665px;
+		}
+		
+		&--img{
+			border-radius: 10px 10px 50px 10px;
+			overflow: hidden;
+		}
+		 
+		&--copy{
+			padding: 30px 15px 30px 30px;
+			
+			h2{
+				margin-bottom: 80px;
+			}
+			
+			&__acceso{
+				margin-bottom: 80px;
+				
+				&:last-of-type{
+					margin-bottom: 0;
+				}
+				
+				h2{
+					color: var(--secundario);
+					margin-bottom: 20px;
+				}
+			}
+		}
+	}
+	
+	.dedicamos{
+		position: relative;
+		background: url(../../img/fondo2.svg) no-repeat left top /  contain;
+		
+		.path1{
+			position: absolute;
+			left: 0px;
+			top: 0px;
+			z-index: 0;
+			opacity: 0;
+		}
+		
+		&.sectionOn{
+			.path1{
+				opacity: .8;
+				
+				path{
+					stroke-dasharray: 2000;
+					stroke-dashoffset:2000;
+					animation: draw 2s linear forwards;
+					animation-iteration-count: 1;
+					animation-delay: 0s;
+				}
+				@keyframes draw {
+					to {
+						stroke-dashoffset: 0;
+					}
+				}
+			}
+		}
+		
+		&--copy{
+			padding-left: 50px;
+			
+			h3{
+				margin-bottom: 20px;
+			}
+			
+			h4{
+				margin: 30px 0;
+			}
+		}
+		&--img{
+			position: absolute;
+			right: 0;
+			bottom: 0;
+			min-width: 650px;
+			width: 50%;
+			max-width: 800px;
+			z-index: -1;
+		}
+	}
+	
+	.promos{
+		position: relative;
+		
+		&.sectionOn{
+			#path1{
+				opacity: 1;
+				
+				path{
+					stroke-dasharray: 2000;
+					stroke-dashoffset:2000;
+					animation: draw 2s linear forwards;
+					animation-iteration-count: 1;
+					animation-delay: 0s;
+				}
+				@keyframes draw {
+					to {
+						stroke-dashoffset: 0;
+					}
+				}
+			}
+		}
+		
+		.fondo3{
+			position: absolute;
+			top: 100px;
+			right: 0;
+			z-index: 1;
+		}
+		
+		#path1{
+			position: absolute;
+			right: -40px;
+			top: 100px;
+			z-index: 1;
+			opacity: 0;
+		}
+		
+		
+		&--img{
+			height: calc(380px + 400 * ((100vw - 1280px) / 1920));
+			background: url(../../img/Desktop/1Home/Secc3.webp) no-repeat center top / cover fixed;
+			position: absolute;
+			top: 0;
+			padding: 0;
+		}
+		
+		&--copy{
+			padding-left: 50px;
+			z-index: 2;
+			position: relative;
+			
+			.titleBig{
+				color: #fff;
+				margin-bottom: 80px;
+			}
+			
+			.col-lg-4{
+				min-height: calc(350px + 150 * ((100vw - 1280px) / 1920));
+			}
+			
+			&__card{
+				background: #fff;
+				padding: 80px 35px 35px;
+				box-shadow: 0 2px 40px 0 rgba(120,159,183,0.16);
+				border-radius: 8px 8px 40px 8px;
+				position: relative;
+				cursor: pointer;
+				height: calc(230px + 150 * ((100vw - 1280px) / 1920));
+				transition: .3s ease-in-out all;
+				
+				&:before{
+					content: "\e907";
+					font-family: 'icomoon' !important;
+					width: 60px;
+					height: 60px;
+					background: var(--primario);
+					position: absolute;
+					top: -5px;
+					left: -5px;
+					border-radius: 8px;
+					font-size: 2em;
+					display: flex;
+					align-items: center;
+					justify-content: center;
+				}
+				
+				&:hover{
+					height: calc(300px + 150 * ((100vw - 1280px) / 1920));
+					
+					.btn{
+						opacity: 1;
+					}
+				}
+				
+				h2{
+					margin: 10px 0 50px;
+				}
+				
+				.btn{
+					max-width: 160px;
+					opacity: 0;
+					position: absolute;
+					bottom: 30px;
+				}
+			}
+			
+			.linkBorder{
+				display: flex;
+				width: max-content;
+				margin: auto;
+			}
+		}
+	}
+	
+	.contacto{
+		background: var(--fondoClaro);
+		position: relative;
+		padding: 0;
+		overflow: initial;
+		
+		.path1{
+			position: absolute;
+			left: 100px;
+			top: 0px;
+			z-index: 0;
+			opacity: 0;
+		}
+		
+		&.sectionOn{
+			.path1{
+				opacity: .8;
+				
+				path{
+					stroke-dasharray: 2000;
+					stroke-dashoffset:2000;
+					animation: draw 4s linear forwards;
+					animation-iteration-count: 1;
+					animation-delay: 0s;
+				}
+				@keyframes draw {
+					to {
+						stroke-dashoffset: 0;
+					}
+				}
+			}
+		}
+		
+		.col-lg-6{
+			padding-left: 0;	
+			align-self: flex-end;
+		}
+		
+		.col-lg-5{
+			max-width: 665px;
+			margin-bottom: 50px;
+		}
+		
+		.titleBig{
+			margin: 30px 0;
+		}
+		
+		.btn{
+			max-width: 160px;
+		}
+		
+		&--img{
+			position: absolute;
+			bottom: 0;
+			//left: 0;
+			//min-width: 640px;
+			//width: 100%;
+			//max-width: 720px;
+		}
+		
+		&--copy{
+			padding-left: 10%;
+			min-height: 550px;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+		}
+	}
+}
+
+@media (min-width:1920px) {
+	.home .ayuda .col-lg-7{
+		max-width: 58.333333%;
+	}
+}

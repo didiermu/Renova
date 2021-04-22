@@ -1,0 +1,421 @@
+
+/// TITULOS
+
+@mixin titlesBig {
+    font-size: var(--h1);
+    position: relative;
+    line-height: 1;
+    font-family: var(--primariaBold);
+    
+    &::after{
+        content: "";
+        display: block;
+        width: 30px;
+        margin-top: 30px;
+        height: 5px;
+        border-radius: 10px;
+        background: var(--primario);
+        transition: .3s ease-in-out all;
+    }
+}
+
+@mixin listas {
+    list-style: none;
+    
+    li{
+        margin-bottom: 10px;
+        font-size: var(--h5);
+        position: relative;
+        padding-left: 20px;
+
+        &::before{
+            content: "";
+            width: 12px;
+            height: 12px;
+            display: block;
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+            background: url(../../img/iconCheck.svg) no-repeat center / contain;
+        }
+    }
+}
+
+// // MISC
+
+@mixin cardFecha {
+    border-radius: 15px 15px 60px 0;
+	overflow: hidden;
+	background: var(--blanco);
+	cursor: pointer;
+    transition: .3s ease-in-out all;
+    
+	&__img{
+		height: 190px;
+        
+		img{
+			object-fit: cover;
+			object-position: center;
+			width: 100%;
+			height: 100%;
+		}
+	}
+
+	&__copy{
+		padding: 0 30px 20px;
+        position: relative;
+        transition: .3s ease-in-out all;
+
+		h3{
+			margin: 10px 0;
+		}
+        
+        h4{
+            margin-bottom: 15px;
+        }
+
+		h6{
+			position: relative;
+			top: -10px;
+			left: 0px;
+			background: var(--fondoClaro);
+			padding: 5px 10px;
+			border-radius: 50px;
+			width: max-content;
+		}
+
+		p{
+			border-top: 1px solid var(--terceroClaro);
+			font-size: var(--h5);
+			padding-top: 20px;
+			margin-top: 20px;
+		}
+        
+        a{
+            font-size: var(--h5);
+            color: var(--blanco);
+            display: none;
+            position: absolute;
+            bottom: 20px;
+            margin-top: 20px;
+            transition: .3s ease-in-out all;
+            
+            &:hover{
+                text-decoration: underline;
+            }
+        }
+	}
+    
+    &:hover{
+        .home--publicaciones__card__copy{
+            background: var(--secundario);
+            padding-bottom:40px;
+           
+            h3,h5,p{
+                color: var(--blanco);
+            }
+            
+            a{
+                display: block;
+            }
+        }
+    }
+    
+    @media (max-width: 992px){
+        &__img{
+            height: calc(140px + 190 * ((100vw - 320px) / 768));
+        }
+        
+        &__copy{
+            padding: 0 20px 20px;
+            
+            h3{
+                font-size: var(--h2);
+            }
+        }
+        
+        
+        &:hover{
+            .home--publicaciones__card__copy{
+                background: var(--blanco);
+                padding-bottom:40px;
+               
+                h3,h5,p{
+                    color: var(--negro);
+                }
+                
+                a{
+                    display: block;
+                    color: var(--negro);
+                }
+            }
+        }
+    }
+}
+
+@mixin cardIcon {
+    border-radius: 15px 15px 60px 0;
+    overflow: hidden;
+    background: var(--fondoClaro);
+    border: none;
+    
+    &__img{
+        height: 190px;
+        margin-bottom: 10px;
+
+        img{
+            object-fit: cover;
+            object-position: center;
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    
+    &__copy{
+        padding: 0 30px 30px;
+        position: relative;
+        top: -30px;
+        min-height: 200px;
+        
+        &__img{
+            border-radius: 50%;
+            background: var(--primario);
+            width:45px;
+            height:45px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+            
+        }
+
+       
+
+        h3{
+            margin: 0 0 10px;
+        }
+    }
+    
+    @media (max-width: 992px){
+        &__img{
+            height: calc(140px + 190 * ((100vw - 320px) / 768));
+        }
+        
+        &__copy{
+            padding: 0 20px 0;
+            
+            h3{
+                font-size: var(--h2);
+            }
+        }
+    }
+}
+
+// FORMS
+
+@mixin chips {
+    min-width: 100px;
+    width: max-content;
+    height: 30px;
+    border-radius: 50px;
+    transition: .3s ease-in-out all;
+    border: 2px solid var(--secundario);
+    padding: 2px 10px;
+    cursor: pointer;
+    
+    h6{
+        font-size: var(--h5);
+        font-family: var(--primariaBold);
+        color: var(--secundario);
+        text-transform: uppercase;
+    }
+    
+    img{
+        margin-left: 10px;
+        cursor: pointer;
+        max-width: 12px;
+    }
+    
+    &:hover{
+        border-color: var(--negro);
+        
+        h6{
+            color: var(--negro);
+        }
+        
+        img{
+            filter: brightness(0);
+        }
+        
+    }
+}
+
+@mixin boton{
+    appearance: none;
+    border: none;
+    outline: none;
+    width: 100%;
+    min-width: 150px;
+    min-height: 44px;
+    font-size: var(--h4);
+    color: var(--negro);
+    border: 1px solid var(--primario);
+    border-radius: 10px;
+    font-family: var(--primariaBold);
+    transition: .3s ease-in-out all;
+
+    &.primario{
+        background: var(--primario);
+
+        &:hover{
+            background: transparent;
+            border: 1px solid var(--primario);
+            color: var(--blanco);
+        }
+    }
+
+    &.secundario{
+        background: transparent;
+        border: 2px solid var(--primario);
+
+        &:hover{
+            background: var(--primario);
+            color: var(--blanco);
+        }
+    }
+
+    
+    &.tercero{
+        background: var(--grisClaro);
+    }
+
+    &:focus{
+        outline: none;
+    }
+    
+}
+
+@mixin input{
+    appearance: none;
+    border: 2px solid var(--grisClaro);
+    outline: none;
+    width: 100%;
+    min-width: 160px;
+    min-height: 44px;
+    font-size: var(--h5);
+    padding: 0 10px;
+    border-radius: 6px;
+    font-family: var(--primariaBold);
+    transition: .3s ease-in-out all;
+
+    &::placeholder{
+        color: var(--fondoGris);
+    }
+
+    &:focus{
+        border: 2px solid var(--primario);
+        color: var(--negro);
+
+        &::placeholder{
+            color: var(--negro);
+        }
+    }
+}
+
+
+@mixin buscador{
+    appearance: none;
+    border: 2px solid var(--grisClaro);
+    outline: none;
+    width: 100%;
+    min-width: 160px;
+    max-width: 350px;
+    height: 44px;
+    font-size: var(--h5);
+    padding: 0 50px 0 10px;
+    border-radius: 50px;
+    font-family: var(--primariaBold);
+    background: url(../../img/Lupa.svg) no-repeat 95% center / 20px;
+    transition: .3s ease-in-out all;
+
+    &::placeholder{
+        color: var(--fondoGris);
+    }
+
+    &:focus{
+        border: 2px solid var(--primario);
+        color: var(--negro);
+        
+        &::placeholder{
+            color: var(--negro);
+        }
+    }
+}
+
+// ANIMACIONES
+
+@mixin animaciones {
+	h1,h2,h3{
+		opacity: 0;
+        transform: translateY(-30px);
+        transition: .3s ease-in-out all;
+	}
+    
+    
+    h4,h5,h6,li, a.link, p{
+        opacity: 0;
+        transform: translateY(-40px);
+        transition: .4s ease-in-out all;
+    }
+    
+    img, form, iframe{
+        opacity: 0;
+        transform: scale(.9);
+        transition: .4s ease-in-out all;
+    }
+	
+	&.transition1{
+		h1,h2,h3,h4,h5,h6,li,a.link, p{
+			opacity: 1;
+            transform: translateY(0px);
+		}
+        
+        img, form, iframe{
+            opacity: 1;
+            transform: scale(1);
+        }
+	}
+}
+
+@mixin lineas {
+    .path1{
+        position: absolute;
+        left: 0px;
+        top: 0px;
+        z-index: 0;
+        opacity: 0;
+    }
+    
+    &.sectionOn{
+        .path1{
+            opacity: .8;
+            
+            path{
+                stroke-dasharray: 2000;
+                stroke-dashoffset:2000;
+                animation: draw 2s linear forwards;
+                animation-iteration-count: 1;
+                animation-delay: 0s;
+            }
+            @keyframes draw {
+                to {
+                    stroke-dashoffset: 0;
+                }
+            }
+        }
+    }
+}
+

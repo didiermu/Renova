@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="954px" height="823px" viewBox="0 0 954 823" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Rectangle</title>
+    <defs>
+        <path d="M414.777335,560.828754 L992.74943,258 L992.74943,258 L1373.92001,763.830441 L723.34314,1261.16002 L361.580538,874.655222 C286.099546,794.011824 290.284504,667.447999 370.927902,591.967007 C384.075824,579.660752 398.825622,569.186661 414.777335,560.828754 Z" id="path-1"></path>
+        <filter x="0.4%" y="-11.9%" width="109.8%" height="124.1%" filterUnits="objectBoundingBox" id="filter-2">
+            <feOffset dx="0" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="40" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0.546910262   0 0 0 0 0.786520807   0 0 0 0 0.933973451  0 0 0 0.121001237 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" opacity="0.20610555">
+        <g id="Desktop-1366x768---Wrapper-1100px-Copy-47" transform="translate(-412.000000, -2506.000000)">
+            <g id="Fondo-Sección-3" transform="translate(683.202991, 2863.500000) scale(-1, 1) translate(-683.202991, -2863.500000) translate(-0.297009, 2398.000000)">
+                <g id="Group-15" transform="translate(530.715695, 563.367510) scale(-1, 1) translate(-530.715695, -563.367510) translate(-305.284305, -196.632490)">
+                    <g id="Group-4" transform="translate(115.221420, 0.342120)">
+                        <g id="Rectangle" transform="translate(777.960004, 759.580010) rotate(37.000000) translate(-777.960004, -759.580010) ">
+                            <use fill="black" fill-opacity="1" filter="url(#filter-2)" xlink:href="#path-1"></use>
+                            <use fill="#F1F4F7" fill-rule="evenodd" xlink:href="#path-1"></use>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

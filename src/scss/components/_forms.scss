@@ -1,0 +1,39 @@
+input[type=button], input[type=submit], .btn{
+    @include boton;
+}
+
+input[type=text], textarea{
+    @include input;
+}
+
+input[type=search]{
+    @include buscador;
+}
+
+
+textarea{
+    resize: none;
+    height: 120px;
+    color: var(--negro);
+    padding: 10px;
+}
+
+.chip{
+    @include chips;
+}
+
+.error-input{
+    color: red;
+    font-size:var(--h6);
+}
+
+// .combo {
+//     @include combo;
+// }
+ 
+// .checkboxes{
+//     @include checkbox;
+// }
+
+
+

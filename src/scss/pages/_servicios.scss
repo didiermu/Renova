@@ -1,0 +1,196 @@
+.servicios{
+    position: relative;
+	background: url(../../img/fondo2.svg) no-repeat left top /  contain;
+    
+    @include lineas;
+    
+    .nuestros{
+        .col-lg-9{
+            padding-left: 50px;
+        }
+        
+        &--copy{
+            
+            h3{
+                margin-bottom: 20px;
+            }
+            
+            h4{
+                margin: 30px 0;
+            }
+        }   
+        
+        .nav{
+            
+            &-tabs{
+                margin-top: 20px;
+                border-bottom: 0;
+                justify-content: space-between;
+                
+                &.nav-active{
+                    margin-bottom: 50px;
+                    
+                    .nav-item{
+                        &:nth-child(2){
+                            margin-top: 0px;    
+                        }
+                        
+                        &:nth-child(3){
+                            margin-top: 0px;    
+                        }
+                    }
+                }
+            }
+            
+            &-item{
+                flex: 0 0 30%;
+                align-items: center;
+                justify-content: center;
+                height: 100px;
+                background: #FFFFFF;
+                box-shadow: 0 2px 40px 0 rgba(120,159,183,0.16);
+                border-radius: 8px 8px 40px 8px;
+                font-size: var(--h3);
+                
+                &:nth-child(2){
+                    margin-top: 50px;    
+                }
+                
+                &:nth-child(3){
+                    margin-top: 100px;    
+                }
+                
+                &.active{
+                    background: var(--secundario);
+                    
+                    span{
+                        color: #FFFFFF;
+                    }
+                    
+                    .nav-link{
+                        &::before{
+                            color: var(--primario);
+                        }
+                    }
+                }
+                
+                span{
+                    font-family: var(--primariaRegular);    
+                }
+            }
+            
+            &-link{
+                display: flex;
+                align-items: center;
+                height: 100%;
+                
+                &::before{
+                    font-size: 1.2em;
+                    margin-right: 10px;
+                }
+                
+                &:hover{
+                    border: none;
+                }
+                
+                &.active{
+                    background: none;
+                    border: none;
+                }
+            }
+        }
+        
+        .tab-pane{
+            position: relative;
+            
+            h2{
+                margin-bottom: 40px;
+            }
+        }
+        
+        .swiper{
+            &-nav{
+                position: absolute;
+                top: 50px;
+                right: 30px;
+                z-index: 1;
+                min-width: 100px;
+            }
+            
+            &-slide{
+                //flex: 0 0 40.333333%;
+    			//max-width: 40.333333%;
+                min-width: 390px;
+                
+                &__card{
+                    border-radius: 8px 8px 40px 8px;    
+                    overflow: hidden;
+                    cursor: pointer;
+                    position: relative;
+                    
+                    &::after{
+                        content: "";
+                        width: 100%;
+                        height: 100%;
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        background: rgba(33, 40, 45, 0.8);
+                        opacity: 0;
+                        transition: .3s ease-in-out all;
+                    }
+                    
+                    &:hover{
+                        &::after{
+                            opacity: 1;
+                        }
+                        
+                        
+                        .swiper-slide__card__copy{
+                            bottom: 0;
+                            
+                            h3{
+                                opacity: 1;
+                            }
+                        }
+                    }
+                    
+                    &__img{
+                        overflow: hidden;
+                        height: 300px;
+                        
+                        img{
+                            width: 100%;
+                            height: 100%;
+                            object-fit: cover;
+                            object-position: center;
+                        }
+                    }
+                    
+                    &__copy{
+                        position: absolute;
+                        bottom: -60px;
+                        padding: 40px;
+                        z-index: 1;
+                        transition: .3s ease-in-out all;
+                        
+                        h2{
+                            color: #FFFFFF;
+                            position: relative;
+                            bottom: 0;
+                            margin-bottom: 10px;
+                        }
+                        
+                        h3{
+                            color: #FFFFFF;
+                            opacity: 0;
+                        }
+                    }
+                }
+                
+               
+            }
+        }
+    }
+    
+}

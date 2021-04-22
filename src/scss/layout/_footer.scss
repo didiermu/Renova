@@ -1,0 +1,23 @@
+.footer{
+	height: 110px;
+	background: var(--grisOscuro);
+	align-items: center;
+	border-top: 2px solid var(--primario);
+	
+	h5,a{
+		color: var(--blanco);
+		font-family: var(--secundariaRegular);
+		text-align: right;
+	}
+	
+}
+
+@media (max-width: 992px){
+	.footer{
+		height: auto;
+		min-height: 180px;
+		padding: 20px 0;
+	
+	}	
+	
+}

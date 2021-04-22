@@ -1,0 +1,44 @@
+
+:root {
+    // COLORS
+
+    --texto: #2F3B46; //
+    --blanco: #FFFFFF; //
+    --grisOscuro: #151B1F;
+    --gris: #828891;
+    --azulClaro: #8897A5; //
+    --primario: #F9BB00; //
+    --secundario: #465766; //
+    --fondoClaro:#F1F4F7; // 
+    
+    // FONTS
+
+    --primariaRegular:'Blinker-Regular';
+    --primariaBold:'Blinker-Bold';
+    --secundariaRegular:'Dina-Bold';
+
+    --h1:calc(78px + 10 * ((100vw - 1280px) / 1920)); //
+    --h2:calc(31px + 10 * ((100vw - 1280px) / 1920)); //
+    --h3:calc(23px + 10 * ((100vw - 1280px) / 1920)); //
+    --h4:calc(19px + 10 * ((100vw - 1280px) / 1920)); //
+    --h5:calc(17px + 10 * ((100vw - 1280px) / 1920)); //
+    --h6:calc(11px + 10 * ((100vw - 1280px) / 1920));
+
+
+    // SECCIONES
+
+    --paddingSection : 120px 0;
+
+    @media (max-width:992px) {
+        --h1:calc(24px + 10 * ((100vw - 320px) / 1280)); //ok
+        --h2:calc(20px + 10 * ((100vw - 320px) / 1280)); //ok
+        --h3:calc(18px + 10 * ((100vw - 320px) / 1280)); 
+        --h4:calc(16px + 10 * ((100vw - 320px) / 1280)); 
+        --h5:calc(14px + 10 * ((100vw - 320px) / 1280));
+        --h6:calc(12px + 10 * ((100vw - 320px) / 1280));
+        
+        // SECCIONES
+        --paddingSection : 30px 0;
+    }
+}
+

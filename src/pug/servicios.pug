@@ -1,0 +1,270 @@
+- titulo = "Servicios - Renova Industrial";
+- tituloHero = "Quiero vender mis desperdicios";
+
+doctype
+html(lang='es')
+
+    include includes/head.pug
+
+    body
+        include includes/header.pug
+        main.servicios
+            include includes/hero.pug
+
+            section.nuestros
+                svg.path1(width='800px' height='800px' viewBox='0 0 1000 1100')
+                    g.Page-1(stroke='none' stroke-width='1' fill='none' fill-rule='evenodd')
+
+                        path(d="M829.358284,449.674323 L449.519976,181.2579 C359.313246,117.51244 234.510337,138.963537 170.764877,229.170267 C154.089911,252.767149 142.72582,279.696927 137.454748,308.106136 L0.703458895,1045.14698 L0.703458895,1045.14698" id="Path-5-Copy-3" stroke="#F9BB00" stroke-width="2" transform="translate(415.030872, 523.073489) rotate(-180.000000) translate(-415.030872, -523.073489) ")
+
+                .container-fluid
+                    .row.align-items-center.objetFade
+                        .col-12.col-lg-9.offset-lg-3.offset-xl-4
+                            .nuestros--copy
+                                h3 Ponemos a tu alcance
+                                h2.titleBig Nuestros servicios
+                                h4 Selecciona lo que necesitas
+                        
+                        .col-12.col-lg-9.offset-lg-3.offset-xl-4
+                            ul.nav.nav-tabs#myTab(role='tablist')
+                                
+                                li.nav-item.d-flex
+                                    a.nav-link.icon-Recoleccion#recoleccion-tab(data-toggle='tab' href='#recoleccion' role='tab' aria-controls='recoleccion' aria-selected='true') 
+                                        span Recolección
+                                    
+                                li.nav-item.d-flex
+                                    a.nav-link.icon-ServicioEnPlantas#servicio-tab(data-toggle='tab' href='#servicio' role='tab' aria-controls='servicio' aria-selected='false') 
+                                        span Servicio en plantas
+                                    
+                                li.nav-item.d-flex
+                                    a.nav-link.icon-Transformacion#transformacion-tab(data-toggle='tab' href='#transformacion' role='tab' aria-controls='transformacion' aria-selected='false') 
+                                        span Transformación
+                                    
+                                    
+                            .tab-content#myTabContent
+                                .tab-pane.fade#recoleccion(role='tabpanel' aria-labelledby='recoleccion-tab')
+                                    
+                                    h2 Contamos con una amplia flotilla de equipos 
+                                        br 
+                                        | de recolección y entrega que incluye:
+                                    
+                                    .swiper-container.sliderServicios
+                                        .swiper-wrapper
+                                            .col-lg-4.swiper-slide.objetFade
+                                                .swiper-slide__card
+                                                    .swiper-slide__card__img
+                                                        picture 
+                                                            source(srcset="../img/Desktop/2Servicios/CardServicio.webp", type="image/webp")
+                                                            img.img-fluid(src="../img/Desktop/2Servicios/CardServicio.jpg", alt="")
+                                                    
+                                                    .swiper-slide__card__copy
+                                                        h2 Flotilla de trailers
+                                                        h3 Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                                            
+                                            .col-lg-4.swiper-slide.objetFade
+                                                .swiper-slide__card
+                                                    .swiper-slide__card__img
+                                                        picture 
+                                                            source(srcset="../img/Desktop/2Servicios/CardServicio.webp", type="image/webp")
+                                                            img.img-fluid(src="../img/Desktop/2Servicios/CardServicio.jpg", alt="")
+                                                    
+                                                    .swiper-slide__card__copy
+                                                        h2 Flotilla de tortons
+                                                        h3 Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                                            .col-lg-4.swiper-slide.objetFade
+                                                .swiper-slide__card
+                                                    .swiper-slide__card__img
+                                                        picture 
+                                                            source(srcset="../img/Desktop/2Servicios/CardServicio.webp", type="image/webp")
+                                                            img.img-fluid(src="../img/Desktop/2Servicios/CardServicio.jpg", alt="")
+                                                    
+                                                    .swiper-slide__card__copy
+                                                        h2 Flotilla de camionetas de 3.5 tons.
+                                                        h3 Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                                            .col-lg-4.swiper-slide.objetFade
+                                                .swiper-slide__card
+                                                    .swiper-slide__card__img
+                                                        picture 
+                                                            source(srcset="../img/Desktop/2Servicios/CardServicio.webp", type="image/webp")
+                                                            img.img-fluid(src="../img/Desktop/2Servicios/CardServicio.jpg", alt="")
+                                                    
+                                                    .swiper-slide__card__copy
+                                                        h2 Góndolas de volteo
+                                                        h3 Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                                            .col-lg-4.swiper-slide.objetFade
+                                                .swiper-slide__card
+                                                    .swiper-slide__card__img
+                                                        picture 
+                                                            source(srcset="../img/Desktop/2Servicios/CardServicio.webp", type="image/webp")
+                                                            img.img-fluid(src="../img/Desktop/2Servicios/CardServicio.jpg", alt="")
+                                                    
+                                                    .swiper-slide__card__copy
+                                                        h2 Jaulas 
+                                                        h3 Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                                            .col-lg-4.swiper-slide.objetFade
+                                                .swiper-slide__card
+                                                    .swiper-slide__card__img
+                                                        picture 
+                                                            source(srcset="../img/Desktop/2Servicios/CardServicio.webp", type="image/webp")
+                                                            img.img-fluid(src="../img/Desktop/2Servicios/CardServicio.jpg", alt="")
+                                                    
+                                                    .swiper-slide__card__copy
+                                                        h2 Cajas secas
+                                                        h3 Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                                            .col-lg-4.swiper-slide.objetFade
+                                                .swiper-slide__card
+                                                    .swiper-slide__card__img
+                                                        picture 
+                                                            source(srcset="../img/Desktop/2Servicios/CardServicio.webp", type="image/webp")
+                                                            img.img-fluid(src="../img/Desktop/2Servicios/CardServicio.jpg", alt="")
+                                                    
+                                                    .swiper-slide__card__copy
+                                                        h2 Plataformas
+                                                        h3 Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                                        
+                                    
+                                    .swiper-nav
+                                        .swiper-button-prev
+                                        .swiper-button-next
+                                    
+                                    .swiper-pagination.justify-content-center.align-items-center.d-flex
+                                    
+                                    
+                                .tab-pane.fade#servicio(role='tabpanel' aria-labelledby='servicio-tab')
+                                    h2 Servicio build to suit en tu empresa con maquinaria
+                                        br 
+                                        | especializada como:
+                                    
+                                    
+                                    .swiper-container.sliderServicios2
+                                        .swiper-wrapper
+                                            .col-lg-4.swiper-slide.objetFade
+                                                .swiper-slide__card
+                                                    .swiper-slide__card__img
+                                                        picture 
+                                                            source(srcset="../img/Desktop/2Servicios/CardServicio.webp", type="image/webp")
+                                                            img.img-fluid(src="../img/Desktop/2Servicios/CardServicio.jpg", alt="")
+                                                    
+                                                    .swiper-slide__card__copy
+                                                        h2 Poligrapas móviles
+                                                        h3 para el servicio de recolección
+                                            
+                                            .col-lg-4.swiper-slide.objetFade
+                                                .swiper-slide__card
+                                                    .swiper-slide__card__img
+                                                        picture 
+                                                            source(srcset="../img/Desktop/2Servicios/CardServicio.webp", type="image/webp")
+                                                            img.img-fluid(src="../img/Desktop/2Servicios/CardServicio.jpg", alt="")
+                                                    
+                                                    .swiper-slide__card__copy
+                                                        h2 Contenedores a la medida
+                                                        h3 Fabricación y diseño
+                                                        
+                                            .col-lg-4.swiper-slide.objetFade
+                                                .swiper-slide__card
+                                                    .swiper-slide__card__img
+                                                        picture 
+                                                            source(srcset="../img/Desktop/2Servicios/CardServicio.webp", type="image/webp")
+                                                            img.img-fluid(src="../img/Desktop/2Servicios/CardServicio.jpg", alt="")
+                                                    
+                                                    .swiper-slide__card__copy
+                                                        h2 Equipo especializado
+                                                        h3 para manejo interno
+                                                        
+                                            .col-lg-4.swiper-slide.objetFade
+                                                .swiper-slide__card
+                                                    .swiper-slide__card__img
+                                                        picture 
+                                                            source(srcset="../img/Desktop/2Servicios/CardServicio.webp", type="image/webp")
+                                                            img.img-fluid(src="../img/Desktop/2Servicios/CardServicio.jpg", alt="")
+                                                    
+                                                    .swiper-slide__card__copy
+                                                        h2 Poligrapas móviles
+                                                        h3 para el servicio de recolección
+                                                        
+                                            .col-lg-4.swiper-slide.objetFade
+                                                .swiper-slide__card
+                                                    .swiper-slide__card__img
+                                                        picture 
+                                                            source(srcset="../img/Desktop/2Servicios/CardServicio.webp", type="image/webp")
+                                                            img.img-fluid(src="../img/Desktop/2Servicios/CardServicio.jpg", alt="")
+                                                    
+                                                    .swiper-slide__card__copy
+                                                        h2 Compactadoras  
+                                                        h3 de material y basura en sitio
+                                                         
+                                            .col-lg-4.swiper-slide.objetFade
+                                                .swiper-slide__card
+                                                    .swiper-slide__card__img
+                                                        picture 
+                                                            source(srcset="../img/Desktop/2Servicios/CardServicio.webp", type="image/webp")
+                                                            img.img-fluid(src="../img/Desktop/2Servicios/CardServicio.jpg", alt="")
+                                                    
+                                                    .swiper-slide__card__copy
+                                                        h2 Báscula en sitio
+                                                        h3 La instalamos para ti
+                                                        
+                                            .col-lg-4.swiper-slide.objetFade
+                                                .swiper-slide__card
+                                                    .swiper-slide__card__img
+                                                        picture 
+                                                            source(srcset="../img/Desktop/2Servicios/CardServicio.webp", type="image/webp")
+                                                            img.img-fluid(src="../img/Desktop/2Servicios/CardServicio.jpg", alt="")
+                                                    
+                                                    .swiper-slide__card__copy
+                                                        h2 Personal especializado
+                                                        h3 sin costo adicional
+                                            
+                                            .col-lg-4.swiper-slide.objetFade
+                                                .swiper-slide__card
+                                                    .swiper-slide__card__img
+                                                        picture 
+                                                            source(srcset="../img/Desktop/2Servicios/CardServicio.webp", type="image/webp")
+                                                            img.img-fluid(src="../img/Desktop/2Servicios/CardServicio.jpg", alt="")
+                                                    
+                                                    .swiper-slide__card__copy
+                                                        h2 Flota de camiones
+                                                        h3 para servicio integral
+                                        
+                                    
+                                    .swiper-nav
+                                        .swiper-button-prev
+                                        .swiper-button-next
+                                    
+                                    .swiper-pagination.justify-content-center.align-items-center.d-flex
+                                    
+                                    
+                                .tab-pane.fade#transformacion(role='tabpanel' aria-labelledby='transformacion-tab') 3
+
+
+        section.promos
+            img.fondo3(src="img/fondo3.svg" alt="")
+
+            svg#path1(width='751px' height='824px' viewBox='0 0 751 824')
+                g#Page-1(stroke='none' stroke-width='1' fill='none' fill-rule='evenodd')
+                    path(d="M707.699302,793.745039 L719.820771,230.480114 L387.954512,30.3141528 C293.370261,-26.7345739 170.447445,3.69398073 113.398718,98.2782319 C100.034329,120.435795 91.0966617,144.976215 87.0813138,170.538717 L1.39332472,716.045467 L1.39332472,716.045467" id="Path-5" stroke="#F9BB00" stroke-width="2")
+
+            .container-fluid
+                .row.align-items-center.objetFade
+                    .col-12.promos--img
+
+                    .col-12.col-lg-8.offset-lg-3.offset-xl-4
+                        .promos--copy
+                            h2.titleBig 
+                                b Promociones    
+
+                            .row
+                                - var n = 0;
+                                while n < 3
+                                    - ++n
+                                    .col-lg-4
+                                        .promos--copy__card
+                                            h5 Precio preferencial
+                                            h2 En volumen de lámina
+                                            a(href="#!") 
+                                                button.btn.secundario Me interesa
+
+                            a(href="#!").linkBorder Ver las promociones 
+
+
+        include includes/footer.pug

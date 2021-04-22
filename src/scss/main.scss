@@ -1,0 +1,28 @@
+
+
+//var
+@import "core/vars";
+
+//fonts
+@import "core/fonts";
+
+//mixins
+@import "core/mixins";
+
+//utilities
+@import "core/utilities";
+
+//general styles
+@import "layout/body";
+
+//media viewports
+@import "layout/media";
+
+//COMPONENTS
+@import "components/hero";
+@import "components/forms";
+@import "components/modals";
+@import "components/slider";
+
+
+
