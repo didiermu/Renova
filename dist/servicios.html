@@ -15,7 +15,7 @@
         <div class="row">   
           <div class="col-12 header--navegacion">
             <div class="header--navegacion--logo"><a href="/"> 
-                <picture> <img class="img-fluid" srcset="img/RenovaLogo.svg"></picture></a></div>
+                <div class="header--navegacion--logo--img d-flex"><img class="img-fluid" id="logo1" src="img/logo1.svg"><img class="img-fluid" src="img/logo2.svg"></div></a></div>
             <nav class="navbar-expand-lg">
               <div class="btnHam" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"></div>
               <div class="collapse navbar-collapse" id="navbarNav">
@@ -170,10 +170,10 @@
                     </div>
                   </div>
                   <div class="swiper-nav">
-                    <div class="swiper-button-prev"></div>
-                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev" id="nav1"></div>
+                    <div class="swiper-button-next" id="nav2"></div>
                   </div>
-                  <div class="swiper-pagination justify-content-center align-items-center d-flex"></div>
+                  <div class="swiper-pagination justify-content-center align-items-center d-flex" id="pag1"></div>
                 </div>
                 <div class="tab-pane fade" id="servicio" role="tabpanel" aria-labelledby="servicio-tab">
                   <h2>Servicio build to suit en tu empresa con maquinaria<br>especializada como:</h2>
@@ -286,58 +286,202 @@
                     </div>
                   </div>
                   <div class="swiper-nav">
-                    <div class="swiper-button-prev"></div>
-                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev" id="nav3"></div>
+                    <div class="swiper-button-next" id="nav4"> </div>
                   </div>
-                  <div class="swiper-pagination justify-content-center align-items-center d-flex"></div>
+                  <div class="swiper-pagination justify-content-center align-items-center d-flex" id="pag2"></div>
                 </div>
-                <div class="tab-pane fade" id="transformacion" role="tabpanel" aria-labelledby="transformacion-tab">3</div>
+                <div class="tab-pane fade" id="transformacion" role="tabpanel" aria-labelledby="transformacion-tab">
+                  <h2>Transformación, separación e identificación <br>de materiales.</h2>
+                  <div class="swiper-container sliderServicios3">
+                    <div class="swiper-wrapper">
+                      <div class="col-lg-4 swiper-slide objetFade">
+                        <div class="swiper-slide__card">
+                          <div class="swiper-slide__card__img">
+                            <picture> 
+                              <source srcset="../img/Desktop/2Servicios/CardServicio.webp" type="image/webp"><img class="img-fluid" src="../img/Desktop/2Servicios/CardServicio.jpg" alt="">
+                            </picture>
+                          </div>
+                          <div class="swiper-slide__card__copy">
+                            <h2>Compactadora de paca</h2>
+                            <h3>de alta densidad</h3>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-lg-4 swiper-slide objetFade">
+                        <div class="swiper-slide__card">
+                          <div class="swiper-slide__card__img">
+                            <picture> 
+                              <source srcset="../img/Desktop/2Servicios/CardServicio.webp" type="image/webp"><img class="img-fluid" src="../img/Desktop/2Servicios/CardServicio.jpg" alt="">
+                            </picture>
+                          </div>
+                          <div class="swiper-slide__card__copy">
+                            <h2>Compactadoras verticales</h2>
+                            <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit</h3>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-lg-4 swiper-slide objetFade">
+                        <div class="swiper-slide__card">
+                          <div class="swiper-slide__card__img">
+                            <picture> 
+                              <source srcset="../img/Desktop/2Servicios/CardServicio.webp" type="image/webp"><img class="img-fluid" src="../img/Desktop/2Servicios/CardServicio.jpg" alt="">
+                            </picture>
+                          </div>
+                          <div class="swiper-slide__card__copy">
+                            <h2>Compactadoras de gran volumen</h2>
+                            <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit</h3>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-lg-4 swiper-slide objetFade">
+                        <div class="swiper-slide__card">
+                          <div class="swiper-slide__card__img">
+                            <picture> 
+                              <source srcset="../img/Desktop/2Servicios/CardServicio.webp" type="image/webp"><img class="img-fluid" src="../img/Desktop/2Servicios/CardServicio.jpg" alt="">
+                            </picture>
+                          </div>
+                          <div class="swiper-slide__card__copy">
+                            <h2>Compactadoras de basura</h2>
+                            <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit</h3>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-lg-4 swiper-slide objetFade">
+                        <div class="swiper-slide__card">
+                          <div class="swiper-slide__card__img">
+                            <picture> 
+                              <source srcset="../img/Desktop/2Servicios/CardServicio.webp" type="image/webp"><img class="img-fluid" src="../img/Desktop/2Servicios/CardServicio.jpg" alt="">
+                            </picture>
+                          </div>
+                          <div class="swiper-slide__card__copy">
+                            <h2>Tritutadoras de materiales</h2>
+                            <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit</h3>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-lg-4 swiper-slide objetFade">
+                        <div class="swiper-slide__card">
+                          <div class="swiper-slide__card__img">
+                            <picture> 
+                              <source srcset="../img/Desktop/2Servicios/CardServicio.webp" type="image/webp"><img class="img-fluid" src="../img/Desktop/2Servicios/CardServicio.jpg" alt="">
+                            </picture>
+                          </div>
+                          <div class="swiper-slide__card__copy">
+                            <h2>Peletizadoras de plásticos</h2>
+                            <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit</h3>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-lg-4 swiper-slide objetFade">
+                        <div class="swiper-slide__card">
+                          <div class="swiper-slide__card__img">
+                            <picture> 
+                              <source srcset="../img/Desktop/2Servicios/CardServicio.webp" type="image/webp"><img class="img-fluid" src="../img/Desktop/2Servicios/CardServicio.jpg" alt="">
+                            </picture>
+                          </div>
+                          <div class="swiper-slide__card__copy">
+                            <h2>Procesarodas de cable</h2>
+                            <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit</h3>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-lg-4 swiper-slide objetFade">
+                        <div class="swiper-slide__card">
+                          <div class="swiper-slide__card__img">
+                            <picture> 
+                              <source srcset="../img/Desktop/2Servicios/CardServicio.webp" type="image/webp"><img class="img-fluid" src="../img/Desktop/2Servicios/CardServicio.jpg" alt="">
+                            </picture>
+                          </div>
+                          <div class="swiper-slide__card__copy">
+                            <h2>Cizallas</h2>
+                            <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit</h3>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-nav">
+                    <div class="swiper-button-prev" id="nav5"></div>
+                    <div class="swiper-button-next" id="nav6"></div>
+                  </div>
+                  <div class="swiper-pagination justify-content-center align-items-center d-flex" id="pag3"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="promos"><img class="fondo3" src="img/fondo3.svg" alt="">
+        <svg id="path1" width="751px" height="824px" viewBox="0 0 751 824">
+          <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+            <path d="M707.699302,793.745039 L719.820771,230.480114 L387.954512,30.3141528 C293.370261,-26.7345739 170.447445,3.69398073 113.398718,98.2782319 C100.034329,120.435795 91.0966617,144.976215 87.0813138,170.538717 L1.39332472,716.045467 L1.39332472,716.045467" id="Path-5" stroke="#F9BB00" stroke-width="2"></path>
+          </g>
+        </svg>
+        <div class="container-fluid">
+          <div class="row align-items-center objetFade">
+            <div class="col-12 promos--img"></div>
+            <div class="col-12 col-lg-9 offset-lg-3 offset-xl-4">
+              <div class="promos--copy">
+                <h2 class="titleBig"> <b>Certificaciones <br>que nos respaldan    </b></h2>
+                <div class="row">
+                  <div class="col-lg-4">
+                    <div class="promos--copy__card d-flex"><span class="icon-Certificaciones"></span>
+                      <h2>Permiso para transporte</h2>
+                      <h4>de RME por parte de SEDESU para el estado de Querétaro.</h4>
+                    </div>
+                  </div>
+                  <div class="col-lg-4">
+                    <div class="promos--copy__card d-flex"><span class="icon-Certificaciones"></span>
+                      <h2>Permiso para transporte</h2>
+                      <h4>de RME por parte de SMAOT Guanajuato.</h4>
+                    </div>
+                  </div>
+                  <div class="col-lg-4">
+                    <div class="promos--copy__card d-flex"><span class="icon-Certificaciones"></span>
+                      <h2>Permiso para transporte</h2>
+                      <h4>de RME por parte de SEDESU para el estado de Nuevo León.</h4>
+                    </div>
+                  </div>
+                </div>
+                <div class="row promos--certificados">
+                  <div class="col-lg-6">
+                    <div class="promos--certificados__lista"> 
+                      <h2>Permiso para ingreso</h2>
+                      <h4>a relleno sanitario Querétaro.</h4>
+                    </div>
+                  </div>
+                  <div class="col-lg-6">
+                    <div class="promos--certificados__lista"> 
+                      <h2>Permiso para reciclaje</h2>
+                      <h4>con SMA de SLW.</h4>
+                    </div>
+                  </div>
+                  <div class="col-lg-6">
+                    <div class="promos--certificados__lista"> 
+                      <h2>Permiso para tratamiento</h2>
+                      <h4>de residuos con SMA de SLW.</h4>
+                    </div>
+                  </div>
+                  <div class="col-lg-6">
+                    <div class="promos--certificados__lista"> 
+                      <h2>Permiso para almacenamiento</h2>
+                      <h4>y acopio de RME en SLW.</h4>
+                    </div>
+                  </div>
+                  <div class="col-lg-6">
+                    <div class="promos--certificados__lista"> 
+                      <h2>Permiso para transporte</h2>
+                      <h4>de Residuos Sólidos Urbanos Apaseo el Grande.</h4>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </section>
     </main>
-    <section class="promos"><img class="fondo3" src="img/fondo3.svg" alt="">
-      <svg id="path1" width="751px" height="824px" viewBox="0 0 751 824">
-        <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-          <path d="M707.699302,793.745039 L719.820771,230.480114 L387.954512,30.3141528 C293.370261,-26.7345739 170.447445,3.69398073 113.398718,98.2782319 C100.034329,120.435795 91.0966617,144.976215 87.0813138,170.538717 L1.39332472,716.045467 L1.39332472,716.045467" id="Path-5" stroke="#F9BB00" stroke-width="2"></path>
-        </g>
-      </svg>
-      <div class="container-fluid">
-        <div class="row align-items-center objetFade">
-          <div class="col-12 promos--img"></div>
-          <div class="col-12 col-lg-8 offset-lg-3 offset-xl-4">
-            <div class="promos--copy">
-              <h2 class="titleBig"> <b>Promociones    </b></h2>
-              <div class="row">
-                <div class="col-lg-4">
-                  <div class="promos--copy__card">
-                    <h5>Precio preferencial</h5>
-                    <h2>En volumen de lámina</h2><a href="#!"> 
-                      <button class="btn secundario">Me interesa</button></a>
-                  </div>
-                </div>
-                <div class="col-lg-4">
-                  <div class="promos--copy__card">
-                    <h5>Precio preferencial</h5>
-                    <h2>En volumen de lámina</h2><a href="#!"> 
-                      <button class="btn secundario">Me interesa</button></a>
-                  </div>
-                </div>
-                <div class="col-lg-4">
-                  <div class="promos--copy__card">
-                    <h5>Precio preferencial</h5>
-                    <h2>En volumen de lámina</h2><a href="#!"> 
-                      <button class="btn secundario">Me interesa</button></a>
-                  </div>
-                </div>
-              </div><a class="linkBorder" href="#!">Ver las promociones </a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
     <footer class="footer d-flex">
       <div class="container">
         <div class="row align-items-center">

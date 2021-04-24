@@ -1,10 +1,5 @@
 @charset "UTF-8";
 
-body .btn--down span:first-of-type,
-body .btn--down span:last-of-type {
-  animation: flecha 1.5s ease-in-out infinite;
-}
-
 :root {
   --texto: #2F3B46;
   --blanco: #FFFFFF;
@@ -17,11 +12,11 @@ body .btn--down span:last-of-type {
   --primariaRegular: 'Blinker-Regular';
   --primariaBold: 'Blinker-Bold';
   --secundariaRegular: 'Dina-Bold';
-  --h1: calc(78px + 10 * ((100vw - 1280px) / 1920));
-  --h2: calc(31px + 10 * ((100vw - 1280px) / 1920));
-  --h3: calc(23px + 10 * ((100vw - 1280px) / 1920));
-  --h4: calc(19px + 10 * ((100vw - 1280px) / 1920));
-  --h5: calc(17px + 10 * ((100vw - 1280px) / 1920));
+  --h1: calc(72px + 10 * ((100vw - 1280px) / 1920));
+  --h2: calc(30px + 10 * ((100vw - 1280px) / 1920));
+  --h3: calc(22px + 10 * ((100vw - 1280px) / 1920));
+  --h4: calc(18px + 10 * ((100vw - 1280px) / 1920));
+  --h5: calc(16px + 10 * ((100vw - 1280px) / 1920));
   --h6: calc(11px + 10 * ((100vw - 1280px) / 1920));
   --paddingSection: 120px 0;
 }
@@ -229,8 +224,28 @@ body .header--navegacion--logo {
   text-align: center;
 }
 
-body .header--navegacion--logo img {
+body .header--navegacion--logo--img {
   max-width: 220px;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+body .header--navegacion--logo--img #logo1 {
+  margin-right: 5px;
+}
+
+body .header--navegacion--logo--img #logo1.logoGiro {
+  animation: giro 5s ease-in-out 1;
+}
+
+@keyframes giro {
+  0% {
+    transform: rotate(0);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 body .header--navegacion .btnHam {
@@ -261,13 +276,6 @@ body .header--navegacion nav #navbarNav>ul {
   transition: .3s ease-in-out all;
 }
 
-body .header--navegacion nav #navbarNav>ul li::after,
-body .titleBig::after {
-  display: block;
-  background: var(--primario);
-  content: "";
-}
-
 body .header--navegacion nav #navbarNav>ul li {
   text-align: center;
   list-style: none;
@@ -282,9 +290,12 @@ body .header--navegacion nav #navbarNav>ul li {
 }
 
 body .header--navegacion nav #navbarNav>ul li::after {
+  content: "";
+  display: block;
   width: 20px;
   height: 5px;
   border-radius: 10px;
+  background: var(--primario);
   transition: .3s ease-in-out all;
 }
 
@@ -476,6 +487,7 @@ body h1 {
 
 body h2 {
   font-size: var(--h2);
+  line-height: 1.2;
 }
 
 body h3 {
@@ -505,10 +517,13 @@ body .titleBig {
 }
 
 body .titleBig::after {
+  content: "";
+  display: block;
   width: 30px;
   margin-top: 30px;
   height: 5px;
   border-radius: 10px;
+  background: var(--primario);
   transition: .3s ease-in-out all;
 }
 
@@ -524,14 +539,12 @@ body section:not(.hero) {
   overflow: hidden;
 }
 
-body .home .ayuda .col-lg-5,
-body .home .contacto .col-lg-6 {
-  padding-left: 0;
-  -ms-flex-item-align: end;
-  align-self: flex-end;
+body .btn--down span:first-of-type {
+  animation: flecha 1.5s ease-in-out infinite;
 }
 
 body .btn--down span:last-of-type {
+  animation: flecha 1.5s ease-in-out infinite;
   animation-delay: .1s;
 }
 
@@ -622,8 +635,7 @@ body .home .ayuda .path1 {
   opacity: 0;
 }
 
-body .home .ayuda.sectionOn .path1,
-body .home .promos.sectionOn #path1 {
+body .home .ayuda.sectionOn .path1 {
   opacity: 1;
 }
 
@@ -633,6 +645,12 @@ body .home .ayuda.sectionOn .path1 path {
   animation: draw 2s linear forwards;
   animation-iteration-count: 1;
   animation-delay: 0s;
+}
+
+body .home .ayuda .col-lg-5 {
+  padding-left: 0;
+  -ms-flex-item-align: end;
+  align-self: flex-end;
 }
 
 body .home .ayuda .col-lg-7 {
@@ -682,6 +700,11 @@ body .home .dedicamos .path1 {
 
 body .home .dedicamos.sectionOn .path1 {
   opacity: .8;
+}
+
+body .home .promos--copy__card:hover .btn,
+body .home .promos.sectionOn #path1 {
+  opacity: 1;
 }
 
 body .home .dedicamos.sectionOn .path1 path {
@@ -794,10 +817,6 @@ body .home .promos--copy__card:hover {
   height: calc(300px + 150 * ((100vw - 1280px)/ 1920));
 }
 
-body .home .promos--copy__card:hover .btn {
-  opacity: 1;
-}
-
 body .home .promos--copy__card h2 {
   margin: 10px 0 50px;
 }
@@ -842,6 +861,12 @@ body .home .contacto.sectionOn .path1 path {
   animation: draw 4s linear forwards;
   animation-iteration-count: 1;
   animation-delay: 0s;
+}
+
+body .home .contacto .col-lg-6 {
+  padding-left: 0;
+  -ms-flex-item-align: end;
+  align-self: flex-end;
 }
 
 body .home .contacto .col-lg-5 {
@@ -1004,13 +1029,6 @@ body .servicios .nuestros .swiper-nav {
   min-width: 100px;
 }
 
-.hero .btn--down,
-.hero .fondo3,
-.hero .path1 {
-  right: 0;
-  position: absolute;
-}
-
 body .servicios .nuestros .swiper-slide {
   min-width: 390px;
 }
@@ -1073,6 +1091,115 @@ body .servicios .nuestros .swiper-slide__card__copy h2 {
 body .servicios .nuestros .swiper-slide__card__copy h3 {
   color: #FFF;
   opacity: 0;
+}
+
+body .servicios .promos {
+  position: relative;
+}
+
+body .servicios .promos.sectionOn #path1 {
+  opacity: 1;
+}
+
+body .servicios .promos.sectionOn #path1 path {
+  stroke-dasharray: 2000;
+  stroke-dashoffset: 2000;
+  animation: draw 2s linear forwards;
+  animation-iteration-count: 1;
+  animation-delay: 0s;
+}
+
+body .servicios .promos .fondo3 {
+  position: absolute;
+  top: 100px;
+  right: 0;
+  z-index: 1;
+}
+
+body .servicios .promos #path1 {
+  position: absolute;
+  right: -40px;
+  top: 100px;
+  z-index: 1;
+  opacity: 0;
+}
+
+.hero .btn--down,
+.hero .fondo3,
+.hero .path1 {
+  right: 0;
+  position: absolute;
+}
+
+body .servicios .promos--img {
+  height: calc(460px + 400 * ((100vw - 1280px)/ 1920));
+  background: url("../img/Desktop/2Servicios/Certificaciones.webp") center top/cover no-repeat fixed;
+  position: absolute;
+  top: 0;
+  padding: 0;
+}
+
+body .servicios .promos--copy {
+  padding-left: 50px;
+  z-index: 2;
+  position: relative;
+}
+
+body .servicios .promos--copy .titleBig {
+  color: #fff;
+  margin-bottom: 30px;
+}
+
+body .servicios .promos--copy__card {
+  background: #fff;
+  padding: 40px 20px;
+  box-shadow: 0 2px 40px 0 rgba(120,159,183,.16);
+  border-radius: 8px 8px 40px;
+  position: relative;
+  cursor: pointer;
+  transition: .3s ease-in-out all;
+  text-align: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -ms-flex-align: center;
+  align-items: center;
+  min-height: 312px;
+}
+
+body .servicios .promos--copy__card span {
+  width: 60px;
+  height: 60px;
+  background: var(--primario);
+  border-radius: 8px;
+  font-size: 2em;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+  align-items: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+body .servicios .promos--copy__card h2 {
+  margin: 10px 0;
+  color: var(--secundario);
+}
+
+body .servicios .promos--certificados {
+  margin-top: 50px;
+}
+
+body .servicios .promos--certificados__lista {
+  border-left: 3px solid var(--primario);
+  margin-bottom: 60px;
+  padding: 0 0 0 15px;
+}
+
+body .servicios .promos--certificados__lista h2 {
+  color: var(--secundario);
 }
 
 .hero {

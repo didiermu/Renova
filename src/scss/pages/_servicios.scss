@@ -193,4 +193,112 @@
         }
     }
     
+    .promos{
+		position: relative;
+		
+		&.sectionOn{
+			#path1{
+				opacity: 1;
+				
+				path{
+					stroke-dasharray: 2000;
+					stroke-dashoffset:2000;
+					animation: draw 2s linear forwards;
+					animation-iteration-count: 1;
+					animation-delay: 0s;
+				}
+				@keyframes draw {
+					to {
+						stroke-dashoffset: 0;
+					}
+				}
+			}
+		}
+		
+		.fondo3{
+			position: absolute;
+			top: 100px;
+			right: 0;
+			z-index: 1;
+		}
+		
+		#path1{
+			position: absolute;
+			right: -40px;
+			top: 100px;
+			z-index: 1;
+			opacity: 0;
+		}
+		
+		
+		&--img{
+			height: calc(460px + 400 * ((100vw - 1280px) / 1920));
+			background: url(../../img/Desktop/2Servicios/Certificaciones.webp) no-repeat center top / cover fixed;
+			position: absolute;
+			top: 0;
+			padding: 0;
+		}
+		
+		&--copy{
+			padding-left: 50px;
+			z-index: 2;
+			position: relative;
+			
+			.titleBig{
+				color: #fff;
+				margin-bottom: 30px;
+			}
+			
+			
+			&__card{
+				background: #fff;
+				padding: 40px 20px;
+				box-shadow: 0 2px 40px 0 rgba(120,159,183,0.16);
+				border-radius: 8px 8px 40px 8px;
+				position: relative;
+				cursor: pointer;
+				transition: .3s ease-in-out all;
+                text-align: center;
+                justify-content: center;
+                flex-direction: column;
+                align-items: center;
+                min-height: 312px;
+				
+				span{
+					width: 60px;
+					height: 60px;
+					background: var(--primario);
+					border-radius: 8px;
+					font-size: 2em;
+					display: flex;
+					align-items: center;
+					justify-content: center;
+                    margin-bottom: 20px;
+				}
+				
+				h2{
+					margin: 10px 0;
+                    color: var(--secundario);
+				}
+				
+			}
+			
+		}
+        
+        &--certificados{
+            margin-top: 50px;
+            
+            &__lista {
+                border-left: 3px solid var(--primario);
+                margin-bottom: 60px;
+                padding: 0 0 0 15px;
+                
+                h2{
+                    color: var(--secundario);
+				}
+            }
+        }
+        
+	}
+	
 }

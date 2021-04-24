@@ -124,10 +124,10 @@ html(lang='es')
                                         
                                     
                                     .swiper-nav
-                                        .swiper-button-prev
-                                        .swiper-button-next
+                                        .swiper-button-prev#nav1
+                                        .swiper-button-next#nav2
                                     
-                                    .swiper-pagination.justify-content-center.align-items-center.d-flex
+                                    .swiper-pagination.justify-content-center.align-items-center.d-flex#pag1
                                     
                                     
                                 .tab-pane.fade#servicio(role='tabpanel' aria-labelledby='servicio-tab')
@@ -228,43 +228,166 @@ html(lang='es')
                                         
                                     
                                     .swiper-nav
-                                        .swiper-button-prev
-                                        .swiper-button-next
+                                        .swiper-button-prev#nav3
+                                        .swiper-button-next#nav4 
                                     
-                                    .swiper-pagination.justify-content-center.align-items-center.d-flex
+                                    .swiper-pagination.justify-content-center.align-items-center.d-flex#pag2
                                     
                                     
-                                .tab-pane.fade#transformacion(role='tabpanel' aria-labelledby='transformacion-tab') 3
+                                .tab-pane.fade#transformacion(role='tabpanel' aria-labelledby='transformacion-tab')
+                                    h2 Transformación, separación e identificación 
+                                        br
+                                        | de materiales.
+                                    
+                                    
+                                    .swiper-container.sliderServicios3
+                                        .swiper-wrapper
+                                            .col-lg-4.swiper-slide.objetFade
+                                                .swiper-slide__card
+                                                    .swiper-slide__card__img
+                                                        picture 
+                                                            source(srcset="../img/Desktop/2Servicios/CardServicio.webp", type="image/webp")
+                                                            img.img-fluid(src="../img/Desktop/2Servicios/CardServicio.jpg", alt="")
+                                                    
+                                                    .swiper-slide__card__copy
+                                                        h2 Compactadora de paca
+                                                        h3 de alta densidad
+                                            
+                                            .col-lg-4.swiper-slide.objetFade
+                                                .swiper-slide__card
+                                                    .swiper-slide__card__img
+                                                        picture 
+                                                            source(srcset="../img/Desktop/2Servicios/CardServicio.webp", type="image/webp")
+                                                            img.img-fluid(src="../img/Desktop/2Servicios/CardServicio.jpg", alt="")
+                                                    
+                                                    .swiper-slide__card__copy
+                                                        h2 Compactadoras verticales
+                                                        h3 Lorem ipsum dolor sit amet, consectetur adipiscing elit
+                                            .col-lg-4.swiper-slide.objetFade
+                                                .swiper-slide__card
+                                                    .swiper-slide__card__img
+                                                        picture 
+                                                            source(srcset="../img/Desktop/2Servicios/CardServicio.webp", type="image/webp")
+                                                            img.img-fluid(src="../img/Desktop/2Servicios/CardServicio.jpg", alt="")
+                                                    
+                                                    .swiper-slide__card__copy
+                                                        h2 Compactadoras de gran volumen
+                                                        h3 Lorem ipsum dolor sit amet, consectetur adipiscing elit
+                                            .col-lg-4.swiper-slide.objetFade
+                                                .swiper-slide__card
+                                                    .swiper-slide__card__img
+                                                        picture 
+                                                            source(srcset="../img/Desktop/2Servicios/CardServicio.webp", type="image/webp")
+                                                            img.img-fluid(src="../img/Desktop/2Servicios/CardServicio.jpg", alt="")
+                                                    
+                                                    .swiper-slide__card__copy
+                                                        h2 Compactadoras de basura
+                                                        h3 Lorem ipsum dolor sit amet, consectetur adipiscing elit
+                                            .col-lg-4.swiper-slide.objetFade
+                                                .swiper-slide__card
+                                                    .swiper-slide__card__img
+                                                        picture 
+                                                            source(srcset="../img/Desktop/2Servicios/CardServicio.webp", type="image/webp")
+                                                            img.img-fluid(src="../img/Desktop/2Servicios/CardServicio.jpg", alt="")
+                                                    
+                                                    .swiper-slide__card__copy
+                                                        h2 Tritutadoras de materiales
+                                                        h3 Lorem ipsum dolor sit amet, consectetur adipiscing elit
+                                            .col-lg-4.swiper-slide.objetFade
+                                                .swiper-slide__card
+                                                    .swiper-slide__card__img
+                                                        picture 
+                                                            source(srcset="../img/Desktop/2Servicios/CardServicio.webp", type="image/webp")
+                                                            img.img-fluid(src="../img/Desktop/2Servicios/CardServicio.jpg", alt="")
+                                                    
+                                                    .swiper-slide__card__copy
+                                                        h2 Peletizadoras de plásticos
+                                                        h3 Lorem ipsum dolor sit amet, consectetur adipiscing elit
+                                            .col-lg-4.swiper-slide.objetFade
+                                                .swiper-slide__card
+                                                    .swiper-slide__card__img
+                                                        picture 
+                                                            source(srcset="../img/Desktop/2Servicios/CardServicio.webp", type="image/webp")
+                                                            img.img-fluid(src="../img/Desktop/2Servicios/CardServicio.jpg", alt="")
+                                                    
+                                                    .swiper-slide__card__copy
+                                                        h2 Procesarodas de cable
+                                                        h3 Lorem ipsum dolor sit amet, consectetur adipiscing elit
+                                            .col-lg-4.swiper-slide.objetFade
+                                                .swiper-slide__card
+                                                    .swiper-slide__card__img
+                                                        picture 
+                                                            source(srcset="../img/Desktop/2Servicios/CardServicio.webp", type="image/webp")
+                                                            img.img-fluid(src="../img/Desktop/2Servicios/CardServicio.jpg", alt="")
+                                                    
+                                                    .swiper-slide__card__copy
+                                                        h2 Cizallas
+                                                        h3 Lorem ipsum dolor sit amet, consectetur adipiscing elit
+                                                        
+                                    
+                                    .swiper-nav
+                                        .swiper-button-prev#nav5
+                                        .swiper-button-next#nav6
+                                
+                                    .swiper-pagination.justify-content-center.align-items-center.d-flex#pag3
 
 
-        section.promos
-            img.fondo3(src="img/fondo3.svg" alt="")
+            section.promos
+                img.fondo3(src="img/fondo3.svg" alt="")
 
-            svg#path1(width='751px' height='824px' viewBox='0 0 751 824')
-                g#Page-1(stroke='none' stroke-width='1' fill='none' fill-rule='evenodd')
-                    path(d="M707.699302,793.745039 L719.820771,230.480114 L387.954512,30.3141528 C293.370261,-26.7345739 170.447445,3.69398073 113.398718,98.2782319 C100.034329,120.435795 91.0966617,144.976215 87.0813138,170.538717 L1.39332472,716.045467 L1.39332472,716.045467" id="Path-5" stroke="#F9BB00" stroke-width="2")
+                svg#path1(width='751px' height='824px' viewBox='0 0 751 824')
+                    g#Page-1(stroke='none' stroke-width='1' fill='none' fill-rule='evenodd')
+                        path(d="M707.699302,793.745039 L719.820771,230.480114 L387.954512,30.3141528 C293.370261,-26.7345739 170.447445,3.69398073 113.398718,98.2782319 C100.034329,120.435795 91.0966617,144.976215 87.0813138,170.538717 L1.39332472,716.045467 L1.39332472,716.045467" id="Path-5" stroke="#F9BB00" stroke-width="2")
 
-            .container-fluid
-                .row.align-items-center.objetFade
-                    .col-12.promos--img
+                .container-fluid
+                    .row.align-items-center.objetFade
+                        .col-12.promos--img
 
-                    .col-12.col-lg-8.offset-lg-3.offset-xl-4
-                        .promos--copy
-                            h2.titleBig 
-                                b Promociones    
+                        .col-12.col-lg-9.offset-lg-3.offset-xl-4
+                            .promos--copy
+                                h2.titleBig 
+                                    b Certificaciones 
+                                        br 
+                                        | que nos respaldan    
 
-                            .row
-                                - var n = 0;
-                                while n < 3
-                                    - ++n
+                                .row
                                     .col-lg-4
-                                        .promos--copy__card
-                                            h5 Precio preferencial
-                                            h2 En volumen de lámina
-                                            a(href="#!") 
-                                                button.btn.secundario Me interesa
-
-                            a(href="#!").linkBorder Ver las promociones 
-
+                                        .promos--copy__card.d-flex
+                                            span.icon-Certificaciones
+                                            h2 Permiso para transporte
+                                            h4 de RME por parte de SEDESU para el estado de Querétaro.
+                                    .col-lg-4
+                                        .promos--copy__card.d-flex
+                                            span.icon-Certificaciones
+                                            h2 Permiso para transporte
+                                            h4 de RME por parte de SMAOT Guanajuato.
+                                    .col-lg-4
+                                        .promos--copy__card.d-flex
+                                            span.icon-Certificaciones
+                                            h2 Permiso para transporte
+                                            h4 de RME por parte de SEDESU para el estado de Nuevo León.
+                                
+                                .row.promos--certificados
+                                    .col-lg-6
+                                        .promos--certificados__lista 
+                                            h2 Permiso para ingreso
+                                            h4 a relleno sanitario Querétaro.
+                                    .col-lg-6
+                                        .promos--certificados__lista 
+                                            h2 Permiso para reciclaje
+                                            h4 con SMA de SLW.
+                                    .col-lg-6
+                                        .promos--certificados__lista 
+                                            h2 Permiso para tratamiento
+                                            h4 de residuos con SMA de SLW.
+                                    .col-lg-6
+                                        .promos--certificados__lista 
+                                            h2 Permiso para almacenamiento
+                                            h4 y acopio de RME en SLW.
+                                    .col-lg-6
+                                        .promos--certificados__lista 
+                                            h2 Permiso para transporte
+                                            h4 de Residuos Sólidos Urbanos Apaseo el Grande.
+                                
 
         include includes/footer.pug
