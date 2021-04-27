@@ -15,33 +15,39 @@
 			background: url(../../img/fondo1.svg) no-repeat left top / contain;
 		}
 		
+		.poligono{
+			top:-30px;	
+			right: 0;
+		}
+		
+		.objetFade{
+			img{
+				left:-100%;
+				position: relative;
+			}	
+			
+			h1,h2,h3,h4,h5,h6,a{
+				transform: translateX(50%);
+			}
+			
+			&.transition1{
+				img{
+					left: 0;
+				}
+				h1,h2,h3,h4,h5,h6,a{
+					transform: translateX(0%);
+				}
+			}
+		} 
+		
 		.path1{
 			position: absolute;
 			left: 0px;
 			bottom: 0px;
 			z-index: 0;
-			opacity: 0;
+			width: calc(1000px + 1500 * ((100vw - 1280px) / 1920));
+			height: calc(800px + 1300 * ((100vw - 1280px) / 1920));
 		}
-		
-		&.sectionOn{
-			.path1{
-				opacity: 1;
-				
-				path{
-					stroke-dasharray: 2000;
-					stroke-dashoffset:2000;
-					animation: draw 2s linear forwards;
-					animation-iteration-count: 1;
-					animation-delay: 0s;
-				}
-				@keyframes draw {
-					to {
-						stroke-dashoffset: 0;
-					}
-				}
-			}
-		}
-		
 		
 		.col-lg-5{
 			padding-left: 0;	
@@ -76,6 +82,11 @@
 					margin-bottom: 20px;
 				}
 			}
+			
+			.linkBorder{
+				display: inline-block;
+				transition: 1s ease-in-out all;
+			}
 		}
 	}
 	
@@ -83,32 +94,40 @@
 		position: relative;
 		background: url(../../img/fondo2.svg) no-repeat left top /  contain;
 		
-		.path1{
-			position: absolute;
-			left: 0px;
-			top: 0px;
-			z-index: 0;
-			opacity: 0;
+		.poligono{
+			top:100px;	
+			right: -30px;
+			animation: mancha 15s linear infinite reverse;
 		}
 		
-		&.sectionOn{
-			.path1{
-				opacity: .8;
-				
-				path{
-					stroke-dasharray: 2000;
-					stroke-dashoffset:2000;
-					animation: draw 2s linear forwards;
-					animation-iteration-count: 1;
-					animation-delay: 0s;
+		.path1{
+			position: absolute;
+			left: -40px;
+			top: -20px;
+			z-index: 0;
+		}
+		
+		.objetFade{
+			img{
+				right:-100%;
+				position: relative;
+			}	
+			
+			h1,h2,h3,h4,h5,h6,a{
+				transform: translateX(-50%);
+			}
+			
+			&.transition1{
+				img{
+					right: 0;
 				}
-				@keyframes draw {
-					to {
-						stroke-dashoffset: 0;
-					}
+				h1,h2,h3,h4,h5,h6,a{
+					transform: translateX(0%);
 				}
 			}
-		}
+		} 
+		
+		
 		
 		&--copy{
 			padding-left: 50px;
@@ -120,11 +139,16 @@
 			h4{
 				margin: 30px 0;
 			}
+			.linkBorder{
+				display: inline-block;
+				transition: 1s ease-in-out all;
+			}
 		}
+		
 		&--img{
 			position: absolute;
 			right: 0;
-			bottom: 0;
+			bottom: 80px;
 			min-width: 650px;
 			width: 50%;
 			max-width: 800px;
@@ -135,23 +159,10 @@
 	.promos{
 		position: relative;
 		
-		&.sectionOn{
-			#path1{
-				opacity: 1;
-				
-				path{
-					stroke-dasharray: 2000;
-					stroke-dashoffset:2000;
-					animation: draw 2s linear forwards;
-					animation-iteration-count: 1;
-					animation-delay: 0s;
-				}
-				@keyframes draw {
-					to {
-						stroke-dashoffset: 0;
-					}
-				}
-			}
+		.poligono{
+			bottom:100px;	
+			left: -30px;
+			max-width:200px;
 		}
 		
 		.fondo3{
@@ -166,17 +177,41 @@
 			right: -40px;
 			top: 100px;
 			z-index: 1;
-			opacity: 0;
 		}
 		
 		
 		&--img{
-			height: calc(380px + 400 * ((100vw - 1280px) / 1920));
-			background: url(../../img/Desktop/1Home/Secc3.webp) no-repeat center top / cover fixed;
+			height: calc(380px + 400 * ((100vw - 1280px) / 1920)) !important;
 			position: absolute;
+			overflow: hidden;
 			top: 0;
 			padding: 0;
+			background: url(../../img/Desktop/1Home/Secc3.webp) no-repeat center / cover fixed;
+			
+			.imageHolder{
+				height: calc(380px + 400 * ((100vw - 1280px) / 1920)) !important;
+				
+				img{
+					opacity: 1;
+					transition: none;
+				}
+				
+			}
 		}
+		
+		.transition1{
+			.promos--copy__card{
+				transform: translateX(0px) !important;
+				opacity: 1;
+			}	
+		}
+		
+		.objetFade-On{
+			.promos--copy__card{
+				transition: .4s ease-in-out all !important;
+			}
+		}
+		
 		
 		&--copy{
 			padding-left: 50px;
@@ -188,9 +223,40 @@
 				margin-bottom: 80px;
 			}
 			
-			.col-lg-4{
+			.row{
 				min-height: calc(350px + 150 * ((100vw - 1280px) / 1920));
 			}
+			
+			.col-lg-4{
+				height: calc(230px + 150 * ((100vw - 1280px) / 1920));
+				transition: 1s ease-in-out all;
+				
+				&:first-of-type{
+					.promos--copy__card{
+						transform: translateX(-50px);
+						transition: .6s ease-in-out all;
+					}
+				}
+				&:nth-of-type(2){
+					.promos--copy__card{
+						transform: translateX(-100px);
+						transition: .8s ease-in-out all;
+					}
+				}
+				&:last-of-type{
+					.promos--copy__card{
+						transform: translateX(-150px);
+						transition: 1s ease-in-out all;
+					}
+				}
+				
+				&:hover{
+					.promos--copy__card{
+						padding-bottom: 60px;	
+					}
+				}
+			}
+			
 			
 			&__card{
 				background: #fff;
@@ -199,8 +265,7 @@
 				border-radius: 8px 8px 40px 8px;
 				position: relative;
 				cursor: pointer;
-				height: calc(230px + 150 * ((100vw - 1280px) / 1920));
-				transition: .3s ease-in-out all;
+				opacity: 0;
 				
 				&:before{
 					content: "\e907";
@@ -219,12 +284,12 @@
 				}
 				
 				&:hover{
-					height: calc(300px + 150 * ((100vw - 1280px) / 1920));
 					
 					.btn{
 						opacity: 1;
 					}
 				}
+				
 				
 				h2{
 					margin: 10px 0 50px;
@@ -235,6 +300,7 @@
 					opacity: 0;
 					position: absolute;
 					bottom: 30px;
+					transition: .3s ease-in-out all;
 				}
 			}
 			
@@ -252,31 +318,44 @@
 		padding: 0;
 		overflow: initial;
 		
+		.poligono{
+			bottom:100px;	
+			right: -30px;
+		}
+		
 		.path1{
 			position: absolute;
 			left: 100px;
 			top: 0px;
 			z-index: 0;
-			opacity: 0;
+			width: calc(750px + 750 * ((100vw - 1280px) / 1920));
+			height: calc(550px + 50 * ((100vw - 1280px) / 1920));
 		}
 		
-		&.sectionOn{
-			.path1{
-				opacity: .8;
-				
-				path{
-					stroke-dasharray: 2000;
-					stroke-dashoffset:2000;
-					animation: draw 4s linear forwards;
-					animation-iteration-count: 1;
-					animation-delay: 0s;
+		.objetFade{
+			img{
+				left:-100%;
+				position: relative;
+			}	
+			
+			h1,h2,h3,h4,h5,h6,a{
+				transform: translateX(50%);
+			}
+			
+			&.transition1{
+				img{
+					left: 0;
 				}
-				@keyframes draw {
-					to {
-						stroke-dashoffset: 0;
-					}
+				h1,h2,h3,h4,h5,h6,a{
+					transform: translateX(0%);
+					opacity: 1;
 				}
 			}
+		} 
+		
+		a{
+			transition: 1s ease-in-out all;	
+			opacity: 0;
 		}
 		
 		.col-lg-6{
@@ -286,7 +365,6 @@
 		
 		.col-lg-5{
 			max-width: 665px;
-			margin-bottom: 50px;
 		}
 		
 		.titleBig{
@@ -300,10 +378,6 @@
 		&--img{
 			position: absolute;
 			bottom: 0;
-			//left: 0;
-			//min-width: 640px;
-			//width: 100%;
-			//max-width: 720px;
 		}
 		
 		&--copy{
@@ -320,4 +394,17 @@
 	.home .ayuda .col-lg-7{
 		max-width: 58.333333%;
 	}
+	
+	.home .contacto .col-lg-5{
+		margin-bottom: 100px;
+	}
 }
+
+/// SAFARI
+
+@media not all and (min-resolution:.001dpcm){ @supports (-webkit-appearance:none) {
+	.home .promos--img{
+		background: url(../img/Desktop/1Home/Secc3.jpg) center/cover no-repeat fixed;
+	}
+	
+}}

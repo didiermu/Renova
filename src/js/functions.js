@@ -12,90 +12,13 @@ function menu(){
 
 /// EFECTOS
 
-function efectoLogo() {
-	var c = 0;
-	var t;
-	var timer_is_on = 0;
-	
-	function timedCount() {
-		console.log(c);
-		c = c + 1;
-		t = setTimeout(timedCount, 1000);
-		
-		if(c==6){
-			c=0;
-			$("#logo1").removeClass("logoGiro");
-		}
-	  }
-	  
-	  function startCount() {
-		if (!timer_is_on) {
-		  timer_is_on = 1;
-		  timedCount();
-		}
-	  }
-	  
-	  function stopCount() {
-		clearTimeout(t);
-		c = 0;
-		timer_is_on = 0;
-		console.log(c);
-	  }
-	
-	//  stopCount();  
-	function sectionFadeLogo() {
-		var seccion = $("section");
-		seccion.each(function () {
-			var posSection = $(this).offset().top;
-			var scrolleo = $(window).scrollTop();
-			
-			if (scrolleo > posSection) {
-				$("#logo1").addClass("logoGiro");
-				startCount();
-				
-				//console.log("entra");
-			} else {
-				
-				//console.log("sale");
-			}
-		});
-	}
-	
-	sectionFadeLogo();
-	 
-	$(document).scroll(function() {
-		sectionFadeLogo();
-	});
-	
-	//window.addEventListener("scroll", function(){ 
-	//	var sectionFade = $("section");
-	//	setTimeout(function(){
-	//		$("#logo1").removeClass("logoGiro");
-	//	},5000);
-	//	sectionFade.each(function () {
-	//		var posSection = $(this).offset().top;
-	//		var scrolleo = $(window).scrollTop();
-	//		
-	//		if (scrolleo > posSection) {
-	//			$("#logo1").addClass("logoGiro");
-	//			console.log("entra");
-	//		} else {
-	//			console.log("sale");
-	//		}
-	//	
-	//	});
-	//	
-	//}, false);
-	
- }
  
- 
- function efectoFade() {
+function efectoFade() {
         
 	function sectionFade() {
 		var sectionFade = $("section");
 		sectionFade.each(function () {
-			var posSection = $(this).offset().top - 400;
+			var posSection = $(this).offset().top - 300;
 			var scrolleo = $(window).scrollTop();
 			
 			if (scrolleo > posSection) {
@@ -109,16 +32,22 @@ function efectoLogo() {
 			}
 		});
 		
-		if ($(".dedicamos").hasClass("sectionOn")){
+		if ($(".dedicamos").hasClass("sectionOn")||$(".promos").hasClass("sectionOn")){
 			$(".header").addClass("black");
 		}
 		
-		//else if($(".hero").hasClass("sectionOn")||$(".ayuda").hasClass("sectionOn")||$(".promos").hasClass("sectionOn")||$(".contacto").hasClass("sectionOn")){
-		//	$(".header").removeClass("black");
-		//}
-
 		else{
 			$(".header").removeClass("black");
+		}
+		
+		if ($(".promos").hasClass("sectionOn")){
+			setTimeout(function(){
+				$(".promos .objetFade").addClass("objetFade-On");
+			},2000);
+		}
+		
+		else{
+			$(".promos .objetFade").removeClass("objetFade-On");
 		}
 	}
 	 
@@ -130,192 +59,90 @@ function efectoLogo() {
 		sectionFade();
 	});
 	
- }
-	
- function efectoFadeServicios() {
-	
-	window.addEventListener("scroll", function(){ 
-		var sectionFade = $("section");
-		setTimeout(function(){
-			$("#logo1").removeClass("logoGiro");
-		},5000);
-		sectionFade.each(function () {
-			var posSection = $(this).offset().top - 300;
-			var scrolleo = $(window).scrollTop();
-			
-			if (scrolleo > posSection) {
-				$(this).find($(".objetFade")).addClass("transition1");
-				$(this).addClass("sectionOn");
-				$("#logo1").addClass("logoGiro");
-			} else {
-				$(this).find($(".objetFade")).removeClass("transition1");
-				$(this).removeClass("sectionOn");
-			}
-		
-		});
-		
-	}, false);
-	
- }
- 
+}
 
-function efectoParallax(){
-	var lastScrollTop = 0;
-	var suma = 0;
-	window.addEventListener("scroll", function(){ 
-		
-		var	iScrollPos = 0,
-			objParallax = $(".objParallax"),
-			posSection = objParallax.parents("section").offset().top - 400,
-			scrolleo = $(window).scrollTop(), //posision scroll
-			heightSection = objParallax.parents("section").height() + 300,
-			limiteParallax = posSection + heightSection;
-		
-		
-		if (scrolleo > posSection) {
-			//console.log("si");
-			
-			if(scrolleo < limiteParallax){
-				//console.log("si sect");
-				
-				var st = window.pageYOffset || document.documentElement.scrollTop;
-				if (st > lastScrollTop){
-					//console.log("downscroll code");
+function imgParallax(){
+	//$('.img-holder-promos').imageScroll({
+	//	container: $('.promos--img'),
+	//	speed:.4,
+	//});	
+	$('.img-holder-hero').imageScroll({
+		container: $('.hero'),
+		speed:.9,
+	});		
+}
+
+function drawSvg(){
+	function pathPrepare ($el) {
+		var lineLength = $el[0].getTotalLength();
+		$el.css("stroke-dasharray", lineLength);
+		$el.css("stroke-dashoffset", lineLength);
+	}
+
+	var $pathAyuda = $("#pathAyuda");
+	var $pathDedicamos = $("#pathDedicamos");
+	var $pathPromos = $("#pathPromos");
+	var $pathContacto = $("#pathContacto");
+
+	// prepare SVG
+	
+	pathPrepare($pathAyuda);
+	pathPrepare($pathDedicamos);
+	pathPrepare($pathPromos);
+	pathPrepare($pathContacto);
+
+	// init controller
+	var controller = new ScrollMagic.Controller();
+
+	// build tween
+	
+	var tween2 = new TimelineMax()
+		.add(TweenMax.to($pathAyuda, 0.5, {strokeDashoffset: 0, ease:Linear.easeNone}))
+		.add(TweenMax.to("path", 1, {ease:Linear.easeNone}), 0);
+	
+	var tween3 = new TimelineMax()
+		.add(TweenMax.to($pathDedicamos, 0.5, {strokeDashoffset: 0, ease:Linear.easeNone}))
+		.add(TweenMax.to("path", 1, {ease:Linear.easeNone}), 0);
+	
+	var tween4 = new TimelineMax()
+		.add(TweenMax.to($pathPromos, 0.8, {strokeDashoffset: 0, ease:Linear.easeNone}))
+		.add(TweenMax.to("path", 1, {ease:Linear.easeNone}), 0);
+	
+	var tween5 = new TimelineMax()
+		.add(TweenMax.to($pathContacto, 0.6, {strokeDashoffset: 0, ease:Linear.easeNone}))
+		.add(TweenMax.to("path", 1, {ease:Linear.easeNone}), 0);
+
+	// build scene
+	
+	var scene2 = new ScrollMagic.Scene({triggerElement: "#triggerAyuda", duration: 600, tweenChanges: true})
+					.setTween(tween2)
+					.addTo(controller);
 					
-					suma = suma + .3;
-                    objParallax.css("transform", "translateY(" + suma + "px)");
-					
-				} else {
-					//console.log("upscroll code");
-				
-					suma = suma - .3;
-                    objParallax.css("transform", "translateY(" + suma + "px)");
-					
-				}
-				lastScrollTop = st <= 0 ? 0 : st; // For Mobile or negative scrolling
-				
-			} else{
-				//console.log("no sect");
-			}
-			
-		} else {
-			//console.log("no");
-		}
-		
-		
-	}, false);
+	var scene3 = new ScrollMagic.Scene({triggerElement: "#triggerDedicamos", duration: 600, tweenChanges: true})
+					.setTween(tween3)
+					.addTo(controller);
+	
+	var scene4 = new ScrollMagic.Scene({triggerElement: "#triggerPromos", duration: 600, tweenChanges: true})
+					.setTween(tween4)
+					.addTo(controller);
+	
+	var scene5 = new ScrollMagic.Scene({triggerElement: "#triggerContacto", duration: 600, tweenChanges: true})
+					.setTween(tween5)
+					.addTo(controller);
 }
 
-
-//CARRUSELES
-
-function carruselServicios1(){
-	var mySwiper = new Swiper(".sliderServicios", {
-		init: false,
-		direction: 'horizontal',
-		pagination: {
-			el: '#pag1',
-			type: 'bullets',
-			clickable:true,
-		},
-		
-		navigation: {
-			nextEl: '#nav1',
-			prevEl: '#nav2',
-		},
-		breakpoints:{
-			320: {
-				slidesPerView: "1",
-				spaceBetween: 10,
-				allowTouchMove:true,
-				centeredSlidesBounds:true,
-			},
-			992: {
-				slidesPerView: "3",
-			}
-		}
-	});
-	mySwiper.init();
-}
-
-function carruselServicios2(){
-	
-	var mySwiper2 = new Swiper(".sliderServicios2", {
-		direction: 'horizontal',
-		pagination: {
-			el: '#pag2',
-			type: 'bullets',
-			clickable:true,
-		},
-		
-		navigation: {
-			nextEl: '#nav3',
-			prevEl: '#nav4',
-		},
-		breakpoints:{
-			320: {
-				slidesPerView: "1",
-				spaceBetween: 10,
-				allowTouchMove:true,
-				centeredSlidesBounds:true,
-			},
-			992: {
-				slidesPerView: "3",
-			}
-		}
-	});
-	
-}
-
-function carruselServicios3(){
-	
-	var mySwiper3 = new Swiper(".sliderServicios3", {
-		direction: 'horizontal',
-		pagination: {
-			el: '#pag3',
-			type: 'bullets',
-			clickable:true,
-		},
-		
-		navigation: {
-			nextEl: '#nav5',
-			prevEl: '#nav5',
-		},
-		breakpoints:{
-			320: {
-				slidesPerView: "1",
-				spaceBetween: 10,
-				allowTouchMove:true,
-				centeredSlidesBounds:true,
-			},
-			992: {
-				slidesPerView: "3",
-			}
-		}
-	});
-	
-}
 
 $(document).ready(function(){
 	menu();
-	efectoLogo();
-	//efectoParallax(); // ok
+	//imgParallax();
 	efectoFade();
-	//efectoFadeServicios();
-		
-	//
-	//if ( window.location.pathname == "/" || window.location.href.indexOf("nosotros") > -1){
-	//	efectoParallax();
-	//}
+	$(window).enllax();	
 	
-	$('#myTab a').on('click', function (e) {
-		
-		$('.nav-item').removeClass("active");
-		$(this).parent('li').addClass("active");
-		$(".nav-tabs").addClass("nav-active");
-		
-		
-	});
+	if ( window.location.pathname == "/"){
+		drawSvg();
+	}
 	
 });
+
+
 

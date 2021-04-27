@@ -271,9 +271,8 @@
         background: var(--primario);
 
         &:hover{
-            background: transparent;
+            background: #fff;
             border: 1px solid var(--primario);
-            color: var(--blanco);
         }
     }
 
@@ -358,32 +357,38 @@
 // ANIMACIONES
 
 @mixin animaciones {
-	h1,h2,h3{
+	h1{
 		opacity: 0;
-        transform: translateY(-30px);
-        transition: .3s ease-in-out all;
+        transform: translateY(-50px) rotateX(90deg);
+        transition: 1s ease-in-out all;
+	}
+    
+    h2,h3{
+		opacity: 0;
+        transform: translateY(-70px) rotateX(90deg);
+        transition: 1s ease-in-out all;
 	}
     
     
     h4,h5,h6,li, a.link, p{
         opacity: 0;
-        transform: translateY(-40px);
-        transition: .4s ease-in-out all;
+        transform: translateY(-70px) rotateX(90deg);
+        transition: 1s ease-in-out all;
     }
     
-    img, form, iframe{
+    img, iframe{
         opacity: 0;
         transform: scale(.9);
-        transition: .4s ease-in-out all;
+        transition: 1s ease-in-out all;
     }
 	
 	&.transition1{
 		h1,h2,h3,h4,h5,h6,li,a.link, p{
 			opacity: 1;
-            transform: translateY(0px);
+            transform: translateY(0px) rotateX(0deg);
 		}
         
-        img, form, iframe{
+        img, iframe{
             opacity: 1;
             transform: scale(1);
         }
@@ -396,7 +401,6 @@
         left: 0px;
         top: 0px;
         z-index: 0;
-        opacity: 0;
     }
     
     &.sectionOn{
@@ -417,5 +421,20 @@
             }
         }
     }
+}
+
+@mixin poli1{
+    animation: mancha 15s ease-in-out infinite;
+
+    @keyframes mancha {
+        
+        90%, 100%{
+            transform: rotate(360deg);
+        }
+        
+        0% {
+            transform: rotate(0deg);
+        } 
+    } 
 }
 

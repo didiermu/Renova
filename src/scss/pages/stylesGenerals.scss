@@ -51,6 +51,12 @@ a{
 	font-size: var(--h4);
 	text-decoration: none;
 	color: var(--negro);
+	transition: .3s ease-in-out all;
+	
+	&:hover{
+		padding: 0 15px;
+		border-color: var(--texto);
+	}
 }
 
 // SECCIONES
@@ -88,8 +94,15 @@ section:not(.hero){
 	}
 }
 
+// ANIMACIONES
+
 .objetFade{
 	@include animaciones;
 }
 
+.poligono{
+	@include poli1;
+	position: absolute;
+	z-index: 1;
+}
 

@@ -1,10 +1,12 @@
 .servicios{
     position: relative;
-	background: url(../../img/fondo2.svg) no-repeat left top /  contain;
+	//background: url(../../img/fondo2.svg) no-repeat left top /  contain;
     
     @include lineas;
     
     .nuestros{
+        position: relative;
+        
         .col-lg-9{
             padding-left: 50px;
         }
@@ -218,16 +220,16 @@
 		.fondo3{
 			position: absolute;
 			top: 100px;
-			right: 0;
+			left: 50%;
 			z-index: 1;
 		}
 		
-		#path1{
+		#path2{
 			position: absolute;
 			right: -40px;
 			top: 100px;
 			z-index: 1;
-			opacity: 0;
+            transform: rotateY(180deg);
 		}
 		
 		

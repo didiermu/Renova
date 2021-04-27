@@ -1,5 +1,4 @@
 - titulo = "Servicios - Renova Industrial";
-- tituloHero = "Quiero vender mis desperdicios";
 
 doctype
 html(lang='es')
@@ -9,13 +8,44 @@ html(lang='es')
     body
         include includes/header.pug
         main.servicios
-            include includes/hero.pug
+            
+            section.hero.heroInt.d-flex
+                .container-fluid
+                    .row 
+                        .col-3 
+                        
+                        .col-9
+                            img.fondo3(src="img/fondo3.svg", alt="Renova Industrial")
+                            #triggerHero
+                            svg.path1(width='800px' height='550px' viewBox='0 0 351 824')
+                                g.Page-1(stroke='none' stroke-width='1' fill='none' fill-rule='evenodd')
+                                    path(d="M605.17587,212.754793 L273.309611,12.5888319 C178.725359,-44.4598949 55.8025434,-14.0313402 -1.24618334,80.552911 C-14.610573,102.710474 -23.5482399,127.250894 -27.5635879,152.813396 L-113.251577,698.320146 L-113.251577,698.320146" id="pathHero" stroke="#F9BB00" stroke-width="2" transform="translate(245.962146, 278.638682) rotate(-120.000000) translate(-245.962146, -278.638682) ")
+                            
+                            .img-holder-hero(data-image="img/Desktop/1Home/HeroImage.jpg")
+                            
+                            .container
+                                .row.objetFade
+                                    .col-12
+                                        .hero--img
+                                            picture
+                                                source(srcset="../img/Desktop/3Materiales/HeroImage.webp" type="image/webp")
+                                                img.img-fluid(src="../img/Desktop/3Materiales/HeroImage.jpg" alt="Renova Insutrial")
+                                                
+                                        .hero--copy
+                                            h1 
+                                                b Quiero vender mis desperdicios
+                                        
+                                .btn--down.d-flex   
+                                    span.icon-Chevron
+                                    span.icon-Chevron
+                                    h5 Scroll
 
+                
             section.nuestros
+                #triggerNuestros
                 svg.path1(width='800px' height='800px' viewBox='0 0 1000 1100')
                     g.Page-1(stroke='none' stroke-width='1' fill='none' fill-rule='evenodd')
-
-                        path(d="M829.358284,449.674323 L449.519976,181.2579 C359.313246,117.51244 234.510337,138.963537 170.764877,229.170267 C154.089911,252.767149 142.72582,279.696927 137.454748,308.106136 L0.703458895,1045.14698 L0.703458895,1045.14698" id="Path-5-Copy-3" stroke="#F9BB00" stroke-width="2" transform="translate(415.030872, 523.073489) rotate(-180.000000) translate(-415.030872, -523.073489) ")
+                        path(d="M829.358284,449.674323 L449.519976,181.2579 C359.313246,117.51244 234.510337,138.963537 170.764877,229.170267 C154.089911,252.767149 142.72582,279.696927 137.454748,308.106136 L0.703458895,1045.14698 L0.703458895,1045.14698" id="pathNuestros" stroke="#F9BB00" stroke-width="2" transform="translate(415.030872, 523.073489) rotate(-180.000000) translate(-415.030872, -523.073489) ")
 
                 .container-fluid
                     .row.align-items-center.objetFade
@@ -136,7 +166,7 @@ html(lang='es')
                                         | especializada como:
                                     
                                     
-                                    .swiper-container.sliderServicios2
+                                    .swiper-container.sliderServicios
                                         .swiper-wrapper
                                             .col-lg-4.swiper-slide.objetFade
                                                 .swiper-slide__card
@@ -240,7 +270,7 @@ html(lang='es')
                                         | de materiales.
                                     
                                     
-                                    .swiper-container.sliderServicios3
+                                    .swiper-container.sliderServicios
                                         .swiper-wrapper
                                             .col-lg-4.swiper-slide.objetFade
                                                 .swiper-slide__card
@@ -334,11 +364,11 @@ html(lang='es')
 
             section.promos
                 img.fondo3(src="img/fondo3.svg" alt="")
-
-                svg#path1(width='751px' height='824px' viewBox='0 0 751 824')
-                    g#Page-1(stroke='none' stroke-width='1' fill='none' fill-rule='evenodd')
-                        path(d="M707.699302,793.745039 L719.820771,230.480114 L387.954512,30.3141528 C293.370261,-26.7345739 170.447445,3.69398073 113.398718,98.2782319 C100.034329,120.435795 91.0966617,144.976215 87.0813138,170.538717 L1.39332472,716.045467 L1.39332472,716.045467" id="Path-5" stroke="#F9BB00" stroke-width="2")
-
+                
+                #triggerCertificaciones
+                svg.path1#path2(width='700px' height='700px' viewBox='0 0 1280 900')
+                    g.Page-1(stroke='none' stroke-width='1' fill='none' fill-rule='evenodd')
+                        path(d="M1211.2503,532.284649 L660.063824,110.319333 C572.357564,43.1750877 446.826426,59.8438944 379.682181,147.550155 C360.550125,172.541143 347.586194,201.694655 341.844551,232.640068 L207.563996,956.364533 L207.563996,956.364533" id="pathCertificaciones" stroke="#F9BB00" stroke-width="2" transform="translate(709.407147, 434.291044) rotate(-302.000000) translate(-709.407147, -434.291044)")
                 .container-fluid
                     .row.align-items-center.objetFade
                         .col-12.promos--img

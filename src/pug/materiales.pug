@@ -1,0 +1,114 @@
+- titulo = "Materiales - Renova Industrial";
+
+doctype
+html(lang='es')
+
+    include includes/head.pug
+
+    body
+        include includes/header.pug
+        main.materiales
+
+            section.hero.heroInt.d-flex
+                .container-fluid
+                    .row 
+                        .col-3 
+
+                        .col-9
+                            img.fondo3(src="img/fondo3.svg" alt="Renova Industrial")
+                            #triggerHero
+                            svg.path1(width='800px' height='550px' viewBox='0 0 351 824')
+                                g.Page-1(stroke='none' stroke-width='1' fill='none' fill-rule='evenodd')
+                                    path(d="M605.17587,212.754793 L273.309611,12.5888319 C178.725359,-44.4598949 55.8025434,-14.0313402 -1.24618334,80.552911 C-14.610573,102.710474 -23.5482399,127.250894 -27.5635879,152.813396 L-113.251577,698.320146 L-113.251577,698.320146" id="pathHero" stroke="#F9BB00" stroke-width="2" transform="translate(245.962146, 278.638682) rotate(-120.000000) translate(-245.962146, -278.638682) ")
+
+                            //-.img-holder-hero(data-image="img/Desktop/1Home/HeroImage.jpg")
+
+                            .container
+                                .row.objetFade
+                                    .col-12
+                                        .hero--img
+                                            picture
+                                                source(srcset="../img/Desktop/3Materiales/HeroImage.webp" type="image/webp")
+                                                img.img-fluid(src="../img/Desktop/3Materiales/HeroImage.jpg" alt="Renova Insutrial")
+
+                                        .hero--copy
+                                            h1 
+                                                b Quiero comprar materiales reciclados
+
+
+                                            .hero--links.d-flex
+                                                .hero--links__link.d-flex
+                                                    h3 Ver materiales
+                                                    .btn--down.d-flex 
+                                                        span.icon-Chevron
+                                                        span.icon-Chevron
+
+                                                .hero--links__link.d-flex
+                                                    h3 Conoce las promociones
+                                                    .btn--down.d-flex 
+                                                        span.icon-Chevron
+                                                        span.icon-Chevron
+
+            section.grid
+                .container-fluid
+                    .row.align-items-center.objetFade
+                        .col-12.col-lg-6.col-xl-5
+                            .grid--img
+
+                                //-svg(width='964px' height='831px' viewBox='0 0 964 831')
+                                //-    defs
+                                //-        clipPath#svgPath
+                                //-            path#path-2(d='M185.817946,342.833991 L515.811585,-58.8120222 L515.811585,-58.8120222 L994.377827,144.327295 L678.062996,889.518338 L242.210465,644.063987 C145.966011,589.863039 111.883014,467.902944 166.083962,371.658489 C171.808666,361.493148 178.411842,351.848202 185.817946,342.833991 Z')
+                                   
+                                picture 
+                                    source(srcset="img/Desktop/3Materiales/01-retornoindustrial.webp" type="image/webp")
+                                    img.img-fluid(src="img/Desktop/3Materiales/01-retornoindustrial.png" alt="Renova Industrial")
+
+
+                        .col-12.col-lg-6
+                            .contacto--copy.objParallax
+                                h3 Contamos con los mejores
+                                h2.titleBig
+                                    b Materiales
+                                
+                                .swiper-container.sliderMateriales
+                                    .swiper-wrapper 
+                                            
+                                        .swiper-slide.d-flex
+                                            a.nav-link#retorno-tab(data-toggle='tab' href='#retorno' role='tab' aria-controls='retorno' aria-selected='true') 
+                                                span Retorno industrial
+                                            
+                                        .swiper-slide.d-flex
+                                            a.nav-link#plasticos-tab(data-toggle='tab' href='#plasticos' role='tab' aria-controls='plasticos' aria-selected='false') 
+                                                span Plásticos
+                                            
+                                        .swiper-slide.d-flex
+                                            a.nav-link#metales-tab(data-toggle='tab' href='#transformacion' role='tab' aria-controls='transformacion' aria-selected='false') 
+                                                span Metales y acero inoxidable
+                                        
+                                        .swiper-slide.d-flex
+                                            a.nav-link#comerciales-tab(data-toggle='tab' href='#recoleccion' role='tab' aria-controls='recoleccion' aria-selected='true') 
+                                                span Materiales comerciales
+                                            
+                                        .swiper-slide.d-flex
+                                            a.nav-link#carton-tab(data-toggle='tab' href='#servicio' role='tab' aria-controls='servicio' aria-selected='false') 
+                                                span Cartón y madera
+                                            
+                                        .swiper-slide.d-flex
+                                            a.nav-link#basura-tab(data-toggle='tab' href='#transformacion' role='tab' aria-controls='transformacion' aria-selected='false') 
+                                                span Gestión de basura industrial
+                                            
+                                .swiper-nav
+                                    .swiper-button-prev
+                                    .swiper-button-next
+                                    
+                                .swiper-pagination.justify-content-center.align-items-center.d-flex
+                                
+                                .tab-content#myTabContent
+                                    .tab-pane.fade#retorno(role='tabpanel' aria-labelledby='retorno-tab')
+                                        h4 HOLA
+                                    
+                                    .tab-pane.fade#plasticos(role='tabpanel' aria-labelledby='plasticos-tab')
+                                        h4 HOLA 2
+                                     
+        include includes/footer.pug

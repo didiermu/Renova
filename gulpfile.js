@@ -194,10 +194,10 @@ gulp.task('browser-sync', () => {
     
     gulp.parallel('pastefiles');
     // gulp.watch('./src/pug/**/*.pug', gulp.parallel('pugphp'));
-    gulp.watch('./src/pug/**/*.pug', gulp.parallel('pug'));
-    gulp.watch('./src/scss/**/**.scss', gulp.parallel('sass'));
-    gulp.watch('./src/css/**/**.css', gulp.parallel('minifyCSS'));
-    gulp.watch('./src/js/*.js', gulp.parallel('scripts'));
+    gulp.watch('./src/pug/**/*.pug', gulp.series('pug'));
+    gulp.watch('./src/scss/**/**.scss', gulp.series('sass'));
+    gulp.watch('./src/css/**/**.css', gulp.series('minifyCSS'));
+    gulp.watch('./src/js/*.js', gulp.series('scripts'));
     gulp.watch('./dist/');
     gulp.watch('./dist/').on('change', browserSync.reload);
 

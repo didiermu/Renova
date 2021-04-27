@@ -4,8 +4,9 @@
     <link rel="preload" href="css/styles.min.css" as="style">
     <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <title>Servicios - Renova Industrial</title>
+    <meta name="description" content="Renova Insutrial - Optimizamos el manejo de tus residuos industriales con equipo moderno y especializado">
     <link rel="stylesheet" href="css/styles.min.css">
     <script src="js/scripts.min.js" async defer></script>
   </head>
@@ -15,7 +16,7 @@
         <div class="row">   
           <div class="col-12 header--navegacion">
             <div class="header--navegacion--logo"><a href="/"> 
-                <div class="header--navegacion--logo--img d-flex"><img class="img-fluid" id="logo1" src="img/logo1.svg"><img class="img-fluid" src="img/logo2.svg"></div></a></div>
+                <div class="header--navegacion--logo--img d-flex"><img class="img-fluid logoGiro" id="logo1" src="img/logo1.svg"><img class="img-fluid" src="img/logo2.svg"></div></a></div>
             <nav class="navbar-expand-lg">
               <div class="btnHam" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"></div>
               <div class="collapse navbar-collapse" id="navbarNav">
@@ -32,28 +33,44 @@
       </div>
     </header>
     <main class="servicios">
-      <section class="hero d-flex"><img class="fondo3" src="img/fondo3.svg" alt="">
-        <svg class="path1" width="800px" height="550px" viewBox="0 0 351 824">
-          <g class="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-            <path d="M605.17587,212.754793 L273.309611,12.5888319 C178.725359,-44.4598949 55.8025434,-14.0313402 -1.24618334,80.552911 C-14.610573,102.710474 -23.5482399,127.250894 -27.5635879,152.813396 L-113.251577,698.320146 L-113.251577,698.320146" id="Path-5-Copy" stroke="#F9BB00" stroke-width="2" transform="translate(245.962146, 278.638682) rotate(-120.000000) translate(-245.962146, -278.638682) "></path>
-          </g>
-        </svg>
-        <div class="container">
-          <div class="row objetFade">
-            <div class="col-12 col-lg-9 offset-lg-3">
-              <div class="hero--copy">
-                <h3></h3>
-                <h1> <b>Quiero vender mis desperdicios</b></h1>
+      <section class="hero heroInt d-flex">
+        <div class="container-fluid">
+          <div class="row"> 
+            <div class="col-3"> </div>
+            <div class="col-9"><img class="fondo3" src="img/fondo3.svg" alt="Renova Industrial">
+              <div id="triggerHero"></div>
+              <svg class="path1" width="800px" height="550px" viewBox="0 0 351 824">
+                <g class="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                  <path d="M605.17587,212.754793 L273.309611,12.5888319 C178.725359,-44.4598949 55.8025434,-14.0313402 -1.24618334,80.552911 C-14.610573,102.710474 -23.5482399,127.250894 -27.5635879,152.813396 L-113.251577,698.320146 L-113.251577,698.320146" id="pathHero" stroke="#F9BB00" stroke-width="2" transform="translate(245.962146, 278.638682) rotate(-120.000000) translate(-245.962146, -278.638682) "></path>
+                </g>
+              </svg>
+              <div class="img-holder-hero" data-image="img/Desktop/1Home/HeroImage.jpg"></div>
+              <div class="container">
+                <div class="row objetFade">
+                  <div class="col-12">
+                    <div class="hero--img">
+                      <picture>
+                        <source srcset="../img/Desktop/3Materiales/HeroImage.webp" type="image/webp"><img class="img-fluid" src="../img/Desktop/3Materiales/HeroImage.jpg" alt="Renova Insutrial">
+                      </picture>
+                    </div>
+                    <div class="hero--copy">
+                      <h1> <b>Quiero vender mis desperdicios</b></h1>
+                    </div>
+                  </div>
+                </div>
+                <div class="btn--down d-flex">  <span class="icon-Chevron"></span><span class="icon-Chevron"></span>
+                  <h5>Scroll</h5>
+                </div>
               </div>
             </div>
           </div>
-          <div class="btn--down d-flex"><span class="icon-Chevron"></span><span class="icon-Chevron"></span></div>
         </div>
       </section>
       <section class="nuestros">
+        <div id="triggerNuestros"></div>
         <svg class="path1" width="800px" height="800px" viewBox="0 0 1000 1100">
           <g class="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-            <path d="M829.358284,449.674323 L449.519976,181.2579 C359.313246,117.51244 234.510337,138.963537 170.764877,229.170267 C154.089911,252.767149 142.72582,279.696927 137.454748,308.106136 L0.703458895,1045.14698 L0.703458895,1045.14698" id="Path-5-Copy-3" stroke="#F9BB00" stroke-width="2" transform="translate(415.030872, 523.073489) rotate(-180.000000) translate(-415.030872, -523.073489) "></path>
+            <path d="M829.358284,449.674323 L449.519976,181.2579 C359.313246,117.51244 234.510337,138.963537 170.764877,229.170267 C154.089911,252.767149 142.72582,279.696927 137.454748,308.106136 L0.703458895,1045.14698 L0.703458895,1045.14698" id="pathNuestros" stroke="#F9BB00" stroke-width="2" transform="translate(415.030872, 523.073489) rotate(-180.000000) translate(-415.030872, -523.073489) "></path>
           </g>
         </svg>
         <div class="container-fluid">
@@ -177,7 +194,7 @@
                 </div>
                 <div class="tab-pane fade" id="servicio" role="tabpanel" aria-labelledby="servicio-tab">
                   <h2>Servicio build to suit en tu empresa con maquinaria<br>especializada como:</h2>
-                  <div class="swiper-container sliderServicios2">
+                  <div class="swiper-container sliderServicios">
                     <div class="swiper-wrapper">
                       <div class="col-lg-4 swiper-slide objetFade">
                         <div class="swiper-slide__card">
@@ -293,7 +310,7 @@
                 </div>
                 <div class="tab-pane fade" id="transformacion" role="tabpanel" aria-labelledby="transformacion-tab">
                   <h2>Transformación, separación e identificación <br>de materiales.</h2>
-                  <div class="swiper-container sliderServicios3">
+                  <div class="swiper-container sliderServicios">
                     <div class="swiper-wrapper">
                       <div class="col-lg-4 swiper-slide objetFade">
                         <div class="swiper-slide__card">
@@ -413,9 +430,10 @@
         </div>
       </section>
       <section class="promos"><img class="fondo3" src="img/fondo3.svg" alt="">
-        <svg id="path1" width="751px" height="824px" viewBox="0 0 751 824">
-          <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-            <path d="M707.699302,793.745039 L719.820771,230.480114 L387.954512,30.3141528 C293.370261,-26.7345739 170.447445,3.69398073 113.398718,98.2782319 C100.034329,120.435795 91.0966617,144.976215 87.0813138,170.538717 L1.39332472,716.045467 L1.39332472,716.045467" id="Path-5" stroke="#F9BB00" stroke-width="2"></path>
+        <div id="triggerCertificaciones"></div>
+        <svg class="path1" id="path2" width="700px" height="700px" viewBox="0 0 1280 900">
+          <g class="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+            <path d="M1211.2503,532.284649 L660.063824,110.319333 C572.357564,43.1750877 446.826426,59.8438944 379.682181,147.550155 C360.550125,172.541143 347.586194,201.694655 341.844551,232.640068 L207.563996,956.364533 L207.563996,956.364533" id="pathCertificaciones" stroke="#F9BB00" stroke-width="2" transform="translate(709.407147, 434.291044) rotate(-302.000000) translate(-709.407147, -434.291044)"></path>
           </g>
         </svg>
         <div class="container-fluid">
