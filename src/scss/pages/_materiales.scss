@@ -26,28 +26,45 @@
     
     .grid{
         background: var(--fondoClaro);
-        padding: 40px 0 0;
+        padding: 120px 0 0;
+        position: relative;
         
-        .col-lg-6{
+        .poligono{
+			bottom:100px;	
+			right: -30px;
+		}
+		
+		.path1{
+			position: absolute;
+			left: 100px;
+			top: 100px;
+			z-index: 0;
+			width: calc(750px + 750 * ((100vw - 1280px) / 1920));
+			height: calc(550px + 50 * ((100vw - 1280px) / 1920));
+		}
+        
+        .col-xl-5{
 			padding-left: 0;	
 			align-self: flex-end;
 		}
 		
-		.col-lg-5{
-			max-width: 665px;
-		}
-        
         .swiper{
+            
+            &-wrapper{
+                flex-flow: row;
+            }
+            
+            &-container{
+                width: 100%;
+                margin: 40px 0;
+            }
+            
             &-nav{
                 position: absolute;
                 top: 50px;
                 right: 30px;
                 z-index: 1;
                 min-width: 100px;
-            }
-            
-            &-container{
-                width: 100%;
             }
             
             &-slide{
@@ -58,10 +75,28 @@
                 box-shadow: 0 2px 40px 0 rgba(120,159,183,0.16);
                 border-radius: 8px 8px 30px 8px;
                 font-size: var(--h3);
-                padding: 0 5px;
+                padding: 0 25px;
                 width: max-content;
                 //min-width: 150px;
                 //width: auto;
+                
+                a{
+                    text-decoration: none;
+                }
+                
+                &.active{
+                    background: var(--secundario);
+                    
+                    span{
+                        color: #FFFFFF;
+                    }
+                    
+                    .nav-link{
+                        &::before{
+                            color: var(--primario);
+                        }
+                    }
+                }
                 
                 &__card{
                     border-radius: 8px 8px 40px 8px;    
@@ -133,5 +168,160 @@
             }
         }
         
+        
+        .tab-pane{
+            min-height: 300px;
+            
+            ul{
+                flex-flow: wrap;
+                
+                li{
+                    flex: 0 0 50%;    
+                    font-size: var(--h4);
+                    
+                    &::marker{
+                        color: var(--primario);
+                    }
+                }
+            }
+            
+            &#plasticos{
+                li{
+                    flex: 0 0 33%;
+                }
+            }
+            
+            &#metales, &#materiales{
+                li{
+                    flex: 0 0 100%;
+                }
+            }
+        }
+    }
+    
+    .promos{
+        padding-left: 50px;
+        position: relative;
+        background: url(../../img/fondo2.svg) no-repeat left top /  contain;
+        
+        .poligono{
+			top:100px;	
+			right: -30px;
+			animation: mancha 15s linear infinite reverse;
+		}
+		
+		.path1{
+			position: absolute;
+			left: -40px;
+			top: -20px;
+			z-index: 0;
+		}
+        
+        .row{
+            position: relative;
+        }
+        
+        .transition1{
+			.promos--copy__card{
+				transform: translateX(0px) !important;
+				opacity: 1;
+			}	
+		}
+		
+		.objetFade-On{
+			.promos--copy__card{
+				transition: .4s ease-in-out all !important;
+			}
+		}
+		
+		
+		&--copy{
+			z-index: 2;
+			position: relative;
+			
+			.titleBig{
+				margin-bottom: 80px;
+			}
+			
+			&__card{
+				background: #fff;
+				padding: 80px 35px 35px;
+				box-shadow: 0 2px 40px 0 rgba(120,159,183,0.16);
+				border-radius: 8px 8px 40px 8px;
+				position: relative;
+				cursor: pointer;
+				opacity: 0;
+				
+				&:before{
+					content: "\e907";
+					font-family: 'icomoon' !important;
+					width: 60px;
+					height: 60px;
+					background: var(--primario);
+					position: absolute;
+					top: -5px;
+					left: -5px;
+					border-radius: 8px;
+					font-size: 2em;
+					display: flex;
+					align-items: center;
+					justify-content: center;
+				}
+				
+				&:hover{
+					
+					.btn{
+						opacity: 1;
+					}
+				}
+				
+				
+				h2{
+					margin: 10px 0 50px;
+				}
+				
+				.btn{
+					max-width: 160px;
+					opacity: 0;
+					position: absolute;
+					bottom: 30px;
+					transition: .3s ease-in-out all;
+				}
+			}
+        }
+        
+        .swiper{
+            &-container{
+				min-height: calc(350px + 150 * ((100vw - 1280px) / 1920));
+			}
+			
+			&-slide{
+				height: calc(230px + 150 * ((100vw - 1280px) / 1920));
+				transition: 1s ease-in-out all;
+				flex: 0 0 30.333333%;
+                max-width: 30.333333%;
+    
+				&:hover{
+					.promos--copy__card{
+						padding-bottom: 60px;	
+					}
+				}
+			}
+            
+            &-nav{
+                position: absolute;
+                top: 50px;
+                right: 30px;
+                z-index: 9;
+                min-width: 100px;
+            }
+            
+            &-pagination{
+                justify-content: flex-end;
+                position: absolute;
+                bottom: 0;
+                right: 30px;
+            }
+        }
     }
 }

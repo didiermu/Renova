@@ -50,6 +50,11 @@ html(lang='es')
                                                         span.icon-Chevron
 
             section.grid
+                #triggerContacto
+                svg.path1(width='700px' height='700px' viewBox='0 0 1250 900')
+                    g.Page-1(stroke='none' stroke-width='1' fill='none' fill-rule='evenodd')
+                        path(d="M1211.2503,532.284649 L660.063824,110.319333 C572.357564,43.1750877 446.826426,59.8438944 379.682181,147.550155 C360.550125,172.541143 347.586194,201.694655 341.844551,232.640068 L207.563996,956.364533 L207.563996,956.364533" id="pathContacto" stroke="#F9BB00" stroke-width="2" transform="translate(709.407147, 434.291044) rotate(-302.000000) translate(-709.407147, -434.291044)")
+                        
                 .container-fluid
                     .row.align-items-center.objetFade
                         .col-12.col-lg-6.col-xl-5
@@ -64,7 +69,6 @@ html(lang='es')
                                     source(srcset="img/Desktop/3Materiales/01-retornoindustrial.webp" type="image/webp")
                                     img.img-fluid(src="img/Desktop/3Materiales/01-retornoindustrial.png" alt="Renova Industrial")
 
-
                         .col-12.col-lg-6
                             .contacto--copy.objParallax
                                 h3 Contamos con los mejores
@@ -72,43 +76,101 @@ html(lang='es')
                                     b Materiales
                                 
                                 .swiper-container.sliderMateriales
-                                    .swiper-wrapper 
-                                            
-                                        .swiper-slide.d-flex
-                                            a.nav-link#retorno-tab(data-toggle='tab' href='#retorno' role='tab' aria-controls='retorno' aria-selected='true') 
+                                    ul.swiper-wrapper.nav#myTab(role='tablist')
+                                        
+                                        li.nav-item.swiper-slide.d-flex.active
+                                            a#retorno-tab(data-toggle='tab' href='#retorno' role='tab' aria-controls='retorno' aria-selected='true') 
                                                 span Retorno industrial
                                             
-                                        .swiper-slide.d-flex
-                                            a.nav-link#plasticos-tab(data-toggle='tab' href='#plasticos' role='tab' aria-controls='plasticos' aria-selected='false') 
+                                        li.nav-item.swiper-slide.d-flex
+                                            a#plasticos-tab(data-toggle='tab' href='#plasticos' role='tab' aria-controls='plasticos' aria-selected='false') 
                                                 span Plásticos
                                             
-                                        .swiper-slide.d-flex
-                                            a.nav-link#metales-tab(data-toggle='tab' href='#transformacion' role='tab' aria-controls='transformacion' aria-selected='false') 
-                                                span Metales y acero inoxidable
+                                        li.nav-item.swiper-slide.d-flex
+                                            a#metales-tab(data-toggle='tab' href='#metales' role='tab' aria-controls='metales' aria-selected='false') 
+                                                span Metales y Acero inoxidable
                                         
-                                        .swiper-slide.d-flex
-                                            a.nav-link#comerciales-tab(data-toggle='tab' href='#recoleccion' role='tab' aria-controls='recoleccion' aria-selected='true') 
+                                        li.nav-item.swiper-slide.d-flex
+                                            a#materiales-tab(data-toggle='tab' href='#materiales' role='tab' aria-controls='materiales' aria-selected='true') 
                                                 span Materiales comerciales
                                             
-                                        .swiper-slide.d-flex
-                                            a.nav-link#carton-tab(data-toggle='tab' href='#servicio' role='tab' aria-controls='servicio' aria-selected='false') 
+                                        li.nav-item.swiper-slide.d-flex
+                                            a#carton-tab(data-toggle='tab' href='#carton' role='tab' aria-controls='carton' aria-selected='false') 
                                                 span Cartón y madera
                                             
-                                        .swiper-slide.d-flex
-                                            a.nav-link#basura-tab(data-toggle='tab' href='#transformacion' role='tab' aria-controls='transformacion' aria-selected='false') 
+                                        li.nav-item.swiper-slide.d-flex
+                                            a#basura-tab(data-toggle='tab' href='#basura' role='tab' aria-controls='basura' aria-selected='false') 
                                                 span Gestión de basura industrial
-                                            
+                                
+                                      
+                                .tab-content#myTabContent
+                                    
+                                    .tab-pane.fade.show.active#retorno(role='tabpanel' aria-labelledby='retorno-tab')
+                                        ul.d-flex
+                                            each val in ['PACA DE PRIMERA', 'BAJO Mn', 'MEDIO Mn', 'BUSHELING', 'GALVANIZADA Y NEGRA', 'PACA Y ESTRUCTURA', 'MIXTO', 'MAQUINARIA OBSOLETA', 'REBABAS', 'PUNTAS Y COLAS']
+                                                li= val
+                                    
+                                    .tab-pane.fade#plasticos(role='tabpanel' aria-labelledby='plasticos-tab')
+                                        ul.d-flex
+                                            each val in ['ABS', 'PS', 'PP', 'PC', 'HDPE', 'PACA Y ESTRUCTURA', 'POM', 'PPO', 'PA', 'TPE', 'PVC', 'SAN', 'PURGAS', 'OTROS']
+                                                li= val
+                                                
+                                    .tab-pane.fade#metales(role='tabpanel' aria-labelledby='metales-tab')
+                                        ul.d-flex
+                                            each val in ['Aluminio Acero Inoxidable series 200', 'Cobre Acero Inoxidable series 300', 'Latón Acero Inoxidable series 400']
+                                                li= val
+                                                
+                                    .tab-pane.fade#materiales(role='tabpanel' aria-labelledby='materiales-tab')
+                                        ul.d-flex
+                                            each val in ['Rollos de lámina galvanizada', 'Lámina negra', 'Lámina pintro', 'Cintas', 'Recortes comerciales', 'Placa']
+                                                li= val
+                                    
+                                    .tab-pane.fade#carton(role='tabpanel' aria-labelledby='carton-tab')
+                                        h4 Lorem ipsum dolor sit amet, consectetur adipiscing elit. In aliquam tempor eros. Nam dapibus ac urna vitae dignissim.
+                                    
+                                    .tab-pane.fade#basura(role='tabpanel' aria-labelledby='basura-tab')
+                                        h4 Lorem ipsum dolor sit amet, consectetur adipiscing elit. In aliquam tempor eros. Nam dapibus ac urna vitae dignissim.
+                                
+                               
                                 .swiper-nav
                                     .swiper-button-prev
                                     .swiper-button-next
-                                    
-                                .swiper-pagination.justify-content-center.align-items-center.d-flex
-                                
-                                .tab-content#myTabContent
-                                    .tab-pane.fade#retorno(role='tabpanel' aria-labelledby='retorno-tab')
-                                        h4 HOLA
-                                    
-                                    .tab-pane.fade#plasticos(role='tabpanel' aria-labelledby='plasticos-tab')
-                                        h4 HOLA 2
+                                                    
+            section.promos 
+                img.img-fluid.poligono(src="img/Form03.svg", alt="Renova Industrial")
+                
+                #triggerDedicamos
+                svg.path1(width='800px' height='800px' viewBox='0 0 1000 1100')
+                    g.Page-1(stroke='none' stroke-width='1' fill='none' fill-rule='evenodd')
+                        path(d="M829.358284,449.674323 L449.519976,181.2579 C359.313246,117.51244 234.510337,138.963537 170.764877,229.170267 C154.089911,252.767149 142.72582,279.696927 137.454748,308.106136 L0.703458895,1045.14698 L0.703458895,1045.14698" id="pathDedicamos" stroke="#F9BB00" stroke-width="2" transform="translate(415.030872, 523.073489) rotate(-180.000000) translate(-415.030872, -523.073489) ")
+                        
+                .container-fluid
+                    .row.align-items-center.objetFade
+                        .col-12.col-lg-9.offset-lg-3.offset-xl-4
+                            .swiper-nav
+                                .swiper-button-prev#prev1
+                                .swiper-button-next#prev2
+                            
+                            
+                        .col-12.col-lg-9.offset-lg-3.offset-xl-4
+                            .promos--copy
+                                h3 Descubre nuestras
+                                h2.titleBig
+                                    b Promociones
+                        
+                            .swiper-container.sliderPromos
+                                .swiper-wrapper
+                                    - var n = 0;
+                                    while n < 6
+                                        - ++n
+                                        .col-lg-4.swiper-slide
+                                            .promos--copy__card
+                                                h5 Precio preferencial
+                                                h2 En volumen de lámina
+                                                a(href="#!") 
+                                                    button.btn.secundario Me interesa
+                        
+                        .col-12.col-lg-9.offset-lg-3.offset-xl-4
+                            .swiper-pagination.align-items-center.d-flex
                                      
         include includes/footer.pug
