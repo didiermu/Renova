@@ -1,3 +1,16 @@
+function anclas(){
+	 $(".hero--links__link").on("click", function () { 
+        var nameLi = $(this).attr("id").replace("link-", ""),
+            nameSection = $("." + nameLi).offset().top;
+      
+        $("html, body").animate({ scrollTop: nameSection = $("." + nameLi).offset().top - 90 }, 1500);
+      
+        return false;
+        
+    });
+	
+}
+
 function drawSvgMateriales(){
 	function pathPrepare ($el) {
 		var lineLength = $el[0].getTotalLength();
@@ -107,10 +120,12 @@ function carruselPromos(){
 
 $(document).ready(function(){
 	if(window.location.href.indexOf("materiales") > -1){
+		anclas();
         tabsMateriales();
         carruselMateriales();
         carruselPromos();
 		drawSvgMateriales();
+		
     }
 	
 });

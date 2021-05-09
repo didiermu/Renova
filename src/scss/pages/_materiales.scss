@@ -1,3 +1,4 @@
+
 .materiales{
     .hero{
         h1{
@@ -8,16 +9,42 @@
             &__link{
                 align-items: center;
                 margin-right: 30px;
+                cursor:pointer;
                 
                 h3{
                     color: #fff;
                 }
+                
                 .btn--down{
                     position: relative;
                     bottom:10px;
                     transform: rotate(90deg) scale(.8);
+                    
                     span{
                         animation: none;
+                    }
+                }
+                
+                &:hover{
+                    .btn--down{
+                        animation: flecha 1.5s ease-in-out infinite;	
+                    }
+                    
+                    @keyframes flecha{
+                        0% {
+                            transform: rotate(90deg) translateX(0px) scale(.8);
+                            opacity: 1;
+                        }
+                        
+                        50% {
+                            transform: rotate(90deg) translateX(10px) scale(.8);
+                            opacity: 1;
+                        }
+                        
+                        100% {
+                            transform: rotate(90deg) translateX(10px) scale(.8);
+                            opacity: 0;
+                        }
                     }
                 }
             }
@@ -75,13 +102,16 @@
                 box-shadow: 0 2px 40px 0 rgba(120,159,183,0.16);
                 border-radius: 8px 8px 30px 8px;
                 font-size: var(--h3);
-                padding: 0 25px;
                 width: max-content;
                 //min-width: 150px;
                 //width: auto;
                 
                 a{
                     text-decoration: none;
+                    height: 100%;
+                    display: flex;
+                    align-items: center;
+                    padding: 0 25px;
                 }
                 
                 &.active{

@@ -58,20 +58,20 @@
     .btn--down{
         font-size: 1.8rem;
         position: absolute;
-        bottom: 60px;
+        bottom: 20px;
         left: 0;
         right: 0;
         margin: auto;
         color: var(--primario);
-        transform: rotate(90deg);
         width: max-content;
+        flex-direction:column;
+        
         
         h5{
             color: #fff;
-            transform: rotate(270deg);
-            left: -20px;
             position: relative;
-            left: 20px;
+            text-align: center;
+            margin-top: 10px;
         }
         
         span{
@@ -80,7 +80,7 @@
             
             &:first-child{
                 opacity: .5;
-                left: 15px;
+                top:10px;
                 position: relative;
             }
         }
@@ -123,7 +123,7 @@
     .hero--copy{
         padding-left: 10%;
         position: absolute;
-        bottom: 50px;
+        bottom: 150px;
     }
    
     

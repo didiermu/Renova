@@ -99,7 +99,7 @@
                             }
                         }
     
-                        &:hover:not(#li-img){
+                        &:hover:not(#li-img), &.activo{
                             &::after{
                                 width: 100%;
                             }

@@ -32,7 +32,7 @@ function efectoFade() {
 			}
 		});
 		
-		if ($(".dedicamos").hasClass("sectionOn")||$(".promos").hasClass("sectionOn")){
+		if ($(".dedicamos").hasClass("sectionOn") || $(".promos").hasClass("sectionOn") || $(".body-materiales .hero").hasClass("sectionOn") || $(".body-destacamos .hero").hasClass("sectionOn") || $(".body-destacamos .valores").hasClass("sectionOn") || $(".body-destacamos .esfuerzo").hasClass("sectionOn")){
 			$(".header").addClass("black");
 		}
 		

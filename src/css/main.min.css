@@ -1,5 +1,13 @@
 @charset "UTF-8";
 
+body .header--navegacion--logo,
+body .home .promos--copy__card,
+body .materiales .grid .swiper-slide,
+body .servicios .nuestros .nav-item,
+body .servicios .promos--copy__card {
+  box-shadow: 0 2px 40px 0 rgba(120,159,183,.16);
+}
+
 :root {
   --texto: #2F3B46;
   --blanco: #FFFFFF;
@@ -222,7 +230,6 @@ body .header--navegacion--logo {
   min-width: 300px;
   padding: 50px;
   text-align: center;
-  box-shadow: 0 2px 40px 0 rgba(120,159,183,.16);
 }
 
 body .header--navegacion--logo--img {
@@ -310,6 +317,7 @@ body .header--navegacion nav #navbarNav>ul li:hover ul {
   display: flex;
 }
 
+body .header--navegacion nav #navbarNav>ul li.activo::after,
 body .header--navegacion nav #navbarNav>ul li:hover:not(#li-img)::after {
   width: 100%;
 }
@@ -438,6 +446,19 @@ body .footer h5 {
   text-align: right;
 }
 
+body .linkBorder,
+body .titleBig,
+body a b,
+body h1 b,
+body h2 b,
+body h3 b,
+body h4 b,
+body h5 b,
+body h6 b,
+body label b {
+  font-family: var(--primariaBold);
+}
+
 @media (max-width:992px) {
   body .footer {
     height: auto;
@@ -467,17 +488,6 @@ body a:hover {
 body h5,
 body h6 {
   line-height: 1.5;
-}
-
-body a b,
-body h1 b,
-body h2 b,
-body h3 b,
-body h4 b,
-body h5 b,
-body h6 b,
-body label b {
-  font-family: var(--primariaBold);
 }
 
 body h1 {
@@ -514,7 +524,6 @@ body .titleBig {
   font-size: var(--h1);
   position: relative;
   line-height: 1;
-  font-family: var(--primariaBold);
 }
 
 body .titleBig::after {
@@ -530,7 +539,6 @@ body .titleBig::after {
 
 body .linkBorder {
   border-bottom: 2px solid var(--primario);
-  font-family: var(--primariaBold);
   font-size: var(--h4);
   text-decoration: none;
   color: var(--negro);
@@ -848,11 +856,6 @@ body .home .promos--img {
   background: url("../img/Desktop/1Home/Secc3.webp") center/cover no-repeat fixed;
 }
 
-body .home .promos--copy .col-lg-4:hover .promos--copy__card,
-body .materiales .promos .swiper-slide:hover .promos--copy__card {
-  padding-bottom: 60px;
-}
-
 body .home .promos--img .imageHolder img {
   opacity: 1;
   transition: none;
@@ -902,10 +905,13 @@ body .home .promos--copy .col-lg-4:last-of-type .promos--copy__card {
   transition: 1s ease-in-out all;
 }
 
+body .home .promos--copy .col-lg-4:hover .promos--copy__card {
+  padding-bottom: 60px;
+}
+
 body .home .promos--copy__card {
   background: #fff;
   padding: 80px 35px 35px;
-  box-shadow: 0 2px 40px 0 rgba(120,159,183,.16);
   border-radius: 8px 8px 40px;
   position: relative;
   cursor: pointer;
@@ -1118,7 +1124,6 @@ body .servicios .nuestros .nav-item {
   justify-content: center;
   height: 100px;
   background: #FFF;
-  box-shadow: 0 2px 40px 0 rgba(120,159,183,.16);
   border-radius: 8px 8px 40px;
   font-size: var(--h3);
 }
@@ -1298,7 +1303,6 @@ body .servicios .promos--copy .titleBig {
 body .servicios .promos--copy__card {
   background: #fff;
   padding: 40px 20px;
-  box-shadow: 0 2px 40px 0 rgba(120,159,183,.16);
   border-radius: 8px 8px 40px;
   position: relative;
   cursor: pointer;
@@ -1355,6 +1359,7 @@ body .materiales .hero--links__link {
   -ms-flex-align: center;
   align-items: center;
   margin-right: 30px;
+  cursor: pointer;
 }
 
 body .materiales .hero--links__link h3 {
@@ -1369,6 +1374,27 @@ body .materiales .hero--links__link .btn--down {
 
 body .materiales .hero--links__link .btn--down span {
   animation: none;
+}
+
+body .materiales .hero--links__link:hover .btn--down {
+  animation: flecha 1.5s ease-in-out infinite;
+}
+
+@keyframes flecha {
+  0% {
+    transform: rotate(90deg) translateX(0) scale(.8);
+    opacity: 1;
+  }
+
+  50% {
+    transform: rotate(90deg) translateX(10px) scale(.8);
+    opacity: 1;
+  }
+
+  100% {
+    transform: rotate(90deg) translateX(10px) scale(.8);
+    opacity: 0;
+  }
 }
 
 body .materiales .grid {
@@ -1422,16 +1448,20 @@ body .materiales .grid .swiper-slide {
   justify-content: center;
   height: 60px;
   background: #FFF;
-  box-shadow: 0 2px 40px 0 rgba(120,159,183,.16);
   border-radius: 8px 8px 30px;
   font-size: var(--h3);
-  padding: 0 25px;
   width: -webkit-max-content;
   width: max-content;
 }
 
 body .materiales .grid .swiper-slide a {
   text-decoration: none;
+  height: 100%;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 0 25px;
 }
 
 body .materiales .grid .swiper-slide.active {
@@ -1542,6 +1572,13 @@ body .materiales .promos {
   background: url("../img/fondo2.svg") left top/contain no-repeat;
 }
 
+body .destacamos .dedicamos--copy__card,
+body .destacamos .valores__card,
+body .materiales .promos--copy__card {
+  background: #fff;
+  box-shadow: 0 2px 40px 0 rgba(120,159,183,.16);
+}
+
 body .materiales .promos .poligono {
   top: 100px;
   right: -30px;
@@ -1578,13 +1615,16 @@ body .materiales .promos--copy .titleBig {
 }
 
 body .materiales .promos--copy__card {
-  background: #fff;
   padding: 80px 35px 35px;
-  box-shadow: 0 2px 40px 0 rgba(120,159,183,.16);
   border-radius: 8px 8px 40px;
   position: relative;
   cursor: pointer;
   opacity: 0;
+}
+
+body .destacamos .dedicamos--copy .col-lg-4:hover .promos--copy__card,
+body .materiales .promos .swiper-slide:hover .promos--copy__card {
+  padding-bottom: 60px;
 }
 
 body .materiales .promos--copy__card:before {
@@ -1650,6 +1690,334 @@ body .materiales .promos .swiper-pagination {
   right: 30px;
 }
 
+body .destacamos .hero h2 {
+  color: #fff;
+  margin-top: 10px;
+}
+
+body .destacamos .dedicamos {
+  position: relative;
+  background: url("../img/fondo2.svg") left top/contain no-repeat;
+}
+
+body .destacamos .dedicamos .poligono {
+  top: 100px;
+  right: -30px;
+  animation: mancha 15s linear infinite reverse;
+}
+
+body .destacamos .dedicamos .path1 {
+  position: absolute;
+  left: -40px;
+  top: -20px;
+  z-index: 0;
+}
+
+body .destacamos .dedicamos .transition1 .dedicamos--copy__card {
+  transform: translateX(0)!important;
+  opacity: 1;
+}
+
+body .destacamos .dedicamos .objetFade-On .dedicamos--copy__card {
+  transition: .4s ease-in-out all!important;
+}
+
+body .destacamos .dedicamos--copy {
+  padding-left: 50px;
+  z-index: 2;
+  position: relative;
+}
+
+body .destacamos .dedicamos--copy .titleBig {
+  margin-bottom: 80px;
+}
+
+body .destacamos .dedicamos--copy .row {
+  min-height: calc(350px + 150 * ((100vw - 1280px)/ 1920));
+}
+
+body .destacamos .dedicamos--copy .col-lg-4 {
+  height: calc(230px + 150 * ((100vw - 1280px)/ 1920));
+  transition: 1s ease-in-out all;
+}
+
+body .destacamos .dedicamos--copy .col-lg-4:first-of-type .promos--copy__card {
+  transform: translateX(-50px);
+  transition: .6s ease-in-out all;
+}
+
+body .destacamos .dedicamos--copy .col-lg-4:nth-of-type(2) .promos--copy__card {
+  transform: translateX(-100px);
+  transition: .8s ease-in-out all;
+}
+
+body .destacamos .dedicamos--copy .col-lg-4:last-of-type .promos--copy__card {
+  transform: translateX(-150px);
+  transition: 1s ease-in-out all;
+}
+
+body .destacamos .dedicamos--copy__card {
+  padding: 40px 35px 35px 80px;
+  border-radius: 8px 8px 40px;
+  position: relative;
+  cursor: pointer;
+  opacity: 0;
+}
+
+body .destacamos .dedicamos--copy__card:before {
+  font-family: icomoon!important;
+  width: 60px;
+  height: 60px;
+  background: var(--primario);
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  border-radius: 8px;
+  font-size: 1.6em;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+  align-items: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+body .destacamos .dedicamos--copy__card#card1:before {
+  content: "\e90b";
+}
+
+body .destacamos .dedicamos--copy__card#card2 {
+  margin-top: 50px;
+}
+
+body .destacamos .dedicamos--copy__card#card2:before {
+  content: "\e906";
+}
+
+body .destacamos .dedicamos--copy__card#card3 {
+  margin-top: 100px;
+}
+
+body .destacamos .dedicamos--copy__card#card3:before {
+  content: "\e904";
+}
+
+body .destacamos .dedicamos--copy__card h2 {
+  color: var(--secundario);
+}
+
+body .destacamos .mision {
+  background: url("../img/Desktop/4Nosdestacamos/MisionVision.webp") center/cover no-repeat;
+  min-height: 675px;
+  -ms-flex-align: center;
+  align-items: center;
+  position: relative;
+}
+
+body .destacamos .mision .fondo3 {
+  position: absolute;
+  top: 50px;
+  left: 40%;
+  z-index: 1;
+}
+
+body .destacamos .mision #path2 {
+  position: absolute;
+  right: -130px;
+  top: -50px;
+  z-index: 1;
+  transform: rotateY(180deg);
+}
+
+body .destacamos .mision .col-12 {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+body .destacamos .mision--copy {
+  -ms-flex: 0 0 45%;
+  flex: 0 0 45%;
+}
+
+body .destacamos .mision--copy .titleBig {
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+body .destacamos .mision--copy h3 {
+  color: #fff;
+}
+
+body .destacamos .mision--copy#vision {
+  margin-top: 150px;
+}
+
+body .destacamos .valores {
+  position: relative;
+  background: url("../img/fondo1.svg") left top/contain no-repeat var(--fondoClaro);
+}
+
+body .destacamos .valores .poligono {
+  top: -30px;
+  right: 0;
+}
+
+body .destacamos .valores .path1 {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  z-index: 0;
+  width: calc(1000px + 1500 * ((100vw - 1280px)/ 1920));
+  height: calc(800px + 1300 * ((100vw - 1280px)/ 1920));
+}
+
+body .destacamos .valores .col-lg-4:nth-child(2) .valores__card,
+body .destacamos .valores .col-lg-4:nth-child(6) .valores__card,
+body .destacamos .valores--cards {
+  margin-top: 50px;
+}
+
+body .destacamos .valores .col-lg-4:nth-child(4) .valores__card {
+  margin-top: -50px;
+}
+
+body .destacamos .valores .col-lg-4:nth-child(3) .valores__card {
+  margin-top: 100px;
+}
+
+body .destacamos .valores__card {
+  padding: 40px 20px;
+  border-radius: 8px 8px 40px;
+  position: relative;
+  cursor: pointer;
+  opacity: 1;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -ms-flex-align: center;
+  align-items: center;
+  margin: 0 0 0 20px;
+}
+
+.heroInt .container-fluid,
+body .destacamos .esfuerzo .container-fluid {
+  padding-right: 0;
+}
+
+body .destacamos .valores__card [class*=icon-] {
+  font-size: 2em;
+  color: var(--secundario);
+  margin-bottom: 15px;
+}
+
+body .destacamos .valores__card h3 {
+  color: var(--secundario);
+  text-align: center;
+}
+
+body .destacamos .esfuerzo {
+  position: relative;
+  padding-bottom: 0;
+}
+
+body .destacamos .esfuerzo .poligono {
+  top: 100px;
+  right: -30px;
+  animation: mancha 15s linear infinite reverse;
+}
+
+body .destacamos .esfuerzo .path1 {
+  position: absolute;
+  right: -50px;
+  top: 60px;
+  z-index: 1;
+  transform: rotateY(180deg);
+}
+
+body .destacamos .esfuerzo .swiper-slide {
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+}
+
+body .destacamos .esfuerzo .navegacion {
+  position: absolute;
+  bottom: 50px;
+  left: 0;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  width: 280px;
+  -ms-flex-align: center;
+  align-items: center;
+  z-index: 2;
+}
+
+body .destacamos .esfuerzo .navegacion .swiper-pagination {
+  right: auto;
+  margin: 0;
+}
+
+body .destacamos .esfuerzo .navegacion .swiper-nav {
+  height: 50px;
+}
+
+body .destacamos .esfuerzo .navegacion .swiper-nav .swiper-button-next,
+body .destacamos .esfuerzo .navegacion .swiper-nav .swiper-button-prev {
+  position: relative;
+}
+
+body .destacamos .esfuerzo .navegacion .swiper-nav .swiper-button-prev {
+  margin-right: 40px;
+}
+
+body .destacamos .esfuerzo--copy {
+  position: absolute;
+  left: 0;
+  width: -webkit-max-content;
+  width: max-content;
+  max-width: 350px;
+}
+
+body .destacamos .esfuerzo--copy h2 {
+  margin: 30px 0 10px;
+}
+
+body .destacamos .esfuerzo--copy h4 {
+  width: 80%;
+}
+
+body .destacamos .esfuerzo--copy ul {
+  padding-left: 20px;
+  margin-top: 15px;
+}
+
+body .destacamos .esfuerzo--copy ul li {
+  font-size: var(--h4);
+  margin-bottom: 15px;
+}
+
+body .destacamos .esfuerzo--copy ul li::marker {
+  color: var(--primario);
+}
+
+body .destacamos .esfuerzo #mascara {
+  position: absolute;
+  opacity: 0;
+  right: 0;
+}
+
+body .destacamos .esfuerzo--img {
+  min-width: 600px;
+  width: 50%;
+  max-width: 800px;
+  z-index: -1;
+}
+
+body .destacamos .esfuerzo--img img {
+  -webkit-clip-path: url("#svgPath");
+  clip-path: url("#svgPath");
+}
+
 .hero {
   height: 700px;
   -ms-flex-align: end;
@@ -1710,20 +2078,21 @@ body .materiales .promos .swiper-pagination {
 
 .hero .btn--down {
   font-size: 1.8rem;
-  bottom: 60px;
+  bottom: 20px;
   left: 0;
   margin: auto;
   color: var(--primario);
-  transform: rotate(90deg);
   width: -webkit-max-content;
   width: max-content;
+  -ms-flex-direction: column;
+  flex-direction: column;
 }
 
 .hero .btn--down h5 {
   color: #fff;
-  transform: rotate(270deg);
   position: relative;
-  left: 20px;
+  text-align: center;
+  margin-top: 10px;
 }
 
 .hero .btn--down span {
@@ -1733,17 +2102,13 @@ body .materiales .promos .swiper-pagination {
 
 .hero .btn--down span:first-child {
   opacity: .5;
-  left: 15px;
+  top: 10px;
   position: relative;
 }
 
 .heroInt {
   background: #fff;
   height: auto;
-}
-
-.heroInt .container-fluid {
-  padding-right: 0;
 }
 
 .heroInt .offset-lg-3 {
@@ -1775,7 +2140,7 @@ body .materiales .promos .swiper-pagination {
 .heroInt .hero--copy {
   padding-left: 10%;
   position: absolute;
-  bottom: 50px;
+  bottom: 150px;
 }
 
 .heroInt .path1 {

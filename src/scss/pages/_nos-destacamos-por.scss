@@ -1,0 +1,354 @@
+.destacamos{
+    .hero{
+        h2{
+            color:#fff;
+            margin-top:10px;
+        }
+       
+    }
+    
+    .dedicamos{
+		position: relative;
+		background: url(../../img/fondo2.svg) no-repeat left top /  contain;
+		
+		.poligono{
+			top:100px;	
+			right: -30px;
+			animation: mancha 15s linear infinite reverse;
+		}
+		
+		.path1{
+			position: absolute;
+			left: -40px;
+			top: -20px;
+			z-index: 0;
+		}
+        
+        .transition1{
+			.dedicamos--copy__card{
+				transform: translateX(0px) !important;
+				opacity: 1;
+			}	
+		}
+		
+		.objetFade-On{
+			.dedicamos--copy__card{
+				transition: .4s ease-in-out all !important;
+			}
+		}
+        
+        
+        &--copy{
+			padding-left: 50px;
+			z-index: 2;
+			position: relative;
+			
+			.titleBig{
+				margin-bottom: 80px;
+			}
+			
+			.row{
+				min-height: calc(350px + 150 * ((100vw - 1280px) / 1920));
+			}
+			
+			.col-lg-4{
+				height: calc(230px + 150 * ((100vw - 1280px) / 1920));
+				transition: 1s ease-in-out all;
+				
+				&:first-of-type{
+					.promos--copy__card{
+						transform: translateX(-50px);
+						transition: .6s ease-in-out all;
+					}
+				}
+				&:nth-of-type(2){
+					.promos--copy__card{
+						transform: translateX(-100px);
+						transition: .8s ease-in-out all;
+					}
+				}
+				&:last-of-type{
+					.promos--copy__card{
+						transform: translateX(-150px);
+						transition: 1s ease-in-out all;
+					}
+				}
+				
+				&:hover{
+					.promos--copy__card{
+						padding-bottom: 60px;	
+					}
+				}
+			}
+			
+			
+			&__card{
+				background: #fff;
+				padding: 40px 35px 35px 80px;
+				box-shadow: 0 2px 40px 0 rgba(120,159,183,0.16);
+				border-radius: 8px 8px 40px 8px;
+				position: relative;
+				cursor: pointer;
+				opacity: 0;
+				
+				&:before{
+					font-family: 'icomoon' !important;
+					width: 60px;
+					height: 60px;
+					background: var(--primario);
+					position: absolute;
+					top: -5px;
+					left: -5px;
+					border-radius: 8px;
+					font-size: 1.6em;
+					display: flex;
+					align-items: center;
+					justify-content: center;
+				}
+                
+                &#card1{
+                    &:before{
+                        content: "\e90b";
+                    }
+                }
+                
+                &#card2{
+                    margin-top: 50px;    
+                    &:before{
+                        content: "\e906";
+                    }
+                }
+                
+                &#card3{
+                    margin-top: 100px;
+                    &:before{
+                        content: "\e904";
+                    }
+                }
+				
+                h2{
+                    color: var(--secundario);
+                }
+			}
+			
+		}
+    }
+    
+    .mision{
+        background: url('../img/Desktop/4Nosdestacamos/MisionVision.webp') no-repeat center / cover;
+        min-height: 675px;
+        align-items: center;
+        position: relative;
+        
+        .fondo3{
+			position: absolute;
+			top: 50px;
+            left: 40%;
+			z-index: 1;
+		}
+		
+		#path2{
+			position: absolute;
+			right: -130px;
+			top: -50px;
+			z-index: 1;
+            transform: rotateY(180deg);
+		}
+        
+        .col-12{
+            display: flex;
+            justify-content: space-between;
+        }
+        
+        &--copy{
+            flex: 0 0 45%;
+            
+            .titleBig{
+                margin-bottom: 20px;
+                color: #fff;
+            }
+            
+            h3{
+                color: #fff;
+            }
+            
+            &#vision{
+                margin-top: 150px;
+            }
+        }
+        
+        
+    }
+    
+    .valores{
+        position: relative;
+        background: url(../img/fondo1.svg) left top/contain no-repeat var(--fondoClaro);
+        
+        .poligono{
+			top:-30px;	
+			right: 0;
+		}
+        
+        .path1{
+			position: absolute;
+			left: 0px;
+			bottom: 0px;
+			z-index: 0;
+			width: calc(1000px + 1500 * ((100vw - 1280px) / 1920));
+			height: calc(800px + 1300 * ((100vw - 1280px) / 1920));
+		}
+        
+        &--cards{
+            margin-top: 50px;    
+        }
+        
+        .col-lg-4{
+            &:nth-child(2), &:nth-child(6){
+                .valores__card{
+                    margin-top: 50px;    
+                }
+            }
+            
+            &:nth-child(4){
+                .valores__card{
+                    margin-top:-50px;
+                }
+            }
+            
+            &:nth-child(3){
+                .valores__card{
+                    margin-top: 100px;    
+                }
+            }
+        }
+        
+        
+        &__card{
+            background: #fff;
+            padding: 40px 20px;
+            box-shadow: 0 2px 40px 0 rgba(120,159,183,0.16);
+            border-radius: 8px 8px 40px 8px;
+            position: relative;
+            cursor: pointer;
+            opacity: 1;
+            flex-direction: column;
+            align-items: center;
+            margin:0 0 0 20px;
+            
+            
+            [class*=icon-]{
+                font-size: 2em;    
+                color: var(--secundario);
+                margin-bottom: 15px;
+            }
+            
+            h3{
+                color: var(--secundario);
+                text-align: center;
+            }
+        }
+    }
+    
+    .esfuerzo{
+		position: relative;
+        padding-bottom: 0;
+        
+		.poligono{
+			top:100px;	
+			right: -30px;
+			animation: mancha 15s linear infinite reverse;
+		}
+		
+		.path1{
+			position: absolute;
+			right: -50px;
+            top: 60px;
+			z-index: 1;
+            transform: rotateY(180deg);
+		}
+		
+		.container-fluid{
+            padding-right: 0;
+        }
+        
+        .swiper-slide{
+            justify-content: flex-end;
+        }
+        
+        .navegacion{
+            position: absolute;
+            bottom: 50px;
+            left: 0;
+            justify-content: space-between;
+            width: 280px;
+            align-items: center;
+            z-index: 2;
+            
+            .swiper-pagination{
+                right: auto;    
+                margin: 0;
+            }
+            
+            .swiper-nav{
+                height: 50px;
+                
+                .swiper-button-next, .swiper-button-prev{
+                    position: relative;
+                }
+                
+                .swiper-button-prev{
+                    margin-right: 40px;
+                }
+            }
+        }
+		
+		&--copy{
+            position: absolute;
+            left: 0;
+            width: max-content;
+            max-width: 350px;
+			
+			h2{
+				margin: 30px 0 10px;
+			}
+            
+            h4{
+                width: 80%;
+            }
+            
+            ul{
+                padding-left: 20px;
+                margin-top: 15px;
+                
+                li{
+                    font-size: var(--h4);
+                    margin-bottom: 15px;
+                    
+                    &::marker{
+                        color: var(--primario);
+                    }
+                }
+            }
+			
+		}
+		
+        #mascara{
+            position: absolute;
+            opacity: 0;
+            right: 0;
+        }
+        
+		&--img{
+			min-width: 600px;
+			width: 50%;
+			max-width: 800px;
+			z-index: -1;
+            
+            img{
+                clip-path: url(#svgPath);
+            }
+		}
+        
+        
+	}
+}

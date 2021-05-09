@@ -1,11 +1,12 @@
 - titulo = "Materiales - Renova Industrial";
+- materiales = "activo";
 
 doctype
 html(lang='es')
 
     include includes/head.pug
 
-    body
+    body.body-materiales
         include includes/header.pug
         main.materiales
 
@@ -37,13 +38,13 @@ html(lang='es')
 
 
                                             .hero--links.d-flex
-                                                .hero--links__link.d-flex
+                                                .hero--links__link.d-flex#link-grid
                                                     h3 Ver materiales
                                                     .btn--down.d-flex 
                                                         span.icon-Chevron
                                                         span.icon-Chevron
 
-                                                .hero--links__link.d-flex
+                                                .hero--links__link.d-flex#link-promos
                                                     h3 Conoce las promociones
                                                     .btn--down.d-flex 
                                                         span.icon-Chevron
@@ -60,11 +61,6 @@ html(lang='es')
                         .col-12.col-lg-6.col-xl-5
                             .grid--img
 
-                                //-svg(width='964px' height='831px' viewBox='0 0 964 831')
-                                //-    defs
-                                //-        clipPath#svgPath
-                                //-            path#path-2(d='M185.817946,342.833991 L515.811585,-58.8120222 L515.811585,-58.8120222 L994.377827,144.327295 L678.062996,889.518338 L242.210465,644.063987 C145.966011,589.863039 111.883014,467.902944 166.083962,371.658489 C171.808666,361.493148 178.411842,351.848202 185.817946,342.833991 Z')
-                                   
                                 picture 
                                     source(srcset="img/Desktop/3Materiales/01-retornoindustrial.webp" type="image/webp")
                                     img.img-fluid(src="img/Desktop/3Materiales/01-retornoindustrial.png" alt="Renova Industrial")
