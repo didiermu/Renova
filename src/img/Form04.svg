@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1029px" height="782px" viewBox="0 0 1029 782" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Rectangle</title>
+    <defs>
+        <linearGradient x1="22.6659409%" y1="38.0954193%" x2="96.8551917%" y2="29.93833%" id="linearGradient-1">
+            <stop stop-color="#F6FBFF" stop-opacity="0.8" offset="0%"></stop>
+            <stop stop-color="#FCFEFF" offset="99.9624399%"></stop>
+        </linearGradient>
+        <path d="M454.216012,414.797099 L942.364767,198.052097 L942.364767,198.052097 L1428.70933,395.182375 L1150.15654,1080.73113 L1062.68902,1292.0521 L408.079836,751.845409 C322.886143,681.540556 310.816354,555.484077 381.121207,470.290384 C400.855397,446.376978 425.879069,427.379106 454.216012,414.797099 Z" id="path-2"></path>
+        <filter x="4.4%" y="-10.9%" width="105.1%" height="122.1%" filterUnits="objectBoundingBox" id="filter-3">
+            <feOffset dx="0" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="40" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0.546910262   0 0 0 0 0.786520807   0 0 0 0 0.933973451  0 0 0 0.121001237 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" opacity="0.100274222">
+        <g id="Desktop-1366x768---Wrapper-1100px-Copy-74" transform="translate(0.000000, -870.000000)">
+            <g id="Group-6" transform="translate(0.000000, 870.000000)">
+                <g id="Fondo-Sección-2" transform="translate(683.000000, 514.500000) scale(-1, 1) translate(-683.000000, -514.500000) ">
+                    <g id="Group-14-Copy" transform="translate(841.160726, 544.744445) scale(-1, 1) translate(-841.160726, -544.744445) translate(-19.339274, -322.755555)">
+                        <g id="Rectangle" transform="translate(793.689727, 745.052097) scale(-1, 1) rotate(-22.000000) translate(-793.689727, -745.052097) ">
+                            <use fill="black" fill-opacity="1" filter="url(#filter-3)" xlink:href="#path-2"></use>
+                            <use fill="url(#linearGradient-1)" fill-rule="evenodd" xlink:href="#path-2"></use>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -105,7 +105,13 @@
                             }
                         }
                     }
+                    
                 }  
+                
+                .btn.activo{
+                    background: #fff;
+                    border: 1px solid var(--primario);
+                }
             
             }
         }

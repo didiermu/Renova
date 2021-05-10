@@ -274,6 +274,12 @@
             background: #fff;
             border: 1px solid var(--primario);
         }
+        
+        &:disabled{
+            background: var(--secundario);
+            color: #fff;
+            border: none;
+        }
     }
 
     &.secundario{
@@ -286,10 +292,7 @@
         }
     }
 
-    
-    &.tercero{
-        background: var(--grisClaro);
-    }
+   
 
     &:focus{
         outline: none;
@@ -298,32 +301,119 @@
 }
 
 @mixin input{
-    appearance: none;
-    border: 2px solid var(--grisClaro);
-    outline: none;
-    width: 100%;
-    min-width: 160px;
-    min-height: 44px;
-    font-size: var(--h5);
-    padding: 0 10px;
-    border-radius: 6px;
-    font-family: var(--primariaBold);
-    transition: .3s ease-in-out all;
-
-    &::placeholder{
-        color: var(--fondoGris);
-    }
-
-    &:focus{
-        border: 2px solid var(--primario);
-        color: var(--negro);
-
-        &::placeholder{
-            color: var(--negro);
+    
+    position: relative;
+    
+    label{
+        position: absolute;
+        font-size: var(--h4);
+        color: var(--secundario);
+        left: 30px;
+        top: 15px;
+        transition: .3s ease-in-out all;
+        
+        &.active{
+            top: -25px;
+            left: 0;
         }
     }
+    
+    input[type=text], textarea{
+        appearance: none;
+        border: 2px solid var(--grisClaro);
+        outline: none;
+        width: 100%;
+        min-width: 160px;
+        min-height: 54px;
+        font-size: var(--h5);
+        padding: 0 10px;
+        font-family: var(--primariaBold);
+        transition: .3s ease-in-out all;
+        background: #FFFFFF;
+        box-shadow: 0 2px 20px 0 rgba(120,159,183,0.16);
+        border-radius: 8px;
+
+        &::placeholder{
+            color: var(--fondoGris);
+        }
+
+        &:focus{
+            border: 2px solid var(--primario);
+            color: var(--negro);
+
+            &::placeholder{
+                color: var(--negro);
+            }
+        }
+    }
+    
 }
 
+@mixin checkbox {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    cursor: pointer;
+    user-select: none;
+    margin-bottom: 15px;
+    flex-flow: column;
+
+    input{
+        position: absolute;
+        opacity: 0;
+        height: 0;
+        width: 0;
+
+        &:checked ~ .checkmark {
+            background-color: var(--primario);
+        }
+
+        &:checked ~ .checkmark:after {
+            display: block;
+        }
+    }
+    
+    .label{
+        
+        a{
+            color: inherit;
+            text-decoration: underline;
+        }
+    }
+    
+    .checkmark{
+        height: 26px;
+        width: 25px;
+        border-radius: 5px;
+        background: var(--primario);
+        margin-right: 10px;
+        position: relative;
+
+        &:after{
+            left: 7px;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+            width: 8px;
+            height: 12px;
+            border: solid ;
+            border-width: 0 3px 3px 0;
+            -webkit-transform: rotate(45deg);
+            -ms-transform: rotate(45deg);
+            transform: rotate(45deg);
+            content: "";
+            position: absolute;
+            display: none;
+        }
+    }
+    
+    .msjError{
+        flex: 0 0 100%;
+        padding-left: 35px;
+        display: none;
+        
+    }
+}
 
 @mixin buscador{
     appearance: none;
@@ -352,6 +442,34 @@
             color: var(--negro);
         }
     }
+}
+
+@mixin combo {
+    
+    cursor: pointer;
+    background: url(../../img/flechaCombo.png) no-repeat 95% center / 10px #fff;
+    min-height: 50px;
+    border-radius: 8px;
+    padding: 0 30px;
+    display: flex;
+    box-shadow: 0 2px 20px 0 rgba(120,159,183,0.16);
+    
+    select{
+        appearance: none;
+        outline: none;
+        border: none;
+        font-size: var(--h4);
+        background: var(--blanco);
+        color: var(--negro);
+        transition: .3s ease-in-out all;
+        width: 100%;
+        cursor: pointer;
+        
+        &:focus{
+            outline: none;
+        }
+    }
+    
 }
 
 // ANIMACIONES

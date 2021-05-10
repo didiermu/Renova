@@ -1,0 +1,110 @@
+- titulo = "Nos destacamos por - Renova Industrial";
+- contacto = "activo";
+
+doctype
+html(lang='es')
+
+    include includes/head.pug
+
+    body.body-contacto
+        include includes/header.pug
+        main.contacto
+
+            section.dedicamos
+                img.img-fluid.poligono(src="img/Form03.svg", alt="Renova Industrial")
+                
+                #triggerDedicamos
+                
+                svg.path1(width='800px' height='800px' viewBox='0 0 1000 1100')
+                    g.Page-1(stroke='none' stroke-width='1' fill='none' fill-rule='evenodd')
+                        path(d="M829.358284,449.674323 L449.519976,181.2579 C359.313246,117.51244 234.510337,138.963537 170.764877,229.170267 C154.089911,252.767149 142.72582,279.696927 137.454748,308.106136 L0.703458895,1045.14698 L0.703458895,1045.14698" id="pathDedicamos" stroke="#F9BB00" stroke-width="2" transform="translate(415.030872, 523.073489) rotate(-180.000000) translate(-415.030872, -523.073489) ")
+                        
+                .container
+                    .row.align-items-center.objetFade
+                       
+                        .col-12.col-lg-9.offset-lg-3.offset-xl-4
+                            .dedicamos--copy
+                                h2.titleBig 
+                                    b Contacto
+                                
+                                h3 Si quieres saber sobre nuestras promociones
+                                    br
+                                    | o solicitar nuestros servicios escríbenos
+                                
+                            form#formContacto(action="")
+                                .input__group
+                                    label Nombre
+                                    input#nombre(type="text", name="")
+
+                                .input__group#ayudaGroup
+                                    //-label ¿En qué te podemos ayudar?
+                                    .combo
+                                        select#comboAyuda(name="") 
+                                            option(value="0" selected hidden)
+                                            option(value="1") Quiero vender mis desperdicios
+                                            option(value="2") Quiero comprar materiales reciclados 
+
+                                .input__group
+                                    label Correo electrónico
+                                    input#email(type="text", name="")
+
+                                .input__group#msjGroup
+                                    label Mensaje
+                                    textarea#mensaje(name="") 
+
+                                .input__group#telefonoGroup
+                                    label Télefono
+                                    input#telefono(type="text", name="")
+                                
+                                .checkboxes#cajaLegal 
+                                    .check
+                                        input#checkLegale.checkbox(type='checkbox')
+                                        label#checkboxLegales.checkmark(for='checkLegale')  
+                                        label.label#labelLegales(for='checkLegale')
+                                            | Acepto 
+                                            a#linkTerminos(href="terminos-y-condiciones.php") el Aviso de Privacidad
+                                            
+                                    span.msjError.show Debes aceptar los términos y condiciones
+                                
+                                input.btn.primario#enviarContacto(type="submit", value="Enviar")
+                            
+                            a(href="mailto:ventas@renovaindustrial.com").linkBorder ventas@renovaindustrial.com
+            
+            section.mapa 
+                
+                #triggerAyuda
+                
+                svg.path1(width='1000px' height='800px' viewBox='0 0 900 824')
+                    g.Page-1(stroke='none' stroke-width='1' fill='none' fill-rule='evenodd')
+                        path(d="M584.473023,562.458371 L212.57173,299.650718 C122.365,235.905257 -2.43790882,257.356355 -66.1833689,347.563085 C-83.9353827,372.684107 -95.6536808,401.561328 -100.426977,431.949078 L-182.296541,953.146978 L-182.296541,953.146978" id="pathAyuda" stroke="#F9BB00" stroke-width="2" transform="translate(201.088241, 533.465513) rotate(-243.000000) translate(-201.088241, -533.465513) ")
+                        
+                .container 
+                    .row
+                        .col-12.col-lg-9.offset-lg-3.offset-xl-4
+                            h2.titleBig 
+                                b Llámanos
+                            
+                            .mapa__imagen 
+                                picture
+                                    source(srcset="img/mapa.webp", type="image/webp")
+                                    img.img-fluid(src="img/mapa.png")
+                               
+                                .mapa__imagen__tooltip#tooltip1
+                                    h6 Planta Norte
+                                    h3 Saltillo
+                                    ul
+                                        li 
+                                            a(href="tel:+ 52 (844) 199 0641") + 52 (844) 199 0641
+                                        li 
+                                            a(href="tel:+ 52 (844) 199 0641") + 52 (844) 199 0641
+                               
+                                .mapa__imagen__tooltip#tooltip2
+                                    h6 Planta Centro
+                                    h3 Querétaro
+                                    ul
+                                        li 
+                                            a(href="tel:+ 52 (442) 225 6338") + 52 (442) 225 6338
+                                        li 
+                                            a(href="tel:+ 52 (442) 225 6242") + 52 (442) 225 6242
+                                        
+        include includes/footer.pug

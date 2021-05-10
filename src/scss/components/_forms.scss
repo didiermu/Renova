@@ -2,7 +2,7 @@ input[type=button], input[type=submit], .btn{
     @include boton;
 }
 
-input[type=text], textarea{
+.input__group{
     @include input;
 }
 
@@ -27,13 +27,13 @@ textarea{
     font-size:var(--h6);
 }
 
-// .combo {
-//     @include combo;
-// }
+ .combo {
+     @include combo;
+ }
  
-// .checkboxes{
-//     @include checkbox;
-// }
+ .checkboxes{
+     @include checkbox;
+ }
 
 
 

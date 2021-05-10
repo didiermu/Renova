@@ -50,6 +50,27 @@ function valTextNum(nameInput) {
 
 }
 
+/// NUMEROS
+
+function valNum(nameInput) {
+	if (nameInput.val().length < 1) {
+		nameInput.siblings("span").remove();
+		nameInput.after("<span class='error-input'>Campo requerido");
+	} else {
+
+		var regEx = /^[0-9]+$/;
+
+		var validEmail = regEx.test(nameInput.val());
+
+		if (!validEmail) {
+			nameInput.siblings("span").remove();
+			nameInput.after('<span class="error-input"> Solo se permiten numeros </span>');
+			nameInput.siblings("span").show();
+		} else {
+			nameInput.siblings("span").remove();
+		}
+	}
+}
 
 /// EMAIL
 
@@ -75,17 +96,41 @@ function valMail(nameInput) {
 	}
 }
 
+ /// COMBOS
+
+function valCombos(nameInput){
+	var combosContacto = $(nameInput);
+	
+	combosContacto.each(function () {
+		$(this).change(function () {
+			if ($(this).val() != null) {
+				$(this).siblings("span").remove();
+				
+			}
+		});
+
+		if ($(this).val() == null) {
+			$(this).siblings("span").remove();
+			$(this).after('<span class="error-input"> Campo requerido </span>');
+		}
+
+	});
+}
+
 function validacionContacto(){
 	$('#enviarContacto').on("click", function() {
 
-        var nombre = $("#nombreContacto"),
-            email = $("#emailContacto"),
-            msj = $("#msjContacto");
+        var nombre = $("#nombre"),
+            email = $("#email"),
+			telefono = $("#telefono")
+			comboAyuda = $("#comboAyuda"),
+            msj = $("#mensaje");
 
         valText(nombre);
         valMail(email);
+		valNum(telefono);
         valTextNum(msj);
-
+		valCombos(comboAyuda);
         
         // VALIDATE ALL
 
