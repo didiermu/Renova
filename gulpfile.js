@@ -180,16 +180,17 @@ gulp.task('watch', () => {
 
 gulp.task('browser-sync', () => {
 
-    php.server({ 
+    /* php.server({ 
         base: './dist/',
         port: 8010,
         keepalive: true
-    });
+    }); */
 
     browserSync.init({
         injectChanges: true,
-        files: ['./dist/**/*.{html,php,css,js}'],
-        proxy: 'localhost:8010',
+        files: ['./dist/**/*.{html,css,js}'],
+        server: "./dist/"
+        // proxy: 'localhost:8010',
     });
     
     gulp.parallel('pastefiles');

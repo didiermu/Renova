@@ -17,12 +17,20 @@
                 
                 .btn--down{
                     position: relative;
-                    bottom:10px;
+                    bottom:5px;
+                    flex-direction: row;
                     transform: rotate(90deg) scale(.8);
                     
                     span{
                         animation: none;
+                        
+                        &:first-child{
+                            top: 0;
+                            left: 15px;
+                        }
                     }
+                    
+                    
                 }
                 
                 &:hover{
@@ -48,7 +56,11 @@
                     }
                 }
             }
-        }    
+        }  
+        
+        &--copy{
+            bottom: 50px;
+        }
     }
     
     .grid{
@@ -251,6 +263,14 @@
             position: relative;
         }
         
+        
+        .objetFade {
+            .promos--copy__card{
+                transform: translateX(50px) !important;  
+                transition: 1s ease-in-out all; 
+            }
+        }
+        
         .transition1{
 			.promos--copy__card{
 				transform: translateX(0px) !important;
@@ -354,4 +374,24 @@
             }
         }
     }
+    
+    .objetFade{
+        img{
+            left:-100%;
+            position: relative;
+        }	
+        
+        h1,h2,h3,h4,h5,h6,a{
+            transform: translateX(50%);
+        }
+        
+        &.transition1{
+            img{
+                left: 0;
+            }
+            h1,h2,h3,h4,h5,h6,a{
+                transform: translateX(0%);
+            }
+        }
+    } 
 }

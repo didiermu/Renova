@@ -1,6 +1,5 @@
 @charset "UTF-8";
 
-body .destacamos .dedicamos--copy__card,
 body .header--navegacion--logo,
 body .home .promos--copy__card,
 body .materiales .grid .swiper-slide,
@@ -248,11 +247,6 @@ body .header--navegacion--logo--img #logo1.logoGiro {
   animation: giro 8s ease-in-out infinite;
 }
 
-body .btn--down span:first-of-type,
-body .btn--down span:last-of-type {
-  animation: flecha 1.5s ease-in-out infinite;
-}
-
 @keyframes giro {
   100%, 90% {
     transform: rotate(360deg);
@@ -466,6 +460,12 @@ body .footer h5 {
   }
 }
 
+body .destacamos .dedicamos--copy .row,
+body .home .promos--copy .row,
+body .materiales .promos .swiper-container {
+  min-height: calc(350px + 150 * ((100vw - 1280px)/ 1920));
+}
+
 body a,
 body h1,
 body h2,
@@ -576,7 +576,12 @@ body section:not(.hero) {
   overflow: hidden;
 }
 
+body .btn--down span:first-of-type {
+  animation: flecha 1.5s ease-in-out infinite;
+}
+
 body .btn--down span:last-of-type {
+  animation: flecha 1.5s ease-in-out infinite;
   animation-delay: .1s;
 }
 
@@ -648,6 +653,14 @@ body .poligono {
   z-index: 1;
 }
 
+body .contacto .dedicamos .poligono,
+body .destacamos .dedicamos .poligono,
+body .destacamos .esfuerzo .poligono,
+body .home .dedicamos .poligono,
+body .materiales .promos .poligono {
+  animation: mancha 15s linear infinite reverse;
+}
+
 @keyframes mancha {
   100%, 90% {
     transform: rotate(360deg);
@@ -671,7 +684,14 @@ body .home .contacto .objetFade h2,
 body .home .contacto .objetFade h3,
 body .home .contacto .objetFade h4,
 body .home .contacto .objetFade h5,
-body .home .contacto .objetFade h6 {
+body .home .contacto .objetFade h6,
+body .servicios .nuestros .objetFade a,
+body .servicios .nuestros .objetFade h1,
+body .servicios .nuestros .objetFade h2,
+body .servicios .nuestros .objetFade h3,
+body .servicios .nuestros .objetFade h4,
+body .servicios .nuestros .objetFade h5,
+body .servicios .nuestros .objetFade h6 {
   transform: translateX(50%);
 }
 
@@ -774,7 +794,6 @@ body .home .dedicamos {
 body .home .dedicamos .poligono {
   top: 100px;
   right: -30px;
-  animation: mancha 15s linear infinite reverse;
 }
 
 body .home .dedicamos .path1 {
@@ -872,12 +891,6 @@ body .home .promos--img {
   background: url("../img/Desktop/1Home/Secc3.webp") center/cover no-repeat fixed;
 }
 
-body .destacamos .dedicamos--copy .col-lg-4:hover .promos--copy__card,
-body .home .promos--copy .col-lg-4:hover .promos--copy__card,
-body .materiales .promos .swiper-slide:hover .promos--copy__card {
-  padding-bottom: 60px;
-}
-
 body .home .promos--img .imageHolder img {
   opacity: 1;
   transition: none;
@@ -903,10 +916,6 @@ body .home .promos--copy .titleBig {
   margin-bottom: 80px;
 }
 
-body .home .promos--copy .row {
-  min-height: calc(350px + 150 * ((100vw - 1280px)/ 1920));
-}
-
 body .home .promos--copy .col-lg-4 {
   height: calc(230px + 150 * ((100vw - 1280px)/ 1920));
   transition: 1s ease-in-out all;
@@ -925,6 +934,10 @@ body .home .promos--copy .col-lg-4:nth-of-type(2) .promos--copy__card {
 body .home .promos--copy .col-lg-4:last-of-type .promos--copy__card {
   transform: translateX(-150px);
   transition: 1s ease-in-out all;
+}
+
+body .home .promos--copy .col-lg-4:hover .promos--copy__card {
+  padding-bottom: 60px;
 }
 
 body .home .promos--copy__card {
@@ -1268,20 +1281,32 @@ body .servicios .nuestros .swiper-slide__card__copy h3 {
   opacity: 0;
 }
 
-body .servicios .promos {
+body .servicios .nuestros .swiper-pagination {
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+}
+
+body .servicios .nuestros .objetFade img {
+  left: -100%;
   position: relative;
 }
 
-body .servicios .promos.sectionOn #path1 {
-  opacity: 1;
+body .servicios .nuestros .objetFade.transition1 img {
+  left: 0;
 }
 
-body .servicios .promos.sectionOn #path1 path {
-  stroke-dasharray: 2000;
-  stroke-dashoffset: 2000;
-  animation: draw 2s linear forwards;
-  animation-iteration-count: 1;
-  animation-delay: 0s;
+body .servicios .nuestros .objetFade.transition1 a,
+body .servicios .nuestros .objetFade.transition1 h1,
+body .servicios .nuestros .objetFade.transition1 h2,
+body .servicios .nuestros .objetFade.transition1 h3,
+body .servicios .nuestros .objetFade.transition1 h4,
+body .servicios .nuestros .objetFade.transition1 h5,
+body .servicios .nuestros .objetFade.transition1 h6 {
+  transform: translateX(0);
+}
+
+body .servicios .promos {
+  position: relative;
 }
 
 body .servicios .promos .fondo3 {
@@ -1294,9 +1319,27 @@ body .servicios .promos .fondo3 {
 body .servicios .promos #path2 {
   position: absolute;
   right: -40px;
-  top: 100px;
+  top: -20px;
+  left: auto;
   z-index: 1;
   transform: rotateY(180deg);
+}
+
+body .materiales .objetFade a,
+body .materiales .objetFade h1,
+body .materiales .objetFade h2,
+body .materiales .objetFade h3,
+body .materiales .objetFade h4,
+body .materiales .objetFade h5,
+body .materiales .objetFade h6,
+body .servicios .promos .objetFade a,
+body .servicios .promos .objetFade h1,
+body .servicios .promos .objetFade h2,
+body .servicios .promos .objetFade h3,
+body .servicios .promos .objetFade h4,
+body .servicios .promos .objetFade h5,
+body .servicios .promos .objetFade h6 {
+  transform: translateX(50%);
 }
 
 body .servicios .promos--img {
@@ -1369,6 +1412,34 @@ body .servicios .promos--certificados__lista h2 {
   color: var(--secundario);
 }
 
+body .servicios .promos .objetFade img {
+  left: -100%;
+  position: relative;
+}
+
+body .servicios .promos .objetFade .promos--copy__card {
+  transform: rotateX(90deg);
+  transition: 1s ease-in-out all;
+}
+
+body .servicios .promos .objetFade.transition1 img {
+  left: 0;
+}
+
+body .servicios .promos .objetFade.transition1 a,
+body .servicios .promos .objetFade.transition1 h1,
+body .servicios .promos .objetFade.transition1 h2,
+body .servicios .promos .objetFade.transition1 h3,
+body .servicios .promos .objetFade.transition1 h4,
+body .servicios .promos .objetFade.transition1 h5,
+body .servicios .promos .objetFade.transition1 h6 {
+  transform: translateX(0);
+}
+
+body .servicios .promos .objetFade.transition1 .promos--copy__card {
+  transform: rotateX(0);
+}
+
 body .materiales .hero h1 {
   margin-bottom: 50px;
 }
@@ -1386,12 +1457,19 @@ body .materiales .hero--links__link h3 {
 
 body .materiales .hero--links__link .btn--down {
   position: relative;
-  bottom: 10px;
+  bottom: 5px;
+  -ms-flex-direction: row;
+  flex-direction: row;
   transform: rotate(90deg) scale(.8);
 }
 
 body .materiales .hero--links__link .btn--down span {
   animation: none;
+}
+
+body .materiales .hero--links__link .btn--down span:first-child {
+  top: 0;
+  left: 15px;
 }
 
 body .materiales .hero--links__link:hover .btn--down {
@@ -1413,6 +1491,10 @@ body .materiales .hero--links__link:hover .btn--down {
     transform: rotate(90deg) translateX(10px) scale(.8);
     opacity: 0;
   }
+}
+
+body .materiales .hero--copy {
+  bottom: 50px;
 }
 
 body .materiales .grid {
@@ -1563,11 +1645,6 @@ body .materiales .grid .tab-pane {
   min-height: 300px;
 }
 
-body .destacamos .dedicamos--copy .row,
-body .materiales .promos .swiper-container {
-  min-height: calc(350px + 150 * ((100vw - 1280px)/ 1920));
-}
-
 body .materiales .grid .tab-pane ul {
   -ms-flex-flow: wrap;
   flex-flow: wrap;
@@ -1603,7 +1680,6 @@ body .materiales .promos {
 body .materiales .promos .poligono {
   top: 100px;
   right: -30px;
-  animation: mancha 15s linear infinite reverse;
 }
 
 body .materiales .promos .path1 {
@@ -1613,8 +1689,24 @@ body .materiales .promos .path1 {
   z-index: 0;
 }
 
+body .destacamos .dedicamos--copy__card:before,
+body .materiales .promos--copy__card:before {
+  width: 60px;
+  top: -5px;
+  -ms-flex-align: center;
+  align-items: center;
+  font-family: icomoon!important;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 body .materiales .promos .row {
   position: relative;
+}
+
+body .materiales .promos .objetFade .promos--copy__card {
+  transform: translateX(50px)!important;
+  transition: 1s ease-in-out all;
 }
 
 body .materiales .promos .transition1 .promos--copy__card {
@@ -1640,27 +1732,26 @@ body .materiales .promos--copy__card {
   opacity: 0;
 }
 
-body .destacamos .dedicamos--copy__card:before,
-body .materiales .promos--copy__card:before {
-  width: 60px;
-  background: var(--primario);
-  top: -5px;
-  left: -5px;
-  -ms-flex-align: center;
-  align-items: center;
-  font-family: icomoon!important;
-  display: -ms-flexbox;
-  display: flex;
+body .destacamos .dedicamos--copy .col-lg-4:hover .promos--copy__card,
+body .materiales .promos .swiper-slide:hover .promos--copy__card {
+  padding-bottom: 60px;
 }
 
 body .materiales .promos--copy__card:before {
   content: "\e907";
   height: 60px;
+  background: var(--primario);
   position: absolute;
+  left: -5px;
   border-radius: 8px;
   font-size: 2em;
   -ms-flex-pack: center;
   justify-content: center;
+}
+
+body .contacto .dedicamos,
+body .destacamos .dedicamos {
+  background: url("../img/fondo2.svg") left top/contain no-repeat;
 }
 
 body .materiales .promos--copy__card:hover .btn {
@@ -1703,6 +1794,25 @@ body .materiales .promos .swiper-pagination {
   right: 30px;
 }
 
+body .materiales .objetFade img {
+  left: -100%;
+  position: relative;
+}
+
+body .materiales .objetFade.transition1 img {
+  left: 0;
+}
+
+body .materiales .objetFade.transition1 a,
+body .materiales .objetFade.transition1 h1,
+body .materiales .objetFade.transition1 h2,
+body .materiales .objetFade.transition1 h3,
+body .materiales .objetFade.transition1 h4,
+body .materiales .objetFade.transition1 h5,
+body .materiales .objetFade.transition1 h6 {
+  transform: translateX(0);
+}
+
 body .destacamos .hero h2 {
   color: #fff;
   margin-top: 10px;
@@ -1710,13 +1820,19 @@ body .destacamos .hero h2 {
 
 body .destacamos .dedicamos {
   position: relative;
-  background: url("../img/fondo2.svg") left top/contain no-repeat;
+}
+
+body .destacamos .dedicamos--copy__card,
+body .destacamos .valores__card {
+  background: #fff;
+  box-shadow: 0 2px 40px 0 rgba(120,159,183,.16);
+  border-radius: 8px 8px 40px;
+  cursor: pointer;
 }
 
 body .destacamos .dedicamos .poligono {
   top: 100px;
   right: -30px;
-  animation: mancha 15s linear infinite reverse;
 }
 
 body .destacamos .dedicamos .path1 {
@@ -1724,6 +1840,11 @@ body .destacamos .dedicamos .path1 {
   left: -40px;
   top: -20px;
   z-index: 0;
+}
+
+body .destacamos .dedicamos .objetFade .dedicamos--copy__card {
+  transform: translateX(100px)!important;
+  transition: 1s ease-in-out all;
 }
 
 body .destacamos .dedicamos .transition1 .dedicamos--copy__card {
@@ -1762,27 +1883,20 @@ body .destacamos .dedicamos--copy .col-lg-4:last-of-type .promos--copy__card {
 }
 
 body .destacamos .dedicamos--copy__card {
-  background: #fff;
   padding: 40px 35px 35px 80px;
-  border-radius: 8px 8px 40px;
   position: relative;
-  cursor: pointer;
   opacity: 0;
 }
 
 body .destacamos .dedicamos--copy__card:before {
   height: 60px;
+  background: var(--primario);
   position: absolute;
+  left: -5px;
   border-radius: 8px;
   font-size: 1.6em;
   -ms-flex-pack: center;
   justify-content: center;
-}
-
-body .contacto .mapa__imagen__tooltip,
-body .destacamos .valores__card {
-  box-shadow: 0 2px 40px 0 rgba(120,159,183,.16);
-  border-radius: 8px 8px 40px;
 }
 
 body .destacamos .dedicamos--copy__card#card1:before {
@@ -1810,7 +1924,7 @@ body .destacamos .dedicamos--copy__card h2 {
 }
 
 body .destacamos .mision {
-  background: url("../img/Desktop/4Nosdestacamos/MisionVision.webp") center/cover no-repeat;
+  background: url("../img/Desktop/4Nosdestacamos/MisionVision.webp") center/cover no-repeat fixed;
   min-height: 675px;
   -ms-flex-align: center;
   align-items: center;
@@ -1891,10 +2005,8 @@ body .destacamos .valores .col-lg-4:nth-child(3) .valores__card {
 }
 
 body .destacamos .valores__card {
-  background: #fff;
   padding: 40px 20px;
   position: relative;
-  cursor: pointer;
   opacity: 1;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -1922,7 +2034,6 @@ body .destacamos .esfuerzo {
 body .destacamos .esfuerzo .poligono {
   top: 100px;
   right: -30px;
-  animation: mancha 15s linear infinite reverse;
 }
 
 body .destacamos .esfuerzo .path1 {
@@ -2020,16 +2131,43 @@ body .destacamos .esfuerzo--img img {
   clip-path: url("#svgPath");
 }
 
+body .destacamos .objetFade img {
+  left: -100%;
+  position: relative;
+}
+
+body .destacamos .objetFade a,
+body .destacamos .objetFade h1,
+body .destacamos .objetFade h2,
+body .destacamos .objetFade h3,
+body .destacamos .objetFade h4,
+body .destacamos .objetFade h5,
+body .destacamos .objetFade h6 {
+  transform: translateX(50%);
+}
+
+body .destacamos .objetFade.transition1 img {
+  left: 0;
+}
+
+body .destacamos .objetFade.transition1 a,
+body .destacamos .objetFade.transition1 h1,
+body .destacamos .objetFade.transition1 h2,
+body .destacamos .objetFade.transition1 h3,
+body .destacamos .objetFade.transition1 h4,
+body .destacamos .objetFade.transition1 h5,
+body .destacamos .objetFade.transition1 h6 {
+  transform: translateX(0);
+}
+
 body .contacto .dedicamos {
   position: relative;
-  background: url("../img/fondo2.svg") left top/contain no-repeat;
   padding-left: 50px;
 }
 
 body .contacto .dedicamos .poligono {
   top: 100px;
   right: -30px;
-  animation: mancha 15s linear infinite reverse;
 }
 
 body .contacto .dedicamos .path1 {
@@ -2122,6 +2260,8 @@ body .contacto .mapa .titleBig {
 body .contacto .mapa__imagen__tooltip {
   background: #fff;
   padding: 20px 30px 0 20px;
+  box-shadow: 0 2px 40px 0 rgba(120,159,183,.16);
+  border-radius: 8px 8px 40px;
   position: absolute;
 }
 
