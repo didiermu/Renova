@@ -43,7 +43,7 @@ function efectoFade() {
 			}
 		});
 		
-		if ($(".home .dedicamos").hasClass("sectionOn") || $(".home .promos").hasClass("sectionOn") || $(".body-materiales .hero").hasClass("sectionOn") || $(".materiales .promos").hasClass("sectionOn") || $(".body-destacamos .hero").hasClass("sectionOn") || $(".body-destacamos .valores").hasClass("sectionOn") || $(".body-destacamos .esfuerzo").hasClass("sectionOn")  || $(".body-servicios .hero").hasClass("sectionOn") || $(".body-servicios .nuestros").hasClass("sectionOn")){
+		if ($(".home .dedicamos").hasClass("sectionOn") || $(".home .promos").hasClass("sectionOn") || $(".body-materiales .hero").hasClass("sectionOn") || $(".materiales .promos").hasClass("sectionOn") || $(".body-destacamos .hero").hasClass("sectionOn") || $(".body-destacamos .valores").hasClass("sectionOn") || $(".body-destacamos .esfuerzo").hasClass("sectionOn")  || $(".body-servicios .hero").hasClass("sectionOn") || $(".servicios .nuestros").hasClass("sectionOn") || $(".servicios .promos").hasClass("sectionOn")){
 			$(".header").addClass("black");
 		}
 		
