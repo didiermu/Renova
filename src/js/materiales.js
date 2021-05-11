@@ -67,18 +67,17 @@ function carruselMateriales(){
 		direction: 'horizontal',
 		loop:true,
 		centeredSlidesBounds:true,
+		slidesPerView: "auto",
 		navigation: {
 			nextEl: '.swiper-button-next',
 			prevEl: '.swiper-button-prev',
 		},
 		breakpoints:{
 			320: {
-				slidesPerView: "1",
 				spaceBetween: 10,
 				allowTouchMove:true,
 			},
 			992: {
-                slidesPerView: "auto",
                 spaceBetween: 30,
                 //slidesOffsetAfter:40,
                 allowTouchMove:false,
@@ -103,7 +102,7 @@ function carruselPromos(){
 		},
 		breakpoints:{
 			320: {
-				slidesPerView: "1",
+				slidesPerView: "auto",
 				spaceBetween: 10,
 				allowTouchMove:true,
 			},
@@ -117,6 +116,7 @@ function carruselPromos(){
 		}
 	});
 }
+
 
 $(document).ready(function(){
 	if(window.location.href.indexOf("materiales") > -1){

@@ -30,7 +30,7 @@ html(lang='es')
                         .col-12.col-lg-7
                             .ayuda--copy(data-enllax-ratio=".2" data-enllax-type="foreground")
                                 h2.titleBig
-                                    b ¿Cómo te
+                                    b ¿Cómo te 
                                         br 
                                         | podemos ayudar?
                                         
@@ -39,14 +39,14 @@ html(lang='es')
                                         br 
                                         | industriales
                                     
-                                    a(href="#!").linkBorder Conoce nuestros servicios 
+                                    a(href="servicios.html").linkBorder Conoce nuestros servicios 
                                     
                                 .ayuda--copy__acceso.offset-lg-1
                                     h2 Quiero comprar materiales
                                         br 
                                         | reciclados
                                     
-                                    a(href="#!").linkBorder Ver materiales
+                                    a(href="materiales.html").linkBorder Ver materiales
                 
             section.dedicamos
                 img.img-fluid.poligono(src="img/Form03.svg", alt="Renova Industrial")
@@ -75,7 +75,7 @@ html(lang='es')
                                     br 
                                     |profesional industriales
                                 
-                                a(href="#!").linkBorder Conoce Renova
+                                a(href="nos-destacamos-por.html").linkBorder Conoce Renova
                                         
                                     
                         
@@ -106,17 +106,21 @@ html(lang='es')
                                     b Promociones    
                                 
                                 .row
-                                    - var n = 0;
-                                    while n < 3
-                                        - ++n
-                                        .col-lg-4
-                                            .promos--copy__card
-                                                h5 Precio preferencial
-                                                h2 En volumen de lámina
-                                                a(href="#!") 
-                                                    button.btn.secundario Me interesa
-                                
-                                a(href="#!").linkBorder Ver las promociones 
+                                    .swiper-container.sliderPromosHome
+                                        .swiper-wrapper
+                                            - var n = 0;
+                                            while n < 3
+                                                - ++n
+                                                .col-lg-4.col-10.swiper-slide
+                                                    .promos--copy__card
+                                                        h5 Precio preferencial
+                                                        h2 En volumen de lámina
+                                                        a(href="#!") 
+                                                            button.btn.secundario Me interesa
+                                                            
+                                        .swiper-pagination.align-items-center
+                                        
+                                a(href="materiales.html#promociones").linkBorder Ver las promociones 
                                 
             section.contacto
                 img.img-fluid.poligono(src="img/Form03.svg", alt="Renova Industrial")
@@ -143,7 +147,7 @@ html(lang='es')
                                 h2.titleBig
                                     b Escríbenos
                                 
-                                a(href="#!") 
+                                a(href="contacto.html") 
                                     button.btn.secundario Me interesa
                                                        
         include includes/footer.pug

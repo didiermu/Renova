@@ -14,9 +14,9 @@ html(lang='es')
             section.hero.heroInt.d-flex
                 .container-fluid
                     .row 
-                        .col-3 
+                        .col-lg-3 
                         
-                        .col-9
+                        .col-lg-9
                             img.fondo3(src="img/fondo3.svg", alt="Renova Industrial")
                             #triggerHero
                             svg.path1(width='800px' height='550px' viewBox='0 0 351 824')
@@ -268,7 +268,7 @@ html(lang='es')
                                         .swiper-button-prev#nav4
                                         .swiper-button-next#nav3
                                     
-                                    .swiper-pagination.align-items-center.d-flex#pag2
+                                    .swiper-pagination.align-items-center.d-flex.swiper-pagination2#pag2
                                     
                                     
                                 .tab-pane.fade#transformacion(role='tabpanel' aria-labelledby='transformacion-tab')
@@ -366,7 +366,7 @@ html(lang='es')
                                         .swiper-button-prev#nav6
                                         .swiper-button-next#nav5
                                 
-                                    .swiper-pagination.align-items-center.d-flex#pag3
+                                    .swiper-pagination.align-items-center.d-flex.swiper-pagination3
 
 
             section.promos
@@ -388,22 +388,31 @@ html(lang='es')
                                         | que nos respaldan    
 
                                 .row
-                                    .col-lg-4
-                                        .promos--copy__card.d-flex
-                                            span.icon-Certificaciones
-                                            h2 Permiso para transporte
-                                            h4 de RME por parte de SEDESU para el estado de Querétaro.
-                                    .col-lg-4
-                                        .promos--copy__card.d-flex
-                                            span.icon-Certificaciones
-                                            h2 Permiso para transporte
-                                            h4 de RME por parte de SMAOT Guanajuato.
-                                    .col-lg-4
-                                        .promos--copy__card.d-flex
-                                            span.icon-Certificaciones
-                                            h2 Permiso para transporte
-                                            h4 de RME por parte de SEDESU para el estado de Nuevo León.
-                                
+                                    .swiper-container.sliderCertificaciones
+                                        .swiper-wrapper
+                                            .col-lg-4.swiper-slide
+                                                .promos--copy__card.d-flex
+                                                    span.icon-Certificaciones
+                                                    h2 Permiso para transporte
+                                                    h4 de RME por parte de SEDESU para el estado de Querétaro.
+                                            
+                                            .col-lg-4.swiper-slide
+                                                .promos--copy__card.d-flex
+                                                    span.icon-Certificaciones
+                                                    h2 Permiso para transporte
+                                                    h4 de RME por parte de SMAOT Guanajuato.
+                                                    
+                                            .col-lg-4.swiper-slide
+                                                .promos--copy__card.d-flex
+                                                    span.icon-Certificaciones
+                                                    h2 Permiso para transporte
+                                                    h4 de RME por parte de SEDESU para el estado de Nuevo León.
+                                        
+                                        .swiper-pagination.align-items-center#paginador2
+                                        
+                                        
+                                        
+                                        
                                 .row.promos--certificados
                                     .col-lg-6
                                         .promos--certificados__lista 

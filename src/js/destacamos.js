@@ -83,6 +83,7 @@ function carruselEsfuerzo(){
 			},
 			992: {
 				slidesPerView: "1",
+				allowTouchMove:false,
 			}
 		}
 	});

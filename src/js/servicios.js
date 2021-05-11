@@ -49,6 +49,10 @@ function tabsPromos(){
 		$('.nav-item').removeClass("active");
 		$(this).parent('li').addClass("active");
 		$(".nav-tabs").addClass("nav-active");
+		//
+		//carruselServicios1();
+		//carruselServicios2();
+		//carruselServicios3();
 		
 	});
 }
@@ -73,10 +77,10 @@ function carruselServicios1(){
 		},
 		breakpoints:{
 			320: {
-				slidesPerView: "1",
+				slidesPerView: 1,
 				spaceBetween: 10,
 				allowTouchMove:true,
-				centeredSlidesBounds:true,
+				//centeredSlidesBounds:true,
 			},
 			992: {
 				slidesPerView: 3,
@@ -106,10 +110,10 @@ function carruselServicios2(){
 		},
 		breakpoints:{
 			320: {
-				slidesPerView: "1",
+				slidesPerView: 1,
 				spaceBetween: 10,
 				allowTouchMove:true,
-				centeredSlidesBounds:true,
+				//centeredSlidesBounds:true,
 			},
 			992: {
 				slidesPerView: "3",
@@ -119,7 +123,6 @@ function carruselServicios2(){
 	});
 	
 }
-
 
 function carruselServicios3(){
 	
@@ -140,10 +143,10 @@ function carruselServicios3(){
 		},
 		breakpoints:{
 			320: {
-				slidesPerView: "1",
+				slidesPerView: 1,
 				spaceBetween: 10,
 				allowTouchMove:true,
-				centeredSlidesBounds:true,
+				//centeredSlidesBounds:true,
 			},
 			992: {
 				slidesPerView: "3",
@@ -155,6 +158,65 @@ function carruselServicios3(){
 }
 
 
+function carruselCertificados(){
+	var mySwiper4 = new Swiper(".sliderCertificaciones", {
+		direction: 'horizontal',
+		pagination: {
+			el: '#paginador2',
+			type: 'bullets',
+			clickable:true,
+		},
+		breakpoints:{
+			320: {
+				slidesPerView: 1,
+				spaceBetween: 10,
+				allowTouchMove:true,
+			},
+			992: {
+                slidesPerView: "auto",
+                spaceBetween: 10,
+                slidesOffsetAfter:30,
+                allowTouchMove:false,
+			}
+		}
+	});
+}
+
+
+function modalServicios(mediaqueryList){
+	var mediaqueryList = window.matchMedia("(max-width: 992px)");
+	
+	if (mediaqueryList.matches) {
+		$(".nav-item").each(function(i, v){
+			$(this).attr("data-target","#servicio"+i);
+			$(this).attr('data-toggle','modal');
+		});
+		
+		var contenido = $(".tab-pane");
+		
+		if($("#myTabContent .modal").length == 3){
+		}
+		
+		else{
+			contenido.each(function(i, v){
+				$(this).wrapAll("<div class='modal fade' id='servicio"+i+"' tabindex='-1' role='dialog' aria-labelledby='exampleModalLabel' aria-hidden='true'><div class='modal-dialog' role='document'><div class='modal-content'><div class='modal-body'>");	
+			});
+		}
+		
+		
+		$(".modal").each(function(i, v){
+			$(this).find(".modal-body").prepend('<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>');
+		});
+	}
+	
+	else{
+		var contenido = $(".tab-pane");
+		$("#myTabContent .modal").remove();
+		$("#myTabContent").append(contenido);
+		//console.log("no media");
+	}
+}
+
 $(document).ready(function(){
 	
     if(window.location.href.indexOf("servicios") > -1){
@@ -162,7 +224,15 @@ $(document).ready(function(){
         carruselServicios1();
 		carruselServicios2();
 		carruselServicios3();
+		carruselCertificados()
         tabsPromos();
+		modalServicios();
+		
+		$(window).resize(function () {
+			modalServicios();
+		});
 	}
+	
+	
     
 });

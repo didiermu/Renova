@@ -30,15 +30,15 @@
     --paddingSection : 120px 0;
 
     @media (max-width:992px) {
-        --h1:calc(24px + 10 * ((100vw - 320px) / 1280)); //ok
-        --h2:calc(20px + 10 * ((100vw - 320px) / 1280)); //ok
-        --h3:calc(18px + 10 * ((100vw - 320px) / 1280)); 
-        --h4:calc(16px + 10 * ((100vw - 320px) / 1280)); 
+        --h1:calc(40px + 10 * ((100vw - 320px) / 1280)); // 
+        --h2:calc(24px + 10 * ((100vw - 320px) / 1280)); //
+        --h3:calc(20px + 10 * ((100vw - 320px) / 1280)); //
+        --h4:calc(16px + 10 * ((100vw - 320px) / 1280)); //
         --h5:calc(14px + 10 * ((100vw - 320px) / 1280));
         --h6:calc(12px + 10 * ((100vw - 320px) / 1280));
         
         // SECCIONES
-        --paddingSection : 30px 0;
+        --paddingSection : 50px 0;
     }
 }
 

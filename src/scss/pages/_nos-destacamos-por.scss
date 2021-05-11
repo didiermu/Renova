@@ -205,6 +205,21 @@
 			height: calc(800px + 1300 * ((100vw - 1280px) / 1920));
 		}
         
+        .objetFade{
+            .valores__card{
+                transform:translateX(100px);
+                transition: 1s ease-in-out all;
+                opacity: 0;
+            }
+            
+            &.transition1{
+                .valores__card{
+                    transform:translateX(0px);
+                    opacity: 1;
+                }
+            }
+        }
+        
         &--cards{
             margin-top: 50px;    
         }
@@ -273,6 +288,34 @@
 			z-index: 1;
             transform: rotateY(180deg);
 		}
+        
+        .objetFade{
+            .esfuerzo--img{
+                left:100%;
+                position: relative;
+                transition: 1s ease-in-out all;
+            }
+            
+            img{
+                right:0;
+                left:0;
+                position: relative;
+            }	
+           
+            
+            &.transition1{
+                .esfuerzo--img{
+                    left:0%;
+                    position: relative;
+                }
+                
+                img{
+                    right: 0;
+                    left:0;
+                }
+               
+            }
+        } 
 		
 		.container-fluid{
             padding-right: 0;
@@ -280,6 +323,8 @@
         
         .swiper-slide{
             justify-content: flex-end;
+            position: relative;
+            overflow: hidden;
         }
         
         .navegacion{
@@ -298,6 +343,7 @@
             
             .swiper-nav{
                 height: 50px;
+                display: flex;
                 
                 .swiper-button-next, .swiper-button-prev{
                     position: relative;
@@ -378,4 +424,119 @@
             }
         }
     } 
+}
+
+@media (max-width:992px) {
+    .destacamos{
+        
+        .dedicamos{
+            .col-lg-4{
+                height:auto;
+            }
+            
+            &--copy{
+                padding-left: 0;
+                
+                .row{
+                    min-height: auto;
+                }
+                
+                &__card{
+                    padding: 30px 35px 25px 50px;
+                    margin-top: 30px !important;
+                    
+                    &:before{
+                        width: 44px;
+                        height: 44px;
+                    }
+                }
+            }
+            
+            .titleBig{
+                margin-bottom: 10px;
+            }
+        }
+        
+        .mision{
+            padding-top: 100px;
+            
+            .col-12{
+                flex-direction: column;
+            }
+            
+            &--copy#vision{
+                margin-top: 50px;
+            }
+            
+        } 
+        
+        .valores{
+            &__card{
+                margin: 0;    
+            }
+            
+            .col-lg-4{
+                
+                &:nth-child(2){
+                    .valores__card{
+                        margin-top: 50px;    
+                    }
+                }
+                
+                &:nth-child(4), &:nth-child(6){
+                    .valores__card{
+                        margin-top:20px;
+                    }
+                }
+                
+                &:nth-child(3), &:nth-child(5){
+                    .valores__card{
+                        margin-top: -20px;    
+                    }
+                }
+                
+            }
+        }
+        
+        .esfuerzo{
+            .container-fluid{
+                padding:0;
+            }
+            
+            .swiper-slide{
+                flex-direction: column;   
+            }
+            
+            &--copy{
+                padding: 0 15px; 
+                position: relative;
+                //min-height: 450px;
+                max-width: fit-content;
+            }
+            
+            &--img{
+                min-width: auto;
+                width: auto;
+                //img{
+                //    transform:scale(.5);
+                //    transform-origin: left;
+                //}
+            }
+            
+            .navegacion {
+                position: relative;
+                width: auto;
+                bottom: 0;
+                
+                .swiper-nav{
+                    display: none;
+                    height:auto;
+                }
+                
+                .swiper-pagination{
+                    margin: auto;
+                }
+            }
+        }
+    }
 }

@@ -6,7 +6,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <meta http-equiv="cache-control" content="no-cache">
-    <title>Nos destacamos por - Renova Industrial</title>
+    <title>Contacto - Renova Industrial</title>
     <meta name="description" content="Renova Insutrial - Optimizamos el manejo de tus residuos industriales con equipo moderno y especializado">
     <link rel="stylesheet" href="css/styles.min.css">
     <script src="js/scripts.min.js" async defer></script>
@@ -26,7 +26,7 @@
                   <li id="li-s2"><a href="materiales.html">Materiales</a></li>
                   <li id="li-s3"><a href="nos-destacamos-por.html">Nos destacamos por</a></li>
                 </ul><a id="linkContacto" href="contacto.html"> 
-                  <button class="btn primario activo">Contacto</button></a>
+                  <button class="btn primario">Contacto</button></a>
               </div>
             </nav>
           </div>
@@ -55,8 +55,8 @@
                 </div>
                 <div class="input__group" id="ayudaGroup">
                   <div class="combo">
-                    <select id="comboAyuda" name=""> 
-                      <option value="0" selected hidden></option>
+                    <select id="comboAyuda" name="">
+                      <option value="0" selected hidden>¿En qué te podemos ayudar?</option>
                       <option value="1">Quiero vender mis desperdicios</option>
                       <option value="2">Quiero comprar materiales reciclados </option>
                     </select>
@@ -95,12 +95,14 @@
           </g>
         </svg>
         <div class="container"> 
-          <div class="row">
+          <div class="row objetFade">
             <div class="col-12 col-lg-9 offset-lg-3 offset-xl-4">
               <h2 class="titleBig"> <b>Llámanos</b></h2>
               <div class="mapa__imagen"> 
                 <picture>
-                  <source srcset="img/mapa.webp" type="image/webp"><img class="img-fluid" src="img/mapa.png">
+                  <source media="(min-width: 992px)" srcset="img/mapa.webp" type="image/webp">
+                  <source media="(min-width: 992px)" srcset="img/mapa.png">
+                  <source srcset="img/mapaMobile.webp" type="image/webp"><img class="img-fluid" src="img/mapaMobile.png">
                 </picture>
                 <div class="mapa__imagen__tooltip" id="tooltip1">
                   <h6>Planta Norte</h6>
@@ -112,9 +114,15 @@
                 </div>
                 <div class="mapa__imagen__tooltip" id="tooltip2">
                   <h6>Planta Centro</h6>
-                  <h3>Querétaro</h3>
+                  <h3>Querétaro </h3>
                   <ul>
                     <li> <a href="tel:+ 52 (442) 225 6338">+ 52 (442) 225 6338</a></li>
+                  </ul>
+                </div>
+                <div class="mapa__imagen__tooltip" id="tooltip3">
+                  <h6>Planta Centro</h6>
+                  <h3>Guanajuato</h3>
+                  <ul>
                     <li> <a href="tel:+ 52 (442) 225 6242">+ 52 (442) 225 6242</a></li>
                   </ul>
                 </div>
@@ -128,7 +136,7 @@
       <div class="container">
         <div class="row align-items-center">
           <div class="col-12">
-            <h5><b>Copyright 2021. Renova Industrial S.A. de C.V.</b></h5>
+            <h5><b>Copyright 2021. <br>Renova Industrial S.A. de C.V.</b></h5>
           </div>
         </div>
       </div>

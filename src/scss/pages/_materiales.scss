@@ -395,3 +395,94 @@
         }
     } 
 }
+
+@media (max-width:992px) {
+    .materiales{
+        .path1{
+            display: none;
+        }
+        
+        .hero{
+            &--links{
+                flex-direction: column;     
+                
+                &__link{
+                    width:max-content;
+                    margin-bottom: 20px;
+                }
+            }
+        }
+        
+        .grid{
+            padding:var(--paddingSection);
+            padding-bottom: 0;
+            
+            .col-xl-5{
+                order: 2;
+            }
+            
+            &--img{
+                transform: none !important;
+            }
+            
+            .swiper-container{
+                margin: 30px 0 10px;
+            }
+            
+            .swiper-nav{
+                display: none;
+            }
+            
+            .tab-pane {
+                min-height: 200px;
+                
+                ul li{
+                    flex: 0 0 100%;
+                }
+                
+                &#plasticos li{
+                    flex:0 0 50%;
+                }
+            }
+        }
+        
+        .promos{
+            padding:var(--paddingSection);
+            
+            .titleBig{
+                margin-bottom: 30px;
+            }
+            
+            .swiper-nav{
+                display: none;
+            }
+            
+            .swiper-slide{
+                flex: 0 0 80%;
+                max-width: 80%;
+                height: auto;
+                
+                &:hover{
+                    .promos--copy__card{
+                        padding-bottom: 35px;
+                    }
+                }
+            }
+            
+            .swiper-pagination {
+                right: auto;
+                justify-content:center;
+            }
+            
+            .promos--copy__card {
+                padding:80px 15px 35px;
+                
+                .btn{
+                    position: relative;
+                    bottom: 0;
+                    opacity: 1;
+                }
+            }
+        }
+    }   
+}

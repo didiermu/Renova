@@ -221,6 +221,10 @@
 				margin-bottom: 80px;
 			}
 			
+			.swiper-pagination{
+				display:none;
+			}
+			
 			.row{
 				min-height: calc(350px + 150 * ((100vw - 1280px) / 1920));
 			}
@@ -397,6 +401,142 @@
 		margin-bottom: 100px;
 	}
 }
+
+
+// MOBILE
+@media (max-width:992px) {
+	main{
+		overflow: hidden;
+	}
+	.home{
+		
+		.ayuda{
+			.row{
+				.col-lg-5{
+					order: 2;
+					padding:0;
+				}
+			}
+			
+			&--copy{
+				padding:0;
+				transform: none !important;
+				
+				.titleBig{
+					margin-bottom: 30px;
+					
+					br{
+						display:none;
+					}
+				}
+				
+				&__acceso{
+					margin-bottom: 50px;
+				}
+			}
+			
+			&--img{
+				margin-top: 50px;
+			}
+		}
+		
+		.dedicamos{
+			padding-bottom: 0;
+			
+			.path1{
+			    width:100%;
+				top: -100px;
+			}
+				
+			&--copy{
+				transform:none !important;
+				padding-left: 0;
+			}
+			
+			&--img{
+				position: relative;
+				bottom:auto;
+				transform:none !important;
+				min-width: auto;
+				width: 100%;
+			}
+		}
+		
+		.promos{
+			.path1{
+			    width:100%;
+				top: -100px;
+			}
+			
+			&--copy{
+				padding-left: 0;
+				
+				.row{
+					margin-bottom: 30px;
+				}
+				
+				.col-lg-4{
+					height: auto !important;
+					
+					&:hover{
+						.promos--copy__card{
+							padding-bottom: 35px;
+						}
+					}
+				}
+				
+				&__card .btn{
+					opacity: 1;
+					bottom:0;
+					position: relative;
+				}
+			}
+			
+			&--img{
+				height:calc(380px + 10 * ((100vw - 320px) / 1280)) !important;
+			}
+			
+			.swiper-pagination{
+				right:auto;
+				margin:0px auto 30px;
+				justify-content: center;
+				position: relative !important;
+				bottom:0 !important;
+				display: flex;
+			}
+		}
+		
+		.contacto{
+			padding:var(--paddingSection);
+			padding-bottom: 0;
+			
+			.path1{
+			    width:100%;
+				top: 150px;
+				left:0;
+			}
+			
+			.col-xl-5{
+				order: 2;
+			}
+			
+			&--copy{
+				min-height: auto;	
+				padding-left: 0;
+			}
+			
+			&--img{
+				position: relative;		
+			}
+		}
+	}
+	
+	
+	.poligono{
+		display: none;
+	}
+}
+
 
 /// SAFARI
 

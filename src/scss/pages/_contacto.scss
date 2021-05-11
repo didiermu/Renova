@@ -4,6 +4,31 @@
 		background: url(../../img/fondo2.svg) no-repeat left top /  contain;
         padding-left: 50px;
         
+        .objetFade{
+            img{
+                left:-100%;
+                position: relative;
+            }	
+            
+            h1,h2,h3,h4,h5,h6,a, form{
+                transform: translateX(50%);
+            }
+           
+            &.transition1{
+                img{
+                    left: 0;
+                }
+                h1,h2,h3,h4,h5,h6,a, form{
+                    transform: translateX(0%);
+                }
+                
+                form{
+                    opacity: 1;
+                }
+            
+            }
+        } 
+        
 		.poligono{
 			top:100px;	
 			right: -30px;
@@ -32,6 +57,9 @@
             margin: 50px 0;
             display: grid;
             grid-template-columns: repeat(2, [col-start] 1fr);
+            position: relative;
+            transition:1s ease-in-out all;
+            opacity: 0;
             
             .input__group{
                 margin-bottom: 35px;
@@ -74,6 +102,33 @@
 		background: url(../../img/Form04.svg) no-repeat left top /  contain var(--texto);
         padding:40px 0 40px 15px;
         
+        .objetFade{
+            
+            h1,h2,h3,h4,h5,h6,a, form{
+                transform: translateX(50%);
+            }
+            
+            .mapa__imagen__tooltip{
+                transform:scale(0);
+                transition: 1s ease-in-out all;
+            }
+            
+            &.transition1{
+               
+                h1,h2,h3,h4,h5,h6,a, form{
+                    transform: translateX(0%);
+                }
+                
+                form{
+                    opacity: 1;
+                }
+                
+                .mapa__imagen__tooltip{
+                    transform:scale(1);
+                }
+            }
+        } 
+        
         .path1{
 			position: absolute;
 			left: 0px;
@@ -88,7 +143,8 @@
             position: absolute;
             left:0;
             top: 60px;
-            text-shadow: 3px 3px 10px #6b6b6b
+            text-shadow: 3px 3px 10px #6b6b6b;
+            z-index: 1;
         }
         
         &__imagen{
@@ -131,8 +187,19 @@
                 }
                 
                 &#tooltip2{
-                    bottom: 10px;
-                    left: 215px;
+                    bottom: 40px;
+                    right: 155px;
+                    
+                    &:before{
+                        right:-5px;
+                        top: -5px;
+                        left: auto;
+                    }
+                }
+                 
+                &#tooltip3{
+                    bottom: 40px;
+                    left: 180px;
                     
                     &:before{
                         right:-5px;
@@ -144,4 +211,90 @@
             }
         }
     }
+    
+    
+}
+
+@media (max-width:992px) {
+    .contacto{
+        .dedicamos{
+            padding:120px 0 0;    
+            
+            form{
+                display: flex;
+                flex-direction: column;
+                
+                .input__group{
+                    width:100%;
+                    
+                    &#ayudaGroup{
+                        order: 4;
+                    }
+                    
+                    &#msjGroup{
+                        order: 5;
+                        margin-bottom: 20px;
+                    }
+                }
+                
+                #cajaLegal{
+                    order: 6;
+                }
+                
+                #enviarContacto{
+                    order: 7;
+                    margin: 20px auto 0;
+                    max-width: none;
+                }
+            }
+            
+            .linkBorder{
+                margin:10px auto 50px;
+                text-align: center;
+                display: block;
+                width:max-content;
+            }
+        }
+        
+        .mapa{
+            padding:var(--paddingSection);
+            
+            .titleBig{
+                position: relative;
+                top: 0;
+                margin-bottom: 30px;
+            }
+            
+            &__imagen{
+                counter-reset: tooltip;
+                
+                img{
+                    margin-bottom: 30px;
+                }
+                
+                &__tooltip{
+                    position: relative;       
+                    left:auto !important;
+                    top: auto !important;
+                    right:auto !important;
+                    bottom:auto !important;
+                    margin-bottom: 30px;
+                    padding-bottom: 10px;
+                    
+                    
+                    &::before{
+                        top: -5px;
+                        right: -5px;
+                        left: auto;
+                        counter-increment: tooltip;
+                        content: counter(tooltip);
+                        font-family: var(--primariaBold) !important;
+                        width:44px;
+                        height:44px;
+                    }
+                }
+            }
+        }
+    }   
+    
 }

@@ -447,7 +447,7 @@
 @mixin combo {
     
     cursor: pointer;
-    background: url(../../img/flechaCombo.png) no-repeat 95% center / 10px #fff;
+    background: url(../../img/arrowBottom.svg) no-repeat 95% center / 15px #fff;
     min-height: 50px;
     border-radius: 8px;
     padding: 0 30px;
@@ -459,8 +459,8 @@
         outline: none;
         border: none;
         font-size: var(--h4);
-        background: var(--blanco);
-        color: var(--negro);
+        background: transparent;
+        color: var(--texto);
         transition: .3s ease-in-out all;
         width: 100%;
         cursor: pointer;

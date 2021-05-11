@@ -1,5 +1,5 @@
-- titulo = "Nos destacamos por - Renova Industrial";
-- contacto = "activo";
+- titulo = "Contacto - Renova Industrial";
+//-- contacto = "activo";
 
 doctype
 html(lang='es')
@@ -37,10 +37,10 @@ html(lang='es')
                                     input#nombre(type="text", name="")
 
                                 .input__group#ayudaGroup
-                                    //-label ¿En qué te podemos ayudar?
+                                    
                                     .combo
-                                        select#comboAyuda(name="") 
-                                            option(value="0" selected hidden)
+                                        select#comboAyuda(name="")
+                                            option(value="0" selected hidden) ¿En qué te podemos ayudar?
                                             option(value="1") Quiero vender mis desperdicios
                                             option(value="2") Quiero comprar materiales reciclados 
 
@@ -79,15 +79,17 @@ html(lang='es')
                         path(d="M584.473023,562.458371 L212.57173,299.650718 C122.365,235.905257 -2.43790882,257.356355 -66.1833689,347.563085 C-83.9353827,372.684107 -95.6536808,401.561328 -100.426977,431.949078 L-182.296541,953.146978 L-182.296541,953.146978" id="pathAyuda" stroke="#F9BB00" stroke-width="2" transform="translate(201.088241, 533.465513) rotate(-243.000000) translate(-201.088241, -533.465513) ")
                         
                 .container 
-                    .row
+                    .row.objetFade
                         .col-12.col-lg-9.offset-lg-3.offset-xl-4
                             h2.titleBig 
                                 b Llámanos
                             
                             .mapa__imagen 
                                 picture
-                                    source(srcset="img/mapa.webp", type="image/webp")
-                                    img.img-fluid(src="img/mapa.png")
+                                    source(media="(min-width: 992px)", srcset="img/mapa.webp", type="image/webp")
+                                    source(media="(min-width: 992px)", srcset="img/mapa.png")
+                                    source(srcset="img/mapaMobile.webp", type="image/webp")
+                                    img.img-fluid(src="img/mapaMobile.png")
                                
                                 .mapa__imagen__tooltip#tooltip1
                                     h6 Planta Norte
@@ -100,10 +102,16 @@ html(lang='es')
                                
                                 .mapa__imagen__tooltip#tooltip2
                                     h6 Planta Centro
-                                    h3 Querétaro
+                                    h3 Querétaro 
                                     ul
                                         li 
                                             a(href="tel:+ 52 (442) 225 6338") + 52 (442) 225 6338
+                                        
+                                            
+                                .mapa__imagen__tooltip#tooltip3
+                                    h6 Planta Centro
+                                    h3 Guanajuato
+                                    ul
                                         li 
                                             a(href="tel:+ 52 (442) 225 6242") + 52 (442) 225 6242
                                         

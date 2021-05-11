@@ -130,15 +130,19 @@ function validacionContacto(){
         valMail(email);
 		valNum(telefono);
         valTextNum(msj);
-		valCombos(comboAyuda);
+		valCombos($("#comboAyuda"));
         
         // VALIDATE ALL
 
         if ($('#formContacto .error-input').length == 0) {
-            $("#formContacto").submit();
+            //$("#formContacto").submit();
+			return true;
         }
+		
+		else{
+			return false;			
+		}
 
-        return false;
 
     });
 
