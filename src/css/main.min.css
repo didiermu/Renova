@@ -455,12 +455,6 @@ body .header.black .header--navegacion nav #navbarNav>ul li {
   }
 }
 
-body .footer a br,
-body .footer h5 br,
-body .home .promos--copy .swiper-pagination {
-  display: none;
-}
-
 body .footer {
   height: 110px;
   background: var(--grisOscuro);
@@ -486,6 +480,11 @@ body h5 b,
 body h6 b,
 body label b {
   font-family: var(--primariaBold);
+}
+
+body .footer a br,
+body .footer h5 br {
+  display: none;
 }
 
 @media (max-width:992px) {
@@ -682,6 +681,44 @@ body .materiales .promos .poligono {
   }
 }
 
+body .home .ayuda .objetFade a,
+body .home .ayuda .objetFade h1,
+body .home .ayuda .objetFade h2,
+body .home .ayuda .objetFade h3,
+body .home .ayuda .objetFade h4,
+body .home .ayuda .objetFade h5,
+body .home .ayuda .objetFade h6,
+body .home .contacto .objetFade a,
+body .home .contacto .objetFade h1,
+body .home .contacto .objetFade h2,
+body .home .contacto .objetFade h3,
+body .home .contacto .objetFade h4,
+body .home .contacto .objetFade h5,
+body .home .contacto .objetFade h6,
+body .materiales .objetFade a,
+body .materiales .objetFade h1,
+body .materiales .objetFade h2,
+body .materiales .objetFade h3,
+body .materiales .objetFade h4,
+body .materiales .objetFade h5,
+body .materiales .objetFade h6,
+body .servicios .nuestros .objetFade a,
+body .servicios .nuestros .objetFade h1,
+body .servicios .nuestros .objetFade h2,
+body .servicios .nuestros .objetFade h3,
+body .servicios .nuestros .objetFade h4,
+body .servicios .nuestros .objetFade h5,
+body .servicios .nuestros .objetFade h6,
+body .servicios .promos .objetFade a,
+body .servicios .promos .objetFade h1,
+body .servicios .promos .objetFade h2,
+body .servicios .promos .objetFade h3,
+body .servicios .promos .objetFade h4,
+body .servicios .promos .objetFade h5,
+body .servicios .promos .objetFade h6 {
+  transform: translateX(50%);
+}
+
 body .home .ayuda {
   background: var(--fondoClaro);
   position: relative;
@@ -711,16 +748,6 @@ body .home .ayuda .poligono {
 body .home .ayuda .objetFade img {
   left: -100%;
   position: relative;
-}
-
-body .home .ayuda .objetFade a,
-body .home .ayuda .objetFade h1,
-body .home .ayuda .objetFade h2,
-body .home .ayuda .objetFade h3,
-body .home .ayuda .objetFade h4,
-body .home .ayuda .objetFade h5,
-body .home .ayuda .objetFade h6 {
-  transform: translateX(50%);
 }
 
 body .home .ayuda .objetFade.transition1 img {
@@ -924,6 +951,10 @@ body .home .promos--copy .titleBig {
   margin-bottom: 80px;
 }
 
+body .home .promos--copy .swiper-pagination {
+  display: none;
+}
+
 body .home .promos--copy .row {
   min-height: calc(350px + 150 * ((100vw - 1280px)/ 1920));
 }
@@ -974,6 +1005,12 @@ body .home .promos--copy__card:before {
   justify-content: center;
 }
 
+body .home .contacto .path1,
+body .materiales .grid .path1 {
+  left: 100px;
+  height: calc(550px + 50 * ((100vw - 1280px)/ 1920));
+}
+
 body .home .promos--copy__card:hover .btn {
   opacity: 1;
 }
@@ -998,12 +1035,6 @@ body .home .promos--copy .linkBorder {
   margin: auto;
 }
 
-body .home .contacto .path1,
-body .materiales .grid .path1 {
-  z-index: 0;
-  width: calc(750px + 750 * ((100vw - 1280px)/ 1920));
-}
-
 body .home .contacto {
   background: var(--fondoClaro);
   position: relative;
@@ -1018,24 +1049,14 @@ body .home .contacto .poligono {
 
 body .home .contacto .path1 {
   position: absolute;
-  left: 100px;
   top: 0;
-  height: calc(550px + 50 * ((100vw - 1280px)/ 1920));
+  z-index: 0;
+  width: calc(750px + 750 * ((100vw - 1280px)/ 1920));
 }
 
 body .home .contacto .objetFade img {
   left: -100%;
   position: relative;
-}
-
-body .home .contacto .objetFade a,
-body .home .contacto .objetFade h1,
-body .home .contacto .objetFade h2,
-body .home .contacto .objetFade h3,
-body .home .contacto .objetFade h4,
-body .home .contacto .objetFade h5,
-body .home .contacto .objetFade h6 {
-  transform: translateX(50%);
 }
 
 body .home .contacto .objetFade.transition1 img {
@@ -1260,6 +1281,10 @@ body .servicios.sectionOn .path1 path {
   animation-delay: 0s;
 }
 
+body .servicios .heroInt .hero--img img {
+  object-position: center left;
+}
+
 body .servicios .nuestros .col-lg-9 {
   padding-left: 50px;
 }
@@ -1382,13 +1407,8 @@ body .servicios .nuestros .swiper-slide__card::after {
   transition: .3s ease-in-out all;
 }
 
-body .servicios .nuestros .swiper-slide__card:hover .swiper-slide__card__copy h3,
 body .servicios .nuestros .swiper-slide__card:hover::after {
   opacity: 1;
-}
-
-body .servicios .nuestros .swiper-slide__card:hover .swiper-slide__card__copy {
-  bottom: 0;
 }
 
 body .servicios .nuestros .swiper-slide__card__img {
@@ -1433,16 +1453,6 @@ body .servicios .nuestros .objetFade img {
   position: relative;
 }
 
-body .servicios .nuestros .objetFade a,
-body .servicios .nuestros .objetFade h1,
-body .servicios .nuestros .objetFade h2,
-body .servicios .nuestros .objetFade h3,
-body .servicios .nuestros .objetFade h4,
-body .servicios .nuestros .objetFade h5,
-body .servicios .nuestros .objetFade h6 {
-  transform: translateX(50%);
-}
-
 body .servicios .nuestros .objetFade.transition1 img {
   left: 0;
 }
@@ -1475,23 +1485,6 @@ body .servicios .promos #path2 {
   left: auto;
   z-index: 1;
   transform: rotateY(180deg);
-}
-
-body .materiales .objetFade a,
-body .materiales .objetFade h1,
-body .materiales .objetFade h2,
-body .materiales .objetFade h3,
-body .materiales .objetFade h4,
-body .materiales .objetFade h5,
-body .materiales .objetFade h6,
-body .servicios .promos .objetFade a,
-body .servicios .promos .objetFade h1,
-body .servicios .promos .objetFade h2,
-body .servicios .promos .objetFade h3,
-body .servicios .promos .objetFade h4,
-body .servicios .promos .objetFade h5,
-body .servicios .promos .objetFade h6 {
-  transform: translateX(50%);
 }
 
 body .servicios .promos--img {
@@ -1755,9 +1748,9 @@ body .materiales .grid .poligono {
 
 body .materiales .grid .path1 {
   position: absolute;
-  left: 100px;
   top: 100px;
-  height: calc(550px + 50 * ((100vw - 1280px)/ 1920));
+  z-index: 0;
+  width: calc(750px + 750 * ((100vw - 1280px)/ 1920));
 }
 
 body .materiales .grid .col-xl-5 {
@@ -2529,11 +2522,6 @@ body .destacamos .esfuerzo--img {
   width: 50%;
   max-width: 800px;
   z-index: -1;
-}
-
-body .destacamos .esfuerzo--img img {
-  -webkit-clip-path: url("#svgPath");
-  clip-path: url("#svgPath");
 }
 
 body .destacamos .objetFade.transition1 img {

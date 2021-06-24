@@ -4,6 +4,10 @@
     
     @include lineas;
     
+    .heroInt .hero--img img{
+        object-position:center left;
+    }
+    
     .nuestros{
         position: relative;
         
@@ -148,13 +152,13 @@
                         }
                         
                         
-                        .swiper-slide__card__copy{
-                            bottom: 0;
-                            
-                            h3{
-                                opacity: 1;
-                            }
-                        }
+                        //.swiper-slide__card__copy{
+                        //    bottom: 0;
+                        //    
+                        //    h3{
+                        //        opacity: 1;
+                        //    }
+                        //}
                     }
                     
                     &__img{

@@ -55,9 +55,50 @@ function drawSvgMateriales(){
 
 function tabsMateriales(){
 	$('.swiper-slide a').on('click', function (e) {
-		
+		var srcImg = $(this).attr("id").replace("-tab","");
 		$('.swiper-slide').removeClass("active");
 		$(this).parent(".swiper-slide").addClass("active");
+		
+		//console.log( $(".grid--img source").attr("srcset").split("/")[3] );
+		//console.log( $(".grid--img img").attr("src").split("/")[3] );
+		console.log(srcImg);
+		
+		switch (srcImg) {
+			case "retorno":
+				$(".grid--img source").attr("srcset","img/Desktop/3Materiales/01-retornoindustrial.webp");
+				$(".grid--img img").attr("src","img/Desktop/3Materiales/01-retornoindustrial.png");
+				
+				break;
+			case "plasticos":
+				$(".grid--img source").attr("srcset","img/Desktop/3Materiales/02-plasticos.webp");
+				$(".grid--img img").attr("src","img/Desktop/3Materiales/02-plasticos.png");
+				
+				break;
+			case "metales":
+				$(".grid--img source").attr("srcset","img/Desktop/3Materiales/03-metalesyacero.webp");
+				$(".grid--img img").attr("src","img/Desktop/3Materiales/03-metalesyacero.png");
+				
+				break;
+		
+			case "materiales":
+				$(".grid--img source").attr("srcset","img/Desktop/3Materiales/04-materialescomerciales.webp");
+				$(".grid--img img").attr("src","img/Desktop/3Materiales/04-materialescomerciales.png");
+				
+				break;
+			case "carton":
+				$(".grid--img source").attr("srcset","img/Desktop/3Materiales/05-cartonymadera.webp");
+				$(".grid--img img").attr("src","img/Desktop/3Materiales/05-cartonymadera.png");
+				
+				break;
+			case "basura":
+				$(".grid--img source").attr("srcset","img/Desktop/3Materiales/06-gestiondebasura.webp");
+				$(".grid--img img").attr("src","img/Desktop/3Materiales/06-gestiondebasura.png");
+				
+				break;
+		
+			default:
+				break;
+		}
 		
 	});
 }

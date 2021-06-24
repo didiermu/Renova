@@ -21,12 +21,12 @@ function efectoFade() {
 			var mediaqueryList = window.matchMedia("(max-width: 992px)");
 			if (mediaqueryList.matches) {
 				var posSection = $(this).offset().top - 600;
-				console.log("mobile home")
+				//console.log("mobile home")
 			}
 			
 			else{
 				var posSection = $(this).offset().top - 300;
-				console.log("d home");
+				//console.log("d home");
 			}
 			
 			//var posSection = $(this).offset().top - 300;
@@ -162,7 +162,7 @@ $(document).ready(function(){
 	efectoFade();
 	$(window).enllax();	
 	
-	if ( window.location.pathname == "/"){
+	if ( window.location.pathname == "/" || window.location.pathname == "/renova-industrial/" ) {
 		drawSvg();
 		carruselHome();
 	}
