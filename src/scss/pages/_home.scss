@@ -92,6 +92,7 @@
 	
 	.dedicamos{
 		position: relative;
+		overflow: initial;
 		background: url(../../img/fondo2.svg) no-repeat left top /  contain;
 		
 		.poligono{
@@ -150,7 +151,6 @@
 			min-width: 650px;
 			width: 50%;
 			max-width: 800px;
-			z-index: -1;
 		}
 	}
 	
@@ -392,6 +392,7 @@
 	}
 }
 
+///  FULL
 @media (min-width:1920px) {
 	.home .ayuda .col-lg-7{
 		max-width: 58.333333%;
@@ -409,6 +410,11 @@
 		overflow: hidden;
 	}
 	.home{
+		
+		.hero{
+			background: url('../img/Mobile/1Home/HeroImage.webp') no-repeat center / cover;	
+		}
+		
 		
 		.ayuda{
 			.row{
@@ -451,6 +457,10 @@
 			&--copy{
 				transform:none !important;
 				padding-left: 0;
+				
+				h4 br{
+					display: none;
+				}
 			}
 			
 			&--img{
@@ -459,6 +469,7 @@
 				transform:none !important;
 				min-width: auto;
 				width: 100%;
+				margin-top: 50px;
 			}
 		}
 		
@@ -483,6 +494,10 @@
 							padding-bottom: 35px;
 						}
 					}
+				}
+				
+				.titleBig{
+					margin-bottom: 30px;
 				}
 				
 				&__card .btn{
@@ -512,7 +527,7 @@
 			
 			.path1{
 			    width:100%;
-				top: 150px;
+				top: 220px;
 				left:0;
 			}
 			
@@ -526,7 +541,8 @@
 			}
 			
 			&--img{
-				position: relative;		
+				position: relative;	
+				margin-top: 50px;	
 			}
 		}
 	}
@@ -545,4 +561,9 @@
 		background: url(../img/Desktop/1Home/Secc3.jpg) center/cover no-repeat fixed;
 	}
 	
+	@media (max-width:992px) {
+		.home .hero {
+			background: url(../img/Mobile/1Home/HeroImage.jpg) center/cover no-repeat;
+		}	
+	}
 }}

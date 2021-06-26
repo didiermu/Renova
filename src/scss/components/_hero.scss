@@ -99,6 +99,10 @@
         margin-left: 10%;
     }
     
+    .col-lg-9{
+        padding-right: 0;
+    }
+    
     .col-9{
         //background: url(../../img/Desktop/2Servicios/HeroImage.webp) no-repeat center / cover;
         display: flex;
@@ -143,7 +147,7 @@
         
         .fondo3{
             width: 160%;
-            top: -90px;
+            top: -120px;
         }
         
         h3{
@@ -174,9 +178,9 @@
             height: calc(540px + 10 * ((100vw - 320px) / 1280));
         }
         
-        .hero--copy{
-            padding-left: 15px;
-        }
+        //.hero--copy{
+        //    padding-left: 15px;
+        //}
     }
     
 }

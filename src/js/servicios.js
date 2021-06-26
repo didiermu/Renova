@@ -49,24 +49,125 @@ function tabsPromos(){
 		$('.nav-item').removeClass("active");
 		$(this).parent('li').addClass("active");
 		$(".nav-tabs").addClass("nav-active");
-		//
-		//carruselServicios1();
-		//carruselServicios2();
-		//carruselServicios3();
+		
+		var mySwiper1 = new Swiper(".sliderServicios1", {
+			direction: 'horizontal',
+			observer:true,
+			observeParents: true,
+			loop:true,
+			slidesPerView: 'auto',
+			
+			pagination: {
+				el: '.swiper-pagination1',
+				type: 'bullets',
+				clickable:true,
+			},
+			
+			navigation: {
+				nextEl: '#nav2',
+				prevEl: '#nav1',
+			},
+			breakpoints:{
+				320: {
+					
+					spaceBetween: 5,
+					allowTouchMove:true,
+					freeMode: false,
+				},
+				992: {
+					
+					slidesOffsetAfter:100,
+					allowTouchMove:false,
+					freeMode: true,
+				}
+			}
+		});
+		
+		var mySwiper2 = new Swiper(".sliderServicios2", {
+			observer:true,
+			observeParents: true,
+			loop:true,
+			direction: 'horizontal',
+			slidesPerView: "auto",
+			pagination: {
+				el: '#pag2',
+				type: 'bullets',
+				clickable:true,
+			},
+			
+			navigation: {
+				nextEl: '#nav3',
+				prevEl: '#nav4',
+			},
+			breakpoints:{
+				320: {
+					spaceBetween: 5,
+					allowTouchMove:true,
+					freeMode: false,
+					//centeredSlidesBounds:true,
+				},
+				992: {
+					
+					slidesOffsetAfter:100,
+					allowTouchMove:false,
+					freeMode: true,
+				}
+			}
+		});
+	
+		var mySwiper3 = new Swiper(".sliderServicios3", {
+			observer:true,
+			observeParents: true,
+			loop:true,
+			direction: 'horizontal',
+			slidesPerView: 'auto',
+			
+			pagination: {
+				el: '#pag3',
+				type: 'bullets',
+				clickable:true,
+			},
+			
+			navigation: {
+				nextEl: '#nav5',
+				prevEl: '#nav6',
+			},
+			breakpoints:{
+				320: {
+					
+					spaceBetween: 5,
+					allowTouchMove:true,
+					freeMode: false,
+				},
+				992: {
+					
+					slidesOffsetAfter:100,
+					allowTouchMove:false,
+					freeMode: true,
+				}
+			}
+		});
+		
+		//carruselServicios1(".sliderServicios1");
+		//carruselServicios2(".sliderServicios2");
+		//carruselServicios3(".sliderServicios3");
 		
 	});
 }
 
 //CARRUSELES
 
-function carruselServicios1(){
-	var mySwiper = new Swiper(".sliderServicios1", {
+function carruselServicios1(slider1){
+	//var mySwiper1  = new Swiper(".sliderServicios1", {
+	var mySwiper1  = new Swiper(slider1, {
+		direction: 'horizontal',
 		observer:true,
 		observeParents: true,
 		loop:true,
-		direction: 'horizontal',
+		slidesPerView: 'auto',
+		
 		pagination: {
-			el: '#pag1',
+			el: '.swiper-pagination1',
 			type: 'bullets',
 			clickable:true,
 		},
@@ -77,27 +178,30 @@ function carruselServicios1(){
 		},
 		breakpoints:{
 			320: {
-				slidesPerView: 1,
-				spaceBetween: 10,
+				
+				spaceBetween: 5,
 				allowTouchMove:true,
-				//centeredSlidesBounds:true,
+				freeMode: false,
 			},
 			992: {
-				slidesPerView: 3,
-				slidesOffsetAfter:100,
 				
+				slidesOffsetAfter:100,
+				allowTouchMove:false,
+				freeMode: true,
 			}
 		}
 	});
+	
 }
 
-function carruselServicios2(){
+function carruselServicios2(slider2){
 	
-	var mySwiper2 = new Swiper(".sliderServicios2", {
+	var mySwiper2 = new Swiper(slider2, {
 		observer:true,
 		observeParents: true,
 		loop:true,
 		direction: 'horizontal',
+		slidesPerView: "auto",
 		pagination: {
 			el: '#pag2',
 			type: 'bullets',
@@ -110,27 +214,31 @@ function carruselServicios2(){
 		},
 		breakpoints:{
 			320: {
-				slidesPerView: 1,
-				spaceBetween: 10,
+				spaceBetween: 5,
 				allowTouchMove:true,
+				freeMode: false,
 				//centeredSlidesBounds:true,
 			},
 			992: {
-				slidesPerView: "3",
+				
 				slidesOffsetAfter:100,
+				allowTouchMove:false,
+				freeMode: true,
 			}
 		}
 	});
 	
 }
 
-function carruselServicios3(){
+function carruselServicios3(slider3){
 	
-	var mySwiper3 = new Swiper(".sliderServicios3", {
-		direction: 'horizontal',
+	var mySwiper3 = new Swiper(slider3, {
 		observer:true,
 		observeParents: true,
 		loop:true,
+		direction: 'horizontal',
+		slidesPerView: 'auto',
+		
 		pagination: {
 			el: '#pag3',
 			type: 'bullets',
@@ -143,14 +251,16 @@ function carruselServicios3(){
 		},
 		breakpoints:{
 			320: {
-				slidesPerView: 1,
-				spaceBetween: 10,
+				
+				spaceBetween: 5,
 				allowTouchMove:true,
-				//centeredSlidesBounds:true,
+				freeMode: false,
 			},
 			992: {
-				slidesPerView: "3",
+				
 				slidesOffsetAfter:100,
+				allowTouchMove:false,
+				freeMode: true,
 			}
 		}
 	});
@@ -171,12 +281,14 @@ function carruselCertificados(){
 				slidesPerView: 1,
 				spaceBetween: 10,
 				allowTouchMove:true,
+				freeMode: false,
 			},
 			992: {
                 slidesPerView: "auto",
                 spaceBetween: 10,
                 slidesOffsetAfter:30,
                 allowTouchMove:false,
+				freeMode: true,
 			}
 		}
 	});
@@ -205,7 +317,7 @@ function modalServicios(mediaqueryList){
 		
 		
 		$(".modal").each(function(i, v){
-			$(this).find(".modal-body").prepend('<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>');
+			$(this).find(".modal-body").prepend('<button type="button" class="close" data-dismiss="modal" aria-label="Close"></button>');
 		});
 	}
 	
@@ -213,19 +325,25 @@ function modalServicios(mediaqueryList){
 		var contenido = $(".tab-pane");
 		$("#myTabContent .modal").remove();
 		$("#myTabContent").append(contenido);
+		$(".modal-backdrop").remove();
+		$("body").removeClass("modal-open");
 		//console.log("no media");
 	}
+	
+	//carruselServicios1(slider1);
+	//carruselServicios2(slider2);
+	//carruselServicios3(slider3);
+	//carruselServicios1(".sliderServicios1");
+	//carruselServicios2(".sliderServicios2");
+	//carruselServicios3(".sliderServicios3");
+	tabsPromos();
 }
 
 $(document).ready(function(){
 	
     if(window.location.href.indexOf("servicios") > -1){
 		drawSvgServicios();
-        carruselServicios1();
-		carruselServicios2();
-		carruselServicios3();
-		carruselCertificados()
-        tabsPromos();
+		carruselCertificados();
 		modalServicios();
 		
 		$(window).resize(function () {
@@ -233,6 +351,4 @@ $(document).ready(function(){
 		});
 	}
 	
-	
-    
 });

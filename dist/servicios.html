@@ -46,11 +46,13 @@
                 </g>
               </svg>
               <div class="img-holder-hero" data-image="img/Desktop/2Servicios/HeroImage.jpg"></div>
-              <div class="container">
+              <div class="container-fluid">
                 <div class="row objetFade">
                   <div class="col-12">
                     <div class="hero--img">
                       <picture>
+                        <source media="(max-width: 992px)" srcset="img/Mobile/2Servicios/HeroImage.webp" type="image/webp">
+                        <source media="(max-width: 992px)" srcset="img/Mobile/2Servicios/HeroImage.jpg">
                         <source srcset="img/Desktop/2Servicios/HeroImage.webp" type="image/webp"><img class="img-fluid" src="img/Desktop/2Servicios/HeroImage.jpg" alt="Renova Insutrial">
                       </picture>
                     </div>
@@ -154,32 +156,6 @@
                             </picture>
                           </div>
                           <div class="swiper-slide__card__copy">
-                            <h2>Jaulas </h2>
-                            <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </h3>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="col-lg-4 swiper-slide">
-                        <div class="swiper-slide__card">
-                          <div class="swiper-slide__card__img">
-                            <picture> 
-                              <source srcset="img/Desktop/2Servicios/CardServicio_01.webp" type="image/webp"><img class="img-fluid" src="img/Desktop/2Servicios/CardServicio_01.jpg" alt="">
-                            </picture>
-                          </div>
-                          <div class="swiper-slide__card__copy">
-                            <h2>Cajas secas</h2>
-                            <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </h3>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="col-lg-4 swiper-slide">
-                        <div class="swiper-slide__card">
-                          <div class="swiper-slide__card__img">
-                            <picture> 
-                              <source srcset="img/Desktop/2Servicios/CardServicio_01.webp" type="image/webp"><img class="img-fluid" src="img/Desktop/2Servicios/CardServicio_01.jpg" alt="">
-                            </picture>
-                          </div>
-                          <div class="swiper-slide__card__copy">
                             <h2>Plataformas</h2>
                             <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </h3>
                           </div>
@@ -191,10 +167,10 @@
                     <div class="swiper-button-prev" id="nav1"></div>
                     <div class="swiper-button-next" id="nav2"></div>
                   </div>
-                  <div class="swiper-pagination align-items-center d-flex" id="pag1"></div>
+                  <div class="swiper-pagination align-items-center d-flex swiper-pagination1" id="pag1"></div>
                 </div>
                 <div class="tab-pane fade" id="servicio" role="tabpanel" aria-labelledby="servicio-tab">
-                  <h2>Servicio build to suit en tu empresa con maquinaria<br>especializada como:</h2>
+                  <h2>Servicio build to suit en tu empresa con maquinaria <br>especializada como:</h2>
                   <div class="swiper-container sliderServicios2">
                     <div class="swiper-wrapper">
                       <div class="col-lg-4 swiper-slide objetFade">
@@ -317,45 +293,6 @@
                         <div class="swiper-slide__card">
                           <div class="swiper-slide__card__img">
                             <picture> 
-                              <source srcset="img/Desktop/2Servicios/Transformacion_Compactadora.webp" type="image/webp"><img class="img-fluid" src="img/Desktop/2Servicios/Transformacion_Compactadora.jpg" alt="">
-                            </picture>
-                          </div>
-                          <div class="swiper-slide__card__copy">
-                            <h2>Compactadoras verticales</h2>
-                            <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit</h3>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="col-lg-4 swiper-slide objetFade">
-                        <div class="swiper-slide__card">
-                          <div class="swiper-slide__card__img">
-                            <picture> 
-                              <source srcset="img/Desktop/2Servicios/Transformacion_Compactadora.webp" type="image/webp"><img class="img-fluid" src="img/Desktop/2Servicios/Transformacion_Compactadora.jpg" alt="">
-                            </picture>
-                          </div>
-                          <div class="swiper-slide__card__copy">
-                            <h2>Compactadoras de gran volumen</h2>
-                            <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit</h3>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="col-lg-4 swiper-slide objetFade">
-                        <div class="swiper-slide__card">
-                          <div class="swiper-slide__card__img">
-                            <picture> 
-                              <source srcset="img/Desktop/2Servicios/Transformacion_Compactadora.webp" type="image/webp"><img class="img-fluid" src="img/Desktop/2Servicios/Transformacion_Compactadora.jpg" alt="">
-                            </picture>
-                          </div>
-                          <div class="swiper-slide__card__copy">
-                            <h2>Compactadoras de basura</h2>
-                            <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit</h3>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="col-lg-4 swiper-slide objetFade">
-                        <div class="swiper-slide__card">
-                          <div class="swiper-slide__card__img">
-                            <picture> 
                               <source srcset="img/Desktop/2Servicios/CardServicio_01.webp" type="image/webp"><img class="img-fluid" src="img/Desktop/2Servicios/CardServicio_01.jpg" alt="">
                             </picture>
                           </div>
@@ -410,7 +347,7 @@
                     <div class="swiper-button-prev" id="nav6"></div>
                     <div class="swiper-button-next" id="nav5"></div>
                   </div>
-                  <div class="swiper-pagination align-items-center d-flex swiper-pagination3"></div>
+                  <div class="swiper-pagination align-items-center d-flex swiper-pagination3" id="pag3"></div>
                 </div>
               </div>
             </div>
@@ -431,28 +368,30 @@
               <div class="promos--copy">
                 <h2 class="titleBig"> <b>Certificaciones <br>que nos respaldan    </b></h2>
                 <div class="row">
-                  <div class="swiper-container sliderCertificaciones">
-                    <div class="swiper-wrapper">
-                      <div class="col-lg-4 swiper-slide">
-                        <div class="promos--copy__card d-flex"><span class="icon-Certificaciones"></span>
-                          <h2>Permiso para transporte</h2>
-                          <h4>de RME por parte de SEDESU para el estado de Querétaro.</h4>
+                  <div class="col-12">
+                    <div class="swiper-container sliderCertificaciones">
+                      <div class="swiper-wrapper">
+                        <div class="col-lg-4 swiper-slide">
+                          <div class="promos--copy__card d-flex"><span class="icon-Certificaciones"></span>
+                            <h2>Permiso para transporte</h2>
+                            <h4>de RME por parte de SEDESU para el estado de Querétaro.</h4>
+                          </div>
+                        </div>
+                        <div class="col-lg-4 swiper-slide">
+                          <div class="promos--copy__card d-flex"><span class="icon-Certificaciones"></span>
+                            <h2>Permiso para transporte</h2>
+                            <h4>de RME por parte de SMAOT Guanajuato.</h4>
+                          </div>
+                        </div>
+                        <div class="col-lg-4 swiper-slide">
+                          <div class="promos--copy__card d-flex"><span class="icon-Certificaciones"></span>
+                            <h2>Permiso para transporte</h2>
+                            <h4>de RME por parte de SEDESU para el estado de Nuevo León.</h4>
+                          </div>
                         </div>
                       </div>
-                      <div class="col-lg-4 swiper-slide">
-                        <div class="promos--copy__card d-flex"><span class="icon-Certificaciones"></span>
-                          <h2>Permiso para transporte</h2>
-                          <h4>de RME por parte de SMAOT Guanajuato.</h4>
-                        </div>
-                      </div>
-                      <div class="col-lg-4 swiper-slide">
-                        <div class="promos--copy__card d-flex"><span class="icon-Certificaciones"></span>
-                          <h2>Permiso para transporte</h2>
-                          <h4>de RME por parte de SEDESU para el estado de Nuevo León.</h4>
-                        </div>
-                      </div>
+                      <div class="swiper-pagination align-items-center" id="paginador2"></div>
                     </div>
-                    <div class="swiper-pagination align-items-center" id="paginador2"></div>
                   </div>
                 </div>
                 <div class="row promos--certificados">

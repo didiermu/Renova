@@ -24,13 +24,20 @@ html(lang='es')
 
                             //-.img-holder-hero(data-image="img/Desktop/1Home/HeroImage.jpg")
 
-                            .container
+                            .container-fluid
                                 .row.objetFade
                                     .col-12
                                         .hero--img
                                             picture
+                                                
+                                                source(media="(max-width: 992px)", srcset="img/Mobile/3Materiales/HeroImage.webp", type="image/webp")
+                                                
+                                                source(media="(max-width: 992px)", srcset="img/Mobile/3Materiales/HeroImage.jpg")
+                                                
                                                 source(srcset="img/Desktop/3Materiales/HeroImage.webp" type="image/webp")
+                                                
                                                 img.img-fluid(src="img/Desktop/3Materiales/HeroImage.jpg" alt="Renova Insutrial")
+                                                
 
                                         .hero--copy
                                             h1 

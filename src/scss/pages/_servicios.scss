@@ -262,14 +262,16 @@
 				margin-bottom: 30px;
 			}
 			
-			
+            .col-12{
+                padding-left: 0;
+            }
+            
 			&__card{
 				background: #fff;
 				padding: 40px 20px;
 				box-shadow: 0 2px 40px 0 rgba(120,159,183,0.16);
 				border-radius: 8px 8px 40px 8px;
 				position: relative;
-				cursor: pointer;
 				transition: .3s ease-in-out all;
                 text-align: center;
                 justify-content: center;
@@ -296,6 +298,9 @@
 				
 			}
 			
+            .swiper-pagination{
+                display: none;
+            }
 		}
         
         &--certificados{
@@ -344,6 +349,18 @@
 	
 }
 
+///  FULL
+@media (min-width:1920px) {
+    .servicios{
+        .col-lg-9.offset-lg-3.offset-xl-4{
+            padding-left: 30px;
+            margin-left: 27.33%;
+            max-width: 70%;
+        }
+    }
+}
+
+
 @media (max-width:992px) {
     .servicios {
         .nuestros {
@@ -354,6 +371,10 @@
             .col-lg-9 {
                 padding-left: 15px;
             }   
+            
+            .nav-tabs{
+                margin-top: 0;
+            }
             
             .nav-item{
                 flex: auto;
@@ -397,6 +418,7 @@
                         
                         h3{
                             font-size: var(--h4);
+                            display: none;
                         }
                     }
                 }
@@ -405,6 +427,15 @@
             
             
             .modal{
+                
+                .tab-pane{
+                    margin-top: 30px;
+                }
+                
+                .modal-content{
+                    height: 100vh;
+                }
+                
                 h2{
                     br{
                         display:none;
@@ -417,7 +448,13 @@
                 
                 .swiper-pagination{
                     justify-content: center;
-                    right:0;
+                    right:auto;
+                    display: none;
+                }
+                
+                .swiper-slide{
+                    min-width: auto;
+                    width: 90%;
                 }
             }
         }
@@ -427,6 +464,7 @@
             
             &--img{
                 height:calc(380px + 10 * ((100vw - 320px) / 1280));
+                background: url('../img/Mobile/2Servicios/Certificaciones.webp') center top/cover no-repeat fixed
             }
             
             &--copy{
@@ -435,7 +473,7 @@
             
             .swiper-pagination{
 				right:auto;
-				margin:0px auto 60px;
+				margin:30px auto 0;
 				justify-content: center;
 				position: relative !important;
 				bottom:0 !important;

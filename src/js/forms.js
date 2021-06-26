@@ -28,7 +28,7 @@ function valText(nameInput) {
 
 function valTextNum(nameInput) {
 
-	if (nameInput.val().length < 1) {
+	if (nameInput.val().length < 1 || nameInput.val()==" ") {
 		nameInput.siblings("span").remove();
 		nameInput.after("<span class='error-input'>Campo requerido");
 	}
@@ -103,15 +103,18 @@ function valCombos(nameInput){
 	
 	combosContacto.each(function () {
 		$(this).change(function () {
-			if ($(this).val() != null) {
-				$(this).siblings("span").remove();
-				
+			if ($(this).val() != 0) {
+				$(this).parent(".combo").siblings("span").remove();
 			}
 		});
 
-		if ($(this).val() == null) {
+		if ($(this).val() == 0) {
 			$(this).siblings("span").remove();
-			$(this).after('<span class="error-input"> Campo requerido </span>');
+			$(this).parent(".combo").after('<span class="error-input">Selecciona una opción</span>');
+		}
+		
+		else{
+			$(this).parent(".combo").siblings("span").remove();
 		}
 
 	});
@@ -136,12 +139,9 @@ function validacionContacto(){
 
         if ($('#formContacto .error-input').length == 0) {
             //$("#formContacto").submit();
-			return true;
         }
 		
-		else{
-			return false;			
-		}
+		return false;
 
 
     });

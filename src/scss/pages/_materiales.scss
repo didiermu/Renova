@@ -396,6 +396,19 @@
     } 
 }
 
+///  FULL
+@media (min-width:1920px) {
+    .materiales{
+        .promos .col-lg-9.offset-lg-3.offset-xl-4{
+            padding-left: 30px;
+            margin-left: 27.33%;
+            max-width: 70%;
+        }
+    }
+}
+
+///  MOBILE
+
 @media (max-width:992px) {
     .materiales{
         .path1{
@@ -443,6 +456,10 @@
                 &#plasticos li{
                     flex:0 0 50%;
                 }
+            }
+            
+            .contacto--copy{
+                margin-bottom: 30px;
             }
         }
         

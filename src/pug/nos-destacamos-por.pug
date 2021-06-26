@@ -23,13 +23,19 @@ html(lang='es')
                                     path(d="M605.17587,212.754793 L273.309611,12.5888319 C178.725359,-44.4598949 55.8025434,-14.0313402 -1.24618334,80.552911 C-14.610573,102.710474 -23.5482399,127.250894 -27.5635879,152.813396 L-113.251577,698.320146 L-113.251577,698.320146" id="pathHero" stroke="#F9BB00" stroke-width="2" transform="translate(245.962146, 278.638682) rotate(-120.000000) translate(-245.962146, -278.638682) ")
 
 
-                            .container
+                            .container-fluid
                                 .row.objetFade
                                     .col-12
                                         .hero--img
                                             picture
+                                                source(media="(max-width: 992px)", srcset="img/Mobile/4Nosdestacamos/HeroImage.webp", type="image/webp")
+                                                
+                                                source(media="(max-width: 992px)", srcset="img/Mobile/4Nosdestacamos/HeroImage.jpg")
+                                                
                                                 source(srcset="img/Desktop/4Nosdestacamos/HeroImage.webp" type="image/webp")
+                                                
                                                 img.img-fluid(src="img/Desktop/4Nosdestacamos/HeroImage.jpg" alt="Renova Insutrial")
+                                                
 
                                         .hero--copy
                                             h1 
@@ -91,7 +97,7 @@ html(lang='es')
                             .mision--copy
                                 h2.titleBig 
                                     b Misión 
-                                h3 Nos esforzamos por ser la mejor solución: En la administración y comercialización de desperdicios industriales, implementando  que generan  ahorro y reducen costos.
+                                h3 Nos esforzamos por ser la mejor solución para la administración y comercialización de desperdicios industriales, implementando soluciones que generan ahorro y reducen costos.
                             
                             .mision--copy#vision
                                 h2.titleBig 
@@ -165,9 +171,9 @@ html(lang='es')
                                                 
                                             h2 Nos esforzamos
                                                 br
-                                                | por ser la mejor solución:
+                                                | por ser la mejor solución
                                                 
-                                            h4 para la administración y comercialización de desperdicios industriales, implementando soluciones que generan un ahorro y reducen costos.
+                                            h4 para la administración y comercialización de desperdicios industriales, implementando soluciones que generan ahorro y reducen costos.  
                                             
                                                 
                                     
@@ -212,7 +218,7 @@ html(lang='es')
                                             h2 Nos distingumos por:
                                             
                                             ul
-                                                each val in ['Contar con un equipo moderno. ', 'Tener un intachable historial financiero. ', 'Implementar un sistema logístico y operativo. ', 'Ser una empresa socialmente responsable. ', 'Contar con todas las licencias, permisos estatales y federales.']
+                                                each val in ['Contar con un equipo moderno. ', 'Pagos puntuales. ', 'Implementar un sistema logístico y operativo. ', 'Cuidamos el medio ambiente. ', 'Contar con todas las licencias, permisos estatales y federales.']
                                                     li= val
                                         
                                         .esfuerzo--img

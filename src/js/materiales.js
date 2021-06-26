@@ -54,14 +54,13 @@ function drawSvgMateriales(){
 }
 
 function tabsMateriales(){
+	  
 	$('.swiper-slide a').on('click', function (e) {
 		var srcImg = $(this).attr("id").replace("-tab","");
-		$('.swiper-slide').removeClass("active");
-		$(this).parent(".swiper-slide").addClass("active");
 		
 		//console.log( $(".grid--img source").attr("srcset").split("/")[3] );
 		//console.log( $(".grid--img img").attr("src").split("/")[3] );
-		console.log(srcImg);
+		//console.log(srcImg);
 		
 		switch (srcImg) {
 			case "retorno":
@@ -107,7 +106,7 @@ function carruselMateriales(){
 	var mySwiper = new Swiper(".sliderMateriales", {
 		direction: 'horizontal',
 		loop:true,
-		centeredSlidesBounds:true,
+		centeredSlidesBounds: true,
 		slidesPerView: "auto",
 		navigation: {
 			nextEl: '.swiper-button-next',
@@ -125,6 +124,17 @@ function carruselMateriales(){
 				
 			}
 		}
+	});
+	
+	tabsMateriales();
+	
+	$('.swiper-slide').on('click', function (e) {
+		var active = $(this).attr("aria-label").split("/")[0] - 1;
+		
+		$('.swiper-slide').removeClass("active");
+		$(this).addClass("active");
+		
+		mySwiper.slideTo(active, 1000, true);
 	});
 }
 
@@ -162,7 +172,7 @@ function carruselPromos(){
 $(document).ready(function(){
 	if(window.location.href.indexOf("materiales") > -1){
 		anclas();
-        tabsMateriales();
+        
         carruselMateriales();
         carruselPromos();
 		drawSvgMateriales();
