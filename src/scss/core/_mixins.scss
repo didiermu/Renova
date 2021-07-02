@@ -305,6 +305,15 @@
     
     position: relative;
     
+    &.lleno{
+        label{
+            left: 0px;
+            top: -25px;
+            font-size: var(--h5);
+        }    
+        
+    }
+    
     label{
         position: absolute;
         font-size: var(--h4);
@@ -346,6 +355,10 @@
                 color: var(--negro);
             }
         }
+    }
+    
+    textarea{
+        padding: 10px;
     }
     
 }
@@ -453,6 +466,7 @@
     border-radius: 8px;
     padding: 0 30px;
     display: flex;
+    align-items: center;
     box-shadow: 0 2px 20px 0 rgba(120,159,183,0.16);
     
     select{

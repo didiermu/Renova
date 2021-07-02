@@ -64,7 +64,22 @@
             .input__group{
                 margin-bottom: 35px;
                 width: 90%;
+                br{
+                    display: none;
+                }
             }
+            
+            .checkboxes{
+                p{
+                    display: flex;
+                    align-items: center;
+                }
+                
+                br{
+                    display: block;
+                }
+            }
+            
             
             #ayudaGroup{
                 grid-column: col-start 2/span 2;

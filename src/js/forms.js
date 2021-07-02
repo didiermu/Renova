@@ -137,9 +137,15 @@ function validacionContacto(){
         
         // VALIDATE ALL
 
-        if ($('#formContacto .error-input').length == 0) {
-            //$("#formContacto").submit();
+        if ($('main.contacto .error-input').length == 0) {
+            $("main.contacto form").submit();
+			
+			//console.log("si");
         }
+		
+		else{
+			//console.log("no");
+		}
 		
 		return false;
 

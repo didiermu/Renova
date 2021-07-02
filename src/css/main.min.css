@@ -465,22 +465,6 @@ body .footer h5 {
   text-align: right;
 }
 
-.btn,
-body .linkBorder,
-body .titleBig,
-body a b,
-body h1 b,
-body h2 b,
-body h3 b,
-body h4 b,
-body h5 b,
-body h6 b,
-body label b,
-input[type=button],
-input[type=submit] {
-  font-family: var(--primariaBold);
-}
-
 body .footer a br,
 body .footer h5 br {
   display: none;
@@ -521,6 +505,17 @@ body h6 {
   line-height: 1.5;
 }
 
+body a b,
+body h1 b,
+body h2 b,
+body h3 b,
+body h4 b,
+body h5 b,
+body h6 b,
+body label b {
+  font-family: var(--primariaBold);
+}
+
 body h1 {
   font-size: var(--h1);
   line-height: 1;
@@ -555,6 +550,7 @@ body .titleBig {
   font-size: var(--h1);
   position: relative;
   line-height: 1;
+  font-family: var(--primariaBold);
 }
 
 body .titleBig::after {
@@ -570,6 +566,7 @@ body .titleBig::after {
 
 body .linkBorder {
   border-bottom: 2px solid var(--primario);
+  font-family: var(--primariaBold);
   font-size: var(--h4);
   text-decoration: none;
   color: var(--negro);
@@ -681,13 +678,6 @@ body .materiales .promos .poligono {
   }
 }
 
-body .destacamos .objetFade a,
-body .destacamos .objetFade h1,
-body .destacamos .objetFade h2,
-body .destacamos .objetFade h3,
-body .destacamos .objetFade h4,
-body .destacamos .objetFade h5,
-body .destacamos .objetFade h6,
 body .home .ayuda .objetFade a,
 body .home .ayuda .objetFade h1,
 body .home .ayuda .objetFade h2,
@@ -702,13 +692,6 @@ body .home .contacto .objetFade h3,
 body .home .contacto .objetFade h4,
 body .home .contacto .objetFade h5,
 body .home .contacto .objetFade h6,
-body .materiales .objetFade a,
-body .materiales .objetFade h1,
-body .materiales .objetFade h2,
-body .materiales .objetFade h3,
-body .materiales .objetFade h4,
-body .materiales .objetFade h5,
-body .materiales .objetFade h6,
 body .servicios .nuestros .objetFade a,
 body .servicios .nuestros .objetFade h1,
 body .servicios .nuestros .objetFade h2,
@@ -2074,6 +2057,16 @@ body .materiales .objetFade img {
   position: relative;
 }
 
+body .materiales .objetFade a,
+body .materiales .objetFade h1,
+body .materiales .objetFade h2,
+body .materiales .objetFade h3,
+body .materiales .objetFade h4,
+body .materiales .objetFade h5,
+body .materiales .objetFade h6 {
+  transform: translateX(50%);
+}
+
 body .materiales .objetFade.transition1 img {
   left: 0;
 }
@@ -2452,6 +2445,24 @@ body .destacamos .esfuerzo .path1 {
   transform: rotateY(180deg);
 }
 
+body .contacto .dedicamos .objetFade a,
+body .contacto .dedicamos .objetFade form,
+body .contacto .dedicamos .objetFade h1,
+body .contacto .dedicamos .objetFade h2,
+body .contacto .dedicamos .objetFade h3,
+body .contacto .dedicamos .objetFade h4,
+body .contacto .dedicamos .objetFade h5,
+body .contacto .dedicamos .objetFade h6,
+body .destacamos .objetFade a,
+body .destacamos .objetFade h1,
+body .destacamos .objetFade h2,
+body .destacamos .objetFade h3,
+body .destacamos .objetFade h4,
+body .destacamos .objetFade h5,
+body .destacamos .objetFade h6 {
+  transform: translateX(50%);
+}
+
 body .destacamos .esfuerzo .objetFade .esfuerzo--img {
   left: 100%;
   position: relative;
@@ -2521,12 +2532,6 @@ body .destacamos .esfuerzo--copy {
   max-width: 350px;
 }
 
-body .contacto .dedicamos .objetFade img,
-body .destacamos .objetFade img {
-  left: -100%;
-  position: relative;
-}
-
 body .destacamos .esfuerzo--copy h2 {
   margin: 30px 0 10px;
 }
@@ -2560,6 +2565,11 @@ body .destacamos .esfuerzo--img {
   width: 50%;
   max-width: 800px;
   z-index: -1;
+}
+
+body .destacamos .objetFade img {
+  left: -100%;
+  position: relative;
 }
 
 body .destacamos .objetFade.transition1 img {
@@ -2698,15 +2708,9 @@ body .contacto .dedicamos {
   padding-left: 50px;
 }
 
-body .contacto .dedicamos .objetFade a,
-body .contacto .dedicamos .objetFade form,
-body .contacto .dedicamos .objetFade h1,
-body .contacto .dedicamos .objetFade h2,
-body .contacto .dedicamos .objetFade h3,
-body .contacto .dedicamos .objetFade h4,
-body .contacto .dedicamos .objetFade h5,
-body .contacto .dedicamos .objetFade h6 {
-  transform: translateX(50%);
+body .contacto .dedicamos .objetFade img {
+  left: -100%;
+  position: relative;
 }
 
 body .contacto .dedicamos .objetFade.transition1 img {
@@ -2763,6 +2767,21 @@ body .contacto .dedicamos form {
 body .contacto .dedicamos form .input__group {
   margin-bottom: 35px;
   width: 90%;
+}
+
+body .contacto .dedicamos form .input__group br {
+  display: none;
+}
+
+body .contacto .dedicamos form .checkboxes p {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+body .contacto .dedicamos form .checkboxes br {
+  display: block;
 }
 
 body .contacto .dedicamos form #ayudaGroup {
@@ -3204,6 +3223,13 @@ body.body-contacto .modal .btn {
   }
 }
 
+.checkboxes,
+.combo {
+  display: -ms-flexbox;
+  display: flex;
+  cursor: pointer;
+}
+
 .btn,
 input[type=button],
 input[type=submit] {
@@ -3219,6 +3245,7 @@ input[type=submit] {
   color: var(--negro);
   border: 1px solid var(--primario);
   border-radius: 10px;
+  font-family: var(--primariaBold);
   transition: .3s ease-in-out all;
 }
 
@@ -3267,6 +3294,12 @@ input[type=submit]:focus {
   position: relative;
 }
 
+.input__group.lleno label {
+  left: 0;
+  top: -25px;
+  font-size: var(--h5);
+}
+
 .input__group label {
   position: absolute;
   font-size: var(--h4);
@@ -3304,6 +3337,11 @@ input[type=search] {
   background: #FFF;
   box-shadow: 0 2px 20px 0 rgba(120,159,183,.16);
   border-radius: 8px;
+}
+
+.input__group textarea,
+textarea {
+  padding: 10px;
 }
 
 .input__group input[type=text]:-ms-input-placeholder,
@@ -3373,7 +3411,6 @@ textarea {
   resize: none;
   height: 120px;
   color: var(--negro);
-  padding: 10px;
 }
 
 .chip {
@@ -3417,13 +3454,12 @@ textarea {
 }
 
 .combo {
-  cursor: pointer;
   background: url("../img/arrowBottom.svg") 95% center/15px no-repeat #fff;
   min-height: 50px;
   border-radius: 8px;
   padding: 0 30px;
-  display: -ms-flexbox;
-  display: flex;
+  -ms-flex-align: center;
+  align-items: center;
   box-shadow: 0 2px 20px 0 rgba(120,159,183,.16);
 }
 
@@ -3446,12 +3482,9 @@ textarea {
 }
 
 .checkboxes {
-  display: -ms-flexbox;
-  display: flex;
   -ms-flex-pack: center;
   justify-content: center;
   position: relative;
-  cursor: pointer;
   -webkit-user-select: none;
   -ms-user-select: none;
   user-select: none;

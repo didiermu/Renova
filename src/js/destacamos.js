@@ -92,6 +92,8 @@ function carruselEsfuerzo(){
 
 $(document).ready(function(){
 	if(window.location.href.indexOf("destacamos") > -1){
+		$("#li-s3").addClass("activo");
+		
 		drawSvgDestacamos();
         carruselEsfuerzo();
     }

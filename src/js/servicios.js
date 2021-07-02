@@ -342,6 +342,8 @@ function modalServicios(mediaqueryList){
 $(document).ready(function(){
 	
     if(window.location.href.indexOf("servicios") > -1){
+		$("#li-s1").addClass("activo");
+		
 		drawSvgServicios();
 		carruselCertificados();
 		modalServicios();
