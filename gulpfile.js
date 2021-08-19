@@ -209,5 +209,5 @@ gulp.task('browser-sync', () => {
  * Default Task
  * ======================================================================================================*/
 
-// gulp.task('default', gulp.parallel('pugphp', "sass", 'scripts', "minifyCSS" , 'img', 'exportWebP', 'pastefiles', 'watch','browser-sync'));
+
 gulp.task('default', gulp.parallel('pug', "sass", 'scripts', "minifyCSS" , 'img', 'exportWebP', 'pastefiles', 'watch','browser-sync'));

@@ -1,10 +1,10 @@
 
 $(document).ready(function(){
-	if(window.location.href.indexOf("contacto") > -1){
+	if ( window.location.pathname == "/" || window.location.pathname == "/renova-industrial/" || window.location.pathname == "/RenovaIndustrial/" ) {
 		
 		$("body").addClass("body-contacto");
 		
-		if(window.location.hash) {
+		if(window.location.hash == "#wpcf7-f76-o1") {
 			$('#modalGracias').modal("show");
 		}
 		

@@ -9,7 +9,7 @@
     <title>Renova Industrial</title>
     <meta name="description" content="Renova Insutrial - Optimizamos el manejo de tus residuos industriales con equipo moderno y especializado">
     <link rel="stylesheet" href="css/styles.min.css">
-    <script src="js/scripts.min.js" async defer></script>
+    <script src="js/scripts.min.js" defer></script>
   </head>
   <body>
     <header class="header">
@@ -22,10 +22,9 @@
               <div class="btnHam" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"></div>
               <div class="collapse navbar-collapse" id="navbarNav">
                 <ul>
-                  <li id="li-s1"><a href="servicios.html"> Servicios</a></li>
+                  <li id="li-s1"><a href="servicios.html"> Servicio integral</a></li>
                   <li id="li-s2"><a href="materiales.html">Materiales</a></li>
-                  <li id="li-s3"><a href="nos-destacamos-por.html">Nos destacamos por</a></li>
-                </ul><a id="linkContacto" href="contacto.html"> 
+                </ul><a id="linkContacto" href="index.html#contacto"> 
                   <button class="btn primario">Contacto</button></a>
               </div>
             </nav>
@@ -65,21 +64,34 @@
         </svg>
         <div class="container-fluid">
           <div class="row align-items-center objetFade">
-            <div class="col-12 col-lg-5">
-              <div class="ayuda--img">
-                <picture> 
-                  <source srcset="img/Desktop/1Home/Secc1.webp" type="image/webp"><img class="img-fluid" src="img/Desktop/1Home/Secc1.jpg" alt="Renova Industrial">
-                </picture>
-              </div>
-            </div>
-            <div class="col-12 col-lg-7">
+            <div class="col-12 col-lg-6 offset-lg-3 offset-xl-4">
               <div class="ayuda--copy" data-enllax-ratio=".2" data-enllax-type="foreground">
                 <h2 class="titleBig"><b>¿Cómo te <br>podemos ayudar?</b></h2>
-                <div class="ayuda--copy__acceso offset-lg-1">
-                  <h2>Quiero vender mis desperdicios<br>industriales</h2><a class="linkBorder" href="servicios.html">Conoce nuestros servicios </a>
-                </div>
-                <div class="ayuda--copy__acceso offset-lg-1">
-                  <h2>Quiero comprar materiales<br>reciclados</h2><a class="linkBorder" href="materiales.html">Ver materiales</a>
+                <div class="ayuda--copy__acceso d-flex">
+                  <div class="ayuda--copy__acceso__item d-flex align-items-center justify-content-center">
+                    <div class="ayuda--copy__acceso__item__img">
+                      <picture> 
+                        <source srcset="img/Servicios.webp" type="image/webp"><img class="img-fluid" src="img/Servicios.jpg" alt="Renova Industrial">
+                      </picture>
+                    </div>
+                    <div class="ayuda--copy__acceso__item__copy">
+                      <h2>Servicios industriales</h2>
+                      <p>Quiero vender mis <br>desperdicios industriales</p><a href="servicios.html">
+                        <button class="btn secundario">Me interesa</button></a>
+                    </div>
+                  </div>
+                  <div class="ayuda--copy__acceso__item d-flex align-items-center justify-content-center">
+                    <div class="ayuda--copy__acceso__item__img">
+                      <picture> 
+                        <source srcset="img/Materiales.webp" type="image/webp"><img class="img-fluid" src="img/Materiales.jpg" alt="Renova Industrial">
+                      </picture>
+                    </div>
+                    <div class="ayuda--copy__acceso__item__copy">
+                      <h2>Materiales</h2>
+                      <p>Quiero comprar<br>materiales reciclados</p><a href="servicios.html">
+                        <button class="btn secundario">Me interesa</button></a>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -97,9 +109,8 @@
           <div class="row align-items-center objetFade">
             <div class="col-12 col-lg-5 offset-lg-3 offset-xl-4">
               <div class="dedicamos--copy" data-enllax-ratio=".3" data-enllax-type="foreground">
-                <h3>Nos dedicamos a la <br>compra, venta y manejo de </h3>
-                <h2 class="titleBig"><b>residuos <br>industriales</b></h2>
-                <h4>Contamos con equipo especializado, <br>personal capacitado y certificaciones <br>que nos permiten ofrecer un servicio <br>profesional</h4><a class="linkBorder" href="nos-destacamos-por.html">Conoce Renova</a>
+                <h3>Nos dedicamos a la <br>compra y venta de</h3>
+                <h2 class="titleBig"><b>residuos <br>industriales</b></h2><a class="linkBorder" href="nos-destacamos-por.html">Conoce Renova</a>
               </div>
             </div>
             <div class="dedicamos--img" data-enllax-ratio=".4" data-enllax-type="foreground">
@@ -110,73 +121,101 @@
           </div>
         </div>
       </section>
-      <section class="promos"><img class="img-fluid poligono" src="img/Form02.svg" alt="Renova Industrial"><img class="fondo3" src="img/fondo3.svg" alt="Renova Industrial">
-        <div id="triggerPromos"></div>
-        <svg id="path1" width="751px" height="824px" viewBox="0 0 751 824"> 
-          <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-            <path d="M707.699302,793.745039 L719.820771,230.480114 L387.954512,30.3141528 C293.370261,-26.7345739 170.447445,3.69398073 113.398718,98.2782319 C100.034329,120.435795 91.0966617,144.976215 87.0813138,170.538717 L1.39332472,716.045467 L1.39332472,716.045467" id="pathPromos" stroke="#F9BB00" stroke-width="2"></path>
+      <section class="contacto" id="contacto"><img class="img-fluid poligono" src="img/Form03.svg" alt="Renova Industrial">
+        <div id="triggerContacto"></div>
+        <svg class="path1" width="700px" height="700px" viewBox="0 0 1250 900">
+          <g class="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+            <path d="M829.358284,449.674323 L449.519976,181.2579 C359.313246,117.51244 234.510337,138.963537 170.764877,229.170267 C154.089911,252.767149 142.72582,279.696927 137.454748,308.106136 L0.703458895,1045.14698 L0.703458895,1045.14698" id="pathContacto" stroke="#F9BB00" stroke-width="2" transform="translate(415.030872, 523.073489) rotate(-180.000000) translate(-415.030872, -523.073489) "></path>
           </g>
         </svg>
         <div class="container-fluid">
           <div class="row align-items-center objetFade">
-            <div class="col-12 promos--img"></div>
             <div class="col-12 col-lg-8 offset-lg-3 offset-xl-4">
-              <div class="promos--copy">
-                <h2 class="titleBig"> <b>Promociones    </b></h2>
-                <div class="row">
-                  <div class="swiper-container sliderPromosHome">
-                    <div class="swiper-wrapper">
-                      <div class="col-lg-4 col-10 swiper-slide">
-                        <div class="promos--copy__card">
-                          <h5>Precio preferencial</h5>
-                          <h2>En volumen de lámina</h2><a href="#!"> 
-                            <button class="btn secundario">Me interesa</button></a>
-                        </div>
-                      </div>
-                      <div class="col-lg-4 col-10 swiper-slide">
-                        <div class="promos--copy__card">
-                          <h5>Precio preferencial</h5>
-                          <h2>En volumen de lámina</h2><a href="#!"> 
-                            <button class="btn secundario">Me interesa</button></a>
-                        </div>
-                      </div>
-                      <div class="col-lg-4 col-10 swiper-slide">
-                        <div class="promos--copy__card">
-                          <h5>Precio preferencial</h5>
-                          <h2>En volumen de lámina</h2><a href="#!"> 
-                            <button class="btn secundario">Me interesa</button></a>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="swiper-pagination align-items-center"></div>
+              <div class="contacto--copy">
+                <h2 class="titleBig"> <b>Contacto</b></h2>
+                <h3>Si quieres saber sobre nuestras promociones<br>o solicitar nuestros servicios escríbenos</h3>
+              </div>
+              <form id="formContacto" action="">
+                <div class="input__group">
+                  <label>Nombre</label>
+                  <input id="nombre" type="text" name="">
+                </div>
+                <div class="input__group" id="ayudaGroup">
+                  <div class="combo">
+                    <select id="comboAyuda" name="">
+                      <option value="0" selected hidden>¿En qué te podemos ayudar?</option>
+                      <option value="1">Quiero vender mis desperdicios</option>
+                      <option value="2">Quiero comprar materiales reciclados </option>
+                    </select>
                   </div>
-                </div><a class="linkBorder" href="materiales.html#promociones">Ver las promociones </a>
+                </div>
+                <div class="input__group">
+                  <label>Correo electrónico</label>
+                  <input id="email" type="text" name="">
+                </div>
+                <div class="input__group" id="msjGroup">
+                  <label>Mensaje</label>
+                  <textarea id="mensaje" name=""> </textarea>
+                </div>
+                <div class="input__group" id="telefonoGroup">
+                  <label>Télefono</label>
+                  <input id="telefono" type="text" name="">
+                </div>
+                <div class="checkboxes" id="cajaLegal"> 
+                  <div class="check">
+                    <input class="checkbox" id="checkLegale" type="checkbox">
+                    <label class="checkmark" id="checkboxLegales" for="checkLegale"> </label>
+                    <label class="label" id="labelLegales" for="checkLegale">Acepto <a id="linkTerminos" href="terminos-y-condiciones.php">el Aviso de Privacidad</a></label>
+                  </div><span class="msjError show">Debes aceptar los términos y condiciones</span>
+                </div>
+                <input class="btn primario" id="enviarContacto" type="submit" value="Enviar">
+              </form>
+              <div class="contacto--links d-flex align-items-center"><a class="linkBorder" href="mailto:ventas@renovaindustrial.com">ventas@renovaindustrial.com</a>
+                <div class="contacto--whats d-flex align-items-center"><img class="img-fluid" src="img/whatsapp.svg" alt="Renova Whats app"><a class="linkBorder" href="https://wa.me/5516773281" target="_blank">Escríbenos</a></div>
               </div>
             </div>
           </div>
         </div>
       </section>
-      <section class="contacto"><img class="img-fluid poligono" src="img/Form03.svg" alt="Renova Industrial">
-        <div id="triggerContacto"></div>
-        <svg class="path1" width="700px" height="700px" viewBox="0 0 1250 900">
+      <section class="mapa d-flex align-items-center">
+        <div id="triggerAyuda"></div>
+        <svg class="path1" width="1000px" height="800px" viewBox="0 0 900 824">
           <g class="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-            <path d="M1211.2503,532.284649 L660.063824,110.319333 C572.357564,43.1750877 446.826426,59.8438944 379.682181,147.550155 C360.550125,172.541143 347.586194,201.694655 341.844551,232.640068 L207.563996,956.364533 L207.563996,956.364533" id="pathContacto" stroke="#F9BB00" stroke-width="2" transform="translate(709.407147, 434.291044) rotate(-302.000000) translate(-709.407147, -434.291044)"></path>
+            <path d="M584.473023,562.458371 L212.57173,299.650718 C122.365,235.905257 -2.43790882,257.356355 -66.1833689,347.563085 C-83.9353827,372.684107 -95.6536808,401.561328 -100.426977,431.949078 L-182.296541,953.146978 L-182.296541,953.146978" id="pathAyuda" stroke="#F9BB00" stroke-width="2" transform="translate(201.088241, 533.465513) rotate(-243.000000) translate(-201.088241, -533.465513) "></path>
           </g>
         </svg>
-        <div class="container-fluid">
-          <div class="row align-items-center objetFade">
-            <div class="col-12 col-lg-6 col-xl-5">
-              <div class="contacto--img">
-                <picture> 
-                  <source srcset="img/Desktop/1Home/Secc4.webp" type="image/webp"><img class="img-fluid" src="img/Desktop/1Home/Secc4.png" alt="Renova Industrial">
+        <div class="container"> 
+          <div class="row objetFade">
+            <div class="col-12 col-lg-9 offset-lg-3 offset-xl-4">
+              <h2 class="titleBig"> <b>Llámanos</b></h2>
+              <div class="mapa__imagen"> 
+                <picture>
+                  <source media="(min-width: 992px)" srcset="img/mapa.webp" type="image/webp">
+                  <source media="(min-width: 992px)" srcset="img/mapa.png">
+                  <source srcset="img/mapaMobile.webp" type="image/webp"><img class="img-fluid" src="img/mapaMobile.png">
                 </picture>
-              </div>
-            </div>
-            <div class="col-12 col-lg-5">
-              <div class="contacto--copy objParallax">
-                <h2>Si quieres saber sobre nuestras promociones o solicitar nuestros servicios</h2>
-                <h2 class="titleBig"><b>Escríbenos</b></h2><a href="contacto.html"> 
-                  <button class="btn secundario">Me interesa</button></a>
+                <div class="mapa__imagen__tooltip" id="tooltip1">
+                  <h6>Planta Norte</h6>
+                  <h3>Saltillo</h3>
+                  <ul>
+                    <li> <a href="tel:+ 52 (844) 199 0641">+ 52 (844) 199 0641</a></li>
+                    <li> <a href="tel:+ 52 (844) 199 0641">+ 52 (844) 199 0641</a></li>
+                  </ul>
+                </div>
+                <div class="mapa__imagen__tooltip" id="tooltip2">
+                  <h6>Planta Centro</h6>
+                  <h3>Querétaro </h3>
+                  <ul>
+                    <li> <a href="tel:+ 52 (442) 225 6338">+ 52 (442) 225 6338</a></li>
+                  </ul>
+                </div>
+                <div class="mapa__imagen__tooltip" id="tooltip3">
+                  <h6>Planta Centro</h6>
+                  <h3>Guanajuato</h3>
+                  <ul>
+                    <li> <a href="tel:+ 52 (442) 225 6242">+ 52 (442) 225 6242</a></li>
+                  </ul>
+                </div>
               </div>
             </div>
           </div>

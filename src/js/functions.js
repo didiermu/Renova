@@ -3,9 +3,11 @@
 /// HEADER
 
 function menu(){
-	$(".header--navegacion .btn").on("click", function () {
-        $(".header").toggleClass("headerOn");
-        $(this).toggleClass("nav-on");
+	$("#linkContacto").on("click", function () { 
+        
+        $("html, body").animate({ scrollTop: $(".contacto").offset().top - 90 }, 1500);
+        
+        return false;
     });
 	
 }
@@ -43,7 +45,7 @@ function efectoFade() {
 			}
 		});
 		
-		if ($(".home .dedicamos").hasClass("sectionOn") || $(".home .promos").hasClass("sectionOn") || $(".body-materiales .hero").hasClass("sectionOn") || $(".materiales .promos").hasClass("sectionOn") || $(".body-destacamos .hero").hasClass("sectionOn") || $(".body-destacamos .valores").hasClass("sectionOn") || $(".body-destacamos .esfuerzo").hasClass("sectionOn")  || $(".body-servicios .hero").hasClass("sectionOn") || $(".servicios .nuestros").hasClass("sectionOn") || $(".servicios .promos").hasClass("sectionOn")){
+		if ($(".home .ayuda").hasClass("sectionOn") || $(".home .dedicamos").hasClass("sectionOn") || $(".home .contacto").hasClass("sectionOn") || $(".body-materiales .hero").hasClass("sectionOn") || $(".materiales .promos").hasClass("sectionOn") || $(".body-destacamos .hero").hasClass("sectionOn") || $(".body-destacamos .valores").hasClass("sectionOn") || $(".body-destacamos .esfuerzo").hasClass("sectionOn")  || $(".body-servicios .hero").hasClass("sectionOn") || $(".servicios .nuestros").hasClass("sectionOn") || $(".servicios .promos").hasClass("sectionOn")){
 			$(".header").addClass("black");
 		}
 		
@@ -51,15 +53,15 @@ function efectoFade() {
 			$(".header").removeClass("black");
 		}
 		
-		if ($(".promos").hasClass("sectionOn")){
-			setTimeout(function(){
-				$(".promos .objetFade").addClass("objetFade-On");
-			},2000);
-		}
+		// if ($(".contacto").hasClass("sectionOn")){
+		// 	setTimeout(function(){
+		// 		$(".promos .objetFade").addClass("objetFade-On");
+		// 	},2000);
+		// }
 		
-		else{
-			$(".promos .objetFade").removeClass("objetFade-On");
-		}
+		// else{
+		// 	$(".promos .objetFade").removeClass("objetFade-On");
+		// }
 	}
 	 
  
@@ -81,14 +83,14 @@ function drawSvg(){
 
 	var $pathAyuda = $("#pathAyuda");
 	var $pathDedicamos = $("#pathDedicamos");
-	var $pathPromos = $("#pathPromos");
+	// var $pathPromos = $("#pathPromos");
 	var $pathContacto = $("#pathContacto");
 
 	// prepare SVG
 	
 	pathPrepare($pathAyuda);
 	pathPrepare($pathDedicamos);
-	pathPrepare($pathPromos);
+	// pathPrepare($pathPromos);
 	pathPrepare($pathContacto);
 
 	// init controller
@@ -104,9 +106,9 @@ function drawSvg(){
 		.add(TweenMax.to($pathDedicamos, 0.5, {strokeDashoffset: 0, ease:Linear.easeNone}))
 		.add(TweenMax.to("path", 1, {ease:Linear.easeNone}), 0);
 	
-	var tween4 = new TimelineMax()
-		.add(TweenMax.to($pathPromos, 0.8, {strokeDashoffset: 0, ease:Linear.easeNone}))
-		.add(TweenMax.to("path", 1, {ease:Linear.easeNone}), 0);
+	// var tween4 = new TimelineMax()
+	// 	.add(TweenMax.to($pathPromos, 0.8, {strokeDashoffset: 0, ease:Linear.easeNone}))
+	// 	.add(TweenMax.to("path", 1, {ease:Linear.easeNone}), 0);
 	
 	var tween5 = new TimelineMax()
 		.add(TweenMax.to($pathContacto, 0.6, {strokeDashoffset: 0, ease:Linear.easeNone}))
@@ -122,51 +124,23 @@ function drawSvg(){
 					.setTween(tween3)
 					.addTo(controller);
 	
-	var scene4 = new ScrollMagic.Scene({triggerElement: "#triggerPromos", duration: 600, tweenChanges: true})
-					.setTween(tween4)
-					.addTo(controller);
+	// var scene4 = new ScrollMagic.Scene({triggerElement: "#triggerPromos", duration: 600, tweenChanges: true})
+	// 				.setTween(tween4)
+	// 				.addTo(controller);
 	
 	var scene5 = new ScrollMagic.Scene({triggerElement: "#triggerContacto", duration: 600, tweenChanges: true})
 					.setTween(tween5)
 					.addTo(controller);
 }
 
-function carruselHome(){
-	var mySwiper2 = new Swiper(".sliderPromosHome", {
-		direction: 'horizontal',
-		centeredSlidesBounds:true,
-		pagination: {
-			el: '.swiper-pagination',
-			type: 'bullets',
-			clickable:true,
-		},
-		breakpoints:{
-			320: {
-				slidesPerView: "auto",
-				spaceBetween: 10,
-				allowTouchMove:true,
-			},
-			992: {
-                slidesPerView: "auto",
-                spaceBetween: 10,
-                slidesOffsetAfter:30,
-                allowTouchMove:false,
-			}
-		}
-	});
-}
-
-
-$(document).ready(function(){
-	//menu();
+$(function(){
+	menu();
 	efectoFade();
 	$(window).enllax();	
 	
-	if ( window.location.pathname == "/" || window.location.pathname == "/renova-industrial/" ) {
+	if ( window.location.pathname == "/" || window.location.pathname == "/renova-industrial/" || window.location.pathname == "/RenovaIndustrial/" ) {
 		drawSvg();
-		carruselHome();
 	}
-	
 });
 
 

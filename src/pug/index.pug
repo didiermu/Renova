@@ -21,32 +21,48 @@ html(lang='es')
                         
                 .container-fluid
                     .row.align-items-center.objetFade
-                        .col-12.col-lg-5
-                            .ayuda--img
-                                picture 
-                                    source(srcset="img/Desktop/1Home/Secc1.webp", type="image/webp")
-                                    img.img-fluid(src="img/Desktop/1Home/Secc1.jpg", alt="Renova Industrial")
-                                
-                        .col-12.col-lg-7
+                        
+                        .col-12.col-lg-6.offset-lg-3.offset-xl-4
+
                             .ayuda--copy(data-enllax-ratio=".2" data-enllax-type="foreground")
                                 h2.titleBig
                                     b ¿Cómo te 
                                         br 
                                         | podemos ayudar?
+                                
+                                .ayuda--copy__acceso.d-flex
+                                    
+                                    .ayuda--copy__acceso__item.d-flex.align-items-center.justify-content-center
+                                        .ayuda--copy__acceso__item__img
+                                            picture 
+                                                source(srcset="img/Servicios.webp", type="image/webp")
+                                                img.img-fluid(src="img/Servicios.jpg", alt="Renova Industrial")
                                         
-                                .ayuda--copy__acceso.offset-lg-1
-                                    h2 Quiero vender mis desperdicios
-                                        br 
-                                        | industriales
+                                        .ayuda--copy__acceso__item__copy
+                                            h2 Servicios industriales
+                                            p Quiero vender mis 
+                                                br 
+                                                | desperdicios industriales
+
+                                            a(href="servicios.html")
+                                                button.btn.secundario Me interesa
+
                                     
-                                    a(href="servicios.html").linkBorder Conoce nuestros servicios 
+                                    .ayuda--copy__acceso__item.d-flex.align-items-center.justify-content-center
+                                        .ayuda--copy__acceso__item__img
+                                            picture 
+                                                source(srcset="img/Materiales.webp", type="image/webp")
+                                                img.img-fluid(src="img/Materiales.jpg", alt="Renova Industrial")
+                                        
+                                        .ayuda--copy__acceso__item__copy
+                                            h2 Materiales
+                                            p Quiero comprar
+                                                br 
+                                                | materiales reciclados
+
+                                            a(href="servicios.html")
+                                                button.btn.secundario Me interesa
                                     
-                                .ayuda--copy__acceso.offset-lg-1
-                                    h2 Quiero comprar materiales
-                                        br 
-                                        | reciclados
-                                    
-                                    a(href="materiales.html").linkBorder Ver materiales
                 
             section.dedicamos
                 img.img-fluid.poligono(src="img/Form03.svg", alt="Renova Industrial")
@@ -62,18 +78,12 @@ html(lang='es')
                             .dedicamos--copy(data-enllax-ratio=".3" data-enllax-type="foreground")
                                 h3 Nos dedicamos a la 
                                     br 
-                                    | compra, venta y manejo de 
+                                    | compra y venta de
                                 h2.titleBig
                                     b residuos 
                                         br 
                                         | industriales
-                                h4 Contamos con equipo especializado, 
-                                    br 
-                                    | personal capacitado y certificaciones 
-                                    br
-                                    | que nos permiten ofrecer un servicio 
-                                    br 
-                                    | profesional
+                               
                                  
                                 a(href="nos-destacamos-por.html").linkBorder Conoce Renova
                                         
@@ -84,68 +94,117 @@ html(lang='es')
                                 source(srcset="img/Desktop/1Home/Secc2.webp", type="image/webp")
                                 img.img-fluid(src="img/Desktop/1Home/Secc2.png", alt="Renova Industrial")
             
-            section.promos
-                img.img-fluid.poligono(src="img/Form02.svg", alt="Renova Industrial")
-                
-                img.fondo3(src="img/fondo3.svg", alt="Renova Industrial") 
-                
-                #triggerPromos
-                svg#path1(width='751px' height='824px' viewBox='0 0 751 824') 
-                    g#Page-1(stroke='none' stroke-width='1' fill='none' fill-rule='evenodd')
-                        path(d="M707.699302,793.745039 L719.820771,230.480114 L387.954512,30.3141528 C293.370261,-26.7345739 170.447445,3.69398073 113.398718,98.2782319 C100.034329,120.435795 91.0966617,144.976215 87.0813138,170.538717 L1.39332472,716.045467 L1.39332472,716.045467" id="pathPromos" stroke="#F9BB00" stroke-width="2")
-                                        
-                .container-fluid
-                    .row.align-items-center.objetFade
-                        .col-12.promos--img
-                            
-                            //-img.img-fluid.img-holder-promos(data-image="img/Desktop/1Home/Secc3.jpg")
-                            
-                        .col-12.col-lg-8.offset-lg-3.offset-xl-4
-                            .promos--copy
-                                h2.titleBig 
-                                    b Promociones    
                                 
-                                .row
-                                    .swiper-container.sliderPromosHome
-                                        .swiper-wrapper
-                                            - var n = 0;
-                                            while n < 3
-                                                - ++n
-                                                .col-lg-4.col-10.swiper-slide
-                                                    .promos--copy__card
-                                                        h5 Precio preferencial
-                                                        h2 En volumen de lámina
-                                                        a(href="#!") 
-                                                            button.btn.secundario Me interesa
-                                                            
-                                        .swiper-pagination.align-items-center
-                                        
-                                a(href="materiales.html#promociones").linkBorder Ver las promociones 
-                                
-            section.contacto
+            section.contacto#contacto
                 img.img-fluid.poligono(src="img/Form03.svg", alt="Renova Industrial")
                 
                 #triggerContacto
+
                 svg.path1(width='700px' height='700px' viewBox='0 0 1250 900')
                     g.Page-1(stroke='none' stroke-width='1' fill='none' fill-rule='evenodd')
-                        path(d="M1211.2503,532.284649 L660.063824,110.319333 C572.357564,43.1750877 446.826426,59.8438944 379.682181,147.550155 C360.550125,172.541143 347.586194,201.694655 341.844551,232.640068 L207.563996,956.364533 L207.563996,956.364533" id="pathContacto" stroke="#F9BB00" stroke-width="2" transform="translate(709.407147, 434.291044) rotate(-302.000000) translate(-709.407147, -434.291044)")
+                        path(d="M829.358284,449.674323 L449.519976,181.2579 C359.313246,117.51244 234.510337,138.963537 170.764877,229.170267 C154.089911,252.767149 142.72582,279.696927 137.454748,308.106136 L0.703458895,1045.14698 L0.703458895,1045.14698" id="pathContacto" stroke="#F9BB00" stroke-width="2" transform="translate(415.030872, 523.073489) rotate(-180.000000) translate(-415.030872, -523.073489) ")
                         
                 .container-fluid
                     .row.align-items-center.objetFade
-                        .col-12.col-lg-6.col-xl-5
-                            .contacto--img
-                                picture 
-                                    source(srcset="img/Desktop/1Home/Secc4.webp", type="image/webp")
-                                    img.img-fluid(src="img/Desktop/1Home/Secc4.png", alt="Renova Industrial")
+                       
+                        .col-12.col-lg-8.offset-lg-3.offset-xl-4
+                            .contacto--copy
+                                h2.titleBig 
+                                    b Contacto
                                 
+                                h3 Si quieres saber sobre nuestras promociones
+                                    br
+                                    | o solicitar nuestros servicios escríbenos
                                 
-                        .col-12.col-lg-5
-                            .contacto--copy.objParallax
-                                h2 Si quieres saber sobre nuestras promociones o solicitar nuestros servicios
-                                h2.titleBig
-                                    b Escríbenos
+                            form#formContacto(action="")
+                                .input__group
+                                    label Nombre
+                                    input#nombre(type="text", name="")
+
+                                .input__group#ayudaGroup
+                                    
+                                    .combo
+                                        select#comboAyuda(name="")
+                                            option(value="0" selected hidden) ¿En qué te podemos ayudar?
+                                            option(value="1") Quiero vender mis desperdicios
+                                            option(value="2") Quiero comprar materiales reciclados 
+
+                                .input__group
+                                    label Correo electrónico
+                                    input#email(type="text", name="")
+
+                                .input__group#msjGroup
+                                    label Mensaje
+                                    textarea#mensaje(name="") 
+
+                                .input__group#telefonoGroup
+                                    label Télefono
+                                    input#telefono(type="text", name="")
                                 
-                                a(href="contacto.html") 
-                                    button.btn.secundario Me interesa
+                                .checkboxes#cajaLegal 
+                                    .check
+                                        input#checkLegale.checkbox(type='checkbox')
+                                        label#checkboxLegales.checkmark(for='checkLegale')  
+                                        label.label#labelLegales(for='checkLegale')
+                                            | Acepto 
+                                            a#linkTerminos(href="terminos-y-condiciones.php") el Aviso de Privacidad
+                                            
+                                    span.msjError.show Debes aceptar los términos y condiciones
+                                
+                                input.btn.primario#enviarContacto(type="submit", value="Enviar")
+                            
+
+                            .contacto--links.d-flex.align-items-center
+                                a.linkBorder(href="mailto:ventas@renovaindustrial.com") ventas@renovaindustrial.com
+                                
+                                .contacto--whats.d-flex.align-items-center
+                                    img.img-fluid(src="img/whatsapp.svg", alt="Renova Whats app")
+                                    a.linkBorder(href="https://wa.me/5516773281", target="_blank") Escríbenos
+
+
+            section.mapa.d-flex.align-items-center
+                
+                #triggerAyuda
+                
+                svg.path1(width='1000px' height='800px' viewBox='0 0 900 824')
+                    g.Page-1(stroke='none' stroke-width='1' fill='none' fill-rule='evenodd')
+                        path(d="M584.473023,562.458371 L212.57173,299.650718 C122.365,235.905257 -2.43790882,257.356355 -66.1833689,347.563085 C-83.9353827,372.684107 -95.6536808,401.561328 -100.426977,431.949078 L-182.296541,953.146978 L-182.296541,953.146978" id="pathAyuda" stroke="#F9BB00" stroke-width="2" transform="translate(201.088241, 533.465513) rotate(-243.000000) translate(-201.088241, -533.465513) ")
+                        
+                .container 
+                    .row.objetFade
+                        .col-12.col-lg-9.offset-lg-3.offset-xl-4
+                            h2.titleBig 
+                                b Llámanos
+                            
+                            .mapa__imagen 
+                                picture
+                                    source(media="(min-width: 992px)", srcset="img/mapa.webp", type="image/webp")
+                                    source(media="(min-width: 992px)", srcset="img/mapa.png")
+                                    source(srcset="img/mapaMobile.webp", type="image/webp")
+                                    img.img-fluid(src="img/mapaMobile.png")
+                               
+                                .mapa__imagen__tooltip#tooltip1
+                                    h6 Planta Norte
+                                    h3 Saltillo
+                                    ul
+                                        li 
+                                            a(href="tel:+ 52 (844) 199 0641") + 52 (844) 199 0641
+                                        li 
+                                            a(href="tel:+ 52 (844) 199 0641") + 52 (844) 199 0641
+                               
+                                .mapa__imagen__tooltip#tooltip2
+                                    h6 Planta Centro
+                                    h3 Querétaro 
+                                    ul
+                                        li 
+                                            a(href="tel:+ 52 (442) 225 6338") + 52 (442) 225 6338
+                                        
+                                            
+                                .mapa__imagen__tooltip#tooltip3
+                                    h6 Planta Centro
+                                    h3 Guanajuato
+                                    ul
+                                        li 
+                                            a(href="tel:+ 52 (442) 225 6242") + 52 (442) 225 6242
                                                        
         include includes/footer.pug

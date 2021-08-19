@@ -104,17 +104,17 @@ function valCombos(nameInput){
 	combosContacto.each(function () {
 		$(this).change(function () {
 			if ($(this).val() != 0) {
-				$(this).parent(".combo").siblings("span").remove();
+				$(this).parents(".combo").siblings("span").remove();
 			}
 		});
 
 		if ($(this).val() == 0) {
 			$(this).siblings("span").remove();
-			$(this).parent(".combo").after('<span class="error-input">Selecciona una opción</span>');
+			$(this).parents(".combo").after('<span class="error-input">Selecciona una opción</span>');
 		}
 		
 		else{
-			$(this).parent(".combo").siblings("span").remove();
+			$(this).parents(".combo").siblings("span").remove();
 		}
 
 	});
@@ -137,8 +137,8 @@ function validacionContacto(){
         
         // VALIDATE ALL
 
-        if ($('main.contacto .error-input').length == 0) {
-            $("main.contacto form").submit();
+        if ($('section.contacto .error-input').length == 0) {
+            $("section.contacto form").submit();
 			
 			//console.log("si");
         }

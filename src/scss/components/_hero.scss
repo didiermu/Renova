@@ -44,7 +44,7 @@
     &--copy{
         z-index: 1;
         position: relative;
-        bottom: 120px;
+        bottom: 150px;
         
         h1{
             color: var(--blanco);
@@ -56,7 +56,7 @@
     }
     
     .btn--down{
-        font-size: 1.8rem;
+        font-size: 2.8rem;
         position: absolute;
         bottom: 20px;
         left: 0;
@@ -80,7 +80,7 @@
             
             &:first-child{
                 opacity: .5;
-                top:10px;
+                top:20px;
                 position: relative;
             }
         }
