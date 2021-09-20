@@ -34,17 +34,19 @@
     
     .fondo3{
         position: absolute;
-        top: -200px;
+        // top: -200px;
+        top: 0;
         right: 0;
         z-index: 1;
-        transform: rotateX(180deg) scale(.6);
+        // transform: rotateX(180deg) scale(.6);
         transform-origin: right;
+        z-index: 0;
     }
     
     &--copy{
         z-index: 1;
         position: relative;
-        bottom: 150px;
+        bottom: 200px;
         
         h1{
             color: var(--blanco);
@@ -58,7 +60,7 @@
     .btn--down{
         font-size: 2.8rem;
         position: absolute;
-        bottom: 20px;
+        bottom: 70px;
         left: 0;
         right: 0;
         margin: auto;
@@ -95,16 +97,15 @@
         padding-right: 0;
     }
     
-    .offset-lg-3{
+    .offset-lg-2{
         margin-left: 10%;
     }
     
-    .col-lg-9{
+    .col-lg-10{
         padding-right: 0;
     }
     
     .col-9{
-        //background: url(../../img/Desktop/2Servicios/HeroImage.webp) no-repeat center / cover;
         display: flex;
         align-items: flex-end;
         
@@ -114,10 +115,10 @@
     }
     
     .hero--img{
-        height: 700px;
+        height: 680px;
         
         img{
-            object-position: center;
+            object-position: center top;
             object-fit: cover;
             width: 100%;
             height: 100%;
@@ -125,9 +126,9 @@
     }
     
     .hero--copy{
-        padding-left: 10%;
+        padding-left: 22%;
         position: absolute;
-        bottom: 150px;
+        bottom: 210px;
     }
    
     
@@ -160,7 +161,9 @@
     }
     
     .heroInt{
-        height: calc(540px + 10 * ((100vw - 320px) / 1280));
+        --altoHero: calc(560px + 1000 * ((100vw - 320px) / 640));
+
+        height: var(--altoHero);
         
         .path1{
             width:100%;
@@ -175,12 +178,12 @@
         }
         
         .hero--img{
-            height: calc(540px + 10 * ((100vw - 320px) / 1280));
+            height: var(--altoHero);
         }
         
-        //.hero--copy{
-        //    padding-left: 15px;
-        //}
+        .hero--copy{
+           padding-left: 15px;
+        }
     }
     
 }

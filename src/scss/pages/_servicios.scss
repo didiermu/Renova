@@ -3,10 +3,12 @@
 	//background: url(../../img/fondo2.svg) no-repeat left top /  contain;
     
     @include lineas;
-    
-    .heroInt .hero--img img{
-        object-position:center left;
+    .path1{
+        right: 0;
+        z-index: 1;
+        left: auto;
     }
+    
     
     .nuestros{
         position: relative;

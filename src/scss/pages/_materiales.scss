@@ -1,6 +1,8 @@
 
 .materiales{
     .hero{
+        background: var(--fondoClaro);
+        
         h1{
             margin-bottom: 50px;
         }
@@ -59,7 +61,7 @@
         }  
         
         &--copy{
-            bottom: 50px;
+            bottom: 130px;
         }
     }
     
