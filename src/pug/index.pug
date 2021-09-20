@@ -10,18 +10,44 @@ html(lang='es')
     body
         include includes/header.pug
         main.home
-            include includes/hero.pug
-            
+            section.hero.d-flex
+                img.fondo3(src="img/fondo3.svg" alt="Renova Industrial")
+                #triggerHero
+                svg.path1(width='800px' height='550px' viewBox='0 0 351 824')
+                    g.Page-1(stroke='none' stroke-width='1' fill='none' fill-rule='evenodd')
+                        path(d="M605.17587,212.754793 L273.309611,12.5888319 C178.725359,-44.4598949 55.8025434,-14.0313402 -1.24618334,80.552911 C-14.610573,102.710474 -23.5482399,127.250894 -27.5635879,152.813396 L-113.251577,698.320146 L-113.251577,698.320146" id="pathHero" stroke="#F9BB00" stroke-width="2" transform="translate(245.962146, 278.638682) rotate(-120.000000) translate(-245.962146, -278.638682) ")
+
+
+                .container#copyHeroContainer
+                    .row.objetFade
+                        .col-12.col-lg-9.offset-lg-3
+                            .hero--copy
+                                h3 Optimizamos el manejo de tus residuos industriales
+                                h1 
+                                    b con equipo moderno y especializado
+
+                    video#videoDesktop(autoplay muted loop preload)
+                        source(src="video/WEBCUT1920X700.mp4" type="video/mp4")
+
+                    video#videoMobile(autoplay muted loop preload)
+                        source(src="video/WEBCUT640X1080.mp4" type="video/mp4")
+
+
+                    .btn--down.d-flex   
+                        span.icon-Chevron
+                        span.icon-Chevron
+                        h5 Scroll
+
             section.ayuda
-                img.img-fluid.poligono(src="img/Form02.svg", alt="Renova Industrial")
+                img.img-fluid.poligono(src="img/Form02.svg" alt="Renova Industrial")
                 #triggerAyuda
                 svg.path1(width='1000px' height='800px' viewBox='0 0 900 824')
                     g.Page-1(stroke='none' stroke-width='1' fill='none' fill-rule='evenodd')
                         path(d="M584.473023,562.458371 L212.57173,299.650718 C122.365,235.905257 -2.43790882,257.356355 -66.1833689,347.563085 C-83.9353827,372.684107 -95.6536808,401.561328 -100.426977,431.949078 L-182.296541,953.146978 L-182.296541,953.146978" id="pathAyuda" stroke="#F9BB00" stroke-width="2" transform="translate(201.088241, 533.465513) rotate(-243.000000) translate(-201.088241, -533.465513) ")
-                        
+
                 .container-fluid
                     .row.align-items-center.objetFade
-                        
+
                         .col-12.col-lg-6.offset-lg-3.offset-xl-4
 
                             .ayuda--copy(data-enllax-ratio=".2" data-enllax-type="foreground")
@@ -29,17 +55,17 @@ html(lang='es')
                                     b ¿Cómo te 
                                         br 
                                         | podemos ayudar?
-                                
+
                                 .ayuda--copy__acceso.d-flex
-                                    
+
                                     .ayuda--copy__acceso__item.d-flex.align-items-center.justify-content-center
                                         .ayuda--copy__acceso__item__img
                                             picture 
-                                                source(srcset="img/Servicios.webp", type="image/webp")
-                                                img.img-fluid(src="img/Servicios.jpg", alt="Renova Industrial")
-                                        
+                                                source(srcset="img/Servicios.webp" type="image/webp")
+                                                img.img-fluid(src="img/Servicios.jpg" alt="Renova Industrial")
+
                                         .ayuda--copy__acceso__item__copy
-                                            h2 Servicios industriales
+                                            h2 Servicio integral
                                             p Quiero vender mis 
                                                 br 
                                                 | desperdicios industriales
@@ -47,31 +73,31 @@ html(lang='es')
                                             a(href="servicios.html")
                                                 button.btn.secundario Me interesa
 
-                                    
+
                                     .ayuda--copy__acceso__item.d-flex.align-items-center.justify-content-center
                                         .ayuda--copy__acceso__item__img
                                             picture 
-                                                source(srcset="img/Materiales.webp", type="image/webp")
-                                                img.img-fluid(src="img/Materiales.jpg", alt="Renova Industrial")
-                                        
+                                                source(srcset="img/Materiales.webp" type="image/webp")
+                                                img.img-fluid(src="img/Materiales.jpg" alt="Renova Industrial")
+
                                         .ayuda--copy__acceso__item__copy
                                             h2 Materiales
                                             p Quiero comprar
                                                 br 
                                                 | materiales reciclados
 
-                                            a(href="servicios.html")
+                                            a(href="materiales.html")
                                                 button.btn.secundario Me interesa
-                                    
-                
+
+
             section.dedicamos
-                img.img-fluid.poligono(src="img/Form03.svg", alt="Renova Industrial")
-                
+                img.img-fluid.poligono(src="img/Form03.svg" alt="Renova Industrial")
+
                 #triggerDedicamos
                 svg.path1(width='800px' height='800px' viewBox='0 0 1000 1100')
                     g.Page-1(stroke='none' stroke-width='1' fill='none' fill-rule='evenodd')
                         path(d="M829.358284,449.674323 L449.519976,181.2579 C359.313246,117.51244 234.510337,138.963537 170.764877,229.170267 C154.089911,252.767149 142.72582,279.696927 137.454748,308.106136 L0.703458895,1045.14698 L0.703458895,1045.14698" id="pathDedicamos" stroke="#F9BB00" stroke-width="2" transform="translate(415.030872, 523.073489) rotate(-180.000000) translate(-415.030872, -523.073489) ")
-                        
+
                 .container-fluid
                     .row.align-items-center.objetFade
                         .col-12.col-lg-5.offset-lg-3.offset-xl-4
@@ -83,46 +109,46 @@ html(lang='es')
                                     b residuos 
                                         br 
                                         | industriales
-                               
-                                 
+
+
                                 a(href="nos-destacamos-por.html").linkBorder Conoce Renova
-                                        
-                                    
-                        
+
+
+
                         .dedicamos--img(data-enllax-ratio=".4" data-enllax-type="foreground")
                             picture 
-                                source(srcset="img/Desktop/1Home/Secc2.webp", type="image/webp")
-                                img.img-fluid(src="img/Desktop/1Home/Secc2.png", alt="Renova Industrial")
-            
-                                
+                                source(srcset="img/Desktop/1Home/Secc2.webp" type="image/webp")
+                                img.img-fluid(src="img/Desktop/1Home/Secc2.png" alt="Renova Industrial")
+
+
             section.contacto#contacto
-                img.img-fluid.poligono(src="img/Form03.svg", alt="Renova Industrial")
-                
+                img.img-fluid.poligono(src="img/Form03.svg" alt="Renova Industrial")
+
                 #triggerContacto
 
                 svg.path1(width='700px' height='700px' viewBox='0 0 1250 900')
                     g.Page-1(stroke='none' stroke-width='1' fill='none' fill-rule='evenodd')
                         path(d="M829.358284,449.674323 L449.519976,181.2579 C359.313246,117.51244 234.510337,138.963537 170.764877,229.170267 C154.089911,252.767149 142.72582,279.696927 137.454748,308.106136 L0.703458895,1045.14698 L0.703458895,1045.14698" id="pathContacto" stroke="#F9BB00" stroke-width="2" transform="translate(415.030872, 523.073489) rotate(-180.000000) translate(-415.030872, -523.073489) ")
-                        
+
                 .container-fluid
                     .row.align-items-center.objetFade
-                       
+
                         .col-12.col-lg-8.offset-lg-3.offset-xl-4
                             .contacto--copy
                                 h2.titleBig 
                                     b Contacto
-                                
+
                                 h3 Si quieres saber sobre nuestras promociones
                                     br
                                     | o solicitar nuestros servicios escríbenos
-                                
+
                             form#formContacto(action="")
                                 .input__group
                                     label Nombre
-                                    input#nombre(type="text", name="")
+                                    input#nombre(type="text" name="")
 
                                 .input__group#ayudaGroup
-                                    
+
                                     .combo
                                         select#comboAyuda(name="")
                                             option(value="0" selected hidden) ¿En qué te podemos ayudar?
@@ -131,7 +157,7 @@ html(lang='es')
 
                                 .input__group
                                     label Correo electrónico
-                                    input#email(type="text", name="")
+                                    input#email(type="text" name="")
 
                                 .input__group#msjGroup
                                     label Mensaje
@@ -139,8 +165,8 @@ html(lang='es')
 
                                 .input__group#telefonoGroup
                                     label Télefono
-                                    input#telefono(type="text", name="")
-                                
+                                    input#telefono(type="text" name="")
+
                                 .checkboxes#cajaLegal 
                                     .check
                                         input#checkLegale.checkbox(type='checkbox')
@@ -148,41 +174,41 @@ html(lang='es')
                                         label.label#labelLegales(for='checkLegale')
                                             | Acepto 
                                             a#linkTerminos(href="terminos-y-condiciones.php") el Aviso de Privacidad
-                                            
+
                                     span.msjError.show Debes aceptar los términos y condiciones
-                                
-                                input.btn.primario#enviarContacto(type="submit", value="Enviar")
-                            
+
+                                input.btn.primario#enviarContacto(type="submit" value="Enviar")
+
 
                             .contacto--links.d-flex.align-items-center
                                 a.linkBorder(href="mailto:ventas@renovaindustrial.com") ventas@renovaindustrial.com
-                                
+
                                 .contacto--whats.d-flex.align-items-center
-                                    img.img-fluid(src="img/whatsapp.svg", alt="Renova Whats app")
-                                    a.linkBorder(href="https://wa.me/5516773281", target="_blank") Escríbenos
+                                    img.img-fluid(src="img/whatsapp.svg" alt="Renova Whats app")
+                                    a.linkBorder(href="https://wa.me/5516773281" target="_blank") Escríbenos
 
 
             section.mapa.d-flex.align-items-center
-                
+
                 #triggerAyuda
-                
+
                 svg.path1(width='1000px' height='800px' viewBox='0 0 900 824')
                     g.Page-1(stroke='none' stroke-width='1' fill='none' fill-rule='evenodd')
                         path(d="M584.473023,562.458371 L212.57173,299.650718 C122.365,235.905257 -2.43790882,257.356355 -66.1833689,347.563085 C-83.9353827,372.684107 -95.6536808,401.561328 -100.426977,431.949078 L-182.296541,953.146978 L-182.296541,953.146978" id="pathAyuda" stroke="#F9BB00" stroke-width="2" transform="translate(201.088241, 533.465513) rotate(-243.000000) translate(-201.088241, -533.465513) ")
-                        
+
                 .container 
                     .row.objetFade
                         .col-12.col-lg-9.offset-lg-3.offset-xl-4
                             h2.titleBig 
                                 b Llámanos
-                            
+
                             .mapa__imagen 
                                 picture
-                                    source(media="(min-width: 992px)", srcset="img/mapa.webp", type="image/webp")
-                                    source(media="(min-width: 992px)", srcset="img/mapa.png")
-                                    source(srcset="img/mapaMobile.webp", type="image/webp")
+                                    source(media="(min-width: 992px)" srcset="img/mapa.webp" type="image/webp")
+                                    source(media="(min-width: 992px)" srcset="img/mapa.png")
+                                    source(srcset="img/mapaMobile.webp" type="image/webp")
                                     img.img-fluid(src="img/mapaMobile.png")
-                               
+
                                 .mapa__imagen__tooltip#tooltip1
                                     h6 Planta Norte
                                     h3 Saltillo
@@ -191,20 +217,20 @@ html(lang='es')
                                             a(href="tel:+ 52 (844) 199 0641") + 52 (844) 199 0641
                                         li 
                                             a(href="tel:+ 52 (844) 199 0641") + 52 (844) 199 0641
-                               
+
                                 .mapa__imagen__tooltip#tooltip2
                                     h6 Planta Centro
                                     h3 Querétaro 
                                     ul
                                         li 
                                             a(href="tel:+ 52 (442) 225 6338") + 52 (442) 225 6338
-                                        
-                                            
+
+
                                 .mapa__imagen__tooltip#tooltip3
                                     h6 Planta Centro
                                     h3 Guanajuato
                                     ul
                                         li 
                                             a(href="tel:+ 52 (442) 225 6242") + 52 (442) 225 6242
-                                                       
+
         include includes/footer.pug

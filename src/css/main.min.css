@@ -670,6 +670,27 @@ body .poligono {
   }
 }
 
+body .home .hero {
+  background: 0 0;
+  height: 700px;
+}
+
+body .home .hero video {
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+body .home .hero #videoMobile,
+body .home .hero .fondo3,
+body .home .hero svg {
+  display: none;
+}
+
 body .home .ayuda {
   background: var(--fondoClaro);
   position: relative;
@@ -1180,6 +1201,10 @@ body.body-contacto .modal .btn {
 }
 
 @media (min-width:1920px) {
+  body .fondo3 {
+    display: none;
+  }
+
   body .home .ayuda .col-lg-7 {
     max-width: 58.333333%;
   }
@@ -1190,8 +1215,8 @@ body.body-contacto .modal .btn {
 }
 
 @media (max-width:992px) {
-  body .home .ayuda--copy .titleBig br,
-  body .home .dedicamos--copy h4 br {
+  body .home .fondo3,
+  body .home .hero #videoDesktop {
     display: none;
   }
 
@@ -1200,7 +1225,16 @@ body.body-contacto .modal .btn {
   }
 
   body .home .hero {
-    background: url("../img/Mobile/1Home/HeroImage.webp") center/cover no-repeat;
+    height: calc(540px + 1000 * ((100vw - 320px)/ 768));
+  }
+
+  body .home .hero #videoMobile {
+    display: block;
+  }
+
+  body .home .ayuda--copy .titleBig br,
+  body .home .dedicamos--copy h4 br {
+    display: none;
   }
 
   body .home .ayuda {

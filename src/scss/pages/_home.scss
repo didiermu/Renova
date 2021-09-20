@@ -1,5 +1,24 @@
 .home{
-	
+	.hero{
+		background: none;
+		height: 700px;
+
+		video{
+			width: 100%;
+			object-fit: cover;
+			object-position: center;
+			height: 100%;
+			position: absolute;
+			left: 0;
+			top: 0;
+		}
+
+		#videoMobile, svg, .fondo3{
+			display: none;
+		}
+
+	}
+
 	.ayuda{
 		background: var(--fondoClaro);
 		position: relative;
@@ -485,6 +504,10 @@
 
 ///  FULL
 @media (min-width:1920px) {
+	.fondo3{
+		display: none;
+	}
+
 	.home .ayuda .col-lg-7{
 		max-width: 58.333333%;
 	}
@@ -506,10 +529,22 @@
 	main{
 		overflow: hidden;
 	}
+
 	.home{
-		
+		.fondo3{
+			display: none;
+		}
+
 		.hero{
-			background: url('../img/Mobile/1Home/HeroImage.webp') no-repeat center / cover;	
+			height: calc(540px + 1000 * ((100vw - 320px) / 768));
+
+			#videoDesktop{
+				display: none;
+			}
+
+			#videoMobile{
+				display: block;
+			}
 		}
 		
 		.ayuda{
