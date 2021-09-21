@@ -1,22 +1,5 @@
 @charset "UTF-8";
 
-body,
-body .footer a,
-body .footer h5 {
-  font-family: var(--secundariaRegular);
-}
-
-body .destacamos .dedicamos--copy__card,
-body .destacamos .valores__card,
-body .header--navegacion--logo,
-body .home .mapa__imagen__tooltip,
-body .materiales .grid .swiper-slide,
-body .materiales .promos--copy__card,
-body .servicios .nuestros .nav-item,
-body .servicios .promos--copy__card {
-  box-shadow: 0 2px 40px 0 rgba(120,159,183,.16);
-}
-
 :root {
   --texto: #2F3B46;
   --blanco: #FFFFFF;
@@ -213,6 +196,7 @@ body .servicios .promos--copy__card {
 body {
   overflow-x: hidden!important;
   position: relative;
+  font-family: var(--secundariaRegular);
 }
 
 body .header {
@@ -238,6 +222,7 @@ body .header--navegacion--logo {
   min-width: 250px;
   padding: 30px;
   text-align: center;
+  box-shadow: 0 2px 40px 0 rgba(120,159,183,.16);
 }
 
 body .header--navegacion--logo--img {
@@ -468,6 +453,7 @@ body .footer {
 body .footer a,
 body .footer h5 {
   color: var(--blanco);
+  font-family: var(--secundariaRegular);
   text-align: right;
 }
 
@@ -919,6 +905,12 @@ body .home .dedicamos--img {
   max-width: 800px;
 }
 
+body .home .contacto .path1,
+body .materiales .grid .path1 {
+  width: calc(750px + 750 * ((100vw - 1280px)/ 1920));
+  height: calc(550px + 50 * ((100vw - 1280px)/ 1920));
+}
+
 body .home .contacto {
   background: url("../img/fondo2.svg") left top/contain no-repeat var(--fondoClaro);
   position: relative;
@@ -935,8 +927,6 @@ body .home .contacto .path1 {
   left: -30px;
   top: 0;
   z-index: 0;
-  width: calc(750px + 750 * ((100vw - 1280px)/ 1920));
-  height: calc(550px + 50 * ((100vw - 1280px)/ 1920));
 }
 
 body .home .contacto .objetFade img {
@@ -1142,6 +1132,7 @@ body .home .mapa .titleBig {
 body .home .mapa__imagen__tooltip {
   background: #fff;
   padding: 20px 30px 0 20px;
+  box-shadow: 0 2px 40px 0 rgba(120,159,183,.16);
   border-radius: 8px 8px 40px;
   position: absolute;
 }
@@ -1491,7 +1482,7 @@ body .servicios .path1 {
   position: absolute;
   top: 0;
   right: 0;
-  z-index: 1;
+  z-index: 0;
   left: auto;
 }
 
@@ -1549,6 +1540,7 @@ body .servicios .nuestros .nav-item {
   justify-content: center;
   height: 100px;
   background: #FFF;
+  box-shadow: 0 2px 40px 0 rgba(120,159,183,.16);
   border-radius: 8px 8px 40px;
   font-size: var(--h3);
 }
@@ -1740,6 +1732,7 @@ body .servicios .promos--copy .col-12 {
 body .servicios .promos--copy__card {
   background: #fff;
   padding: 40px 20px;
+  box-shadow: 0 2px 40px 0 rgba(120,159,183,.16);
   border-radius: 8px 8px 40px;
   position: relative;
   transition: .3s ease-in-out all;
@@ -1768,13 +1761,14 @@ body .servicios .promos--copy__card span {
   margin-bottom: 20px;
 }
 
+body .materiales .grid .combo,
+body .servicios .promos--copy .swiper-pagination {
+  display: none;
+}
+
 body .servicios .promos--copy__card h2 {
   margin: 10px 0;
   color: var(--secundario);
-}
-
-body .servicios .promos--copy .swiper-pagination {
-  display: none;
 }
 
 body .servicios .promos--certificados {
@@ -2016,14 +2010,17 @@ body .materiales .grid .path1 {
   left: 100px;
   top: 100px;
   z-index: 0;
-  width: calc(750px + 750 * ((100vw - 1280px)/ 1920));
-  height: calc(550px + 50 * ((100vw - 1280px)/ 1920));
 }
 
 body .materiales .grid .col-xl-5 {
   padding-left: 0;
   -ms-flex-item-align: end;
   align-self: flex-end;
+}
+
+body .materiales .grid--img {
+  top: -50px;
+  position: relative;
 }
 
 body .materiales .grid .swiper-wrapper {
@@ -2051,6 +2048,7 @@ body .materiales .grid .swiper-slide {
   justify-content: center;
   height: 60px;
   background: #FFF;
+  box-shadow: 0 2px 40px 0 rgba(120,159,183,.16);
   border-radius: 8px 8px 30px;
   font-size: var(--h3);
   width: -webkit-max-content;
@@ -2218,6 +2216,7 @@ body .materiales .promos--copy .titleBig {
 body .materiales .promos--copy__card {
   background: #fff;
   padding: 80px 35px 35px;
+  box-shadow: 0 2px 40px 0 rgba(120,159,183,.16);
   border-radius: 8px 8px 40px;
   position: relative;
   cursor: pointer;
@@ -2329,7 +2328,6 @@ body .materiales .objetFade.transition1 h6 {
 }
 
 @media (max-width:992px) {
-  body .materiales .grid .swiper-nav,
   body .materiales .path1 {
     display: none;
   }
@@ -2359,12 +2357,27 @@ body .materiales .objetFade.transition1 h6 {
     transform: none!important;
   }
 
+  body .materiales .grid .combo {
+    margin: 30px 0 10px;
+    display: -ms-flexbox;
+    display: flex;
+  }
+
   body .materiales .grid .swiper-container {
     margin: 30px 0 10px;
+    display: none;
+  }
+
+  body .materiales .grid .swiper-nav {
+    display: none;
   }
 
   body .materiales .grid .tab-pane {
     min-height: 200px;
+  }
+
+  body .materiales .grid .tab-pane ul {
+    margin-top: 30px;
   }
 
   body .materiales .grid .tab-pane ul li {
@@ -2505,6 +2518,7 @@ body .destacamos .dedicamos--copy .col-lg-4:hover .promos--copy__card {
 body .destacamos .dedicamos--copy__card {
   background: #fff;
   padding: 40px 35px 35px 80px;
+  box-shadow: 0 2px 40px 0 rgba(120,159,183,.16);
   border-radius: 8px 8px 40px;
   position: relative;
   opacity: 0;
@@ -2647,6 +2661,7 @@ body .destacamos .valores .col-lg-4:nth-child(3) .valores__card {
 body .destacamos .valores__card {
   background: #fff;
   padding: 40px 20px;
+  box-shadow: 0 2px 40px 0 rgba(120,159,183,.16);
   border-radius: 8px 8px 40px;
   position: relative;
   opacity: 1;

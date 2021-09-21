@@ -88,6 +88,15 @@
 			padding-left: 0;	
 			align-self: flex-end;
 		}
+
+        .combo{
+            display: none;
+        }
+
+        &--img{
+            top: -50px;
+            position: relative;
+        }
 		
         .swiper{
             
@@ -440,8 +449,14 @@
                 transform: none !important;
             }
             
+            .combo{
+                margin: 30px 0 10px;
+                display: flex;
+            }
+
             .swiper-container{
                 margin: 30px 0 10px;
+                display: none;
             }
             
             .swiper-nav{
@@ -451,8 +466,12 @@
             .tab-pane {
                 min-height: 200px;
                 
-                ul li{
-                    flex: 0 0 100%;
+                ul {
+                    margin-top: 30px;
+
+                    li{
+                        flex: 0 0 100%;
+                    }
                 }
                 
                 &#plasticos li{
