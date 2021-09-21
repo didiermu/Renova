@@ -472,14 +472,19 @@
                 margin-bottom: 30px;
             }
             
-            .swiper-nav{
-                display: none;
+            .swiper-nav, .swiper-pagination{
+                display: none !important;
+            }
+
+            .swiper-wrapper{
+                flex-direction: column;
             }
             
             .swiper-slide{
-                flex: 0 0 80%;
-                max-width: 80%;
+                flex: 0 0 100%;
+                max-width: 100%;
                 height: auto;
+                margin-bottom: 30px;
                 
                 &:hover{
                     .promos--copy__card{

@@ -1935,8 +1935,7 @@ body .servicios .promos .objetFade.transition1 .promos--copy__card {
     justify-content: center;
     position: relative!important;
     bottom: 0!important;
-    display: -ms-flexbox;
-    display: flex;
+    display: none;
   }
 }
 
@@ -2331,8 +2330,7 @@ body .materiales .objetFade.transition1 h6 {
 
 @media (max-width:992px) {
   body .materiales .grid .swiper-nav,
-  body .materiales .path1,
-  body .materiales .promos .swiper-nav {
+  body .materiales .path1 {
     display: none;
   }
 
@@ -2365,11 +2363,6 @@ body .materiales .objetFade.transition1 h6 {
     margin: 30px 0 10px;
   }
 
-  body .materiales .grid .contacto--copy,
-  body .materiales .promos .titleBig {
-    margin-bottom: 30px;
-  }
-
   body .materiales .grid .tab-pane {
     min-height: 200px;
   }
@@ -2384,15 +2377,34 @@ body .materiales .objetFade.transition1 h6 {
     flex: 0 0 50%;
   }
 
+  body .materiales .grid .contacto--copy {
+    margin-bottom: 30px;
+  }
+
   body .materiales .promos {
     padding: var(--paddingSection);
   }
 
+  body .materiales .promos .titleBig {
+    margin-bottom: 30px;
+  }
+
+  body .materiales .promos .swiper-nav,
+  body .materiales .promos .swiper-pagination {
+    display: none!important;
+  }
+
+  body .materiales .promos .swiper-wrapper {
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+
   body .materiales .promos .swiper-slide {
-    -ms-flex: 0 0 80%;
-    flex: 0 0 80%;
-    max-width: 80%;
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+    max-width: 100%;
     height: auto;
+    margin-bottom: 30px;
   }
 
   body .materiales .promos .swiper-slide:hover .promos--copy__card {

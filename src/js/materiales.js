@@ -188,33 +188,104 @@ function carruselMateriales() {
 }
 
 function carruselPromos() {
-  var mySwiper2 = new Swiper(".sliderPromos", {
+  var swiperP = new Swiper(".sliderPromosN", {
     direction: "horizontal",
     centeredSlidesBounds: true,
+    slidesPerView: "auto",
+    spaceBetween: 10,
+    slidesOffsetAfter: 30,
+    allowTouchMove: false,
+    observer: true,
+    observeParents: true,
     navigation: {
       nextEl: "#prev2",
       prevEl: "#prev1",
     },
+
     pagination: {
       el: ".swiper-pagination",
       type: "bullets",
       clickable: true,
     },
-    breakpoints: {
-      320: {
-        slidesPerView: "auto",
-        spaceBetween: 10,
-        allowTouchMove: true,
-      },
-      992: {
+  });
+
+  function reee() {
+    if ($(window).width() > 992) {
+      $(".sliderPromos").addClass("sliderPromosN");
+      console.log("si");
+    } else {
+      swiperP.destroy();
+      $(".sliderPromos").attr("class", "sliderPromos");
+      console.log("no");
+    }
+
+    setTimeout(function () {
+      swiperP = new Swiper(".sliderPromosN", {
+        direction: "horizontal",
+        centeredSlidesBounds: true,
         slidesPerView: "auto",
         spaceBetween: 10,
         slidesOffsetAfter: 30,
         allowTouchMove: false,
-      },
-    },
+        observer: true,
+        observeParents: true,
+        navigation: {
+          nextEl: "#prev2",
+          prevEl: "#prev1",
+        },
+
+        pagination: {
+          el: ".swiper-pagination",
+          type: "bullets",
+          clickable: true,
+        },
+      });
+    }, 1);
+  }
+
+  reee();
+
+  $(window).resize(function () {
+    reee();
   });
+
+  // if (!$(window).width() < 992) {
+  //   console.log("si");
+  // } else {
+  //   console.log("no");
+  //   swiperP.destroy();
+  // }
+
+  // $(window).resize(function () {
+  //   if (!$(window).width() < 992) {
+  //     console.log("si r");
+  //   } else {
+  //     console.log("no r");
+
+  //     swiperP.destroy();
+  //   }
+  // });
 }
+
+// function reee() {
+//   if ($(window).width() > 992) {
+//     $(".sliderPromos").addClass("sliderPromosN");
+//     console.log("si");
+//   } else {
+//     $(".sliderPromos").attr("class", "sliderPromos");
+//     $(".sliderPromos").destroy();
+//     console.log("no");
+//   }
+
+//   setTimeout(function () {
+//     carruselPromos();
+//   }, 1000);
+// }
+// // reee();
+
+// $(window).resize(function () {
+//   reee();
+// });
 
 $(document).ready(function () {
   if (window.location.href.indexOf("materiales") > -1) {
@@ -224,6 +295,7 @@ $(document).ready(function () {
 
     carruselMateriales();
     carruselPromos();
+
     drawSvgMateriales();
   }
 });
