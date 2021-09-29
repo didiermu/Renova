@@ -69,165 +69,42 @@ function drawSvgMateriales() {
     .addTo(controller);
 }
 
-function tabsMateriales() {
-  $(".swiper-slide a").on("click", function (e) {
-    var srcImg = $(this).attr("id").replace("-tab", "");
+function comboMateriales(mediaqueryList) {
+  var mediaqueryList = window.matchMedia("(max-width: 992px)");
 
-    switch (srcImg) {
-      case "retorno":
-        $(".grid--img source").attr(
-          "srcset",
-          "http://www.muum.live/RenovaIndustrial/wp-content/themes/Renova/assets/img/Desktop/3Materiales/01-retornoindustrial.webp"
-        );
-        $(".grid--img img").attr(
-          "src",
-          "http://www.muum.live/RenovaIndustrial/wp-content/themes/Renova/assets/img/Desktop/3Materiales/01-retornoindustrial.png"
-        );
+  if (mediaqueryList.matches) {
+    $(".tab-pane").each(function (i, v) {
+      var contenidoTab = $(this);
+      var titleTab = $(this).data("title");
 
-        break;
-      case "plasticos":
-        $(".grid--img source").attr(
-          "srcset",
-          "http://www.muum.live/RenovaIndustrial/wp-content/themes/Renova/assets/img/Desktop/3Materiales/02-plasticos.webp"
-        );
-        $(".grid--img img").attr(
-          "src",
-          "http://www.muum.live/RenovaIndustrial/wp-content/themes/Renova/assets/img/Desktop/3Materiales/02-plasticos.png"
-        );
+      $(".tab-content").append(
+        "<div class='acordeon'><button type='button' data-toggle='collapse' data-target='#collapseExample" +
+          i +
+          "' aria-expanded='false' aria-controls='collapseExample'>" +
+          titleTab +
+          "</button><div class='collapse' id='#collapseExample" +
+          i +
+          "'><div class='card card-body'>" +
+          contenidoTab.html() +
+          "</div></div></div>"
+      );
+    });
 
-        break;
-      case "metales":
-        $(".grid--img source").attr(
-          "srcset",
-          "http://www.muum.live/RenovaIndustrial/wp-content/themes/Renova/assets/img/Desktop/3Materiales/03-metalesyacero.webp"
-        );
-        $(".grid--img img").attr(
-          "src",
-          "http://www.muum.live/RenovaIndustrial/wp-content/themes/Renova/assets/img/Desktop/3Materiales/03-metalesyacero.png"
-        );
+    $(".tab-content").addClass("col-12");
 
-        break;
+    $(".acordeon").on("click", function () {
+      $(".acordeon").find("button").attr("aria-expanded", "false");
+      $(".acordeon").find(".collapse").removeClass("show");
+      $(this).find("button").attr("aria-expanded", "true");
+      $(this).find(".collapse").toggleClass("show");
 
-      case "materiales":
-        $(".grid--img source").attr(
-          "srcset",
-          "http://www.muum.live/RenovaIndustrial/wp-content/themes/Renova/assets/img/Desktop/3Materiales/04-materialescomerciales.webp"
-        );
-        $(".grid--img img").attr(
-          "src",
-          "http://www.muum.live/RenovaIndustrial/wp-content/themes/Renova/assets/img/Desktop/3Materiales/04-materialescomerciales.png"
-        );
+      var nameLi = $(this).offset().top;
 
-        break;
-      case "carton":
-        $(".grid--img source").attr(
-          "srcset",
-          "http://www.muum.live/RenovaIndustrial/wp-content/themes/Renova/assets/img/Desktop/3Materiales/05-cartonymadera.webp"
-        );
-        $(".grid--img img").attr(
-          "src",
-          "http://www.muum.live/RenovaIndustrial/wp-content/themes/Renova/assets/img/Desktop/3Materiales/05-cartonymadera.png"
-        );
-
-        break;
-      case "basura":
-        $(".grid--img source").attr(
-          "srcset",
-          "http://www.muum.live/RenovaIndustrial/wp-content/themes/Renova/assets/img/Desktop/3Materiales/06-gestiondebasura.webp"
-        );
-        $(".grid--img img").attr(
-          "src",
-          "http://www.muum.live/RenovaIndustrial/wp-content/themes/Renova/assets/img/Desktop/3Materiales/06-gestiondebasura.png"
-        );
-
-        break;
-
-      default:
-        break;
-    }
-  });
-}
-
-function comboMateriales() {
-  $("#comboMateriales").on("change", function () {
-    let valorCombo = $(this).val();
-
-    $(".tab-pane").removeClass("show active");
-    $("#" + valorCombo).addClass("show active");
-
-    switch (valorCombo) {
-      case "retorno":
-        $(".grid--img source").attr(
-          "srcset",
-          "http://www.muum.live/RenovaIndustrial/wp-content/themes/Renova/assets/img/Desktop/3Materiales/01-retornoindustrial.webp"
-        );
-        $(".grid--img img").attr(
-          "src",
-          "http://www.muum.live/RenovaIndustrial/wp-content/themes/Renova/assets/img/Desktop/3Materiales/01-retornoindustrial.png"
-        );
-
-        break;
-      case "plasticos":
-        $(".grid--img source").attr(
-          "srcset",
-          "http://www.muum.live/RenovaIndustrial/wp-content/themes/Renova/assets/img/Desktop/3Materiales/02-plasticos.webp"
-        );
-        $(".grid--img img").attr(
-          "src",
-          "http://www.muum.live/RenovaIndustrial/wp-content/themes/Renova/assets/img/Desktop/3Materiales/02-plasticos.png"
-        );
-
-        break;
-      case "metales":
-        $(".grid--img source").attr(
-          "srcset",
-          "http://www.muum.live/RenovaIndustrial/wp-content/themes/Renova/assets/img/Desktop/3Materiales/03-metalesyacero.webp"
-        );
-        $(".grid--img img").attr(
-          "src",
-          "http://www.muum.live/RenovaIndustrial/wp-content/themes/Renova/assets/img/Desktop/3Materiales/03-metalesyacero.png"
-        );
-
-        break;
-
-      case "materiales":
-        $(".grid--img source").attr(
-          "srcset",
-          "http://www.muum.live/RenovaIndustrial/wp-content/themes/Renova/assets/img/Desktop/3Materiales/04-materialescomerciales.webp"
-        );
-        $(".grid--img img").attr(
-          "src",
-          "http://www.muum.live/RenovaIndustrial/wp-content/themes/Renova/assets/img/Desktop/3Materiales/04-materialescomerciales.png"
-        );
-
-        break;
-      case "carton":
-        $(".grid--img source").attr(
-          "srcset",
-          "http://www.muum.live/RenovaIndustrial/wp-content/themes/Renova/assets/img/Desktop/3Materiales/05-cartonymadera.webp"
-        );
-        $(".grid--img img").attr(
-          "src",
-          "http://www.muum.live/RenovaIndustrial/wp-content/themes/Renova/assets/img/Desktop/3Materiales/05-cartonymadera.png"
-        );
-
-        break;
-      case "basura":
-        $(".grid--img source").attr(
-          "srcset",
-          "http://www.muum.live/RenovaIndustrial/wp-content/themes/Renova/assets/img/Desktop/3Materiales/06-gestiondebasura.webp"
-        );
-        $(".grid--img img").attr(
-          "src",
-          "http://www.muum.live/RenovaIndustrial/wp-content/themes/Renova/assets/img/Desktop/3Materiales/06-gestiondebasura.png"
-        );
-
-        break;
-
-      default:
-        break;
-    }
-  });
+      $("html, body").animate({ scrollTop: nameLi - 90 }, 1000);
+    });
+  } else {
+    $(".acordeon").remove();
+  }
 }
 
 function carruselMateriales() {
@@ -244,16 +121,16 @@ function carruselMateriales() {
       320: {
         spaceBetween: 10,
         allowTouchMove: true,
+        loop: false,
       },
       992: {
         spaceBetween: 30,
         //slidesOffsetAfter:40,
+        loop: true,
         allowTouchMove: false,
       },
     },
   });
-
-  tabsMateriales();
 
   $(".swiper-slide").on("click", function (e) {
     var active = $(this).attr("aria-label").split("/")[0] - 1;
@@ -265,116 +142,19 @@ function carruselMateriales() {
   });
 }
 
-function carruselPromos() {
-  var swiperP = new Swiper(".sliderPromosN", {
-    direction: "horizontal",
-    centeredSlidesBounds: true,
-    slidesPerView: "auto",
-    spaceBetween: 10,
-    slidesOffsetAfter: 30,
-    allowTouchMove: false,
-    observer: true,
-    observeParents: true,
-    navigation: {
-      nextEl: "#prev2",
-      prevEl: "#prev1",
-    },
-
-    pagination: {
-      el: ".swiper-pagination",
-      type: "bullets",
-      clickable: true,
-    },
-  });
-
-  function reee() {
-    if ($(window).width() > 992) {
-      $(".sliderPromos").addClass("sliderPromosN");
-      console.log("si");
-    } else {
-      swiperP.destroy();
-      $(".sliderPromos").attr("class", "sliderPromos");
-      console.log("no");
-    }
-
-    setTimeout(function () {
-      swiperP = new Swiper(".sliderPromosN", {
-        direction: "horizontal",
-        centeredSlidesBounds: true,
-        slidesPerView: "auto",
-        spaceBetween: 10,
-        slidesOffsetAfter: 30,
-        allowTouchMove: false,
-        observer: true,
-        observeParents: true,
-        navigation: {
-          nextEl: "#prev2",
-          prevEl: "#prev1",
-        },
-
-        pagination: {
-          el: ".swiper-pagination",
-          type: "bullets",
-          clickable: true,
-        },
-      });
-    }, 1);
-  }
-
-  reee();
-
-  $(window).resize(function () {
-    reee();
-  });
-
-  // if (!$(window).width() < 992) {
-  //   console.log("si");
-  // } else {
-  //   console.log("no");
-  //   swiperP.destroy();
-  // }
-
-  // $(window).resize(function () {
-  //   if (!$(window).width() < 992) {
-  //     console.log("si r");
-  //   } else {
-  //     console.log("no r");
-
-  //     swiperP.destroy();
-  //   }
-  // });
-}
-
-// function reee() {
-//   if ($(window).width() > 992) {
-//     $(".sliderPromos").addClass("sliderPromosN");
-//     console.log("si");
-//   } else {
-//     $(".sliderPromos").attr("class", "sliderPromos");
-//     $(".sliderPromos").destroy();
-//     console.log("no");
-//   }
-
-//   setTimeout(function () {
-//     carruselPromos();
-//   }, 1000);
-// }
-// // reee();
-
-// $(window).resize(function () {
-//   reee();
-// });
-
 $(document).ready(function () {
   if (window.location.href.indexOf("materiales") > -1) {
+    $("body").addClass("body-materiales");
     $("#li-s2").addClass("activo");
 
     anclas();
 
     carruselMateriales();
-    carruselPromos();
-    comboMateriales();
 
     drawSvgMateriales();
+
+    $(window).resize(function () {
+      comboMateriales();
+    });
   }
 });

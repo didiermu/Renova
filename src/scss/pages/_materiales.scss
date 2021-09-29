@@ -89,13 +89,16 @@
 			align-self: flex-end;
 		}
 
-        .combo{
-            display: none;
+        .cajaImagen{
+            position: absolute;
+            top: -100px;
+            left: 0;
         }
-
-        &--img{
-            top: -50px;
-            position: relative;
+       
+        #retorno{
+            .cajaImagen{
+                top: -300px;
+            }
         }
 		
         .swiper{
@@ -135,6 +138,7 @@
                     display: flex;
                     align-items: center;
                     padding: 0 25px;
+                    transition: .3s ease-in-out all;
                 }
                 
                 &.active{
@@ -221,6 +225,10 @@
             }
         }
         
+        .tab-content{
+            position: relative;
+            width: 100%;
+        }
         
         .tab-pane{
             min-height: 300px;
@@ -249,6 +257,7 @@
                     flex: 0 0 100%;
                 }
             }
+
         }
     }
     
@@ -375,6 +384,7 @@
                 right: 30px;
                 z-index: 9;
                 min-width: 100px;
+                display: none;
             }
             
             &-pagination{
@@ -382,6 +392,7 @@
                 position: absolute;
                 bottom: 0;
                 right: 30px;
+                display: none !important;
             }
         }
     }
@@ -440,9 +451,16 @@
         .grid{
             padding:var(--paddingSection);
             padding-bottom: 0;
-            
+
             .col-xl-5{
+                padding: 0 15px;
+            }
+            
+            .cajaImagen{
+                position: relative;
+                top: 0 !important;
                 order: 2;
+                padding: 0;
             }
             
             &--img{
@@ -465,7 +483,10 @@
             
             .tab-pane {
                 min-height: 200px;
-                
+                flex-direction: column;
+                display: none;
+
+
                 ul {
                     margin-top: 30px;
 
@@ -481,6 +502,39 @@
             
             .contacto--copy{
                 margin-bottom: 30px;
+            }
+
+            #collapseExample1{
+                ul li{
+                    flex: 0 0 48%;
+                }
+            }
+
+            .acordeon{
+                flex-direction: column;
+                display:flex;
+                margin-bottom: 10px;
+
+                
+
+                ul{
+                    flex-flow: wrap;
+                    padding: 0 10px;
+                    justify-content: space-between;
+
+                    li{
+                        flex: 0 0 100%;    
+                        font-size: var(--h4);
+                        
+                        &::marker{
+                            color: var(--primario);
+                        }
+                    }
+                }
+
+                .card{
+                    padding: 10px 0 0;
+                }
             }
         }
         

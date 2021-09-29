@@ -187,3 +187,17 @@
     }
     
 }
+
+
+@media (min-width:1440px) {
+    .heroInt {
+        .col-xl-9{
+            flex: 0 0 73.333333%;
+            max-width: 73.333333%;
+        }
+
+        .hero--img{
+            height: 900px;
+        }
+    }
+}

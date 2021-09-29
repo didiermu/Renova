@@ -6,13 +6,17 @@
 
     .path1{
         right: 0;
-        z-index: 0;
+        z-index: 1;
         left: auto;
     }
     
     
     .nuestros{
         position: relative;
+
+        .path1{
+            z-index: 0;
+        }
         
         .col-lg-9{
             padding-left: 50px;
@@ -470,8 +474,17 @@
                 background: url('../img/Mobile/2Servicios/Certificaciones.webp') center top/cover no-repeat fixed
             }
             
+            .swiper-slide{
+                margin-bottom: 30px;
+                height: auto !important;
+            }
+
             &--copy{
                 padding-left: 0;
+
+                &__card{
+                    min-height: auto;
+                }
             }
 
 

@@ -1,0 +1,32 @@
+.acordeon{
+   box-shadow: 0 2px 20px 0 rgba(120,159,183,0.16);
+   border-radius: 8px;
+   overflow: hidden;
+
+   button, span{
+      cursor: pointer;
+      background: url(../../img/arrowBottom.svg) no-repeat 95% center / 15px #fff;
+      min-height: 50px;
+      outline: none;
+      padding: 0 15px;
+      display: flex;
+      align-items: center;
+      width: 100%;
+      border: none;
+      font-size: var(--h4);
+      color: var(--texto);
+   }
+
+   .collapse{
+      .card{
+         border: none;
+         border-top: 1px solid;
+         border-radius: 0;
+         font-size: var(--h4);
+         color: var(--texto);
+         padding: 15px;
+      }
+      
+   }
+   
+}

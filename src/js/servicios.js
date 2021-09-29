@@ -275,7 +275,6 @@ function carruselCertificados() {
     breakpoints: {
       320: {
         slidesPerView: 3,
-        spaceBetween: 80,
         allowTouchMove: false,
         freeMode: false,
         direction: "vertical",
@@ -340,6 +339,7 @@ function modalServicios(mediaqueryList) {
 
 $(document).ready(function () {
   if (window.location.href.indexOf("servicios") > -1) {
+    $("body").addClass("body-servicios");
     $("#li-s1").addClass("activo");
 
     drawSvgServicios();
@@ -349,5 +349,7 @@ $(document).ready(function () {
     $(window).resize(function () {
       modalServicios();
     });
+
+    // console.log("s");
   }
 });
