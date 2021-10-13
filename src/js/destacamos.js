@@ -122,6 +122,81 @@ function carruselEsfuerzo() {
   });
 }
 
+function efectoFade3() {
+  var valor = 1;
+
+  function sectionFade() {
+    var sectionFade = $(".navegacion");
+    sectionFade.each(function () {
+      var posSection = $(this).offset().top - 40;
+      var scrolleo = $(window).scrollTop();
+
+      if (scrolleo > posSection) {
+        // console.log("ya");
+        $("body").css("overflow", "hidden");
+        setTimeout(function () {
+          valor = 0;
+          console.log(valor);
+        }, 1000);
+      } else {
+        valor = 1;
+        console.log(valor);
+        $("body").css("overflow", "auto");
+        // console.log("no");
+      }
+
+      // scrollDwo();
+    });
+  }
+
+  function scrollDwo() {
+    var scrollableElement = document.body; //document.getElementById('scrollableElement');
+
+    scrollableElement.addEventListener("wheel", checkScrollDirection);
+
+    function checkScrollDirection(event) {
+      if (valor == 1) {
+        sectionFade();
+      } else {
+        $("body").css("overflow", "auto");
+        // setTimeout(function () {
+        //   // console.log(valor);
+        // }, 2000);
+      }
+
+      // if (checkScrollDirectionIsUp(event)) {
+      //   // $("body").css("overflow", "auto");
+      //   console.log("UP");
+      // } else {
+      //   // $("body").css("overflow", "auto");
+      //   console.log("down");
+      // }
+    }
+
+    function checkScrollDirectionIsUp(event) {
+      if (event.wheelDelta) {
+        return event.wheelDelta > 0;
+      }
+
+      return event.deltaY < 0;
+    }
+  }
+  scrollDwo();
+
+  // $(document).scroll(function () {
+  //   if (valor == 1) {
+  //     sectionFade();
+  //   } else {
+  //     setTimeout(function () {
+  //       $("body").css("overflow", "auto");
+  //       valor = 0;
+  //       // console.log(valor);
+  //     }, 2000);
+  //   }
+  //   // sectionFade();
+  // });
+}
+
 $(document).ready(function () {
   if (window.location.href.indexOf("destacamos") > -1) {
     $("body").addClass("body-destacamos");
@@ -129,5 +204,7 @@ $(document).ready(function () {
 
     drawSvgDestacamos();
     carruselEsfuerzo();
+
+    efectoFade3();
   }
 });

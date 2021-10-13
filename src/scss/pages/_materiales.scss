@@ -257,7 +257,10 @@
                     flex: 0 0 100%;
                 }
             }
+        }
 
+        .acordeon{
+            display: none;
         }
     }
     
@@ -519,7 +522,7 @@
 
                 ul{
                     flex-flow: wrap;
-                    padding: 0 10px;
+                    padding: 0 20px;
                     justify-content: space-between;
 
                     li{
@@ -533,7 +536,7 @@
                 }
 
                 .card{
-                    padding: 10px 0 0;
+                    padding: 20px 0 0;
                 }
             }
         }

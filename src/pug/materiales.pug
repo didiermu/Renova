@@ -166,18 +166,20 @@ html(lang='es')
 
                                 .col-12.col-lg-6.col-xl-5.offset-lg-6
                                     .contacto--copy.objParallax
-                                        h4 Lorem ipsum dolor sit amet, consectetur adipiscing elit. In aliquam tempor eros. Nam dapibus ac urna vitae dignissim.
+                                        ul 
+                                            li Cartón nacional
+                                            li Cartón americano
 
-                            .tab-pane.fade#basura(data-title='Gestión de basura industrial' role='tabpanel' aria-labelledby='basura-tab')
-                                .col-12.col-lg-6.col-xl-5.cajaImagen
-                                    .grid--img(data-enllax-ratio=".2" data-enllax-type="foreground")
-                                        picture 
-                                            source(srcset="img/Desktop/3Materiales/06-gestiondebasura.webp" type="image/webp")
-                                            img.img-fluid(src="img/Desktop/3Materiales/06-gestiondebasura.png" alt="Renova Industrial")
+                            //- .tab-pane.fade#basura(data-title='Gestión de basura industrial' role='tabpanel' aria-labelledby='basura-tab')
+                            //- .col-12.col-lg-6.col-xl-5.cajaImagen
+                            //-     .grid--img(data-enllax-ratio=".2" data-enllax-type="foreground")
+                            //-         picture 
+                            //-             source(srcset="img/Desktop/3Materiales/06-gestiondebasura.webp" type="image/webp")
+                            //-             img.img-fluid(src="img/Desktop/3Materiales/06-gestiondebasura.png" alt="Renova Industrial")
 
-                                .col-12.col-lg-6.col-xl-5.offset-lg-6
-                                    .contacto--copy.objParallax
-                                        h4 Lorem ipsum dolor sit amet, consectetur adipiscing elit. In aliquam tempor eros. Nam dapibus ac urna vitae dignissim.
+                            //- .col-12.col-lg-6.col-xl-5.offset-lg-6
+                            //-     .contacto--copy.objParallax
+                            //-         h4 Lorem ipsum dolor sit amet, consectetur adipiscing elit. In aliquam tempor eros. Nam dapibus ac urna vitae dignissim.
 
 
 
@@ -202,14 +204,17 @@ html(lang='es')
 
                         .col-12.col-lg-9.offset-lg-3.offset-xl-4
                             .promos--copy
-                                h3 Descubre nuestras
+                                //- h3 Descubre nuestras
+                                //- h2.titleBig
+                                //-     b Promociones
+
                                 h2.titleBig
-                                    b Promociones
+                                    b Próximamente
 
                             .swiper-container.sliderPromos
                                 .swiper-wrapper
                                     - var n = 0;
-                                    while n < 3
+                                    while n < 0
                                         - ++n
                                         .col-lg-4.swiper-slide
                                             .promos--copy__card

@@ -2,10 +2,28 @@
    box-shadow: 0 2px 20px 0 rgba(120,159,183,0.16);
    border-radius: 8px;
    overflow: hidden;
+   position: relative;
+
+   &::after{
+      content: "+";
+      display: block;
+      position: absolute;
+      right: 15px;
+      top: 5px;
+      color: var(--primario);
+      font-size: x-large;
+   }
+
+   &.open{
+      &::after{
+         content: "-";
+      }
+   }
 
    button, span{
       cursor: pointer;
-      background: url(../../img/arrowBottom.svg) no-repeat 95% center / 15px #fff;
+      // background: url(../../img/arrowBottom.svg) no-repeat 95% center / 15px #fff;
+      background: #fff;
       min-height: 50px;
       outline: none;
       padding: 0 15px;
@@ -20,7 +38,7 @@
    .collapse{
       .card{
          border: none;
-         border-top: 1px solid;
+         border-top: 1px solid var(--azulClaro);
          border-radius: 0;
          font-size: var(--h4);
          color: var(--texto);

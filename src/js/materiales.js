@@ -69,9 +69,9 @@ function drawSvgMateriales() {
     .addTo(controller);
 }
 
-function comboMateriales(mediaqueryList) {
-  var mediaqueryList = window.matchMedia("(max-width: 992px)");
+var mediaqueryList = window.matchMedia("(max-width: 992px)");
 
+function comboMateriales(mediaqueryList) {
   if (mediaqueryList.matches) {
     $(".tab-pane").each(function (i, v) {
       var contenidoTab = $(this);
@@ -90,18 +90,32 @@ function comboMateriales(mediaqueryList) {
       );
     });
 
+    $(".tab-content").append(
+      "<div class='acordeon' id='tabGestion'><button type='button' data-toggle='collapse' data-target='#collapseExample' aria-expanded='false' aria-controls='collapseExample'>Gestión de basura</button></div>"
+    );
+
     $(".tab-content").addClass("col-12");
 
-    $(".acordeon").on("click", function () {
-      $(".acordeon").find("button").attr("aria-expanded", "false");
-      $(".acordeon").find(".collapse").removeClass("show");
-      $(this).find("button").attr("aria-expanded", "true");
-      $(this).find(".collapse").toggleClass("show");
+    $(".acordeon")
+      .not("#tabGestion")
+      .on("click", function () {
+        $(".acordeon").not($(this)).removeClass("open");
+        $(".acordeon")
+          .find("button")
+          .not($(this).find("button"))
+          .attr("aria-expanded", "false");
+        $(".acordeon")
+          .find(".collapse")
+          .not($(this).find(".collapse"))
+          .removeClass("show");
 
-      var nameLi = $(this).offset().top;
+        $(this).find(".collapse").toggleClass("show");
+        $(this).toggleClass("open");
+        $(this).find("button").attr("aria-expanded", "true");
 
-      $("html, body").animate({ scrollTop: nameLi - 90 }, 1000);
-    });
+        var nameLi = $(this).offset().top;
+        $("html, body").animate({ scrollTop: nameLi - 90 }, 1000);
+      });
   } else {
     $(".acordeon").remove();
   }
@@ -150,11 +164,22 @@ $(document).ready(function () {
     anclas();
 
     carruselMateriales();
-
+    comboMateriales(mediaqueryList);
     drawSvgMateriales();
 
-    $(window).resize(function () {
-      comboMateriales();
-    });
+    if ($(".sliderPromos .swiper-slide").length == 0) {
+      $(".sliderPromos").hide();
+    }
+
+    window.onscroll = function (ev) {
+      if (window.innerHeight + window.scrollY >= document.body.offsetHeight) {
+        $(".objetFade").addClass("transition1");
+        // console.log("fon");
+      }
+    };
+
+    // $(window).resize(function () {
+    //   comboMateriales();
+    // });
   }
 });

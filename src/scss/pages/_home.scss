@@ -17,6 +17,10 @@
 			display: none;
 		}
 
+		&--copy{
+			--h2:calc(50px + 10 * ((100vw - 1280px) / 1920));
+		}
+
 	}
 
 	.ayuda{
