@@ -197,6 +197,164 @@ function efectoFade3() {
   // });
 }
 
+function stopScroll() {
+  function sectionFade() {
+    var sectionFade = $(".esfuerzo");
+    var posSection = sectionFade.offset().top - 100;
+    var scrolleo = $(window).scrollTop();
+
+    if (scrolleo > posSection) {
+      // $("html, body").animate(
+      //   { scrollTop: $(".navegacion").offset().top - 20 },
+      //   500
+      // );
+      // $("body").css("overflow", "hidden");
+      scrollDwo();
+    }
+  }
+
+  function scrollDwo() {
+    var scrollableElement = document.body; //document.getElementById('scrollableElement');
+
+    scrollableElement.addEventListener("wheel", checkScrollDirection);
+
+    function checkScrollDirection(event) {
+      if (checkScrollDirectionIsUp(event)) {
+        console.log("UP");
+        var sectionFade = $(".esfuerzo");
+        var posSection = sectionFade.offset().top - 100;
+        var scrolleo = $(window).scrollTop();
+
+        if (scrolleo > posSection) {
+          // $("html, body").animate(
+          //   { scrollTop: $(".navegacion").offset().top - 20 },
+          //   500
+          // );
+          $("body").css("background", "red");
+        }
+      } else {
+        // $("body").css("overflow", "auto");
+
+        // console.log(scrolleo, posSection);
+        // if (posSection == 2594) {
+        //   return $("body").css("overflow", "auto");
+        // }
+
+        console.log("down");
+      }
+    }
+
+    function checkScrollDirectionIsUp(event) {
+      if (event.wheelDelta) {
+        return event.wheelDelta > 0;
+      }
+
+      return event.deltaY < 0;
+    }
+  }
+
+  window.onscroll = function (ev) {
+    // sectionFade();
+    scrollDwo();
+  };
+}
+
+function touchS() {
+  var touchPos;
+
+  // store the touching position at the start of each touch
+  document.body.ontouchstart = function (e) {
+    touchPos = e.changedTouches[0].clientY;
+  };
+
+  // detect wether the "old" touchPos is
+  // greater or smaller than the newTouchPos
+  document.body.ontouchmove = function (e) {
+    let newTouchPos = e.changedTouches[0].clientY;
+    if (newTouchPos > touchPos) {
+      // console.log("finger moving down");
+      $("body").css("background", "blue");
+      $("body").css("overflow", "auto");
+
+      $("body").removeClass("onn");
+      // $("body").css("overflow", "auto");
+    }
+    if (newTouchPos < touchPos) {
+      // console.log("finger moving up");
+      // scrollDwo();
+      // $("body").css("background", "blue");
+      var sectionFade = $(".esfuerzo");
+      var posSection = sectionFade.offset().top - 100;
+      var scrolleo = $(window).scrollTop();
+
+      if (scrolleo > posSection) {
+        $("body").css("background", "red");
+        $("body").addClass("onn");
+        $("body").css("overflow", "hidden");
+        $(".esfuerzo").css("overflow-y", "scroll");
+
+        // alert(scrolleo, posSection);
+        // if (posSection > 2700) {
+        //   $("body").css("background", "green");
+        //   // $("body").css("overflow", "auto");
+        // }
+        // setTimeout(function () {
+
+        // }, 2000);
+      } else {
+        $("body").css("background", "green");
+        $("body").removeClass("onn");
+      }
+
+      function scrollDwo() {
+        var scrollableElement = document.body; //document.getElementById('scrollableElement');
+
+        scrollableElement.addEventListener("wheel", checkScrollDirection);
+
+        function checkScrollDirection(event) {
+          if (checkScrollDirectionIsUp(event)) {
+            console.log("UP");
+            var sectionFade = $(".esfuerzo");
+            var posSection = sectionFade.offset().top - 100;
+            var scrolleo = $(window).scrollTop();
+
+            if (scrolleo > posSection) {
+              // $("html, body").animate(
+              //   { scrollTop: $(".navegacion").offset().top - 20 },
+              //   500
+              // );
+              $("body").css("background", "red");
+            }
+          } else {
+            $("body").css("background", "blue");
+            // $("body").css("overflow", "auto");
+
+            // console.log(scrolleo, posSection);
+            // if (posSection == 2594) {
+            //   return $("body").css("overflow", "auto");
+            // }
+          }
+        }
+
+        function checkScrollDirectionIsUp(event) {
+          if (event.wheelDelta) {
+            return event.wheelDelta > 0;
+          }
+
+          return event.deltaY < 0;
+        }
+      }
+    }
+
+    if ($("body").hasClass("onn")) {
+      // $("html, body").animate(
+      //   { scrollTop: $(".navegacion").offset().top - 20 },
+      //   500
+      // );
+    }
+  };
+}
+
 $(document).ready(function () {
   if (window.location.href.indexOf("destacamos") > -1) {
     $("body").addClass("body-destacamos");
@@ -205,6 +363,7 @@ $(document).ready(function () {
     drawSvgDestacamos();
     carruselEsfuerzo();
 
-    efectoFade3();
+    // stopScroll();
+    touchS();
   }
 });

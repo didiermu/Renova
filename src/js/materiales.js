@@ -169,6 +169,9 @@ $(document).ready(function () {
 
     if ($(".sliderPromos .swiper-slide").length == 0) {
       $(".sliderPromos").hide();
+      $("#textComing").show();
+    } else {
+      $("#textComing").hide();
     }
 
     window.onscroll = function (ev) {
