@@ -274,9 +274,13 @@
                 padding-left: 0;
             }
             
+            .sliderCertificaciones{
+                display: flex;
+            }
+
 			&__card{
 				background: #fff;
-				padding: 40px 20px;
+				padding: 40px 0px;
 				box-shadow: 0 2px 40px 0 rgba(120,159,183,0.16);
 				border-radius: 8px 8px 40px 8px;
 				position: relative;
@@ -285,7 +289,7 @@
                 justify-content: center;
                 flex-direction: column;
                 align-items: center;
-                min-height: 312px;
+                min-height: 250px;
 				
 				span{
 					width: 60px;
@@ -489,6 +493,10 @@
                 height:calc(380px + 10 * ((100vw - 320px) / 1280));
                 background: url('../img/Mobile/2Servicios/Certificaciones.webp') center top/cover no-repeat fixed
             }
+
+            .sliderCertificaciones{
+                flex-direction: column;
+            }
             
             .swiper-slide{
                 margin-bottom: 30px;
@@ -497,6 +505,10 @@
 
             &--copy{
                 padding-left: 0;
+
+                .col-12{
+                    padding: 0;
+                }
 
                 &__card{
                     min-height: auto;

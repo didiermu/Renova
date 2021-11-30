@@ -1743,9 +1743,14 @@ body .servicios .promos--copy .col-12 {
   padding-left: 0;
 }
 
+body .servicios .promos--copy .sliderCertificaciones {
+  display: -ms-flexbox;
+  display: flex;
+}
+
 body .servicios .promos--copy__card {
   background: #fff;
-  padding: 40px 20px;
+  padding: 40px 0;
   border-radius: 8px 8px 40px;
   position: relative;
   transition: .3s ease-in-out all;
@@ -1756,7 +1761,7 @@ body .servicios .promos--copy__card {
   flex-direction: column;
   -ms-flex-align: center;
   align-items: center;
-  min-height: 312px;
+  min-height: 250px;
 }
 
 body .servicios .promos--copy__card span {
@@ -1958,6 +1963,11 @@ body .servicios .promos .objetFade.transition1 .promos--copy__card {
     background: url("../img/Mobile/2Servicios/Certificaciones.webp") center top/cover no-repeat fixed;
   }
 
+  body .servicios .promos .sliderCertificaciones {
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+
   body .servicios .promos .swiper-slide {
     margin-bottom: 30px;
     height: auto!important;
@@ -1965,6 +1975,10 @@ body .servicios .promos .objetFade.transition1 .promos--copy__card {
 
   body .servicios .promos--copy {
     padding-left: 0;
+  }
+
+  body .servicios .promos--copy .col-12 {
+    padding: 0;
   }
 
   body .servicios .promos--copy__card {
