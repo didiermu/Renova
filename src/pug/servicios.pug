@@ -10,47 +10,47 @@ html(lang='es')
     body.body-servicios
         include includes/header.pug
         main.servicios
-            
+
             section.hero.heroInt.d-flex
                 .container-fluid
                     .row 
                         .col-lg-2
-                        
+
                         .col-lg-10.col-xl-9.offset-xl-1
-                            img.fondo3(src="img/FormInt.svg", alt="Renova Industrial")
+                            img.fondo3(src="img/FormInt.svg" alt="Renova Industrial")
                             #triggerHero
                             svg.path1(width='800px' height='550px' viewBox='0 0 351 824')
                                 g.Page-1(stroke='none' stroke-width='1' fill='none' fill-rule='evenodd')
                                     path(d="M605.17587,212.754793 L273.309611,12.5888319 C178.725359,-44.4598949 55.8025434,-14.0313402 -1.24618334,80.552911 C-14.610573,102.710474 -23.5482399,127.250894 -27.5635879,152.813396 L-113.251577,698.320146 L-113.251577,698.320146" id="pathHero" stroke="#F9BB00" stroke-width="2" transform="translate(245.962146, 278.638682) rotate(-120.000000) translate(-245.962146, -278.638682) ")
-                            
+
                             .img-holder-hero(data-image="img/Desktop/2Servicios/HeroImage.jpg")
-                            
+
                             .container-fluid
                                 .row.objetFade
                                     .col-12
                                         .hero--img
                                             picture
-                                                
-                                                source(media="(max-width: 992px)", srcset="img/Mobile/2Servicios/HeroImage.webp", type="image/webp")
-                                                
-                                                source(media="(max-width: 992px)", srcset="img/Mobile/2Servicios/HeroImage.png")
-                                                
+
+                                                source(media="(max-width: 992px)" srcset="img/Mobile/2Servicios/HeroImage.webp" type="image/webp")
+
+                                                source(media="(max-width: 992px)" srcset="img/Mobile/2Servicios/HeroImage.png")
+
                                                 source(srcset="img/Desktop/2Servicios/HeroImage.webp" type="image/webp")
-                                                
+
                                                 img.img-fluid(src="img/Desktop/2Servicios/HeroImage.png" alt="Renova Insutrial")
-                                                
+
                                         .hero--copy
                                             h1 
                                                 b Quiero vender 
                                                     br 
                                                     | mis desperdicios
-                                        
+
                                 .btn--down.d-flex   
                                     span.icon-Chevron
                                     span.icon-Chevron
                                     h5 Scroll
 
-                
+
             section.nuestros
                 #triggerNuestros
                 svg.path1(width='800px' height='800px' viewBox='0 0 1000 1100')
@@ -64,217 +64,217 @@ html(lang='es')
                                 h3 Ponemos a tu alcance
                                 h2.titleBig Nuestros servicios
                                 h4 Selecciona lo que necesitas
-                        
+
                         .col-12.col-lg-9.offset-lg-3.offset-xl-4
                             ul.nav.nav-tabs#myTab(role='tablist')
-                                
+
                                 li.nav-item.d-flex
                                     a.nav-link.icon-Recoleccion#recoleccion-tab(data-toggle='tab' href='#recoleccion' role='tab' aria-controls='recoleccion' aria-selected='true') 
                                         span Recolección
-                                    
+
                                 li.nav-item.d-flex
                                     a.nav-link.icon-ServicioEnPlantas#servicio-tab(data-toggle='tab' href='#servicio' role='tab' aria-controls='servicio' aria-selected='false') 
                                         span Servicio en plantas
-                                    
+
                                 li.nav-item.d-flex
                                     a.nav-link.icon-Transformacion#transformacion-tab(data-toggle='tab' href='#transformacion' role='tab' aria-controls='transformacion' aria-selected='false') 
                                         span Transformación
-                                    
-                                    
+
+
                             .tab-content#myTabContent
                                 .tab-pane.fade#recoleccion(role='tabpanel' aria-labelledby='recoleccion-tab')
-                                    
+
                                     h2 Contamos con una amplia flotilla de equipos 
                                         br 
                                         | de recolección y entrega que incluye:
-                                    
+
                                     .swiper-container.sliderServicios1
                                         .swiper-wrapper
                                             .col-lg-4.swiper-slide
                                                 .swiper-slide__card
                                                     .swiper-slide__card__img
                                                         picture 
-                                                            source(srcset="img/Desktop/2Servicios/Transporte_FlotillaTrailers.webp", type="image/webp")
-                                                            img.img-fluid(src="img/Desktop/2Servicios/Transporte_FlotillaTrailers.jpg", alt="")
-                                                    
+                                                            source(srcset="img/Desktop/2Servicios/Transporte_FlotillaTrailers.webp" type="image/webp")
+                                                            img.img-fluid(src="img/Desktop/2Servicios/Transporte_FlotillaTrailers.jpg" alt="")
+
                                                     .swiper-slide__card__copy
                                                         h2 Flotilla de trailers
                                                         h3 Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-                                            
+
                                             .col-lg-4.swiper-slide
                                                 .swiper-slide__card
                                                     .swiper-slide__card__img
                                                         picture 
-                                                            source(srcset="img/Desktop/2Servicios/Transporte_FlotillaTortons.webp", type="image/webp")
-                                                            img.img-fluid(src="img/Desktop/2Servicios/Transporte_FlotillaTortons.jpg", alt="")
-                                                    
+                                                            source(srcset="img/Desktop/2Servicios/Transporte_FlotillaTortons.webp" type="image/webp")
+                                                            img.img-fluid(src="img/Desktop/2Servicios/Transporte_FlotillaTortons.jpg" alt="")
+
                                                     .swiper-slide__card__copy
                                                         h2 Flotilla de tortons
                                                         h3 Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-                                            
+
                                             .col-lg-4.swiper-slide
                                                 .swiper-slide__card
                                                     .swiper-slide__card__img
                                                         picture 
-                                                            source(srcset="img/Desktop/2Servicios/Transporte_35tons.webp", type="image/webp")
-                                                            img.img-fluid(src="img/Desktop/2Servicios/Transporte_35tons.jpg", alt="")
-                                                    
+                                                            source(srcset="img/Desktop/2Servicios/Transporte_35tons.webp" type="image/webp")
+                                                            img.img-fluid(src="img/Desktop/2Servicios/Transporte_35tons.jpg" alt="")
+
                                                     .swiper-slide__card__copy
                                                         h2 Flotilla de camionetas de 3.5 tons.
                                                         h3 Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-                                            
+
                                             .col-lg-4.swiper-slide
                                                 .swiper-slide__card
                                                     .swiper-slide__card__img
                                                         picture 
-                                                            source(srcset="img/Desktop/2Servicios/CardServicio_Gondolas.webp", type="image/webp")
-                                                            img.img-fluid(src="img/Desktop/2Servicios/CardServicio_Gondolas.jpg", alt="")
-                                                    
+                                                            source(srcset="img/Desktop/2Servicios/CardServicio_Gondolas.webp" type="image/webp")
+                                                            img.img-fluid(src="img/Desktop/2Servicios/CardServicio_Gondolas.jpg" alt="")
+
                                                     .swiper-slide__card__copy
                                                         h2 Góndolas de volteo
                                                         h3 Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-                                            
-                                            
+
+
                                             //- .col-lg-4.swiper-slide
                                             //-     .swiper-slide__card
                                             //-         .swiper-slide__card__img
                                             //-             picture 
-                                            //-                 source(srcset="img/Desktop/2Servicios/CardServicio_01.webp", type="image/webp")
-                                            //-                 img.img-fluid(src="img/Desktop/2Servicios/CardServicio_01.jpg", alt="")
-                                                    
+                                            //-                 source(srcset="img/Desktop/2Servicios/CardServicio_01.webp" type="image/webp")
+                                            //-                 img.img-fluid(src="img/Desktop/2Servicios/CardServicio_01.jpg" alt="")
+
                                             //-         .swiper-slide__card__copy
                                             //-             h2 Plataformas
                                             //-             h3 Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-                                        
-                                    
+
+
                                     .swiper-nav
                                         .swiper-button-prev#nav1
                                         .swiper-button-next#nav2
-                                    
+
                                     .swiper-pagination.align-items-center.d-flex.swiper-pagination1#pag1
-                                    
-                                    
+
+
                                 .tab-pane.fade#servicio(role='tabpanel' aria-labelledby='servicio-tab')
                                     h2 Servicio build to suit en tu empresa con maquinaria 
                                         br 
                                         | especializada como:
-                                    
-                                    
+
+
                                     .swiper-container.sliderServicios2
                                         .swiper-wrapper
                                             .col-lg-4.swiper-slide.objetFade
                                                 .swiper-slide__card
                                                     .swiper-slide__card__img
                                                         picture 
-                                                            source(srcset="img/Desktop/2Servicios/ServicioPlantas_Poligrapa.webp", type="image/webp")
-                                                            img.img-fluid(src="img/Desktop/2Servicios/ServicioPlantas_Poligrapa.jpg", alt="")
-                                                    
+                                                            source(srcset="img/Desktop/2Servicios/ServicioPlantas_Poligrapa.webp" type="image/webp")
+                                                            img.img-fluid(src="img/Desktop/2Servicios/ServicioPlantas_Poligrapa.jpg" alt="")
+
                                                     .swiper-slide__card__copy
                                                         h2 Poligrapas móviles
                                                         h3 para el servicio de recolección
-                                            
+
                                             .col-lg-4.swiper-slide.objetFade
                                                 .swiper-slide__card
                                                     .swiper-slide__card__img
                                                         picture 
-                                                            source(srcset="img/Desktop/2Servicios/ServicioPlantas_ContenedorMedida.webp", type="image/webp")
-                                                            img.img-fluid(src="img/Desktop/2Servicios/ServicioPlantas_ContenedorMedida.jpg", alt="")
-                                                    
+                                                            source(srcset="img/Desktop/2Servicios/ServicioPlantas_ContenedorMedida.webp" type="image/webp")
+                                                            img.img-fluid(src="img/Desktop/2Servicios/ServicioPlantas_ContenedorMedida.jpg" alt="")
+
                                                     .swiper-slide__card__copy
                                                         h2 Contenedores a la medida
                                                         h3 Fabricación y diseño
-                                                        
+
                                             .col-lg-4.swiper-slide.objetFade
                                                 .swiper-slide__card
                                                     .swiper-slide__card__img
                                                         picture 
-                                                            source(srcset="img/Desktop/2Servicios/ServicioPlantas_EquipoEspecializado.webp", type="image/webp")
-                                                            img.img-fluid(src="img/Desktop/2Servicios/ServicioPlantas_EquipoEspecializado.jpg", alt="")
-                                                    
+                                                            source(srcset="img/Desktop/2Servicios/ServicioPlantas_EquipoEspecializado.webp" type="image/webp")
+                                                            img.img-fluid(src="img/Desktop/2Servicios/ServicioPlantas_EquipoEspecializado.jpg" alt="")
+
                                                     .swiper-slide__card__copy
                                                         h2 Equipo especializado
                                                         h3 para manejo interno
-                                                        
-                                                        
+
+
                                             .col-lg-4.swiper-slide.objetFade
                                                 .swiper-slide__card
                                                     .swiper-slide__card__img
                                                         picture 
-                                                            source(srcset="img/Desktop/2Servicios/Transformacion_Compactadora_2.webp", type="image/webp")
-                                                            img.img-fluid(src="img/Desktop/2Servicios/Transformacion_Compactadora_2.png", alt="")
-                                                    
+                                                            source(srcset="img/Desktop/2Servicios/Transformacion_Compactadora_2.webp" type="image/webp")
+                                                            img.img-fluid(src="img/Desktop/2Servicios/Transformacion_Compactadora_2.png" alt="")
+
                                                     .swiper-slide__card__copy
                                                         h2 Compactadoras  
                                                         h3 de material y basura en sitio
-                                                         
+
                                             .col-lg-4.swiper-slide.objetFade
                                                 .swiper-slide__card
                                                     .swiper-slide__card__img
                                                         picture 
-                                                            source(srcset="img/Desktop/2Servicios/ServicioPlantas_BasculaSitio.webp", type="image/webp")
-                                                            img.img-fluid(src="img/Desktop/2Servicios/ServicioPlantas_BasculaSitio.jpg", alt="")
-                                                    
+                                                            source(srcset="img/Desktop/2Servicios/ServicioPlantas_BasculaSitio.webp" type="image/webp")
+                                                            img.img-fluid(src="img/Desktop/2Servicios/ServicioPlantas_BasculaSitio.jpg" alt="")
+
                                                     .swiper-slide__card__copy
                                                         h2 Báscula en sitio
                                                         h3 La instalamos para ti
-                                                        
+
                                             .col-lg-4.swiper-slide.objetFade
                                                 .swiper-slide__card
                                                     .swiper-slide__card__img
                                                         picture 
-                                                            source(srcset="img/Desktop/2Servicios/ServicioPlantas_PersonalEspecializado.webp", type="image/webp")
-                                                            img.img-fluid(src="img/Desktop/2Servicios/ServicioPlantas_PersonalEspecializado.jpg", alt="")
-                                                    
+                                                            source(srcset="img/Desktop/2Servicios/ServicioPlantas_PersonalEspecializado.webp" type="image/webp")
+                                                            img.img-fluid(src="img/Desktop/2Servicios/ServicioPlantas_PersonalEspecializado.jpg" alt="")
+
                                                     .swiper-slide__card__copy
                                                         h2 Personal especializado
                                                         h3 sin costo adicional
-                                            
+
                                             .col-lg-4.swiper-slide.objetFade
                                                 .swiper-slide__card
                                                     .swiper-slide__card__img
                                                         picture 
-                                                            source(srcset="img/Desktop/2Servicios/ServicioPlantas_FlotaCamiones.webp", type="image/webp")
-                                                            img.img-fluid(src="img/Desktop/2Servicios/ServicioPlantas_FlotaCamiones.jpg", alt="")
-                                                    
+                                                            source(srcset="img/Desktop/2Servicios/ServicioPlantas_FlotaCamiones.webp" type="image/webp")
+                                                            img.img-fluid(src="img/Desktop/2Servicios/ServicioPlantas_FlotaCamiones.jpg" alt="")
+
                                                     .swiper-slide__card__copy
                                                         h2 Flota de camiones
                                                         h3 para servicio integral
-                                        
-                                    
+
+
                                     .swiper-nav
                                         .swiper-button-prev#nav4
                                         .swiper-button-next#nav3
-                                    
+
                                     .swiper-pagination.align-items-center.d-flex.swiper-pagination2#pag2
-                                    
-                                    
+
+
                                 .tab-pane.fade#transformacion(role='tabpanel' aria-labelledby='transformacion-tab')
                                     h2 Transformación, separación e identificación 
                                         br
                                         | de materiales.
-                                    
-                                    
+
+
                                     .swiper-container.sliderServicios3
                                         .swiper-wrapper
                                             .col-lg-4.swiper-slide.objetFade
                                                 .swiper-slide__card
                                                     .swiper-slide__card__img
                                                         picture 
-                                                            source(srcset="img/Desktop/2Servicios/Transformacion_Compactadora.webp", type="image/webp")
-                                                            img.img-fluid(src="img/Desktop/2Servicios/Transformacion_Compactadora.jpg", alt="")
-                                                    
+                                                            source(srcset="img/Desktop/2Servicios/Transformacion_Compactadora.webp" type="image/webp")
+                                                            img.img-fluid(src="img/Desktop/2Servicios/Transformacion_Compactadora.jpg" alt="")
+
                                                     .swiper-slide__card__copy
                                                         h2 Compactadora de paca
                                                         h3 de alta densidad
-                                            
-                                            
+
+
                                             .col-lg-4.swiper-slide.objetFade
                                                 .swiper-slide__card
                                                     .swiper-slide__card__img
                                                         picture 
-                                                            source(srcset="img/Desktop/2Servicios/Transformacion_Trituradora.webp", type="image/webp")
-                                                            img.img-fluid(src="img/Desktop/2Servicios/Transformacion_Trituradora.jpg", alt="")
-                                                    
+                                                            source(srcset="img/Desktop/2Servicios/Transformacion_Trituradora.webp" type="image/webp")
+                                                            img.img-fluid(src="img/Desktop/2Servicios/Transformacion_Trituradora.jpg" alt="")
+
                                                     .swiper-slide__card__copy
                                                         h2 Tritutadoras de materiales
                                                         h3 Lorem ipsum dolor sit amet, consectetur adipiscing elit
@@ -282,9 +282,9 @@ html(lang='es')
                                                 .swiper-slide__card
                                                     .swiper-slide__card__img
                                                         picture 
-                                                            source(srcset="img/Desktop/2Servicios/Transformacion_Paletizadora.webp", type="image/webp")
-                                                            img.img-fluid(src="img/Desktop/2Servicios/Transformacion_Paletizadora.jpg", alt="")
-                                                    
+                                                            source(srcset="img/Desktop/2Servicios/Transformacion_Paletizadora.webp" type="image/webp")
+                                                            img.img-fluid(src="img/Desktop/2Servicios/Transformacion_Paletizadora.jpg" alt="")
+
                                                     .swiper-slide__card__copy
                                                         h2 Peletizadoras de plásticos
                                                         h3 Lorem ipsum dolor sit amet, consectetur adipiscing elit
@@ -292,9 +292,9 @@ html(lang='es')
                                                 .swiper-slide__card
                                                     .swiper-slide__card__img
                                                         picture 
-                                                            source(srcset="img/Desktop/2Servicios/Transformacion_ProcesadorasCable.webp", type="image/webp")
-                                                            img.img-fluid(src="img/Desktop/2Servicios/Transformacion_ProcesadorasCable.jpg", alt="")
-                                                    
+                                                            source(srcset="img/Desktop/2Servicios/Transformacion_ProcesadorasCable.webp" type="image/webp")
+                                                            img.img-fluid(src="img/Desktop/2Servicios/Transformacion_ProcesadorasCable.jpg" alt="")
+
                                                     .swiper-slide__card__copy
                                                         h2 Procesarodas de cable
                                                         h3 Lorem ipsum dolor sit amet, consectetur adipiscing elit
@@ -302,24 +302,24 @@ html(lang='es')
                                                 .swiper-slide__card
                                                     .swiper-slide__card__img
                                                         picture 
-                                                            source(srcset="img/Desktop/2Servicios/Transformacion_Cizalla.webp", type="image/webp")
-                                                            img.img-fluid(src="img/Desktop/2Servicios/Transformacion_Cizalla.jpg", alt="")
-                                                    
+                                                            source(srcset="img/Desktop/2Servicios/Transformacion_Cizalla.webp" type="image/webp")
+                                                            img.img-fluid(src="img/Desktop/2Servicios/Transformacion_Cizalla.jpg" alt="")
+
                                                     .swiper-slide__card__copy
                                                         h2 Cizallas
                                                         h3 Lorem ipsum dolor sit amet, consectetur adipiscing elit
-                                                        
-                                    
+
+
                                     .swiper-nav
                                         .swiper-button-prev#nav6
                                         .swiper-button-next#nav5
-                                
+
                                     .swiper-pagination.align-items-center.d-flex.swiper-pagination3#pag3
 
 
             section.promos
                 img.fondo3(src="img/fondo3.svg" alt="")
-                
+
                 #triggerCertificaciones
                 svg.path1#path2(width='700px' height='700px' viewBox='0 0 1280 900')
                     g.Page-1(stroke='none' stroke-width='1' fill='none' fill-rule='evenodd')
@@ -344,22 +344,22 @@ html(lang='es')
                                                         span.icon-Certificaciones
                                                         h2 Permiso para transporte
                                                         h4 de RME por parte de SEDESU para el estado de Querétaro.
-                                                
+
                                                 .col-lg-4.swiper-slide
                                                     .promos--copy__card.d-flex
                                                         span.icon-Certificaciones
                                                         h2 Permiso para transporte
                                                         h4 de RME por parte de SMAOT Guanajuato.
-                                                        
+
                                                 .col-lg-4.swiper-slide
                                                     .promos--copy__card.d-flex
                                                         span.icon-Certificaciones
                                                         h2 Permiso para transporte
                                                         h4 de RME por parte de SEDESU para el estado de Nuevo León.
-                                            
+
                                             .swiper-pagination.align-items-center#paginador2
-                                        
-                                        
+
+
                                 .row.promos--certificados
                                     .col-lg-6
                                         .promos--certificados__lista 
@@ -381,6 +381,6 @@ html(lang='es')
                                         .promos--certificados__lista 
                                             h2 Permiso para transporte
                                             h4 de Residuos Sólidos Urbanos Apaseo el Grande.
-                                
+
 
         include includes/footer.pug

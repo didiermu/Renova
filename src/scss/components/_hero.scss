@@ -193,9 +193,14 @@
 
 @media (min-width:1440px) {
     .heroInt {
+        .row{
+            padding: 0;
+        }
+
         .col-xl-9{
-            flex: 0 0 73.333333%;
-            max-width: 73.333333%;
+            flex: 0 0 83.333333%;
+            max-width: 83.333333%;
+            margin-left: 16%;
         }
 
         .hero--img{

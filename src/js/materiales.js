@@ -78,7 +78,9 @@ function comboMateriales(mediaqueryList) {
       var titleTab = $(this).data("title");
 
       $(".tab-content").append(
-        "<div class='acordeon'><button type='button' data-toggle='collapse' data-target='#collapseExample" +
+        "<div class='acordeon' id='acordeon" +
+          i +
+          "'><button type='button' data-toggle='collapse' data-target='#collapseExample" +
           i +
           "' aria-expanded='false' aria-controls='collapseExample'>" +
           titleTab +

@@ -63,110 +63,113 @@ function tabsPromos() {
     $(this).parent("li").addClass("active");
     $(".nav-tabs").addClass("nav-active");
 
-    var mySwiper1 = new Swiper(".sliderServicios1", {
-      direction: "horizontal",
-      observer: true,
-      observeParents: true,
-      loop: true,
-      slidesPerView: "auto",
+    // var mySwiper1 = new Swiper(".sliderServicios1", {
+    //   direction: "horizontal",
+    //   // observer: true,
+    //   // observeParents: true,
+    //   loop: true,
+    //   slidesPerView: "auto",
 
-      pagination: {
-        el: ".swiper-pagination1",
-        type: "bullets",
-        clickable: true,
-      },
+    //   pagination: {
+    //     el: "#pag1",
+    //     type: "bullets",
+    //     clickable: true,
+    //   },
 
-      navigation: {
-        nextEl: "#nav2",
-        prevEl: "#nav1",
-      },
-      breakpoints: {
-        320: {
-          spaceBetween: 5,
-          allowTouchMove: true,
-          freeMode: false,
-        },
-        992: {
-          slidesOffsetAfter: 100,
-          allowTouchMove: false,
-          freeMode: true,
-        },
-      },
-    });
+    //   navigation: {
+    //     nextEl: "#nav2",
+    //     prevEl: "#nav1",
+    //   },
+    //   breakpoints: {
+    //     320: {
+    //       spaceBetween: 5,
+    //       allowTouchMove: true,
+    //       freeMode: false,
+    //     },
+    //     992: {
+    //       slidesOffsetAfter: 100,
+    //       allowTouchMove: false,
+    //       freeMode: true,
+    //     },
+    //   },
+    // });
 
-    var mySwiper2 = new Swiper(".sliderServicios2", {
-      observer: true,
-      observeParents: true,
-      loop: true,
-      direction: "horizontal",
-      slidesPerView: "auto",
-      pagination: {
-        el: "#pag2",
-        type: "bullets",
-        clickable: true,
-      },
+    // var mySwiper2 = new Swiper(".sliderServicios2", {
+    //   // observer: true,
+    //   // observeParents: true,
+    //   loop: true,
+    //   direction: "horizontal",
+    //   slidesPerView: "auto",
+    //   pagination: {
+    //     el: "#pag2",
+    //     type: "bullets",
+    //     clickable: true,
+    //   },
 
-      navigation: {
-        nextEl: "#nav3",
-        prevEl: "#nav4",
-      },
-      breakpoints: {
-        320: {
-          spaceBetween: 5,
-          allowTouchMove: true,
-          freeMode: false,
-          //centeredSlidesBounds:true,
-        },
-        992: {
-          slidesOffsetAfter: 100,
-          allowTouchMove: false,
-          freeMode: true,
-        },
-      },
-    });
+    //   navigation: {
+    //     nextEl: "#nav3",
+    //     prevEl: "#nav4",
+    //   },
+    //   breakpoints: {
+    //     320: {
+    //       spaceBetween: 5,
+    //       allowTouchMove: true,
+    //       freeMode: false,
+    //       //centeredSlidesBounds:true,
+    //     },
+    //     992: {
+    //       slidesOffsetAfter: 100,
+    //       allowTouchMove: false,
+    //       freeMode: true,
+    //     },
+    //   },
+    // });
 
-    var mySwiper3 = new Swiper(".sliderServicios3", {
-      observer: true,
-      observeParents: true,
-      loop: true,
-      direction: "horizontal",
-      slidesPerView: "auto",
+    // var mySwiper3 = new Swiper(".sliderServicios3", {
+    //   // observer: true,
+    //   // observeParents: true,
+    //   loop: true,
+    //   direction: "horizontal",
+    //   slidesPerView: "auto",
 
-      pagination: {
-        el: "#pag3",
-        type: "bullets",
-        clickable: true,
-      },
+    //   pagination: {
+    //     el: "#pag3",
+    //     type: "bullets",
+    //     clickable: true,
+    //   },
 
-      navigation: {
-        nextEl: "#nav5",
-        prevEl: "#nav6",
-      },
-      breakpoints: {
-        320: {
-          spaceBetween: 5,
-          allowTouchMove: true,
-          freeMode: false,
-        },
-        992: {
-          slidesOffsetAfter: 100,
-          allowTouchMove: false,
-          freeMode: true,
-        },
-      },
-    });
+    //   navigation: {
+    //     nextEl: "#nav5",
+    //     prevEl: "#nav6",
+    //   },
+    //   breakpoints: {
+    //     320: {
+    //       spaceBetween: 5,
+    //       allowTouchMove: true,
+    //       freeMode: false,
+    //     },
+    //     992: {
+    //       slidesOffsetAfter: 100,
+    //       allowTouchMove: false,
+    //       freeMode: true,
+    //     },
+    //   },
+    // });
 
-    //carruselServicios1(".sliderServicios1");
-    //carruselServicios2(".sliderServicios2");
-    //carruselServicios3(".sliderServicios3");
+    // carruselServicios1();
+    // carruselServicios2();
+    // carruselServicios3();
+  });
+
+  $(".tab-content .modal .close").on("click", function () {
+    $(".nav-item").removeClass("active");
   });
 }
 
 //CARRUSELES
 
-function carruselServicios1(slider1) {
-  //var mySwiper1  = new Swiper(".sliderServicios1", {
-  var mySwiper1 = new Swiper(slider1, {
+function carruselServicios1() {
+  var mySwiper1 = new Swiper(".sliderServicios1", {
     direction: "horizontal",
     observer: true,
     observeParents: true,
@@ -174,7 +177,7 @@ function carruselServicios1(slider1) {
     slidesPerView: "auto",
 
     pagination: {
-      el: ".swiper-pagination1",
+      el: "#pag1",
       type: "bullets",
       clickable: true,
     },
@@ -196,10 +199,12 @@ function carruselServicios1(slider1) {
       },
     },
   });
+
+  console.log("slide1");
 }
 
-function carruselServicios2(slider2) {
-  var mySwiper2 = new Swiper(slider2, {
+function carruselServicios2() {
+  var mySwiper2 = new Swiper(".sliderServicios2", {
     observer: true,
     observeParents: true,
     loop: true,
@@ -229,10 +234,12 @@ function carruselServicios2(slider2) {
       },
     },
   });
+
+  console.log("slide2");
 }
 
-function carruselServicios3(slider3) {
-  var mySwiper3 = new Swiper(slider3, {
+function carruselServicios3() {
+  var mySwiper3 = new Swiper(".sliderServicios3", {
     observer: true,
     observeParents: true,
     loop: true,
@@ -262,6 +269,8 @@ function carruselServicios3(slider3) {
       },
     },
   });
+
+  console.log("slide3");
 }
 
 function carruselCertificados() {
@@ -328,9 +337,6 @@ function modalServicios(mediaqueryList) {
     //console.log("no media");
   }
 
-  //carruselServicios1(slider1);
-  //carruselServicios2(slider2);
-  //carruselServicios3(slider3);
   //carruselServicios1(".sliderServicios1");
   //carruselServicios2(".sliderServicios2");
   //carruselServicios3(".sliderServicios3");
@@ -349,6 +355,10 @@ $(document).ready(function () {
     $(window).resize(function () {
       modalServicios();
     });
+
+    carruselServicios1();
+    carruselServicios2();
+    carruselServicios3();
 
     // console.log("s");
   }

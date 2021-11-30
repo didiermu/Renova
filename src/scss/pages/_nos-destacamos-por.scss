@@ -440,6 +440,10 @@
 @media (max-width:992px) {
     .destacamos{
         
+        .heroInt .hero--copy h2{
+            width: 90%;
+        }
+        
         .dedicamos{
             .col-lg-4{
                 height:auto;
@@ -466,11 +470,12 @@
             .titleBig{
                 margin-bottom: 10px;
             }
+           
         }
         
         .mision{
             padding-top: 100px;
-            background: url('../img/Mobile/4Nosdestacamos/MisionVision.webp') center/cover no-repeat fixed;
+            background: url('../img/Mobile/4Nosdestacamos/MisionVision2.jpg') center/cover no-repeat fixed;
             
             .col-12{
                 flex-direction: column;
@@ -563,3 +568,16 @@
         }
     }
 }
+
+/// SAFARI
+
+@media not all and (min-resolution:.001dpcm){ @supports (-webkit-appearance:none) {
+	
+	@media (max-width:992px) {
+		.destacamos .mision{
+            background: url('../img/Mobile/4Nosdestacamos/MisionVision2.jpg') no-repeat center 30px / cover !important;
+        }
+
+	}
+}}
+

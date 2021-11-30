@@ -243,6 +243,10 @@
                     &::marker{
                         color: var(--primario);
                     }
+
+                    ul{
+                        padding-left: 20px;
+                    }
                 }
             }
             
@@ -518,8 +522,6 @@
                 display:flex;
                 margin-bottom: 10px;
 
-                
-
                 ul{
                     flex-flow: wrap;
                     padding: 0 20px;
@@ -538,6 +540,18 @@
                 .card{
                     padding: 20px 0 0;
                 }
+
+                #otros{
+                    order: 10;
+                }
+            }
+
+            #acordeon5{
+                display: none;
+            }
+
+            #tabGestion::after{
+                display: none;
             }
         }
         

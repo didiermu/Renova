@@ -122,238 +122,238 @@ function carruselEsfuerzo() {
   });
 }
 
-function efectoFade3() {
-  var valor = 1;
+// function efectoFade3() {
+//   var valor = 1;
 
-  function sectionFade() {
-    var sectionFade = $(".navegacion");
-    sectionFade.each(function () {
-      var posSection = $(this).offset().top - 40;
-      var scrolleo = $(window).scrollTop();
+//   function sectionFade() {
+//     var sectionFade = $(".navegacion");
+//     sectionFade.each(function () {
+//       var posSection = $(this).offset().top - 40;
+//       var scrolleo = $(window).scrollTop();
 
-      if (scrolleo > posSection) {
-        // console.log("ya");
-        $("body").css("overflow", "hidden");
-        setTimeout(function () {
-          valor = 0;
-          console.log(valor);
-        }, 1000);
-      } else {
-        valor = 1;
-        console.log(valor);
-        $("body").css("overflow", "auto");
-        // console.log("no");
-      }
+//       if (scrolleo > posSection) {
+//         // console.log("ya");
+//         $("body").css("overflow", "hidden");
+//         setTimeout(function () {
+//           valor = 0;
+//           console.log(valor);
+//         }, 1000);
+//       } else {
+//         valor = 1;
+//         console.log(valor);
+//         $("body").css("overflow", "auto");
+//         // console.log("no");
+//       }
 
-      // scrollDwo();
-    });
-  }
+//       // scrollDwo();
+//     });
+//   }
 
-  function scrollDwo() {
-    var scrollableElement = document.body; //document.getElementById('scrollableElement');
+//   function scrollDwo() {
+//     var scrollableElement = document.body; //document.getElementById('scrollableElement');
 
-    scrollableElement.addEventListener("wheel", checkScrollDirection);
+//     scrollableElement.addEventListener("wheel", checkScrollDirection);
 
-    function checkScrollDirection(event) {
-      if (valor == 1) {
-        sectionFade();
-      } else {
-        $("body").css("overflow", "auto");
-        // setTimeout(function () {
-        //   // console.log(valor);
-        // }, 2000);
-      }
+//     function checkScrollDirection(event) {
+//       if (valor == 1) {
+//         sectionFade();
+//       } else {
+//         $("body").css("overflow", "auto");
+//         // setTimeout(function () {
+//         //   // console.log(valor);
+//         // }, 2000);
+//       }
 
-      // if (checkScrollDirectionIsUp(event)) {
-      //   // $("body").css("overflow", "auto");
-      //   console.log("UP");
-      // } else {
-      //   // $("body").css("overflow", "auto");
-      //   console.log("down");
-      // }
-    }
+//       // if (checkScrollDirectionIsUp(event)) {
+//       //   // $("body").css("overflow", "auto");
+//       //   console.log("UP");
+//       // } else {
+//       //   // $("body").css("overflow", "auto");
+//       //   console.log("down");
+//       // }
+//     }
 
-    function checkScrollDirectionIsUp(event) {
-      if (event.wheelDelta) {
-        return event.wheelDelta > 0;
-      }
+//     function checkScrollDirectionIsUp(event) {
+//       if (event.wheelDelta) {
+//         return event.wheelDelta > 0;
+//       }
 
-      return event.deltaY < 0;
-    }
-  }
-  scrollDwo();
+//       return event.deltaY < 0;
+//     }
+//   }
+//   scrollDwo();
 
-  // $(document).scroll(function () {
-  //   if (valor == 1) {
-  //     sectionFade();
-  //   } else {
-  //     setTimeout(function () {
-  //       $("body").css("overflow", "auto");
-  //       valor = 0;
-  //       // console.log(valor);
-  //     }, 2000);
-  //   }
-  //   // sectionFade();
-  // });
-}
+//   // $(document).scroll(function () {
+//   //   if (valor == 1) {
+//   //     sectionFade();
+//   //   } else {
+//   //     setTimeout(function () {
+//   //       $("body").css("overflow", "auto");
+//   //       valor = 0;
+//   //       // console.log(valor);
+//   //     }, 2000);
+//   //   }
+//   //   // sectionFade();
+//   // });
+// }
 
-function stopScroll() {
-  function sectionFade() {
-    var sectionFade = $(".esfuerzo");
-    var posSection = sectionFade.offset().top - 100;
-    var scrolleo = $(window).scrollTop();
+// function stopScroll() {
+//   function sectionFade() {
+//     var sectionFade = $(".esfuerzo");
+//     var posSection = sectionFade.offset().top - 100;
+//     var scrolleo = $(window).scrollTop();
 
-    if (scrolleo > posSection) {
-      // $("html, body").animate(
-      //   { scrollTop: $(".navegacion").offset().top - 20 },
-      //   500
-      // );
-      // $("body").css("overflow", "hidden");
-      scrollDwo();
-    }
-  }
+//     if (scrolleo > posSection) {
+//       // $("html, body").animate(
+//       //   { scrollTop: $(".navegacion").offset().top - 20 },
+//       //   500
+//       // );
+//       // $("body").css("overflow", "hidden");
+//       scrollDwo();
+//     }
+//   }
 
-  function scrollDwo() {
-    var scrollableElement = document.body; //document.getElementById('scrollableElement');
+//   function scrollDwo() {
+//     var scrollableElement = document.body; //document.getElementById('scrollableElement');
 
-    scrollableElement.addEventListener("wheel", checkScrollDirection);
+//     scrollableElement.addEventListener("wheel", checkScrollDirection);
 
-    function checkScrollDirection(event) {
-      if (checkScrollDirectionIsUp(event)) {
-        console.log("UP");
-        var sectionFade = $(".esfuerzo");
-        var posSection = sectionFade.offset().top - 100;
-        var scrolleo = $(window).scrollTop();
+//     function checkScrollDirection(event) {
+//       if (checkScrollDirectionIsUp(event)) {
+//         console.log("UP");
+//         var sectionFade = $(".esfuerzo");
+//         var posSection = sectionFade.offset().top - 100;
+//         var scrolleo = $(window).scrollTop();
 
-        if (scrolleo > posSection) {
-          // $("html, body").animate(
-          //   { scrollTop: $(".navegacion").offset().top - 20 },
-          //   500
-          // );
-          $("body").css("background", "red");
-        }
-      } else {
-        // $("body").css("overflow", "auto");
+//         if (scrolleo > posSection) {
+//           // $("html, body").animate(
+//           //   { scrollTop: $(".navegacion").offset().top - 20 },
+//           //   500
+//           // );
+//           $("body").css("background", "red");
+//         }
+//       } else {
+//         // $("body").css("overflow", "auto");
 
-        // console.log(scrolleo, posSection);
-        // if (posSection == 2594) {
-        //   return $("body").css("overflow", "auto");
-        // }
+//         // console.log(scrolleo, posSection);
+//         // if (posSection == 2594) {
+//         //   return $("body").css("overflow", "auto");
+//         // }
 
-        console.log("down");
-      }
-    }
+//         console.log("down");
+//       }
+//     }
 
-    function checkScrollDirectionIsUp(event) {
-      if (event.wheelDelta) {
-        return event.wheelDelta > 0;
-      }
+//     function checkScrollDirectionIsUp(event) {
+//       if (event.wheelDelta) {
+//         return event.wheelDelta > 0;
+//       }
 
-      return event.deltaY < 0;
-    }
-  }
+//       return event.deltaY < 0;
+//     }
+//   }
 
-  window.onscroll = function (ev) {
-    // sectionFade();
-    scrollDwo();
-  };
-}
+//   window.onscroll = function (ev) {
+//     // sectionFade();
+//     scrollDwo();
+//   };
+// }
 
-function touchS() {
-  var touchPos;
+// function touchS() {
+//   var touchPos;
 
-  // store the touching position at the start of each touch
-  document.body.ontouchstart = function (e) {
-    touchPos = e.changedTouches[0].clientY;
-  };
+//   // store the touching position at the start of each touch
+//   document.body.ontouchstart = function (e) {
+//     touchPos = e.changedTouches[0].clientY;
+//   };
 
-  // detect wether the "old" touchPos is
-  // greater or smaller than the newTouchPos
-  document.body.ontouchmove = function (e) {
-    let newTouchPos = e.changedTouches[0].clientY;
-    if (newTouchPos > touchPos) {
-      // console.log("finger moving down");
-      $("body").css("background", "blue");
-      $("body").css("overflow", "auto");
+//   // detect wether the "old" touchPos is
+//   // greater or smaller than the newTouchPos
+//   document.body.ontouchmove = function (e) {
+//     let newTouchPos = e.changedTouches[0].clientY;
+//     if (newTouchPos > touchPos) {
+//       // console.log("finger moving down");
+//       $("body").css("background", "blue");
+//       $("body").css("overflow", "auto");
 
-      $("body").removeClass("onn");
-      // $("body").css("overflow", "auto");
-    }
-    if (newTouchPos < touchPos) {
-      // console.log("finger moving up");
-      // scrollDwo();
-      // $("body").css("background", "blue");
-      var sectionFade = $(".esfuerzo");
-      var posSection = sectionFade.offset().top - 100;
-      var scrolleo = $(window).scrollTop();
+//       $("body").removeClass("onn");
+//       // $("body").css("overflow", "auto");
+//     }
+//     if (newTouchPos < touchPos) {
+//       // console.log("finger moving up");
+//       // scrollDwo();
+//       // $("body").css("background", "blue");
+//       var sectionFade = $(".esfuerzo");
+//       var posSection = sectionFade.offset().top - 100;
+//       var scrolleo = $(window).scrollTop();
 
-      if (scrolleo > posSection) {
-        $("body").css("background", "red");
-        $("body").addClass("onn");
-        $("body").css("overflow", "hidden");
-        $(".esfuerzo").css("overflow-y", "scroll");
+//       if (scrolleo > posSection) {
+//         $("body").css("background", "red");
+//         $("body").addClass("onn");
+//         $("body").css("overflow", "hidden");
+//         $(".esfuerzo").css("overflow-y", "scroll");
 
-        // alert(scrolleo, posSection);
-        // if (posSection > 2700) {
-        //   $("body").css("background", "green");
-        //   // $("body").css("overflow", "auto");
-        // }
-        // setTimeout(function () {
+//         // alert(scrolleo, posSection);
+//         // if (posSection > 2700) {
+//         //   $("body").css("background", "green");
+//         //   // $("body").css("overflow", "auto");
+//         // }
+//         // setTimeout(function () {
 
-        // }, 2000);
-      } else {
-        $("body").css("background", "green");
-        $("body").removeClass("onn");
-      }
+//         // }, 2000);
+//       } else {
+//         $("body").css("background", "green");
+//         $("body").removeClass("onn");
+//       }
 
-      function scrollDwo() {
-        var scrollableElement = document.body; //document.getElementById('scrollableElement');
+//       function scrollDwo() {
+//         var scrollableElement = document.body; //document.getElementById('scrollableElement');
 
-        scrollableElement.addEventListener("wheel", checkScrollDirection);
+//         scrollableElement.addEventListener("wheel", checkScrollDirection);
 
-        function checkScrollDirection(event) {
-          if (checkScrollDirectionIsUp(event)) {
-            console.log("UP");
-            var sectionFade = $(".esfuerzo");
-            var posSection = sectionFade.offset().top - 100;
-            var scrolleo = $(window).scrollTop();
+//         function checkScrollDirection(event) {
+//           if (checkScrollDirectionIsUp(event)) {
+//             console.log("UP");
+//             var sectionFade = $(".esfuerzo");
+//             var posSection = sectionFade.offset().top - 100;
+//             var scrolleo = $(window).scrollTop();
 
-            if (scrolleo > posSection) {
-              // $("html, body").animate(
-              //   { scrollTop: $(".navegacion").offset().top - 20 },
-              //   500
-              // );
-              $("body").css("background", "red");
-            }
-          } else {
-            $("body").css("background", "blue");
-            // $("body").css("overflow", "auto");
+//             if (scrolleo > posSection) {
+//               // $("html, body").animate(
+//               //   { scrollTop: $(".navegacion").offset().top - 20 },
+//               //   500
+//               // );
+//               $("body").css("background", "red");
+//             }
+//           } else {
+//             $("body").css("background", "blue");
+//             // $("body").css("overflow", "auto");
 
-            // console.log(scrolleo, posSection);
-            // if (posSection == 2594) {
-            //   return $("body").css("overflow", "auto");
-            // }
-          }
-        }
+//             // console.log(scrolleo, posSection);
+//             // if (posSection == 2594) {
+//             //   return $("body").css("overflow", "auto");
+//             // }
+//           }
+//         }
 
-        function checkScrollDirectionIsUp(event) {
-          if (event.wheelDelta) {
-            return event.wheelDelta > 0;
-          }
+//         function checkScrollDirectionIsUp(event) {
+//           if (event.wheelDelta) {
+//             return event.wheelDelta > 0;
+//           }
 
-          return event.deltaY < 0;
-        }
-      }
-    }
+//           return event.deltaY < 0;
+//         }
+//       }
+//     }
 
-    if ($("body").hasClass("onn")) {
-      // $("html, body").animate(
-      //   { scrollTop: $(".navegacion").offset().top - 20 },
-      //   500
-      // );
-    }
-  };
-}
+//     if ($("body").hasClass("onn")) {
+//       // $("html, body").animate(
+//       //   { scrollTop: $(".navegacion").offset().top - 20 },
+//       //   500
+//       // );
+//     }
+//   };
+// }
 
 $(document).ready(function () {
   if (window.location.href.indexOf("destacamos") > -1) {
@@ -364,6 +364,6 @@ $(document).ready(function () {
     carruselEsfuerzo();
 
     // stopScroll();
-    touchS();
+    // touchS();
   }
 });

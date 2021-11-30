@@ -46,13 +46,13 @@ html(lang='es')
 
                                             .hero--links.d-flex
                                                 .hero--links__link.d-flex#link-grid
-                                                    h3 Ver materiales
+                                                    h2 Ver materiales
                                                     .btn--down.d-flex 
                                                         span.icon-Chevron
                                                         span.icon-Chevron
 
                                                 .hero--links__link.d-flex#link-promos
-                                                    h3 Conoce las promociones
+                                                    h2 Conoce las promociones
                                                     .btn--down.d-flex 
                                                         span.icon-Chevron
                                                         span.icon-Chevron
@@ -128,7 +128,7 @@ html(lang='es')
                                 .col-12.col-lg-6.col-xl-5.offset-lg-6
                                     .contacto--copy.objParallax
                                         ul.d-flex
-                                            each val in ['ABS', 'PS', 'PP', 'PC', 'HDPE', 'PACA Y ESTRUCTURA', 'POM', 'PPO', 'PA', 'TPE', 'PVC', 'SAN', 'PURGAS', 'OTROS']
+                                            each val in ['ABS', 'PS', 'PP', 'PC', 'HDPE', 'PACA Y ESTRUCTURA', 'POM', 'PPO', 'PA', 'TPE', 'PVC', 'OTROS', 'PURGAS', 'SAN']
                                                 li= val
 
                             .tab-pane.fade#metales(data-title='Metales y Acero inoxidable' role='tabpanel' aria-labelledby='metales-tab')
@@ -170,16 +170,17 @@ html(lang='es')
                                             li Cartón nacional
                                             li Cartón americano
 
-                            //- .tab-pane.fade#basura(data-title='Gestión de basura industrial' role='tabpanel' aria-labelledby='basura-tab')
-                            //- .col-12.col-lg-6.col-xl-5.cajaImagen
-                            //-     .grid--img(data-enllax-ratio=".2" data-enllax-type="foreground")
-                            //-         picture 
-                            //-             source(srcset="img/Desktop/3Materiales/06-gestiondebasura.webp" type="image/webp")
-                            //-             img.img-fluid(src="img/Desktop/3Materiales/06-gestiondebasura.png" alt="Renova Industrial")
+                            .tab-pane.fade#basura(data-title='Gestión de basura industrial' role='tabpanel' aria-labelledby='basura-tab')
 
-                            //- .col-12.col-lg-6.col-xl-5.offset-lg-6
-                            //-     .contacto--copy.objParallax
-                            //-         h4 Lorem ipsum dolor sit amet, consectetur adipiscing elit. In aliquam tempor eros. Nam dapibus ac urna vitae dignissim.
+                                .col-12.col-lg-6.col-xl-5.cajaImagen
+                                    .grid--img(data-enllax-ratio=".2" data-enllax-type="foreground")
+                                        picture 
+                                            source(srcset="img/Desktop/3Materiales/06-gestiondebasura.webp" type="image/webp")
+                                            img.img-fluid(src="img/Desktop/3Materiales/06-gestiondebasura.png" alt="Renova Industrial")
+
+                                .col-12.col-lg-6.col-xl-5.offset-lg-6
+                                    .contacto--copy.objParallax
+                                        h4 
 
 
 
