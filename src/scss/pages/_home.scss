@@ -3,6 +3,19 @@
 		background: none;
 		height: 700px;
 
+		#linkVideo{
+			position: absolute;
+			bottom: 20px;
+			right: 30px;
+			background: rgba(0,0,0,0.5);
+			border: 1px solid var(--primario);
+			color: #fff;
+			z-index: 1;
+			padding: 10px;
+			border-radius: 5px;
+			text-decoration: none !important;
+		}
+
 		video{
 			width: 100%;
 			object-fit: cover;
@@ -551,7 +564,18 @@
 
 		.hero{
 			height: calc(540px + 1000 * ((100vw - 320px) / 768));
+			
+			#linkVideo{
+				// position: relative;
+				left: 15px;
+				right: auto;
+				bottom: 120px;
+			}
 
+			.btn--down{
+				bottom: 20px;
+			}
+			
 			#videoDesktop{
 				display: none;
 			}

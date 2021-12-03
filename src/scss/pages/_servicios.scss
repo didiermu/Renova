@@ -237,7 +237,8 @@
 		
 		.fondo3{
 			position: absolute;
-			top: 100px;
+			top: auto;
+            bottom: 0;
 			left: 50%;
 			z-index: 1;
 		}
@@ -250,10 +251,15 @@
 			z-index: 1;
             transform: rotateY(180deg);
 		}
+
+        .sliderCertificaciones{
+            flex-wrap: wrap;
+        }
 		
 		
 		&--img{
-			height: calc(460px + 400 * ((100vw - 1280px) / 1920));
+			// height: calc(460px + 400 * ((100vw - 1280px) / 1920));
+            height: 100%;
 			background: url(../../img/Desktop/2Servicios/Certificaciones.webp) no-repeat center top / cover fixed;
 			position: absolute;
 			top: 0;
@@ -290,6 +296,7 @@
                 flex-direction: column;
                 align-items: center;
                 min-height: 250px;
+                margin-bottom: 30px;
 				
 				span{
 					width: 60px;
@@ -488,15 +495,18 @@
         
         .promos{
             padding-top: 80px;
+
+            .fondo3{
+                bottom: auto;
+                top: 100px;
+            }
             
             &--img{
                 height:calc(380px + 10 * ((100vw - 320px) / 1280));
                 background: url('../img/Mobile/2Servicios/Certificaciones.webp') center top/cover no-repeat fixed
             }
 
-            .sliderCertificaciones{
-                flex-direction: column;
-            }
+            
             
             .swiper-slide{
                 margin-bottom: 30px;
@@ -512,6 +522,7 @@
 
                 &__card{
                     min-height: auto;
+                    margin-bottom: 0;
                 }
             }
 

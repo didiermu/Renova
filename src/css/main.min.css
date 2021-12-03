@@ -6,17 +6,6 @@ body .footer h5 {
   font-family: var(--secundariaRegular);
 }
 
-body .destacamos .dedicamos--copy__card,
-body .destacamos .valores__card,
-body .header--navegacion--logo,
-body .home .mapa__imagen__tooltip,
-body .materiales .grid .swiper-slide,
-body .materiales .promos--copy__card,
-body .servicios .nuestros .nav-item,
-body .servicios .promos--copy__card {
-  box-shadow: 0 2px 40px 0 rgba(120,159,183,.16);
-}
-
 :root {
   --texto: #2F3B46;
   --blanco: #FFFFFF;
@@ -238,6 +227,7 @@ body .header--navegacion--logo {
   min-width: 250px;
   padding: 30px;
   text-align: center;
+  box-shadow: 0 2px 40px 0 rgba(120,159,183,.16);
 }
 
 body .header--navegacion--logo--img {
@@ -471,19 +461,6 @@ body .footer h5 {
   text-align: right;
 }
 
-body .linkBorder,
-body .titleBig,
-body a b,
-body h1 b,
-body h2 b,
-body h3 b,
-body h4 b,
-body h5 b,
-body h6 b,
-body label b {
-  font-family: var(--primariaBold);
-}
-
 body .footer a br,
 body .footer h5 br {
   display: none;
@@ -524,6 +501,17 @@ body h6 {
   line-height: 1.5;
 }
 
+body a b,
+body h1 b,
+body h2 b,
+body h3 b,
+body h4 b,
+body h5 b,
+body h6 b,
+body label b {
+  font-family: var(--primariaBold);
+}
+
 body h1 {
   font-size: var(--h1);
   line-height: 1;
@@ -558,6 +546,7 @@ body .titleBig {
   font-size: var(--h1);
   position: relative;
   line-height: 1;
+  font-family: var(--primariaBold);
 }
 
 body .titleBig::after {
@@ -573,10 +562,16 @@ body .titleBig::after {
 
 body .linkBorder {
   border-bottom: 2px solid var(--primario);
+  font-family: var(--primariaBold);
   font-size: var(--h4);
   text-decoration: none;
   color: var(--negro);
   transition: .3s ease-in-out all;
+}
+
+body .home .ayuda--copy__acceso__item__copy a,
+body .home .hero #linkVideo {
+  text-decoration: none!important;
 }
 
 body .linkBorder:hover {
@@ -674,6 +669,18 @@ body .poligono {
 body .home .hero {
   background: 0 0;
   height: 700px;
+}
+
+body .home .hero #linkVideo {
+  position: absolute;
+  bottom: 20px;
+  right: 30px;
+  background: rgba(0,0,0,.5);
+  border: 1px solid var(--primario);
+  color: #fff;
+  z-index: 1;
+  padding: 10px;
+  border-radius: 5px;
 }
 
 body .home .hero iframe,
@@ -828,10 +835,6 @@ body .home .ayuda--copy__acceso__item__copy p {
   transition: .3s ease-in-out all;
 }
 
-body .home .ayuda--copy__acceso__item__copy a {
-  text-decoration: none!important;
-}
-
 body .home .ayuda--copy__acceso__item__copy .btn {
   color: #fff;
   min-width: 200px;
@@ -902,6 +905,7 @@ body .home .dedicamos--copy h4 {
   margin: 30px 0;
 }
 
+body .home .contacto--copy .titleBig,
 body .home .dedicamos--copy .titleBig {
   margin-bottom: 30px;
 }
@@ -999,10 +1003,6 @@ body .home .contacto .offset-xl-4 {
 body .home .contacto--copy {
   z-index: 2;
   position: relative;
-}
-
-body .home .contacto--copy .titleBig {
-  margin-bottom: 30px;
 }
 
 body .home .contacto form {
@@ -1140,6 +1140,7 @@ body .home .mapa .titleBig {
 body .home .mapa__imagen__tooltip {
   background: #fff;
   padding: 20px 30px 0 20px;
+  box-shadow: 0 2px 40px 0 rgba(120,159,183,.16);
   border-radius: 8px 8px 40px;
   position: absolute;
 }
@@ -1242,6 +1243,16 @@ body.body-contacto .modal .btn {
 
   body .home .hero {
     height: calc(540px + 1000 * ((100vw - 320px)/ 768));
+  }
+
+  body .home .hero #linkVideo {
+    left: 15px;
+    right: auto;
+    bottom: 120px;
+  }
+
+  body .home .hero .btn--down {
+    bottom: 20px;
   }
 
   body .home .hero #videoMobile {
@@ -1554,6 +1565,7 @@ body .servicios .nuestros .nav-item {
   justify-content: center;
   height: 100px;
   background: #FFF;
+  box-shadow: 0 2px 40px 0 rgba(120,159,183,.16);
   border-radius: 8px 8px 40px;
   font-size: var(--h3);
 }
@@ -1706,7 +1718,8 @@ body .servicios .promos {
 
 body .servicios .promos .fondo3 {
   position: absolute;
-  top: 100px;
+  top: auto;
+  bottom: 0;
   left: 50%;
   z-index: 1;
 }
@@ -1720,8 +1733,13 @@ body .servicios .promos #path2 {
   transform: rotateY(180deg);
 }
 
+body .servicios .promos .sliderCertificaciones {
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
 body .servicios .promos--img {
-  height: calc(460px + 400 * ((100vw - 1280px)/ 1920));
+  height: 100%;
   background: url("../img/Desktop/2Servicios/Certificaciones.webp") center top/cover no-repeat fixed;
   position: absolute;
   top: 0;
@@ -1751,6 +1769,7 @@ body .servicios .promos--copy .sliderCertificaciones {
 body .servicios .promos--copy__card {
   background: #fff;
   padding: 40px 0;
+  box-shadow: 0 2px 40px 0 rgba(120,159,183,.16);
   border-radius: 8px 8px 40px;
   position: relative;
   transition: .3s ease-in-out all;
@@ -1762,6 +1781,7 @@ body .servicios .promos--copy__card {
   -ms-flex-align: center;
   align-items: center;
   min-height: 250px;
+  margin-bottom: 30px;
 }
 
 body .servicios .promos--copy__card span {
@@ -1958,14 +1978,14 @@ body .servicios .promos .objetFade.transition1 .promos--copy__card {
     padding-top: 80px;
   }
 
+  body .servicios .promos .fondo3 {
+    bottom: auto;
+    top: 100px;
+  }
+
   body .servicios .promos--img {
     height: calc(380px + 10 * ((100vw - 320px)/ 1280));
     background: url("../img/Mobile/2Servicios/Certificaciones.webp") center top/cover no-repeat fixed;
-  }
-
-  body .servicios .promos .sliderCertificaciones {
-    -ms-flex-direction: column;
-    flex-direction: column;
   }
 
   body .servicios .promos .swiper-slide {
@@ -1983,6 +2003,7 @@ body .servicios .promos .objetFade.transition1 .promos--copy__card {
 
   body .servicios .promos--copy__card {
     min-height: auto;
+    margin-bottom: 0;
   }
 
   body .servicios .promos .swiper-pagination {
@@ -2132,6 +2153,7 @@ body .materiales .grid .swiper-slide {
   justify-content: center;
   height: 60px;
   background: #FFF;
+  box-shadow: 0 2px 40px 0 rgba(120,159,183,.16);
   border-radius: 8px 8px 30px;
   font-size: var(--h3);
   width: -webkit-max-content;
@@ -2313,6 +2335,7 @@ body .materiales .promos--copy .titleBig {
 body .materiales .promos--copy__card {
   background: #fff;
   padding: 80px 35px 35px;
+  box-shadow: 0 2px 40px 0 rgba(120,159,183,.16);
   border-radius: 8px 8px 40px;
   position: relative;
   cursor: pointer;
@@ -2672,6 +2695,7 @@ body .destacamos .dedicamos--copy .col-lg-4:hover .promos--copy__card {
 body .destacamos .dedicamos--copy__card {
   background: #fff;
   padding: 40px 35px 35px 80px;
+  box-shadow: 0 2px 40px 0 rgba(120,159,183,.16);
   border-radius: 8px 8px 40px;
   position: relative;
   opacity: 0;
@@ -2818,6 +2842,7 @@ body .destacamos .valores .col-lg-4:nth-child(3) .valores__card {
 body .destacamos .valores__card {
   background: #fff;
   padding: 40px 20px;
+  box-shadow: 0 2px 40px 0 rgba(120,159,183,.16);
   border-radius: 8px 8px 40px;
   position: relative;
   opacity: 1;
