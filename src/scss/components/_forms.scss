@@ -1,6 +1,4 @@
-
-
- @mixin chips {
+@mixin chips {
     min-width: 100px;
     width: max-content;
     height: 30px;
@@ -9,35 +7,29 @@
     border: 2px solid var(--secundario);
     padding: 2px 10px;
     cursor: pointer;
-    
-    h6{
+    h6 {
         font-size: var(--h5);
         font-family: var(--primariaBold);
         color: var(--secundario);
         text-transform: uppercase;
     }
-    
-    img{
+    img {
         margin-left: 10px;
         cursor: pointer;
         max-width: 12px;
     }
-    
-    &:hover{
+    &:hover {
         border-color: var(--negro);
-        
-        h6{
+        h6 {
             color: var(--negro);
         }
-        
-        img{
+        img {
             filter: brightness(0);
         }
-        
     }
 }
 
-@mixin boton{
+@mixin boton {
     appearance: none;
     border: none;
     outline: none;
@@ -50,68 +42,54 @@
     border-radius: 10px;
     font-family: var(--primariaBold);
     transition: .3s ease-in-out all;
-
-    &.primario{
+    &.primario {
         background: var(--primario);
-
-        &:hover{
+        &:hover {
             background: #fff;
             border: 1px solid var(--primario);
         }
-        
-        &:disabled{
+        &:disabled {
             background: var(--secundario);
             color: #fff;
             border: none;
         }
     }
-
-    &.secundario{
+    &.secundario {
         background: transparent;
         border: 2px solid var(--primario);
-
-        &:hover{
+        &:hover {
             background: var(--primario);
             color: var(--blanco);
         }
     }
-
-   
-
-    &:focus{
+    &:focus {
         outline: none;
     }
-    
 }
 
-@mixin input{
-    
+@mixin input {
     position: relative;
-    
-    &.lleno{
-        label{
+    &.lleno {
+        label {
             left: 0px;
             top: -25px;
             font-size: var(--h5);
-        }    
-        
+        }
     }
-    
-    label{
+    label {
         position: absolute;
         font-size: var(--h4);
         color: var(--secundario);
         left: 30px;
         top: 15px;
         transition: .3s ease-in-out all;
-        
-        &.active{
+        &.active {
             top: -25px;
             left: 0;
         }
     }
-    
-    input[type=text], textarea{
+    input[type=text],
+    textarea {
         appearance: none;
         border: 2px solid var(--grisClaro);
         outline: none;
@@ -123,27 +101,22 @@
         font-family: var(--primariaBold);
         transition: .3s ease-in-out all;
         background: #FFFFFF;
-        box-shadow: 0 2px 20px 0 rgba(120,159,183,0.16);
+        box-shadow: 0 2px 20px 0 rgba(120, 159, 183, 0.16);
         border-radius: 8px;
-
-        &::placeholder{
+        &::placeholder {
             color: var(--fondoGris);
         }
-
-        &:focus{
+        &:focus {
             border: 2px solid var(--primario);
             color: var(--negro);
-
-            &::placeholder{
+            &::placeholder {
                 color: var(--negro);
             }
         }
     }
-    
-    textarea{
+    textarea {
         padding: 10px;
     }
-    
 }
 
 @mixin checkbox {
@@ -154,46 +127,43 @@
     user-select: none;
     margin-bottom: 15px;
     flex-flow: column;
-
-    input{
+    .check {
+        display: flex;
+        align-items: center;
+    }
+    input {
         position: absolute;
         opacity: 0;
         height: 0;
         width: 0;
-
-        &:checked ~ .checkmark {
+        &:checked~.checkmark {
             background-color: var(--primario);
         }
-
-        &:checked ~ .checkmark:after {
+        &:checked~.checkmark:after {
             display: block;
         }
     }
-    
-    .label{
-        
-        a{
+    .label {
+        a {
             color: inherit;
             text-decoration: underline;
         }
     }
-    
-    .checkmark{
+    .checkmark {
         height: 26px;
         width: 25px;
         border-radius: 5px;
         background: var(--primario);
         margin-right: 10px;
         position: relative;
-
-        &:after{
+        &:after {
             left: 7px;
             top: 0;
             bottom: 0;
             margin: auto;
             width: 8px;
             height: 12px;
-            border: solid ;
+            border: solid;
             border-width: 0 3px 3px 0;
             -webkit-transform: rotate(45deg);
             -ms-transform: rotate(45deg);
@@ -203,16 +173,14 @@
             display: none;
         }
     }
-    
-    .msjError{
+    .msjError {
         flex: 0 0 100%;
         padding-left: 35px;
         display: none;
-        
     }
 }
 
-@mixin buscador{
+@mixin buscador {
     appearance: none;
     border: 2px solid var(--grisClaro);
     outline: none;
@@ -226,23 +194,19 @@
     font-family: var(--primariaBold);
     background: url(../../img/Lupa.svg) no-repeat 95% center / 20px;
     transition: .3s ease-in-out all;
-
-    &::placeholder{
+    &::placeholder {
         color: var(--fondoGris);
     }
-
-    &:focus{
+    &:focus {
         border: 2px solid var(--primario);
         color: var(--negro);
-        
-        &::placeholder{
+        &::placeholder {
             color: var(--negro);
         }
     }
 }
 
 @mixin combo {
-    
     cursor: pointer;
     background: url(../../img/arrowBottom.svg) no-repeat 95% center / 15px #fff;
     min-height: 50px;
@@ -250,9 +214,8 @@
     padding: 0 30px;
     display: flex;
     align-items: center;
-    box-shadow: 0 2px 20px 0 rgba(120,159,183,0.16);
-    
-    select{
+    box-shadow: 0 2px 20px 0 rgba(120, 159, 183, 0.16);
+    select {
         appearance: none;
         outline: none;
         border: none;
@@ -262,49 +225,46 @@
         transition: .3s ease-in-out all;
         width: 100%;
         cursor: pointer;
-        
-        &:focus{
+        &:focus {
             outline: none;
         }
     }
-    
 }
 
-
-
-input[type=button], input[type=submit], .btn{
+input[type=button],
+input[type=submit],
+.btn {
     @include boton;
 }
 
-.input__group{
+.input__group {
     @include input;
 }
 
-input[type=search]{
+input[type=search] {
     @include buscador;
 }
 
-
-textarea{
+textarea {
     resize: none;
     height: 120px;
     color: var(--negro);
     padding: 10px;
 }
 
-.chip{
+.chip {
     @include chips;
 }
 
-.error-input{
+.error-input {
     color: red;
-    font-size:var(--h6);
+    font-size: var(--h6);
 }
 
- .combo {
-     @include combo;
- }
- 
- .checkboxes{
-     @include checkbox;
- }
+.combo {
+    @include combo;
+}
+
+.checkboxes {
+    @include checkbox;
+}
