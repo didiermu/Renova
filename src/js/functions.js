@@ -3,7 +3,7 @@
 /// HEADER
 
 function menu() {
-    $("#linkContacto").on("click", function() {
+    $("#linkContacto").on("click", function () {
         $("html, body").animate({ scrollTop: $(".contacto").offset().top - 90 },
             1500
         );
@@ -17,7 +17,7 @@ function menu() {
 function efectoFade() {
     function sectionFade() {
         var sectionFade = $("section");
-        sectionFade.each(function() {
+        sectionFade.each(function () {
             var mediaqueryList = window.matchMedia("(max-width: 992px)");
             if (mediaqueryList.matches) {
                 var posSection = $(this).offset().top - 600;
@@ -34,6 +34,7 @@ function efectoFade() {
                 $(this).find($(".objetFade")).addClass("transition1");
                 $("section").removeClass("sectionOn");
                 $(this).addClass("sectionOn");
+                // startPlayback();
             } else {
                 $(this).find($(".objetFade")).removeClass("transition1");
             }
@@ -70,7 +71,7 @@ function efectoFade() {
 
     sectionFade();
 
-    $(document).scroll(function() {
+    $(document).scroll(function () {
         sectionFade();
     });
 }
@@ -133,18 +134,18 @@ function drawSvg() {
     // build scene
 
     var scene2 = new ScrollMagic.Scene({
-            triggerElement: "#triggerAyuda",
-            duration: 600,
-            tweenChanges: true,
-        })
+        triggerElement: "#triggerAyuda",
+        duration: 600,
+        tweenChanges: true,
+    })
         .setTween(tween2)
         .addTo(controller);
 
     var scene3 = new ScrollMagic.Scene({
-            triggerElement: "#triggerDedicamos",
-            duration: 600,
-            tweenChanges: true,
-        })
+        triggerElement: "#triggerDedicamos",
+        duration: 600,
+        tweenChanges: true,
+    })
         .setTween(tween3)
         .addTo(controller);
 
@@ -153,15 +154,57 @@ function drawSvg() {
     // 				.addTo(controller);
 
     var scene5 = new ScrollMagic.Scene({
-            triggerElement: "#triggerContacto",
-            duration: 600,
-            tweenChanges: true,
-        })
+        triggerElement: "#triggerContacto",
+        duration: 600,
+        tweenChanges: true,
+    })
         .setTween(tween5)
         .addTo(controller);
 }
 
-$(function() {
+var video;
+var canvas;
+var wrapVideo = document.querySelector("videoDesktop");
+
+function startPlayback()
+{
+if (!video) {
+    video = document.createElement('video');
+    video.src = '../video/videoDesktop.mp4';
+    video.loop = true;
+    video.addEventListener('playing', paintVideo);
+}
+video.play();
+}
+
+function paintVideo()
+{
+if (!canvas) {
+    canvas = document.createElement('canvas');
+    canvas.width = video.videoWidth;
+    canvas.height = video.videoHeight;
+//   document.wrapVideo.appendChild(canvas);
+$("#videoDesktop").append(canvas);
+}
+canvas.getContext('2d').drawImage(video, 0, 0, canvas.width, canvas.height);
+if (!video.paused)
+    requestAnimationFrame(paintVideo);
+}
+
+const videoURL = () => {
+    var mediaqueryList = window.matchMedia("(max-width: 992px)");
+    if (mediaqueryList.matches) {
+        console.log("d");
+        // $("#videoDesktop").attr("autoplay",true);
+        $("#videoDesktop").play();
+    }
+    else{
+        $("#videoMobile").attr("autoplay");
+        console.log("m");
+    }
+}
+
+$(function () {
     menu();
     efectoFade();
     $(window).enllax();
@@ -172,5 +215,11 @@ $(function() {
         window.location.pathname == "/RenovaIndustrial/"
     ) {
         drawSvg();
+        // videoURL();
+        // $(window).resize(function(){
+        //     videoURL();
+        // });
+        console.log("vi4");
+       
     }
 });

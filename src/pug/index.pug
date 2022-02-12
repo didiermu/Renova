@@ -26,13 +26,19 @@ html(lang='es')
                                     b con equipo moderno y especializado
 
 
-                    video#videoDesktop(autoplay muted loop preload)
+                    video#videoDesktop(loop preload controls autoplay)
                         source(src="video/videoDesktop.mp4" type="video/mp4")
+                        //- source(src="video/videoDesktop.webm" type="video/webm")
 
-                    video#videoMobile(autoplay muted loop preload)
+
+
+                    video#videoMobile(loop preload controls)
                         source(src="video/videoMobile.mp4" type="video/mp4")
+                        //- source(src="video/videoMobile.webm" type="video/webm")
 
                     a#linkVideo(href="https://youtube.com/watch?v=66g39IglGsY&feature=share" target="_blank" rel="noopener noreferrer") Ver video completo
+
+                    button(onclick="startPlayback()") Start Playback
 
                     .btn--down.d-flex   
                         span.icon-Chevron
@@ -252,5 +258,4 @@ html(lang='es')
 
                         p Cualquier modificación a este aviso de privacidad podrá consultarla en www.renovaindustrial.com.
                         p Fecha última actualización 31/Agosto/2015.
-
 
