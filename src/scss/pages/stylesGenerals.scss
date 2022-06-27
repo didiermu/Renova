@@ -1,108 +1,113 @@
-
-h1,h2,h3,h4,h5,h6,label,a{
-	margin: 0;
-	color: var(--texto);
-	line-height: 1.3;
-
-	b{
-		font-family: var(--primariaBold);
-	}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+label,
+a {
+    margin: 0;
+    color: var(--texto);
+    line-height: 1.3;
+    b {
+        font-family: var(--primariaBold);
+    }
 }
 
-h1{
-	font-size: var(--h1);
-	line-height: 1;
-}
-h2{
-	font-size: var(--h2);
-	line-height: 1.2;
-}
-h3{
-	font-size: var(--h3);
-}
-h4{
-	font-size: var(--h4);
-}
-h5{
-	font-size: var(--h5);
-	line-height: 1.5;
-}
-h6{
-	font-size: var(--h6);
-	line-height: 1.5;
+h1 {
+    font-size: var(--h1);
+    line-height: 1;
 }
 
-a{
-	text-decoration: none;
-	color: inherit;
-	
-	&:hover{
-		color: inherit;
-	}
+h2 {
+    font-size: var(--h2);
+    line-height: 1.2;
 }
 
-.titleBig{
-	@include titlesBig;
+h3 {
+    font-size: var(--h3);
 }
 
-.linkBorder{
-	border-bottom: 2px solid var(--primario);
-	font-family: var(--primariaBold);
-	font-size: var(--h4);
-	text-decoration: none;
-	color: var(--negro);
-	transition: .3s ease-in-out all;
-	
-	&:hover{
-		padding: 0 15px;
-		border-color: var(--texto);
-	}
+h4 {
+    font-size: var(--h4);
+}
+
+h5 {
+    font-size: var(--h5);
+    line-height: 1.5;
+}
+
+h6 {
+    font-size: var(--h6);
+    line-height: 1.5;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    @media (hover: hover) {
+        &:hover {
+            color: inherit;
+        }
+    }
+}
+
+.titleBig {
+    @include titlesBig;
+}
+
+.linkBorder {
+    border-bottom: 2px solid var(--primario);
+    font-family: var(--primariaBold);
+    font-size: var(--h4);
+    text-decoration: none;
+    color: var(--negro);
+    transition: .3s ease-in-out all;
+    @media (hover: hover) {
+        &:hover {
+            padding: 0 15px;
+            border-color: var(--texto);
+        }
+    }
 }
 
 // SECCIONES
-
-section:not(.hero){
-	padding: var(--paddingSection);
-	overflow: hidden;
+section:not(.hero) {
+    padding: var(--paddingSection);
+    overflow: hidden;
 }
 
-.btn--down{
-	span:first-of-type{
-		animation: flecha 1.5s ease-in-out infinite;	
-	}
-	span:last-of-type{
-		animation: flecha 1.5s ease-in-out infinite;	
-		animation-delay: .1s;
-	}
-	
-	
-	@keyframes flecha{
-		0% {
-			transform: translateX(0px) scaleX(.8);
-			opacity: 0;
-		}
-		
-		50% {
-			transform: translateX(20px) scaleX(.8);
-			opacity: 1;
-		}
-		
-		100% {
-			transform: translateX(20px) scaleX(.8);
-			opacity: 0;
-		}
-	}
+.btn--down {
+    span:first-of-type {
+        animation: flecha 1.5s ease-in-out infinite;
+    }
+    span:last-of-type {
+        animation: flecha 1.5s ease-in-out infinite;
+        animation-delay: .1s;
+    }
+    @keyframes flecha {
+        0% {
+            transform: translateX(0px) scaleX(.8);
+            opacity: 0;
+        }
+        50% {
+            transform: translateX(20px) scaleX(.8);
+            opacity: 1;
+        }
+        100% {
+            transform: translateX(20px) scaleX(.8);
+            opacity: 0;
+        }
+    }
 }
 
 // ANIMACIONES
-
-.objetFade{
-	@include animaciones;
+.objetFade {
+    @include animaciones;
 }
 
-.poligono{
-	@include poli1;
-	position: absolute;
-	z-index: 1;
+.poligono {
+    @include poli1;
+    position: absolute;
+    z-index: 1;
 }
-

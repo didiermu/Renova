@@ -1,12 +1,8 @@
 // **** \\ STYLES_CSS // **** // 
-
-
 body {
     overflow-x: hidden !important;
     position: relative;
     font-family: var(--secundariaRegular);
-    
-    
     @import "header";
     @import "footer";
     @import "pages/stylesGenerals";
@@ -14,5 +10,5 @@ body {
     @import "pages/_servicios";
     @import "pages/_materiales";
     @import "pages/_nos-destacamos-por";
-    // @import "pages/_contacto";
+    @import "pages/_rrhh";
 }

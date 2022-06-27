@@ -96,7 +96,6 @@ html(lang='es')
                                             a(href="materiales.html")
                                                 button.btn.secundario Me interesa
 
-
             section.dedicamos
                 img.img-fluid.poligono(src="img/Form03.svg" alt="Renova Industrial")
 
@@ -126,7 +125,6 @@ html(lang='es')
                             picture 
                                 source(srcset="img/Desktop/1Home/Secc2.webp" type="image/webp")
                                 img.img-fluid(src="img/Desktop/1Home/Secc2.png" alt="Renova Industrial")
-
 
             section.contacto#contacto
                 img.img-fluid.poligono(src="img/Form03.svg" alt="Renova Industrial")
@@ -179,8 +177,8 @@ html(lang='es')
                                         input#checkLegale.checkbox(type='checkbox')
                                         label#checkboxLegales.checkmark(for='checkLegale')  
                                         label.label#labelLegales(for='checkLegale')
-                                            | Acepto 
-                                            a#linkTerminos(href="terminos-y-condiciones.php") el Aviso de Privacidad
+                                            | Acepto el 
+                                            a#linkTerminos(href="aviso-de-privacidad.html" target="_blank") Aviso de Privacidad
 
                                     span.msjError.show Debes aceptar los términos y condiciones
 
@@ -194,6 +192,19 @@ html(lang='es')
                                     img.img-fluid(src="img/whatsapp.svg" alt="Renova Whats app")
                                     a.linkBorder(href="https://wa.me/5516773281" target="_blank") Escríbenos
 
+            section.rrhh 
+                .container-fluid
+                    .row.align-items-center.objetFade
+                        .col-12.col-lg-5.offset-lg-6.offset-xl-5
+                            .rrhh--copy
+                                h2.titleBig 
+                                    b ¡Estamos contratando!
+
+                                h3 Tu experiencia es muy valiosa para
+                                    br
+                                    | nosotros, intégrate a nuestro equipo
+
+                                a(data-toggle="modal" data-target="#modal-rrhh").linkBorder Me interesa
 
             section.mapa.d-flex.align-items-center
 
@@ -241,21 +252,79 @@ html(lang='es')
                                             a(href="tel:+ 52 (442) 225 6242") + 52 (442) 225 6242
 
         include includes/footer.pug
-        .modal#modalLegales(tabindex='-1' role='dialog')
+
+
+        .modal.fade#modal-rrhh(tabindex='-1' role='dialog')
             .modal-dialog.modal-dialog-centered.modal-lg(role='document')
                 .modal-content
                     button.close(type='button' data-dismiss='modal' aria-label='Close')
 
                     .modal-body
-                        h2 Aviso de Privacidad
-                        p Renova Industrial S.A. de C.V., con domicilio en Nogal 908, Colonia Arboledas, C.P. 76140, Querétaro, Querétaro, es responsable de recabar sus datos personales, del uso que se le dé a los mismos y de su protección.
+                        h2.titleBig 
+                            b Bolsa de trabajo
+                        h3 Si te interesa trabajar con nosotros, envía tus datos y pronto te contactaremos
 
-                        p Su información personal será utilizada para: proveer los servicios y productos que ha solicitado o información sobre estos, ofertas, darle a conocer sobre cambios en los mismos y evaluar la calidad del servicio que le brindamos. Para las finalidades antes mencionadas, requerimos obtener los siguientes datos personales: Nombre, dirección de correo electrónico y número telefónico, los cuales no son considerados como sensible según la Ley Federal de Protección de Datos Personales en Posesión de los Particulares.
+                        form#form-rrhh(action="")
+                            .input__group
+                                label Nombre
+                                input#nombre-rh(type="text" name="")
 
-                        p Usted tiene derecho de acceder, rectificar y cancelar sus datos personales, así como de oponerse al tratamiento de los mismos o revocar el consentimiento que para tal fin nos haya otorgado, a través de los procedimientos que hemos implementado. Para conocer dichos procedimientos, los requisitos y plazos, se puede poner en contacto con nuestro departamento de datos personales en Renova Industrial, Nogal 908, Colonia Arboledas, C.P. 76140, Querétaro, Querétaro, a los teléfonos +52 (442) 225 6338 o +52 (442) 225 6242 y en la dirección de correo electrónico lchavez@renovaindustrial.com
+                            .input__group#sucursal-rh
+                                .combo
+                                    select#combo-sucursal-rh(name="")
+                                        option(value="0" selected hidden) Sucursal
+                                        option(value="1") Saltillo
+                                        option(value="2") Querétaro
+                                        option(value="3") Guanajuato
 
-                        p Asimismo, le informamos que sus datos personales NO serán transferidos o tratados dentro o fuera del país, por personas distintas a esta empresa.
+                            .input__group#group-edad-rh
+                                label Edad
+                                input#edad-rh(type="text" name="")
 
-                        p Cualquier modificación a este aviso de privacidad podrá consultarla en www.renovaindustrial.com.
-                        p Fecha última actualización 31/Agosto/2015.
+                            .input__group#group-puesto-rh
+                                label Puesto de tu interés
+                                input#puesto-rh(type="text" name="")
 
+                            .input__group#group-domicilio-rh
+                                label Domicilio
+                                input#domicilio-rh(type="text" name="")
+
+                            .input__group#group-msj-rh
+                                label Describe tu experiencia previa
+                                textarea#mensaje-rh(name="") 
+
+                            .input__group#group-tel-rh
+                                label Teléfono
+                                input#telefono-rh(type="text" name="")
+
+
+                            .input__group#group-email-rh
+                                label Correo electrónico
+                                input#emal-rh(type="text" name="")
+
+                            .input__group#group-cv-rh
+                                input#subir-cv(type="file" accept="application/pdf, .xlsx,.xls, .docx,.ppt, .pptx" hidden)
+                                h5#file-name 
+                                    b file.jpg
+                                label.btn.secundario#label-cv(for='subir-cv') Subir curriculum
+
+                            .checkboxes#cajaLegal-rh
+                                .check
+                                    input#checkLegale-rh.checkbox(type='checkbox')
+                                    label#checkboxLegales-rh.checkmark(for='checkLegale-rh')  
+                                    label.label#labelLegales-rh(for='checkLegale-rh')
+                                        | Acepto el 
+                                        a(href="aviso-de-privacidad.html" target="_blank") Aviso de Privacidad
+
+
+                        input.btn.primario#enviar-rhh(type="button" value="Enviar mis datos")
+
+        .modal.fade#modal-rrhh-send(tabindex='-1' role='dialog')
+            .modal-dialog.modal-dialog-centered.modal-lg(role='document')
+                .modal-content
+                    .modal-body
+                        h2
+                            b ¡Recibimos tus datos!
+                        h3 Revisaremos tu información y pronto nos pondremos en contacto contigo.
+
+                        button.btn.primario(type="button" data-dismiss='modal' aria-label='Close') Aceptar

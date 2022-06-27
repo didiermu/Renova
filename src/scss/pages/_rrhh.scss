@@ -1,0 +1,252 @@
+.rrhh {
+    height: calc(530px + 10 * ((100vw - 1920px) / 992));
+    background: url('../img/back-rrhh.webp') no-repeat center / cover;
+    .titleBig,
+    h3 {
+        color: #fff;
+    }
+    h3 {
+        margin: 1em 0;
+    }
+    .linkBorder {
+        margin-top: 1em;
+        color: #fff;
+        cursor: pointer;
+    }
+}
+
+&.body-legales {
+    background: url('../img/back-modal-rrhh.webp') no-repeat center left / contain fixed #fff;
+    .header--navegacion nav #navbarNav>ul li a {
+        color: #000;
+    }
+}
+
+#modal-rrhh,
+#modal-rrhh-send {
+    background: url('../img/back-modal-rrhh.webp') no-repeat center / cover #fff;
+    .modal-dialog {
+        max-width: none;
+        margin: 0;
+        background: none;
+        height: 100%;
+    }
+    .modal-content {
+        border-radius: 0;
+        width: 100%;
+        height: 100%;
+        max-width: 1440px;
+        border: 0;
+        margin: auto;
+        background: none;
+    }
+    .titleBig {
+        margin-bottom: 20px;
+    }
+    .titleBig,
+    h3 {
+        text-align: left;
+    }
+    form {
+        display: grid;
+        grid-template-columns: repeat(2, [col-start] 1fr);
+        margin: 5em 0 1em;
+        .wpcf7-response-output {
+            display: none;
+        }
+        .input__group {
+            width: 90%;
+            margin-bottom: 35px;
+            br {
+                display: none;
+            }
+        }
+        #sucursal-rh {
+            grid-column: col-start 2/span 2;
+            grid-row: 1/1;
+            span {
+                width: 100%;
+            }
+        }
+        #group-edad-rh {
+            grid-column: col-start 1/span 1;
+            grid-row: 2/2;
+        }
+        #group-puesto-rh {
+            grid-column: col-start 2/span 2;
+            grid-row: 2/2;
+        }
+        #group-domicilio-rh {
+            grid-column: col-start 1/span 1;
+            grid-row: 3/3;
+        }
+        #group-msj-rh {
+            grid-column: col-start 2/span 2;
+            grid-row: 3/6;
+            textarea {
+                height: 100%;
+            }
+        }
+        #group-tel-rh {
+            grid-column: col-start 1/span 1;
+            grid-row: 4/4;
+        }
+        #group-email-rh {
+            grid-column: col-start 1/span 1;
+            grid-row: 5/5;
+        }
+        #group-cv-rh {
+            grid-column: col-start 2/span 2;
+            grid-row: 6/6;
+            display: flex;
+            align-items: center;
+            input {
+                display: none;
+            }
+            #file-name {
+                display: flex;
+                align-items: center;
+                margin-right: 15px;
+                display: none;
+                &::before {
+                    content: "";
+                    width: 20px;
+                    height: 20px;
+                    background: url('../img/icon-check.svg') no-repeat center / cover;
+                    display: block;
+                    margin: 0 10px 0 5px;
+                }
+            }
+            .btn {
+                width: max-content;
+                position: relative;
+                left: auto;
+                top: auto;
+                margin: 0;
+                background: #fff;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                @media (hover: hover) {
+                    &:hover {
+                        color: var(--grisOscuro)
+                    }
+                }
+                &::before {
+                    content: "";
+                    width: 20px;
+                    height: 20px;
+                    background: url('../img/icon-upload.svg') no-repeat center / cover;
+                    display: block;
+                    margin: 0 10px 0 5px;
+                }
+            }
+        }
+        >p {
+            grid-column: col-start 1/span 2;
+            grid-row: 7/7;
+        }
+        #enviar-rhh {
+            width: max-content;
+            margin: 1em auto;
+            width: calc(280px + 30 * ((100vw - 1920px) / 992));
+            display: block;
+        }
+    }
+    #enviar-rhh {
+        display: none;
+    }
+}
+
+#modal-rrhh-send {
+    .modal-body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    h2 {
+        font-size: var(--h1);
+        text-align: center;
+        color: var(--secundario);
+        margin-bottom: 20px;
+    }
+    h3 {
+        text-align: center;
+    }
+    .btn {
+        width: auto;
+        margin: 50px auto 0;
+    }
+}
+
+@media (max-width:768px) {
+    .rrhh {
+        height: calc(350px + 10 * ((100vw - 768px) / 640));
+    }
+}
+
+@media (max-width:640px) {
+    .rrhh {
+        height: calc(480px + 10 * ((100vw - 640px) / 360));
+        display: flex;
+        align-items: end;
+        background: {
+            image: url('../../img/back-rrhh-mobile.webp');
+        }
+    }
+    #modal-rrhh {
+        form {
+            display: flex;
+            flex-direction: column;
+            margin-top: 2em;
+            .input__group {
+                width: 100%;
+            }
+            #sucursal-rh {
+                order: 6;
+            }
+            #group-edad-rh {
+                order: 2;
+            }
+            #group-puesto-rh {
+                order: 7;
+            }
+            #group-domicilio-rh {
+                order: 3;
+            }
+            #group-msj-rh {
+                order: 8;
+                textarea {
+                    height: 100px;
+                }
+            }
+            #group-tel-rh {
+                order: 4;
+            }
+            #group-email-rh {
+                order: 5;
+            }
+            #group-cv-rh {
+                order: 9;
+                flex-direction: column;
+                #file-name {
+                    margin-bottom: 1em;
+                }
+                .btn {
+                    width: 100%;
+                    margin: auto;
+                }
+            }
+            #cajaLegal-rh {
+                order: 10;
+            }
+            >p {
+                order: 11;
+            }
+        }
+        #enviar-rhh {
+            width: 100%;
+        }
+    }
+}

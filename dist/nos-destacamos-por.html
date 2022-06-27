@@ -25,6 +25,7 @@
                   <li id="li-s1"><a href="servicios.html"> Servicio integral</a></li>
                   <li id="li-s2"><a href="materiales.html">Materiales</a></li>
                   <li class="activo" id="li-s3"><a href="nos-destacamos-por.html">Nos destacamos por</a></li>
+                  <li id="li-s4"><a href="nos-destacamos-por.html#bolsa-de-trabajo">Bolsa de trabajo</a></li>
                 </ul><a id="linkContacto" href="index.html#contacto"> 
                   <button class="btn primario">Contacto</button></a>
               </div>
@@ -270,6 +271,18 @@
           </div>
         </div>
       </section>
+      <section class="rrhh" id="bolsa-de-trabajo">
+        <div class="container-fluid">
+          <div class="row align-items-center objetFade">
+            <div class="col-12 col-lg-5 offset-lg-6 offset-xl-5">
+              <div class="rrhh--copy">
+                <h2 class="titleBig"> <b>¡Estamos contratando!</b></h2>
+                <h3>Tu experiencia es muy valiosa para<br>nosotros, intégrate a nuestro equipo</h3><a class="linkBorder" data-toggle="modal" data-target="#modal-rrhh">Me interesa</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
     <footer class="footer d-flex">
       <div class="container">
@@ -280,5 +293,80 @@
         </div>
       </div>
     </footer>
+    <div class="modal fade" id="modal-rrhh" tabindex="-1" role="dialog">
+      <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+        <div class="modal-content">
+          <button class="close" type="button" data-dismiss="modal" aria-label="Close"></button>
+          <div class="modal-body">
+            <h2 class="titleBig"> <b>Bolsa de trabajo</b></h2>
+            <h3>Si te interesa trabajar con nosotros, envía tus datos y pronto te contactaremos</h3>
+            <form id="form-rrhh" action="">
+              <div class="input__group">
+                <label>Nombre</label>
+                <input id="nombre-rh" type="text" name="">
+              </div>
+              <div class="input__group" id="sucursal-rh">
+                <div class="combo">
+                  <select id="combo-sucursal-rh" name="">
+                    <option value="0" selected hidden>Sucursal</option>
+                    <option value="1">Saltillo</option>
+                    <option value="2">Querétaro</option>
+                    <option value="3">Guanajuato</option>
+                  </select>
+                </div>
+              </div>
+              <div class="input__group" id="group-edad-rh">
+                <label>Edad</label>
+                <input id="edad-rh" type="text" name="">
+              </div>
+              <div class="input__group" id="group-puesto-rh">
+                <label>Puesto de tu interés</label>
+                <input id="puesto-rh" type="text" name="">
+              </div>
+              <div class="input__group" id="group-domicilio-rh">
+                <label>Domicilio</label>
+                <input id="domicilio-rh" type="text" name="">
+              </div>
+              <div class="input__group" id="group-msj-rh">
+                <label>Describe tu experiencia previa</label>
+                <textarea id="mensaje-rh" name=""> </textarea>
+              </div>
+              <div class="input__group" id="group-tel-rh">
+                <label>Teléfono</label>
+                <input id="telefono-rh" type="text" name="">
+              </div>
+              <div class="input__group" id="group-email-rh">
+                <label>Correo electrónico</label>
+                <input id="emal-rh" type="text" name="">
+              </div>
+              <div class="input__group" id="group-cv-rh">
+                <input id="subir-cv" type="file" accept="application/pdf, .xlsx,.xls, .docx,.ppt, .pptx" hidden>
+                <h5 id="file-name"> <b>file.jpg</b></h5>
+                <label class="btn secundario" id="label-cv" for="subir-cv">Subir curriculum</label>
+              </div>
+              <div class="checkboxes" id="cajaLegal-rh">
+                <div class="check">
+                  <input class="checkbox" id="checkLegale-rh" type="checkbox">
+                  <label class="checkmark" id="checkboxLegales-rh" for="checkLegale-rh"> </label>
+                  <label class="label" id="labelLegales-rh" for="checkLegale-rh">Acepto el <a href="aviso-de-privacidad.html" target="_blank">Aviso de Privacidad</a></label>
+                </div><span class="msjError show">Debes aceptar los términos y condiciones</span>
+              </div>
+            </form>
+            <input class="btn primario" id="enviar-rhh" type="submit" value="Enviar mis datos">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="modal-rrhh-send" tabindex="-1" role="dialog">
+      <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+        <div class="modal-content">
+          <div class="modal-body">
+            <h2><b>¡Recibimos tus datos!</b></h2>
+            <h3>Revisaremos tu información y pronto nos pondremos en contacto contigo.</h3>
+            <button class="btn primario" type="button" data-dismiss="modal" aria-label="Close">Aceptar</button>
+          </div>
+        </div>
+      </div>
+    </div>
   </body>
 </html>

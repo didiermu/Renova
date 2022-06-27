@@ -44,9 +44,11 @@
     transition: .3s ease-in-out all;
     &.primario {
         background: var(--primario);
-        &:hover {
-            background: #fff;
-            border: 1px solid var(--primario);
+        @media (hover: hover) {
+            &:hover {
+                background: #fff;
+                border: 1px solid var(--primario);
+            }
         }
         &:disabled {
             background: var(--secundario);
@@ -57,9 +59,11 @@
     &.secundario {
         background: transparent;
         border: 2px solid var(--primario);
-        &:hover {
-            background: var(--primario);
-            color: var(--blanco);
+        @media (hover: hover) {
+            &:hover {
+                background: var(--primario);
+                color: var(--blanco);
+            }
         }
     }
     &:focus {

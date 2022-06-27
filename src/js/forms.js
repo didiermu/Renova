@@ -2,23 +2,23 @@
 
 function valText(nameInput) {
 
-	var regEx = /^[a-zA-ZÀ-ÿ\u00f1\u00d1]+(\s*[a-zA-ZÀ-ÿ\u00f1\u00d1]*)*[a-zA-ZÀ-ÿ\u00f1\u00d1]+$/;
-	var validText = regEx.test(nameInput.val());
+    var regEx = /^[a-zA-ZÀ-ÿ\u00f1\u00d1]+(\s*[a-zA-ZÀ-ÿ\u00f1\u00d1]*)*[a-zA-ZÀ-ÿ\u00f1\u00d1]+$/;
+    var validText = regEx.test(nameInput.val());
 
-	if (nameInput.val().length < 1) {
-		nameInput.siblings("span").remove();
-		nameInput.after("<span class='error-input'>Campo requerido");
-	} else {
-		nameInput.siblings("span").remove();
+    if (nameInput.val().length < 1) {
+        nameInput.siblings("span").remove();
+        nameInput.after("<span class='error-input'>Campo requerido");
+    } else {
+        nameInput.siblings("span").remove();
 
-		if (!validText) {
-			nameInput.siblings("span").remove();
-			nameInput.after('<span class="error-input"> Solo se aceptan letras </span>');
-			nameInput.siblings("span").show();
-		} else {
-			nameInput.siblings("span").remove();
-		}
-	}
+        if (!validText) {
+            nameInput.siblings("span").remove();
+            nameInput.after('<span class="error-input"> Solo se aceptan letras </span>');
+            nameInput.siblings("span").show();
+        } else {
+            nameInput.siblings("span").remove();
+        }
+    }
 
 
 }
@@ -28,24 +28,22 @@ function valText(nameInput) {
 
 function valTextNum(nameInput) {
 
-	if (nameInput.val().length < 1 || nameInput.val()==" ") {
-		nameInput.siblings("span").remove();
-		nameInput.after("<span class='error-input'>Campo requerido");
-	}
-	
-	else {
-		nameInput.siblings("span").remove();
-		var regEx = /^[A-Za-z0-9 _]*[A-Za-z0-9][A-Za-z0-9 _]*$/;
-		var validText = regEx.test(nameInput.val());
+    if (nameInput.val().length < 1 || nameInput.val() == " ") {
+        nameInput.siblings("span").remove();
+        nameInput.after("<span class='error-input'>Campo requerido");
+    } else {
+        nameInput.siblings("span").remove();
+        var regEx = /^[A-Za-z0-9 _]*[A-Za-z0-9][A-Za-z0-9 _]*$/;
+        var validText = regEx.test(nameInput.val());
 
-		if (!validText) {
-			nameInput.siblings("span").remove();
-			nameInput.after('<span class="error-input"> No se permiten caracteres especiales </span>');
-			nameInput.siblings("span").show();
-		} else {
-			nameInput.siblings("span").remove();
-		}
-	}
+        if (!validText) {
+            nameInput.siblings("span").remove();
+            nameInput.after('<span class="error-input"> No se permiten caracteres especiales </span>');
+            nameInput.siblings("span").show();
+        } else {
+            nameInput.siblings("span").remove();
+        }
+    }
 
 
 }
@@ -53,101 +51,93 @@ function valTextNum(nameInput) {
 /// NUMEROS
 
 function valNum(nameInput) {
-	if (nameInput.val().length < 1) {
-		nameInput.siblings("span").remove();
-		nameInput.after("<span class='error-input'>Campo requerido");
-	} else {
+    if (nameInput.val().length < 1) {
+        nameInput.siblings("span").remove();
+        nameInput.after("<span class='error-input'>Campo requerido");
+    } else {
 
-		var regEx = /^[0-9]+$/;
+        var regEx = /^[0-9]+$/;
 
-		var validEmail = regEx.test(nameInput.val());
+        var validEmail = regEx.test(nameInput.val());
 
-		if (!validEmail) {
-			nameInput.siblings("span").remove();
-			nameInput.after('<span class="error-input"> Solo se permiten numeros </span>');
-			nameInput.siblings("span").show();
-		} else {
-			nameInput.siblings("span").remove();
-		}
-	}
+        if (!validEmail) {
+            nameInput.siblings("span").remove();
+            nameInput.after('<span class="error-input"> Solo se permiten numeros </span>');
+            nameInput.siblings("span").show();
+        } else {
+            nameInput.siblings("span").remove();
+        }
+    }
 }
 
 /// EMAIL
 
 function valMail(nameInput) {
-	if (nameInput.val().length < 1) {
-		nameInput.siblings("span").remove();
-		nameInput.after("<span class='error-input'>Campo requerido");
-	 }
-		
-	else{
-		var regEx = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-		var validNumbre = regEx.test(nameInput.val());
+    if (nameInput.val().length < 1) {
+        nameInput.siblings("span").remove();
+        nameInput.after("<span class='error-input'>Campo requerido");
+    } else {
+        var regEx = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+        var validNumbre = regEx.test(nameInput.val());
 
-		if (!validNumbre) {
-			nameInput.siblings("span").remove();
-			nameInput.after('<span class="error-input"> Verifica el formato de email </span>');
-			nameInput.siblings("span").show();
-		}
-
-		else{
-			nameInput.siblings("span").remove();
-		}
-	}
+        if (!validNumbre) {
+            nameInput.siblings("span").remove();
+            nameInput.after('<span class="error-input"> Verifica el formato de email </span>');
+            nameInput.siblings("span").show();
+        } else {
+            nameInput.siblings("span").remove();
+        }
+    }
 }
 
- /// COMBOS
+/// COMBOS
 
-function valCombos(nameInput){
-	var combosContacto = $(nameInput);
-	
-	combosContacto.each(function () {
-		$(this).change(function () {
-			if ($(this).val() != 0) {
-				$(this).parents(".combo").siblings("span").remove();
-			}
-		});
+function valCombos(nameInput) {
+    var combosContacto = $(nameInput);
 
-		if ($(this).val() == 0) {
-			$(this).siblings("span").remove();
-			$(this).parents(".combo").after('<span class="error-input">Selecciona una opción</span>');
-		}
-		
-		else{
-			$(this).parents(".combo").siblings("span").remove();
-		}
+    combosContacto.each(function() {
+        $(this).change(function() {
+            if ($(this).val() != 0) {
+                $(this).parents(".combo").siblings("span").remove();
+            }
+        });
 
-	});
+        if ($(this).val() == 0) {
+            $(this).parents(".combo").siblings("span").remove();
+            $(this).parents(".combo").after('<span class="error-input">Selecciona una opción</span>');
+        } else {
+            $(this).parents(".combo").siblings("span").remove();
+        }
+
+    });
 }
 
-function validacionContacto(){
-	$('#enviarContacto').on("click", function() {
+function validacionContacto() {
+    $('#enviarContacto').on("click", function() {
 
         var nombre = $("#nombre"),
             email = $("#email"),
-			telefono = $("#telefono")
-			comboAyuda = $("#comboAyuda"),
+            telefono = $("#telefono")
+        comboAyuda = $("#comboAyuda"),
             msj = $("#mensaje");
 
         valText(nombre);
         valMail(email);
-		valNum(telefono);
+        valNum(telefono);
         valTextNum(msj);
-		valCombos($("#comboAyuda"));
-        
+        valCombos($("#comboAyuda"));
+
         // VALIDATE ALL
 
         if ($('section.contacto .error-input').length == 0) {
             $("section.contacto form").submit();
-			
-			//console.log("si");
+
+            //console.log("si");
+        } else {
+            //console.log("no");
         }
-		
-		else{
-			//console.log("no");
-		}
-		
-		return false;
+
+        return false;
 
 
     });
@@ -155,5 +145,5 @@ function validacionContacto(){
 }
 
 window.onload = function() {
-	validacionContacto();
+    validacionContacto();
 };

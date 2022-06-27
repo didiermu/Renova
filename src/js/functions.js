@@ -3,8 +3,10 @@
 /// HEADER
 
 function menu() {
-    $("#linkContacto").on("click", function () {
-        $("html, body").animate({ scrollTop: $(".contacto").offset().top - 90 },
+    $("#linkContacto").on("click", function() {
+        $("html, body").animate({
+                scrollTop: $(".contacto").offset().top - 90
+            },
             1500
         );
 
@@ -17,7 +19,7 @@ function menu() {
 function efectoFade() {
     function sectionFade() {
         var sectionFade = $("section");
-        sectionFade.each(function () {
+        sectionFade.each(function() {
             var mediaqueryList = window.matchMedia("(max-width: 992px)");
             if (mediaqueryList.matches) {
                 var posSection = $(this).offset().top - 600;
@@ -71,7 +73,7 @@ function efectoFade() {
 
     sectionFade();
 
-    $(document).scroll(function () {
+    $(document).scroll(function() {
         sectionFade();
     });
 }
@@ -107,7 +109,9 @@ function drawSvg() {
                 ease: Linear.easeNone,
             })
         )
-        .add(TweenMax.to("path", 1, { ease: Linear.easeNone }), 0);
+        .add(TweenMax.to("path", 1, {
+            ease: Linear.easeNone
+        }), 0);
 
     var tween3 = new TimelineMax()
         .add(
@@ -116,7 +120,9 @@ function drawSvg() {
                 ease: Linear.easeNone,
             })
         )
-        .add(TweenMax.to("path", 1, { ease: Linear.easeNone }), 0);
+        .add(TweenMax.to("path", 1, {
+            ease: Linear.easeNone
+        }), 0);
 
     // var tween4 = new TimelineMax()
     // 	.add(TweenMax.to($pathPromos, 0.8, {strokeDashoffset: 0, ease:Linear.easeNone}))
@@ -129,23 +135,25 @@ function drawSvg() {
                 ease: Linear.easeNone,
             })
         )
-        .add(TweenMax.to("path", 1, { ease: Linear.easeNone }), 0);
+        .add(TweenMax.to("path", 1, {
+            ease: Linear.easeNone
+        }), 0);
 
     // build scene
 
     var scene2 = new ScrollMagic.Scene({
-        triggerElement: "#triggerAyuda",
-        duration: 600,
-        tweenChanges: true,
-    })
+            triggerElement: "#triggerAyuda",
+            duration: 600,
+            tweenChanges: true,
+        })
         .setTween(tween2)
         .addTo(controller);
 
     var scene3 = new ScrollMagic.Scene({
-        triggerElement: "#triggerDedicamos",
-        duration: 600,
-        tweenChanges: true,
-    })
+            triggerElement: "#triggerDedicamos",
+            duration: 600,
+            tweenChanges: true,
+        })
         .setTween(tween3)
         .addTo(controller);
 
@@ -154,10 +162,10 @@ function drawSvg() {
     // 				.addTo(controller);
 
     var scene5 = new ScrollMagic.Scene({
-        triggerElement: "#triggerContacto",
-        duration: 600,
-        tweenChanges: true,
-    })
+            triggerElement: "#triggerContacto",
+            duration: 600,
+            tweenChanges: true,
+        })
         .setTween(tween5)
         .addTo(controller);
 }
@@ -166,29 +174,27 @@ var video;
 var canvas;
 var wrapVideo = document.querySelector("videoDesktop");
 
-function startPlayback()
-{
-if (!video) {
-    video = document.createElement('video');
-    video.src = '../video/videoDesktop.mp4';
-    video.loop = true;
-    video.addEventListener('playing', paintVideo);
-}
-video.play();
+function startPlayback() {
+    if (!video) {
+        video = document.createElement('video');
+        video.src = '../video/videoDesktop.mp4';
+        video.loop = true;
+        video.addEventListener('playing', paintVideo);
+    }
+    video.play();
 }
 
-function paintVideo()
-{
-if (!canvas) {
-    canvas = document.createElement('canvas');
-    canvas.width = video.videoWidth;
-    canvas.height = video.videoHeight;
-//   document.wrapVideo.appendChild(canvas);
-$("#videoDesktop").append(canvas);
-}
-canvas.getContext('2d').drawImage(video, 0, 0, canvas.width, canvas.height);
-if (!video.paused)
-    requestAnimationFrame(paintVideo);
+function paintVideo() {
+    if (!canvas) {
+        canvas = document.createElement('canvas');
+        canvas.width = video.videoWidth;
+        canvas.height = video.videoHeight;
+        //   document.wrapVideo.appendChild(canvas);
+        $("#videoDesktop").append(canvas);
+    }
+    canvas.getContext('2d').drawImage(video, 0, 0, canvas.width, canvas.height);
+    if (!video.paused)
+        requestAnimationFrame(paintVideo);
 }
 
 const videoURL = () => {
@@ -197,14 +203,13 @@ const videoURL = () => {
         console.log("d");
         // $("#videoDesktop").attr("autoplay",true);
         $("#videoDesktop").play();
-    }
-    else{
+    } else {
         $("#videoMobile").attr("autoplay");
         console.log("m");
     }
 }
 
-$(function () {
+$(function() {
     menu();
     efectoFade();
     $(window).enllax();
@@ -212,7 +217,9 @@ $(function () {
     if (
         window.location.pathname == "/" ||
         window.location.pathname == "/renova-industrial/" ||
-        window.location.pathname == "/RenovaIndustrial/"
+        window.location.pathname == "/RenovaIndustrial/" ||
+        // stage
+        window.location.pathname == "/stage/"
     ) {
         drawSvg();
         // videoURL();
@@ -220,6 +227,6 @@ $(function () {
         //     videoURL();
         // });
         console.log("vi4");
-       
+
     }
 });

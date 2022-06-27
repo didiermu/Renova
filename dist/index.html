@@ -25,6 +25,7 @@
                   <li id="li-s1"><a href="servicios.html"> Servicio integral</a></li>
                   <li id="li-s2"><a href="materiales.html">Materiales</a></li>
                   <li id="li-s3"><a href="nos-destacamos-por.html">Nos destacamos por</a></li>
+                  <li id="li-s4"><a href="nos-destacamos-por.html#bolsa-de-trabajo">Bolsa de trabajo</a></li>
                 </ul><a id="linkContacto" href="index.html#contacto"> 
                   <button class="btn primario">Contacto</button></a>
               </div>
@@ -171,13 +172,25 @@
                   <div class="check">
                     <input class="checkbox" id="checkLegale" type="checkbox">
                     <label class="checkmark" id="checkboxLegales" for="checkLegale"> </label>
-                    <label class="label" id="labelLegales" for="checkLegale">Acepto <a id="linkTerminos" href="terminos-y-condiciones.php">el Aviso de Privacidad</a></label>
+                    <label class="label" id="labelLegales" for="checkLegale">Acepto el <a id="linkTerminos" href="aviso-de-privacidad.html" target="_blank">Aviso de Privacidad</a></label>
                   </div><span class="msjError show">Debes aceptar los términos y condiciones</span>
                 </div>
                 <input class="btn primario" id="enviarContacto" type="submit" value="Enviar">
               </form>
               <div class="contacto--links d-flex align-items-center"><a class="linkBorder" href="mailto:ventas@renovaindustrial.com">ventas@renovaindustrial.com</a>
                 <div class="contacto--whats d-flex align-items-center"><img class="img-fluid" src="img/whatsapp.svg" alt="Renova Whats app"><a class="linkBorder" href="https://wa.me/5516773281" target="_blank">Escríbenos</a></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="rrhh"> 
+        <div class="container-fluid">
+          <div class="row align-items-center objetFade">
+            <div class="col-12 col-lg-5 offset-lg-6 offset-xl-5">
+              <div class="rrhh--copy">
+                <h2 class="titleBig"> <b>¡Estamos contratando!</b></h2>
+                <h3>Tu experiencia es muy valiosa para<br>nosotros, intégrate a nuestro equipo</h3><a class="linkBorder" data-toggle="modal" data-target="#modal-rrhh">Me interesa</a>
               </div>
             </div>
           </div>
@@ -237,18 +250,77 @@
         </div>
       </div>
     </footer>
-    <div class="modal" id="modalLegales" tabindex="-1" role="dialog">
+    <div class="modal fade" id="modal-rrhh" tabindex="-1" role="dialog">
       <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
         <div class="modal-content">
           <button class="close" type="button" data-dismiss="modal" aria-label="Close"></button>
           <div class="modal-body">
-            <h2>Aviso de Privacidad</h2>
-            <p>Renova Industrial S.A. de C.V., con domicilio en Nogal 908, Colonia Arboledas, C.P. 76140, Querétaro, Querétaro, es responsable de recabar sus datos personales, del uso que se le dé a los mismos y de su protección.</p>
-            <p>Su información personal será utilizada para: proveer los servicios y productos que ha solicitado o información sobre estos, ofertas, darle a conocer sobre cambios en los mismos y evaluar la calidad del servicio que le brindamos. Para las finalidades antes mencionadas, requerimos obtener los siguientes datos personales: Nombre, dirección de correo electrónico y número telefónico, los cuales no son considerados como sensible según la Ley Federal de Protección de Datos Personales en Posesión de los Particulares.</p>
-            <p>Usted tiene derecho de acceder, rectificar y cancelar sus datos personales, así como de oponerse al tratamiento de los mismos o revocar el consentimiento que para tal fin nos haya otorgado, a través de los procedimientos que hemos implementado. Para conocer dichos procedimientos, los requisitos y plazos, se puede poner en contacto con nuestro departamento de datos personales en Renova Industrial, Nogal 908, Colonia Arboledas, C.P. 76140, Querétaro, Querétaro, a los teléfonos +52 (442) 225 6338 o +52 (442) 225 6242 y en la dirección de correo electrónico lchavez@renovaindustrial.com</p>
-            <p>Asimismo, le informamos que sus datos personales NO serán transferidos o tratados dentro o fuera del país, por personas distintas a esta empresa.</p>
-            <p>Cualquier modificación a este aviso de privacidad podrá consultarla en www.renovaindustrial.com.</p>
-            <p>Fecha última actualización 31/Agosto/2015.</p>
+            <h2 class="titleBig"> <b>Bolsa de trabajo</b></h2>
+            <h3>Si te interesa trabajar con nosotros, envía tus datos y pronto te contactaremos</h3>
+            <form id="form-rrhh" action="">
+              <div class="input__group">
+                <label>Nombre</label>
+                <input id="nombre-rh" type="text" name="">
+              </div>
+              <div class="input__group" id="sucursal-rh">
+                <div class="combo">
+                  <select id="combo-sucursal-rh" name="">
+                    <option value="0" selected hidden>Sucursal</option>
+                    <option value="1">Saltillo</option>
+                    <option value="2">Querétaro</option>
+                    <option value="3">Guanajuato</option>
+                  </select>
+                </div>
+              </div>
+              <div class="input__group" id="group-edad-rh">
+                <label>Edad</label>
+                <input id="edad-rh" type="text" name="">
+              </div>
+              <div class="input__group" id="group-puesto-rh">
+                <label>Puesto de tu interés</label>
+                <input id="puesto-rh" type="text" name="">
+              </div>
+              <div class="input__group" id="group-domicilio-rh">
+                <label>Domicilio</label>
+                <input id="domicilio-rh" type="text" name="">
+              </div>
+              <div class="input__group" id="group-msj-rh">
+                <label>Describe tu experiencia previa</label>
+                <textarea id="mensaje-rh" name=""> </textarea>
+              </div>
+              <div class="input__group" id="group-tel-rh">
+                <label>Teléfono</label>
+                <input id="telefono-rh" type="text" name="">
+              </div>
+              <div class="input__group" id="group-email-rh">
+                <label>Correo electrónico</label>
+                <input id="emal-rh" type="text" name="">
+              </div>
+              <div class="input__group" id="group-cv-rh">
+                <input id="subir-cv" type="file" accept="application/pdf, .xlsx,.xls, .docx,.ppt, .pptx" hidden>
+                <h5 id="file-name"> <b>file.jpg</b></h5>
+                <label class="btn secundario" id="label-cv" for="subir-cv">Subir curriculum</label>
+              </div>
+              <div class="checkboxes" id="cajaLegal-rh">
+                <div class="check">
+                  <input class="checkbox" id="checkLegale-rh" type="checkbox">
+                  <label class="checkmark" id="checkboxLegales-rh" for="checkLegale-rh"> </label>
+                  <label class="label" id="labelLegales-rh" for="checkLegale-rh">Acepto el <a href="aviso-de-privacidad.html" target="_blank">Aviso de Privacidad</a></label>
+                </div>
+              </div>
+            </form>
+            <input class="btn primario" id="enviar-rhh" type="button" value="Enviar mis datos">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="modal-rrhh-send" tabindex="-1" role="dialog">
+      <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+        <div class="modal-content">
+          <div class="modal-body">
+            <h2><b>¡Recibimos tus datos!</b></h2>
+            <h3>Revisaremos tu información y pronto nos pondremos en contacto contigo.</h3>
+            <button class="btn primario" type="button" data-dismiss="modal" aria-label="Close">Aceptar</button>
           </div>
         </div>
       </div>
