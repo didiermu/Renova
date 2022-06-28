@@ -1752,8 +1752,12 @@ body .servicios .promos .sliderCertificaciones {
   flex-wrap: wrap;
 }
 
+body .servicios .promos #col-iso {
+  padding: 0 30px 0 15px;
+}
+
 body .servicios .promos #iso {
-  padding: 10px 0;
+  padding: 10px;
   min-height: auto;
 }
 
@@ -1998,6 +2002,18 @@ body .servicios .promos .objetFade.transition1 .promos--copy__card {
 
   body .servicios .promos {
     padding-top: 80px;
+  }
+
+  body .servicios .promos #col-iso {
+    padding: 0 15px;
+  }
+
+  body .servicios .promos #col-iso #iso {
+    margin-bottom: 15px;
+  }
+
+  body .servicios .promos #col-iso #iso img {
+    width: 40%;
   }
 
   body .servicios .promos .fondo3 {
